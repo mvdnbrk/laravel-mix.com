@@ -14,7 +14,7 @@
 
     <body class="font-sans antialiased text-black leading-tight">
 
-    <div id="app">
+    <div id="app" class="border-t-8">
         @yield('body')
     </div>
 
