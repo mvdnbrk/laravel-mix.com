@@ -9,3 +9,6 @@
 @import "tailwindcss/utilities";
 
 /* Add custom utilities here... */
+html, body {
+    font-family: "Miriam Libre", sans-serif;
+}

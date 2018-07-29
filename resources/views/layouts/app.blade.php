@@ -9,12 +9,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Miriam+Libre">
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-        <style>
-            html, body {
-                font-family: "Miriam Libre",sans-serif;
-            }
-        </style>
-
         <title>{{ config('app.name', 'Laravel Mix') }}</title>
     </head>
 
