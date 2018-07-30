@@ -3,9 +3,7 @@
 @section('body')
     <div class="min-h-screen flex items-center justify-center">
         <div class="flex flex-col items-center">
-            <h1 class="text-5xl">
-                Laravel <span class="ml-1 font-light">Mix</span>
-            </h1>
+            @include('svg.logo')
 
             <h2 class="flex justify-center mt-2 text-sm text-grey">v2.1.11</h2>
 
