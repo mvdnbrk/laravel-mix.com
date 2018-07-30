@@ -22,7 +22,7 @@
                     href="https://github.com/JeffreyWay/laravel-mix/tree/master/docs#readme"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
                 >
-                    @include('svg.icons.github', ['class' => 'fill-current w-4 h-4'])
+                    @include('svg.icons.file-alt-regular', ['class' => 'fill-current w-4 h-4'])
                     <span class="ml-2">Docs on Github</span>
                 </a>
                 <a
