@@ -33,6 +33,14 @@
                     @include('svg.icons.video-solid', ['class' => 'fill-current w-4 h-4'])
                     <span class="ml-2">Laracasts</span>
                 </a>
+                <a
+                    href="/plugins"
+                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
+                >
+                    @include('svg.icons.puzzle-piece-solid', ['class' => 'fill-current w-4 h-4'])
+                    <span class="ml-2">Plugins</span>
+                </a>
+            </div>
 
             <div class="flex items-center mt-32 text-grey-light text-xs">
                 <span>proudly hosted with</span>
