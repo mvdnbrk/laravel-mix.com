@@ -5,7 +5,11 @@
         <div class="flex flex-col items-center">
             @include('svg.logo')
 
-            <h2 class="flex justify-center mt-2 text-sm text-grey">v2.1.11</h2>
+
+
+            <p class="mt-6 text-lg">An elegant wrapper around Webpack for the 80% use case.</p>
+
+            <p class="flex justify-center mt-2 text-sm text-grey">v2.1.11</p>
 
             <div class="md:flex mt-16">
                 <a
