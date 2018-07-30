@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Miriam+Libre">
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <title>{{ config('app.name', 'Laravel Mix') }}</title>
@@ -14,7 +13,7 @@
         {!! Analytics::render() !!}
     </head>
 
-    <body class="font-sans antialiased text-black leading-tight">
+    <body>
 
     <div id="app" class="border-t-8">
         @yield('body')

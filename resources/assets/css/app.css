@@ -10,5 +10,6 @@
 
 /* Add custom utilities here... */
 html, body {
-    font-family: "Miriam Libre", sans-serif;
+    @apply font-sans;
+    @apply text-black;
 }
