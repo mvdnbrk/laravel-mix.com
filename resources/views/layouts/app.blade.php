@@ -33,7 +33,7 @@
 
     <body>
 
-    <div id="app" class="border-t-8">
+    <div id="app" class="border-t-4">
         @yield('body')
     </div>
 
