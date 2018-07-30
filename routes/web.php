@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'WelcomeController@show');
-Route::get('/plugins', 'PluginsController@show');
+Route::get('/extensions', 'ExtensionsController@show');

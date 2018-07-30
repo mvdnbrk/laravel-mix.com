@@ -34,11 +34,11 @@
                     <span class="ml-2">Laracasts</span>
                 </a>
                 <a
-                    href="/plugins"
+                    href="/extensions"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
                 >
                     @include('svg.icons.puzzle-piece-solid', ['class' => 'fill-current w-4 h-4'])
-                    <span class="ml-2">Plugins</span>
+                    <span class="ml-2">Extensions</span>
                 </a>
             </div>
 

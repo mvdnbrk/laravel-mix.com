@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PluginsController extends Controller
+class ExtensionsController extends Controller
 {
     public function show()
     {
-        return view('plugins');
+        return view('extensions');
     }
 }
