@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <title>{{ config('app.name', 'Laravel Mix') }}</title>
+
+        {!! Analytics::render() !!}
     </head>
 
     <body class="font-sans antialiased text-black leading-tight">
