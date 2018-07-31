@@ -20,8 +20,18 @@
                     </a>
                 </li>
                 <li class="border-b mb-2 pb-1">
+                    <a href="https://github.com/dadamotion/laravel-mix-criticalcss" target="_blank" class="text-black no-underline hover:text-blue">
+                        Critical CSS
+                    </a>
+                </li>
+                <li class="border-b mb-2 pb-1">
                     <a href="https://github.com/dadamotion/laravel-mix-dload" target="_blank" class="text-black no-underline hover:text-blue">
                         Download
+                    </a>
+                </li>
+                <li class="border-b mb-2 pb-1">
+                    <a href="https://github.com/rias500/laravel-mix-eslint" target="_blank" class="text-black no-underline hover:text-blue">
+                        ESLint
                     </a>
                 </li>
                 <li class="border-b mb-2 pb-1">
