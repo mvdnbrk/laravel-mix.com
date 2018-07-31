@@ -21,7 +21,7 @@
             "@context": "http://schema.org/",
             "@type": "Organization",
             "url": "https://laravel-mix.com",
-            "logo": "https://laravel-mix.com/images/logo.png"
+            "logo": "https://laravel-mix.com/images/logo.png",
             "sameAs": [
                 "https://github.com/JeffreyWay/laravel-mix"
             ]
