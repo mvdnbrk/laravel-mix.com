@@ -14,31 +14,31 @@
                     href="https://github.com/JeffreyWay/laravel-mix"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
                 >
-                    @include('svg.icons.github', ['class' => 'fill-current w-4 h-4'])
-                    <span class="ml-2">Source on Github</span>
+                    @include('svg.icons.github', ['class' => 'fill-current mr-2 w-4 h-4'])
+                    Source on Github
                 </a>
 
                 <a
                     href="https://github.com/JeffreyWay/laravel-mix/tree/master/docs#readme"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
                 >
-                    @include('svg.icons.file-alt-regular', ['class' => 'fill-current w-4 h-4'])
-                    <span class="ml-2">Docs on Github</span>
+                    @include('svg.icons.file-alt-regular', ['class' => 'fill-current mr-2 w-4 h-4'])
+                    Docs on Github
                 </a>
                 <a
                     href="https://laracasts.com/series/learn-laravel-mix"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
                     title="Watch screencasts at Laracasts: Learn Laravel Mix"
                 >
-                    @include('svg.icons.video-solid', ['class' => 'fill-current w-4 h-4'])
-                    <span class="ml-2">Laracasts</span>
+                    @include('svg.icons.video-solid', ['class' => 'fill-current mr-2 w-4 h-4'])
+                    Laracasts
                 </a>
                 <a
                     href="/extensions"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
                 >
-                    @include('svg.icons.puzzle-piece-solid', ['class' => 'fill-current w-4 h-4'])
-                    <span class="ml-2">Extensions</span>
+                    @include('svg.icons.puzzle-piece-solid', ['class' => 'fill-current mr-2 w-4 h-4'])
+                    Extensions
                 </a>
             </div>
 
