@@ -1,4 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.app', [
+    'title' => 'Laravel Mix Extensions',
+    'description' => 'List of Laravel Mix extenstions.',
+])
 
 @section('body')
     <div class="min-h-screen flex flex-col items-center justify-center">
