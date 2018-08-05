@@ -13,3 +13,7 @@
 
 Route::get('/', 'WelcomeController@show');
 Route::get('/extensions', 'ExtensionsController@show');
+
+Route::get('/docs', 'DocumentationRootController@show');
+Route::get('/docs/{page}', 'DocumentationRedirectController@show');
+Route::get('/docs/{version}/{page}', 'DocumentationController@show');
