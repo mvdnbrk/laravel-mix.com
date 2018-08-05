@@ -11,6 +11,14 @@
 
             <div class="md:flex mt-16">
                 <a
+                    href="/docs"
+                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
+                >
+                    @include('svg.icons.file-alt-regular', ['class' => 'fill-current mr-2 w-4 h-4'])
+                    Documentation
+                </a>
+
+                <a
                     href="https://github.com/JeffreyWay/laravel-mix"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
                 >
@@ -19,13 +27,6 @@
                 </a>
 
                 <a
-                    href="https://github.com/JeffreyWay/laravel-mix/tree/master/docs#readme"
-                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
-                >
-                    @include('svg.icons.file-alt-regular', ['class' => 'fill-current mr-2 w-4 h-4'])
-                    Docs on Github
-                </a>
-                <a
                     href="https://laracasts.com/series/learn-laravel-mix"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
                     title="Watch screencasts at Laracasts: Learn Laravel Mix"
@@ -33,6 +34,7 @@
                     @include('svg.icons.video-solid', ['class' => 'fill-current mr-2 w-4 h-4'])
                     Laracasts
                 </a>
+
                 <a
                     href="/extensions"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"

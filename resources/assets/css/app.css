@@ -13,3 +13,32 @@ html, body {
     @apply font-sans;
     @apply text-black;
 }
+
+h1 {
+    @apply mb-8;
+    @apply pb-2;
+    @apply border-b;
+    @apply border-grey-dark;
+}
+
+h2, h3, h4, h5, h6, p, ul, blockquote, pre {
+    @apply mb-4;
+}
+
+pre {
+    @apply p-4;
+    @apply bg-grey-lighter;
+}
+
+li {
+    @apply p-1;
+}
+
+a {
+    @apply text-black;
+    @apply no-underline;
+}
+
+a:hover {
+    @apply text-blue;
+}
