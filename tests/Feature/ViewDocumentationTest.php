@@ -52,4 +52,12 @@ class ViewDocumentationTest extends TestCase
         $response->assertOk();
         $response->assertViewIs('documentation');
     }
+
+    /** @test */
+    public function a_request_to_a_non_exisiting_page_should_return_a_404()
+    {
+        $response = $this->get('/docs/9.9/page-does-not_exist');
+
+        $response->assertNotFound();
+    }
 }

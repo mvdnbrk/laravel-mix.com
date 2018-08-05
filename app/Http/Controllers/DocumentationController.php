@@ -17,6 +17,11 @@ class DocumentationController extends DocumentationBaseController
     public function show($version, $page)
     {
         $content = $this->documentation->get($version, $page);
+
+        if (is_null($content)) {
+            abort(404);
+        }
+
         $title = (new Crawler($content))->filterXPath('//h1');
 
         return view('documentation', [
