@@ -4,7 +4,6 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use App\Documentation;
-use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -14,7 +13,7 @@ class DocumentationTest extends TestCase
     {
         parent::setUp();
 
-        $this->documentation = new Documentation(new Filesystem());
+        $this->documentation = new Documentation();
     }
 
     /** @test */
