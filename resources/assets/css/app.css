@@ -21,13 +21,18 @@ h1 {
     @apply border-grey-dark;
 }
 
-h2, h3, h4, h5, h6, p, ul, blockquote, pre {
+h2, h3, h4, h5, h6, p, ul, ol, blockquote, pre {
     @apply mb-4;
+}
+
+code {
+    @apply bg-grey-lighter;
 }
 
 pre {
     @apply p-4;
     @apply bg-grey-lighter;
+    @apply rounded;
 }
 
 li {

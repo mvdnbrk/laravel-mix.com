@@ -11,7 +11,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
     ]
   })
   .purgeCss({
-    whitelist: ['pre', 'blockquote'],
+    whitelist: ['code', 'pre', 'blockquote'],
   })
 
 if (mix.inProduction()) {
