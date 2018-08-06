@@ -3,28 +3,10 @@
 namespace App;
 
 use ParsedownExtra;
-use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Facades\Storage;
 
 class Documentation
 {
-    /**
-     * The filesystem implementation.
-     *
-     * @var Illuminate\Filesystem\Filesystem
-     */
-    protected $files;
-
-    /**
-     * Create a new documentation instance.
-     *
-     * @param  Illuminate\Filesystem\Filesystem  $files
-     * @return void
-     */
-    public function __construct(Filesystem $files)
-    {
-        $this->files = $files;
-    }
-
     /**
      * Get the default version of the documentation.
      *
@@ -72,10 +54,10 @@ class Documentation
      */
     public function get($version, $page)
     {
-        $path = base_path('storage/docs/'.$version.'/'.$page.'.md');
+        $path = "{$version}/{$page}.md";
 
-        if ($this->files->exists($path)) {
-            return (new ParsedownExtra())->text($this->files->get($path));
+        if (Storage::disk('docs')->exists($path)) {
+            return (new ParsedownExtra())->text(Storage::disk('docs')->get($path));
         }
 
         return null;

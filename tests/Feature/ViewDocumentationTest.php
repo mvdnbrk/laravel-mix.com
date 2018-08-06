@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
+use Illuminate\Support\Facades\Storage;
 
 class ViewDocumentationTest extends TestCase
 {
@@ -47,15 +48,23 @@ class ViewDocumentationTest extends TestCase
     /** @test */
     public function view_a_documentation_page()
     {
-        $response = $this->get('/docs/9.9/some-page');
+        Storage::fake('docs');
+        Storage::disk('docs')->put('9.9/test-page.md', '# Test title');
+
+        $this->assertTrue(Storage::disk('docs')->exists('9.9/test-page.md'));
+
+        $response = $this->get('/docs/9.9/test-page');
 
         $response->assertOk();
         $response->assertViewIs('documentation');
+        $response->assertSee('<h1>Test title</h1>');
     }
 
     /** @test */
     public function a_request_to_a_non_exisiting_page_should_return_a_404()
     {
+        Storage::fake('docs');
+
         $response = $this->get('/docs/9.9/page-does-not_exist');
 
         $response->assertNotFound();
