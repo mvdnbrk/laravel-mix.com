@@ -10,7 +10,7 @@ return [
     | Here you may specify which page should be displayed as a default.
     */
 
-    'default_page' => env('DOCUMENTATION_DEFAULT_PAGE', 'index'),
+    'default_page' => env('DOCUMENTATION_DEFAULT_PAGE', 'installation'),
 
     /*
     |--------------------------------------------------------------------------
