@@ -62,4 +62,21 @@ class Documentation
 
         return null;
     }
+
+    /**
+     * Get the documentation index page.
+     *
+     * @param  string  $version
+     * @return string|null
+     */
+    public function getIndex($version)
+    {
+        $path = "{$version}/index.md";
+
+        if (Storage::disk('docs')->exists($path)) {
+            return (new ParsedownExtra())->text(Storage::disk('docs')->get($path));
+        }
+
+        return null;
+    }
 }
