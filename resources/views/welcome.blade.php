@@ -3,7 +3,7 @@
 @section('body')
     <div class="min-h-screen flex items-center justify-center">
         <div class="flex flex-col items-center">
-            @include('svg.logo')
+            @include('svg.laravel-mix-logo', ['class' => 'w-64'])
 
             <p class="mt-6 text-lg px-4 text-center leading-normal">An elegant wrapper around Webpack for the 80% use case.</p>
 
