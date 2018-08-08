@@ -47,3 +47,22 @@ a {
 a:hover {
     @apply text-blue;
 }
+
+.docs-index h2 {
+    @apply pb-1;
+    @apply border-b;
+    @apply border-dotted;
+    @apply text-sm;
+    @apply text-grey-dark;
+    @apply uppercase;
+}
+
+.docs-index > ul {
+    @apply list-reset;
+}
+
+.docs-index > ul > li > ul {
+    @apply list-reset;
+    @apply leading-normal;
+    @apply text-sm;
+}
