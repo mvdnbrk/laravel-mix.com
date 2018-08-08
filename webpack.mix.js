@@ -6,7 +6,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
   .options({
     postCss: [
       require('postcss-import')(),
-      require('tailwindcss')(/* './path/to/tailwind.js' */),
+      require('tailwindcss')('./tailwind.js'),
       require('postcss-nesting')(),
     ]
   })
