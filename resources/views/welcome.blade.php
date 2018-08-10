@@ -11,7 +11,7 @@
 
             <div class="md:flex mt-16">
                 <a
-                    href="/docs"
+                    href="{{ $default_docs_start_page }}"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
                 >
                     @include('svg.icons.file-alt-regular', ['class' => 'fill-current mr-2 w-4 h-4'])

@@ -8,6 +8,26 @@ use Illuminate\Support\Facades\Storage;
 class Documentation
 {
     /**
+     * Get the default page of the documentation.
+     *
+     * @return string
+     */
+    public function defaultPage()
+    {
+        return config('documentation.default_page');
+    }
+
+    /**
+     * Get the default start page of the documentation.
+     *
+     * @return string
+     */
+    public function defaultStartPage()
+    {
+        return "/docs/{$this->defaultVersion()}/{$this->defaultPage()}";
+    }
+
+    /**
      * Get the default version of the documentation.
      *
      * @return string

@@ -100,4 +100,23 @@ class DocumentationTest extends TestCase
         $this->assertTrue($this->documentation->isVersion('1.0'));
         $this->assertFalse($this->documentation->isVersion('invalid-version'));
     }
+
+    /** @test */
+    public function it_can_retrieve_the_default_documentation_page()
+    {
+        config(['documentation.default_page' => 'test-page']);
+
+        $this->assertEquals('test-page', $this->documentation->defaultPage());
+    }
+
+    /** @test */
+    public function it_can_retrieve_the_default_documentation_start_page()
+    {
+        config(['documentation.versions' => [
+            '1.0',
+        ]]);
+        config(['documentation.default_page' => 'test-page']);
+
+        $this->assertEquals('/docs/1.0/test-page', $this->documentation->defaultStartPage());
+    }
 }
