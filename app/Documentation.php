@@ -74,9 +74,24 @@ class Documentation
         $path = "{$version}/index.md";
 
         if (Storage::disk('docs')->exists($path)) {
-            return (new ParsedownExtra())->text(Storage::disk('docs')->get($path));
+            return $this->replaceLinks(
+                $version,
+                (new ParsedownExtra())->text(Storage::disk('docs')->get($path))
+            );
         }
 
         return null;
+    }
+
+    /**
+     * Replace the version place-holder in links.
+     *
+     * @param  string  $version
+     * @param  string  $content
+     * @return string
+     */
+    public static function replaceLinks($version, $content)
+    {
+        return str_replace('{{version}}', $version, $content);
     }
 }
