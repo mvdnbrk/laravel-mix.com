@@ -44,12 +44,7 @@
                 </a>
             </div>
 
-            <div class="flex items-center mt-32 text-grey-light text-xs">
-                <span>proudly hosted with</span>
-                <a href="https://m.do.co/c/7a24c68b1e6d" class="text-grey-light hover:text-blue-light">
-                    @include('svg.digital-ocean-logo', ['class' => 'ml-2 fill-current w-24'])
-                </a>
-            </div>
+            @include('partials.footer')
         </div>
     </div>
 @endsection
