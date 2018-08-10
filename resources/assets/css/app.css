@@ -16,14 +16,21 @@ html, body {
 }
 
 h1 {
+    @apply text-3xl;
+    @apply font-semibold;
     @apply mb-8;
     @apply pb-2;
-    @apply border-b;
-    @apply border-grey-dark;
 }
 
 h2, h3, h4, h5, h6, p, ul, ol, blockquote, pre {
     @apply mb-4;
+}
+
+blockquote {
+    @apply px-2;
+    @apply text-grey-darker;
+    @apply border-l-4;
+    @apply border-grey-light;
 }
 
 code {
@@ -33,11 +40,12 @@ code {
 pre {
     @apply p-4;
     @apply bg-grey-lighter;
+    @apply border;
     @apply rounded;
 }
 
 li {
-    @apply p-1;
+    @apply py-1;
 }
 
 a {
@@ -51,6 +59,7 @@ a:hover {
 
 .docs-index h2 {
     @apply pb-1;
+    @apply mb-2;
     @apply border-b;
     @apply border-dotted;
     @apply text-sm;
