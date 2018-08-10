@@ -7,7 +7,7 @@
     <div class="container mx-auto">
         <div class="flex">
             <section class="flex flex-col xl:w-1/5 p-8 border-r">
-                <div class="flex justify-center mb-12">
+                <div class="flex justify-center mb-10">
                     <a href="{{ config('app.url') }}">
                         @include('svg.laravel-mix-logo', ['class' => 'w-32 h-8'])
                     </a>
@@ -17,7 +17,7 @@
                 </div>
             </section>
 
-            <article class="mt-16 xl:w-4/5 p-8">
+            <article class="mt-12 xl:w-4/5 p-8">
                 {!! $content !!}
             </article>
         </div>
