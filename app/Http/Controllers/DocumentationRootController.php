@@ -14,6 +14,6 @@ class DocumentationRootController extends DocumentationBaseController
      */
     public function show()
     {
-        return redirect('/docs/'.$this->documentation->defaultVersion(), 301);
+        return redirect('/docs/'.$this->documentation->defaultVersion(), 302);
     }
 }

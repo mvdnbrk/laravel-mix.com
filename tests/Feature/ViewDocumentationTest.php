@@ -21,7 +21,7 @@ class ViewDocumentationTest extends TestCase
     {
         $response = $this->get('/docs');
 
-        $response->assertStatus(301);
+        $response->assertStatus(302);
         $response->assertRedirect('/docs/9.9');
     }
 
