@@ -38,6 +38,7 @@ code {
 }
 
 pre {
+    @apply overflow-x-auto;
     @apply p-4;
     @apply bg-grey-lighter;
     @apply border;
