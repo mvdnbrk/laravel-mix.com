@@ -4,6 +4,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Documentation versions.
+    |--------------------------------------------------------------------------
+    |
+    | Here you can specify all versions of the documentation.
+    | Documentation files should be placed in /storage/docs/{version}.
+    */
+
+    'versions' => [
+        '2.1',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Default page.
     |--------------------------------------------------------------------------
     |
@@ -35,19 +48,6 @@ return [
 
     'excluded_pages' => [
         'readme',
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Documentation versions.
-    |--------------------------------------------------------------------------
-    |
-    | Here you can specify all versions of the documentation.
-    | Documentation files should be placed in /storage/docs/{version}.
-    */
-
-    'versions' => [
-        '2.1',
     ],
 
 ];
