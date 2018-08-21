@@ -3,6 +3,7 @@
 namespace App;
 
 use ParsedownExtra;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
 class Documentation
@@ -74,6 +75,10 @@ class Documentation
      */
     public function get($version, $page)
     {
+        if ($this->isExcludedPage($page)) {
+            return null;
+        }
+
         $path = "{$version}/{$page}.md";
 
         if (Storage::disk('docs')->exists($path)) {
@@ -101,6 +106,18 @@ class Documentation
         }
 
         return null;
+    }
+
+    /**
+     * Determines if a page is excluded from the documentation.
+     *
+     * @param string  $page
+     * @return boolean
+     */
+    public function isExcludedPage($page)
+    {
+        return collect(config('documentation.excluded_pages'))
+            ->contains(Str::lower($page));
     }
 
     /**

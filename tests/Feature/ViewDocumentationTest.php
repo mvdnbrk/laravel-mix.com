@@ -69,4 +69,18 @@ class ViewDocumentationTest extends TestCase
 
         $response->assertNotFound();
     }
+
+    /** @test */
+    public function a_request_to_an_excluded_documentation_page_should_return_a_404()
+    {
+        Storage::fake('docs');
+        Storage::disk('docs')->put('9.9/excluded.md', '# Excluded page');
+        config(['documentation.excluded_pages' => 'excluded']);
+
+        $this->assertTrue(Storage::disk('docs')->exists('9.9/excluded.md'));
+
+        $response = $this->get('/docs/9.9/excluded');
+
+        $response->assertNotFound();
+    }
 }

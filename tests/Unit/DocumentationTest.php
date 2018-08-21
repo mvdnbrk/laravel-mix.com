@@ -119,4 +119,14 @@ class DocumentationTest extends TestCase
 
         $this->assertEquals('/docs/1.0/test-page', $this->documentation->defaultStartPage());
     }
+
+    /** @test */
+    public function it_can_determine_if_a_page_has_been_excluded()
+    {
+        config(['documentation.excluded_pages' => 'readme']);
+
+        $this->assertTrue($this->documentation->isExcludedPage('readme'));
+        $this->assertTrue($this->documentation->isExcludedPage('README'));
+        $this->assertTrue($this->documentation->isExcludedPage('ReadMe'));
+    }
 }
