@@ -77,7 +77,7 @@ class DocumentationTest extends TestCase
     }
 
     /** @test */
-    public function if_a_default_version_is_configured_that_does_not_exits_it_will_fallback_to_the_latest_available_version()
+    public function if_a_default_version_is_configured_that_does_not_exist_it_will_fallback_to_the_latest_available_version()
     {
         config(['documentation.versions' => [
             '2.0',
