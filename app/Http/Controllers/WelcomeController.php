@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Documentation;
-
-class WelcomeController extends Controller
+class WelcomeController extends DocumentationBaseController
 {
     public function show()
     {
-        $default_docs_start_page = (new Documentation)->defaultStartPage();
+        $default_docs_start_page = $this->documentation->defaultStartPage();
 
         return view('welcome', compact('default_docs_start_page'));
     }
