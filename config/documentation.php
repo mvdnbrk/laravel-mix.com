@@ -4,10 +4,21 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Latest release.
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the latest release version of your package.
+    | If no value is specified we will fall back to the default version.
+    */
+
+    'latest_release' => env('DOCUMENTATION_LATEST_RELEASE', null),
+
+    /*
+    |--------------------------------------------------------------------------
     | Documentation versions.
     |--------------------------------------------------------------------------
     |
-    | Here you can specify all versions of the documentation.
+    | Here you may specify all versions of the documentation.
     | Documentation files should be placed in /storage/docs/{version}.
     */
 

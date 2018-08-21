@@ -88,6 +88,20 @@ class Documentation
     }
 
     /**
+     * Get the latest release version of the package.
+     *
+     * @return string
+     */
+    public function latestRelease()
+    {
+        if ($latest = config('documentation.latest_release')) {
+            return $latest;
+        }
+
+        return $this->defaultVersion();
+    }
+
+    /**
      * Determines if a page is excluded from the documentation.
      *
      * @param string  $page

@@ -17,6 +17,29 @@ class DocumentationTest extends TestCase
     }
 
     /** @test */
+    public function it_can_retrieve_the_latest_release()
+    {
+        config(['documentation.latest_release' => '1.2.99']);
+
+        $release = $this->documentation->latestRelease();
+
+        $this->assertEquals('1.2.99', $release);
+    }
+
+    /** @test */
+    public function if_there_is_no_latest_release_version_specified_we_will_fall_back_to_the_default_version()
+    {
+        config(['documentation.latest_release' => null]);
+        config(['documentation.versions' => [
+            '1.0',
+        ]]);
+
+        $release = $this->documentation->latestRelease();
+
+        $this->assertEquals('1.0', $release);
+    }
+
+    /** @test */
     public function it_can_retrieve_a_collection_of_all_versions_of_the_documentation()
     {
         config(['documentation.versions' => [

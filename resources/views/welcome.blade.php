@@ -7,11 +7,11 @@
 
             <p class="mt-6 text-lg px-4 text-center leading-normal">An elegant wrapper around Webpack for the 80% use case.</p>
 
-            <p class="flex justify-center mt-6 text-sm text-grey">v2.1.14</p>
+            <p class="flex justify-center mt-6 text-sm text-grey">{{ $latest_release }}</p>
 
             <div class="md:flex mt-16">
                 <a
-                    href="{{ $default_docs_start_page }}"
+                    href="{{ $documentation_url }}"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
                 >
                     @include('svg.icons.file-alt-regular', ['class' => 'fill-current mr-2 w-4 h-4'])
