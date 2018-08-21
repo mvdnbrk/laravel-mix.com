@@ -45,27 +45,6 @@ class Documentation
     }
 
     /**
-     * Determine if the given version is a valid version.
-     *
-     * @param  string  $version
-     * @return bool
-     */
-    public function isVersion($version)
-    {
-        return $this->versions()->contains($version);
-    }
-
-    /**
-     * Get all the versions of the documentation.
-     *
-     * @return \Illuminate\Support\Collection
-     */
-    public function versions()
-    {
-        return collect(config('documentation.versions'));
-    }
-
-    /**
      * Get the given documentation page.
      * Returns null if the given page does not exist.
      *
@@ -121,6 +100,17 @@ class Documentation
     }
 
     /**
+     * Determine if the given version is a valid version.
+     *
+     * @param  string  $version
+     * @return bool
+     */
+    public function isVersion($version)
+    {
+        return $this->versions()->contains($version);
+    }
+
+    /**
      * Replace the version place-holder in links.
      *
      * @param  string  $version
@@ -130,5 +120,15 @@ class Documentation
     public static function replaceLinks($version, $content)
     {
         return str_replace('{{version}}', $version, $content);
+    }
+
+    /**
+     * Get all the versions of the documentation.
+     *
+     * @return \Illuminate\Support\Collection
+     */
+    public function versions()
+    {
+        return collect(config('documentation.versions'));
     }
 }
