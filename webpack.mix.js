@@ -14,7 +14,9 @@ mix.postCss('resources/css/app.css', 'public/css')
         'code',
         'pre',
         'blockquote',
+        'carbon-ads',
     ],
+    whitelistPatterns: [/carbon.*/],
     whitelistPatternsChildren: [/^docs-index$/]
   })
 
