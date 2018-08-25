@@ -12,6 +12,14 @@
                         @include('svg.laravel-mix-logo', ['class' => 'w-32 h-8'])
                     </a>
                 </div>
+                <div>
+                    <script
+                        async
+                        type="text/javascript"
+                        src="//cdn.carbonads.com/carbon.js?serve=CK7DV27M&placement=laravel-mixcom"
+                        id="_carbonads_js">
+                    </script>
+                </div>
                 <div class="docs-index">
                     {!! $index !!}
                 </div>
