@@ -7,7 +7,7 @@
     @include('partials.header')
     <div class="container mx-auto">
         <div class="flex">
-            <section class="hidden flex flex-col lg:w-1/4 xl:w-1/5 p-8 border-r">
+            <section class="flex flex-col lg:w-1/4 xl:w-1/5 p-8 border-r">
                 <div>
                     <script
                         async
