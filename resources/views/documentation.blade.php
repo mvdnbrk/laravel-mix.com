@@ -4,15 +4,7 @@
 ])
 
 @section('body')
-    <header class="flex items-center bg-white h-16 z-50 pin-t sticky border-b">
-        <div class="container mx-auto">
-            <div class="px-10">
-                <a href="{{ config('app.url') }}">
-                    @include('svg.laravel-mix-logo', ['class' => 'h-12'])
-                </a>
-            </div>
-        </div>
-    </header>
+    @include('partials.header')
     <div class="container mx-auto">
         <div class="flex">
             <section class="hidden flex flex-col lg:w-1/4 xl:w-1/5 p-8 border-r">
@@ -33,7 +25,6 @@
                 {!! $content !!}
             </article>
         </div>
-
-        @include('partials.footer')
     </div>
+    @include('partials.footer')
 @endsection
