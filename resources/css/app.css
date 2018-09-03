@@ -38,7 +38,9 @@ blockquote {
 
 code[class*="language-"],
 pre[class*="language-"] {
+    @apply text-sm;
     @apply bg-grey-lighter;
+    @apply mb-4;
 }
 
 pre {
