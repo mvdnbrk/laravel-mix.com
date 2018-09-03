@@ -9,6 +9,7 @@
 @import "tailwindcss/utilities";
 
 @import "carbon";
+@import "prismjs";
 
 /* Add custom utilities here... */
 html, body {
@@ -35,14 +36,12 @@ blockquote {
     @apply border-grey-light;
 }
 
-code {
+code[class*="language-"],
+pre[class*="language-"] {
     @apply bg-grey-lighter;
 }
 
 pre {
-    @apply overflow-x-auto;
-    @apply p-4;
-    @apply bg-grey-lighter;
     @apply border;
     @apply rounded;
 }
