@@ -5,19 +5,24 @@
 
 @section('body')
     @include('partials.header')
-    <div class="container mx-auto">
-        <div class="flex">
-            <section class="flex flex-col lg:w-1/4 xl:w-1/5 p-8 border-r">
+
+    <div class="max-w-3xl mx-auto px-6">
+        <div class="lg:flex -mx-6">
+            <nav id="nav" class="hidden w-full lg:block lg:w-1/4 xl:w-1/5 px-6 pt-10 lg:border-r z-40">
                 @include('partials.carbonads')
                 <div class="docs-index">
                     {!! $index !!}
                 </div>
-            </section>
-
-            <article class="lg:w-3/4 xl:w-4/5 p-8">
+            </nav>
+            <article id="content" class="w-full lg:w-3/4 xl:w-4/5 pt-10 px-6">
                 {!! $content !!}
             </article>
         </div>
     </div>
+
     @include('partials.footer')
+
+    @push('scripts')
+        <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
+    @endpush
 @endsection

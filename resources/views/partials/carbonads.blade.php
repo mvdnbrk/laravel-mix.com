@@ -1,4 +1,4 @@
-<div>
+<div class="hidden lg:block">
     <script
         async
         type="text/javascript"

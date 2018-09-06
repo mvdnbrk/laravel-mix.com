@@ -32,11 +32,10 @@
 
     <body>
 
-    <div id="app" class="border-t-4">
+    <div id="app">
         @yield('body')
     </div>
 
-    <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
-
+    @stack('scripts')
     </body>
 </html>

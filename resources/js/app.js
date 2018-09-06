@@ -1,6 +1,7 @@
-import Prism from 'prismjs';
+import './toggle-menu'
+import Prism from 'prismjs'
 
-Prism.highlightAll();
+Prism.highlightAll()
 
 /**
  * First we will load all of this project's JavaScript dependencies which
