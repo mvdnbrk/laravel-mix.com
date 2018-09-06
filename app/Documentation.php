@@ -81,7 +81,7 @@ class Documentation
 
         return $this->replaceLinks(
             $version,
-            (new ParsedownExtra())->text(Storage::disk('docs')->get($path))
+            (new ParsedownExtra())->text(Storage::disk('docs')->get($this->getIndexPath($version)))
         );
     }
 
