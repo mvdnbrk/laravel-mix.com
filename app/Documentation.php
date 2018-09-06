@@ -75,16 +75,25 @@ class Documentation
      */
     public function getIndex($version)
     {
-        $path = "{$version}/index.md";
-
-        if (Storage::disk('docs')->exists($path)) {
-            return $this->replaceLinks(
-                $version,
-                (new ParsedownExtra())->text(Storage::disk('docs')->get($path))
-            );
+        if (! Storage::disk('docs')->exists($this->getIndexPath($version))) {
+            return null;
         }
 
-        return null;
+        return $this->replaceLinks(
+            $version,
+            (new ParsedownExtra())->text(Storage::disk('docs')->get($path))
+        );
+    }
+
+    /**
+     * Get the documentation index payh.
+     *
+     * @param  string  $version
+     * @return string
+     */
+    public function getIndexPath($version)
+    {
+        return $version.'/'.config('documentation.table_of_contents').'.md';
     }
 
     /**
@@ -110,6 +119,7 @@ class Documentation
     public function isExcludedPage($page)
     {
         return collect(config('documentation.excluded_pages'))
+            ->push(config('documentation.table_of_contents'))
             ->contains(Str::lower($page));
     }
 

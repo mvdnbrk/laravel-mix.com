@@ -50,11 +50,25 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Table of contents.
+    |--------------------------------------------------------------------------
+    |
+    |  Here you may specify where your index page lives.
+    |  The "table of contents" page  page will be
+    |  excluded by default from viewing.
+    |
+    */
+
+    'table_of_contents' => env('DOCUMENTATION_INDEX', 'index'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Excluded pages.
     |--------------------------------------------------------------------------
     |
     | Here you may specify which pages are excluded from the documentation.
-    / The readme page is excluded by default.
+    | The readme and "table of contents" page which you specified in the
+    | section above will be excluded by default.
     */
 
     'excluded_pages' => [

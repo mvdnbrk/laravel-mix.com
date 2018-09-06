@@ -152,4 +152,20 @@ class DocumentationTest extends TestCase
         $this->assertTrue($this->documentation->isExcludedPage('README'));
         $this->assertTrue($this->documentation->isExcludedPage('ReadMe'));
     }
+
+    /** @test */
+    public function it_can_retrieve_the_index_path()
+    {
+        config(['documentation.table_of_contents' => 'test-table-of-contents']);
+
+        $this->assertEquals('test-version/test-table-of-contents.md', $this->documentation->getIndexPath('test-version'));
+    }
+
+    /** @test */
+    public function the_table_of_contents_page_is_always_excluded_as_a_standalone_page()
+    {
+        config(['documentation.table_of_contents' => 'test-table-of-contents']);
+
+        $this->assertTrue($this->documentation->isExcludedPage('test-table-of-contents'));
+    }
 }
