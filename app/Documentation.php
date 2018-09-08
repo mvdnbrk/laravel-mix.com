@@ -39,7 +39,7 @@ class Documentation
             return config('documentation.default_version');
         }
 
-        return $this->versions()->reject(function($value) {
+        return $this->versions()->reject(function ($value) {
             return $value == 'master';
         })->first();
     }
