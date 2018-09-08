@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use App\Documentation;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
@@ -167,5 +168,15 @@ class DocumentationTest extends TestCase
         config(['documentation.table_of_contents' => 'test-table-of-contents']);
 
         $this->assertTrue($this->documentation->isExcludedPage('test-table-of-contents'));
+    }
+
+    /** @test */
+    public function it_can_retrieve_the_documentation_index_page()
+    {
+        Storage::fake('docs');
+        Storage::disk('docs')->put('version999/test-index.md', '# index');
+        config(['documentation.table_of_contents' => 'test-index']);
+
+        $this->assertEquals('<h1>index</h1>', $this->documentation->getIndex('version999'));
     }
 }

@@ -75,13 +75,15 @@ class Documentation
      */
     public function getIndex($version)
     {
-        if (! Storage::disk('docs')->exists($this->getIndexPath($version))) {
+        $path = $this->getIndexPath($version);
+
+        if (! Storage::disk('docs')->exists($path)) {
             return null;
         }
 
         return $this->replaceLinks(
             $version,
-            (new ParsedownExtra())->text(Storage::disk('docs')->get($this->getIndexPath($version)))
+            (new ParsedownExtra())->text(Storage::disk('docs')->get($path))
         );
     }
 
