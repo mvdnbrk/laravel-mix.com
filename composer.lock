@@ -412,16 +412,16 @@
         },
         {
             "name": "ipunkt/laravel-analytics",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ipunkt/laravel-analytics.git",
-                "reference": "640e4523b71f801e507b024fee69dfe760912481"
+                "reference": "83503d163f3064055f18ac2786338da4332f6190"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ipunkt/laravel-analytics/zipball/640e4523b71f801e507b024fee69dfe760912481",
-                "reference": "640e4523b71f801e507b024fee69dfe760912481",
+                "url": "https://api.github.com/repos/ipunkt/laravel-analytics/zipball/83503d163f3064055f18ac2786338da4332f6190",
+                "reference": "83503d163f3064055f18ac2786338da4332f6190",
                 "shasum": ""
             },
             "require": {
@@ -437,6 +437,16 @@
                 "martijnc/php-csp": "For handling Content Security Policy matters"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Ipunkt\\LaravelAnalytics\\AnalyticsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Analytics": "Ipunkt\\LaravelAnalytics\\AnalyticsFacade"
+                    }
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "Ipunkt\\LaravelAnalytics\\": "src/"
@@ -461,7 +471,7 @@
                 "php",
                 "statistics"
             ],
-            "time": "2018-05-03T07:40:09+00:00"
+            "time": "2018-09-10T06:04:38+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -2680,16 +2690,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "181c4502d8f34db7aed7bfe88d4f87875b8e947a"
+                "reference": "e79cd403fb77fc8963a99ecc30e80ddd885b3311"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/181c4502d8f34db7aed7bfe88d4f87875b8e947a",
-                "reference": "181c4502d8f34db7aed7bfe88d4f87875b8e947a",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/e79cd403fb77fc8963a99ecc30e80ddd885b3311",
+                "reference": "e79cd403fb77fc8963a99ecc30e80ddd885b3311",
                 "shasum": ""
             },
             "require": {
@@ -2708,7 +2718,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -2737,7 +2747,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2018-03-03T17:56:25+00:00"
+            "time": "2018-06-30T13:14:06+00:00"
         },
         {
             "name": "fzaninotto/faker",
@@ -3582,16 +3592,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.3.4",
+            "version": "7.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "0356331bf62896dc56e3a15030b23b73f38b2935"
+                "reference": "7b331efabbb628c518c408fdfcaf571156775de2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0356331bf62896dc56e3a15030b23b73f38b2935",
-                "reference": "0356331bf62896dc56e3a15030b23b73f38b2935",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7b331efabbb628c518c408fdfcaf571156775de2",
+                "reference": "7b331efabbb628c518c408fdfcaf571156775de2",
                 "shasum": ""
             },
             "require": {
@@ -3662,7 +3672,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-09-05T09:58:53+00:00"
+            "time": "2018-09-08T15:14:29+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
