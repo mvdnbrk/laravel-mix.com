@@ -81,7 +81,7 @@ class Documentation
             return null;
         }
 
-        return $this->replaceLinks(
+        return $this->replaceVersion(
             $version,
             (new ParsedownExtra())->text(Storage::disk('docs')->get($path))
         );
@@ -143,7 +143,7 @@ class Documentation
      * @param  string  $content
      * @return string
      */
-    public static function replaceLinks($version, $content)
+    public static function replaceVersion($version, $content)
     {
         return str_replace('{{version}}', $version, $content);
     }
