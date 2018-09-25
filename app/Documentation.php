@@ -81,9 +81,8 @@ class Documentation
             return null;
         }
 
-        return $this->replaceVersion(
-            $version,
-            (new ParsedownExtra())->text(Storage::disk('docs')->get($path))
+        return (new ParsedownExtra())->text(
+            $this->replaceLinks($version, Storage::disk('docs')->get($path))
         );
     }
 
@@ -137,13 +136,41 @@ class Documentation
     }
 
     /**
+     * Replace the version place-holder in links
+     * and convert links to a full url.
+     *
+     * @param  string  $version
+     * @param  string  $content
+     * @return string
+     */
+    public function replaceLinks($version, $content)
+    {
+        return $this->replaceLinksToFullUrl(
+            $this->replaceVersion($version, $content)
+        );
+    }
+
+    /**
+     * Replace the all links to a full url.
+     *
+     * @param  string  $content
+     * @return string
+     */
+    public function replaceLinksToFullUrl($content)
+    {
+        return preg_replace_callback('/\([\/](.*)\)/m', function ($matches) {
+            return '('.url($matches[1]).')';
+        }, $content);
+    }
+
+    /**
      * Replace the version place-holder in links.
      *
      * @param  string  $version
      * @param  string  $content
      * @return string
      */
-    public static function replaceVersion($version, $content)
+    public function replaceVersion($version, $content)
     {
         return str_replace('{{version}}', $version, $content);
     }

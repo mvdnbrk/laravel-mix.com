@@ -171,6 +171,22 @@ class DocumentationTest extends TestCase
     }
 
     /** @test */
+    public function it_can_replace_a_version_placeholder_in_links()
+    {
+        tap($this->documentation->replaceVersion('1.1', '/docs/{{version}}/installation'), function ($string) {
+            $this->assertEquals('/docs/1.1/installation', $string);
+        });
+    }
+
+    /** @test */
+    public function it_can_replace_a_link_to_a_full_url()
+    {
+        tap($this->documentation->replaceLinksToFullUrl('[Installation](/docs/1.1/installation)'), function ($string) {
+            $this->assertEquals('[Installation]('.config('app.url').'/docs/1.1/installation)', $string);
+        });
+    }
+
+    /** @test */
     public function it_can_retrieve_the_documentation_index_page()
     {
         Storage::fake('docs');
@@ -178,5 +194,14 @@ class DocumentationTest extends TestCase
         config(['documentation.table_of_contents' => 'test-index']);
 
         $this->assertEquals('<h1>index</h1>', $this->documentation->getIndex('version999'));
+    }
+
+    /** @test */
+    public function it_can_retrieve_the_documentation_index_page_and_it_has_full_urls()
+    {
+        Storage::fake('docs');
+        Storage::disk('docs')->put('version999/index.md', '[Installation](/docs/{{version}}/installation)');
+
+        $this->assertEquals('<p><a href="'.config('app.url').'/docs/version999/installation">Installation</a></p>', $this->documentation->getIndex('version999'));
     }
 }
