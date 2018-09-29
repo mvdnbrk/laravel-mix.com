@@ -1,7 +1,6 @@
 let mix = require('laravel-mix')
 require('laravel-mix-purgecss')
 
-
 mix.babelConfig({
     plugins: [
         ['prismjs', {
@@ -25,6 +24,7 @@ mix.js('resources/js/app.js', 'public/js')
         'pre',
         'blockquote',
         'carbon-ads',
+        'lg:max-h-(screen-22)',
     ],
     whitelistPatterns: [/carbon.*/],
     whitelistPatternsChildren: [/^docs-index$/]
