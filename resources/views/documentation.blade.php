@@ -14,9 +14,11 @@
                     {!! $index !!}
                 </div>
             </nav>
-            <article id="content" class="w-full lg:w-3/4 xl:w-4/5 pt-10 px-6">
+            <article id="content" class="w-full lg:w-3/4 xl:w-3/5 pt-10 px-6">
                 {!! $content !!}
             </article>
+            <div class="hidden pt-10 px-6 xl:block xl:w-1/5 text-sm">
+            </div>
         </div>
     </div>
 
