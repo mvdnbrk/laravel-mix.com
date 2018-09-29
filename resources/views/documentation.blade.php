@@ -8,7 +8,7 @@
 
     <div class="max-w-3xl mx-auto px-6">
         <div class="lg:flex -mx-6">
-            <nav id="nav" class="hidden w-full lg:block lg:w-1/4 xl:w-1/5 px-6 pt-10 lg:border-r z-40">
+            <nav id="nav" class="hidden w-full lg:block lg:w-1/4 xl:w-1/5 px-6 pt-4 lg:border-r z-40 lg:max-h-(screen-22) pin-22 lg:sticky">
                 <div class="docs-index">
                     {!! $index !!}
                 </div>
@@ -16,7 +16,7 @@
             <article id="content" class="w-full lg:w-3/4 xl:w-3/5 pt-10 px-6">
                 {!! $content !!}
             </article>
-            <div class="hidden pt-10 px-6 xl:flex flex-col xl:w-1/5 text-sm items-center">
+            <div class="hidden pt-4 px-6 xl:flex flex-col xl:w-1/5 text-sm items-center lg:max-h-(screen-22) pin-22 lg:sticky">
                 @include('partials.carbonads')
                 <a
                     class="flex items-center justify-center mt-2 px-5 py-2 rounded border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
