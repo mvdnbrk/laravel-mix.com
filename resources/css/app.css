@@ -25,7 +25,13 @@ h1 {
     @apply pb-2;
 }
 
-h2, h3, h4, h5, h6, p, ul, ol, blockquote, pre {
+h2, h3, h4, h5, h6, ul, ol, blockquote, pre {
+    @apply mt-6;
+    @apply mb-4;
+}
+
+p, ul {
+    @apply mt-0;
     @apply mb-4;
 }
 
