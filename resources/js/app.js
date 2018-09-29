@@ -3,6 +3,11 @@ import Prism from 'prismjs'
 
 Prism.highlightAll()
 
+let current = document.querySelectorAll(".docs-index a[href='" + window.location.href + "']");
+if (current.length) {
+    current[0].classList.toggle('is-active');
+}
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when

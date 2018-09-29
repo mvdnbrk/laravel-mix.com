@@ -82,6 +82,12 @@ a:hover {
     @apply text-sm;
 }
 
+a.is-active {
+    @apply cursor-default;
+    @apply font-semibold;
+    @apply text-blue;
+}
+
 .pin-22 {
     top: 5.5rem;
 }
