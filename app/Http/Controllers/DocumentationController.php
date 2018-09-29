@@ -28,6 +28,8 @@ class DocumentationController extends DocumentationBaseController
             'title' => count($title) ? $title->text() : null,
             'index' => $this->documentation->getIndex($version),
             'content' => $content,
+            'version' => $version,
+            'page' => $page,
         ]);
     }
 }

@@ -16,8 +16,16 @@
             <article id="content" class="w-full lg:w-3/4 xl:w-3/5 pt-10 px-6">
                 {!! $content !!}
             </article>
-            <div class="hidden pt-10 px-6 xl:block xl:w-1/5 text-sm">
+            <div class="hidden pt-10 px-6 xl:flex flex-col xl:w-1/5 text-sm items-center">
                 @include('partials.carbonads')
+                <a
+                    class="flex items-center justify-center mt-2 px-5 py-2 rounded border text-grey-darker no-underline hover:bg-grey-lighter hover:border-grey"
+                    href="{{ config('documentation.repository.url') }}/edit/{{ $version }}/{{ $page }}.md"
+                    target="_blank"
+                >
+                    @include('svg.icons.edit-pencil', ['class' => 'fill-current mr-2 w-3 h-3'])
+                    edit this page
+                </a>
             </div>
         </div>
     </div>

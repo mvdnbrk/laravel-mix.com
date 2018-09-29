@@ -75,4 +75,8 @@ return [
         'readme',
     ],
 
+    'repository' => [
+        'url' => 'https://github.com/mvdnbrk/laravel-mix-docs',
+    ]
+
 ];
