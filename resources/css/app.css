@@ -63,6 +63,7 @@ a:hover {
 
 .docs-index h2 {
     @apply pb-1;
+    @apply mt-0;
     @apply mb-2;
     @apply border-b;
     @apply border-dotted;
