@@ -1,5 +1,6 @@
 import './toggle-menu'
 import Prism from 'prismjs'
+import SmoothScroll from 'smoothscroll-for-websites'
 
 Prism.highlightAll()
 
