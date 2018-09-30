@@ -19,11 +19,6 @@ html, body {
     font-size: 16px;
 }
 
-blockquote, pre {
-    @apply mt-6;
-    @apply mb-4;
-}
-
 .header-link {
     @apply text-grey-dark;
     @apply relative;
@@ -48,23 +43,28 @@ p, ul, ol {
     @apply mb-4;
 }
 
+blockquote, pre {
+    @apply border;
+    @apply rounded;
+    @apply p-3;
+    @apply mt-6;
+    @apply mb-4;
+}
+
 blockquote {
-    @apply px-2;
     @apply text-grey-darker;
     @apply border-l-4;
     @apply border-grey-light;
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
-    @apply text-sm;
-    @apply bg-grey-lighter;
-    @apply mb-4;
+blockquote > p {
+    @apply mb-0;
 }
 
-pre {
-    @apply border;
-    @apply rounded;
+pre[class*="language-"] {
+    @apply bg-grey-lighter;
+    @apply p-3;
+    @apply text-sm;
 }
 
 li {
