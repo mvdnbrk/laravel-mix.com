@@ -1,0 +1,41 @@
+h1, h2, h3, h4 {
+    @apply mt-6;
+    @apply mb-4;
+}
+
+h1, h2, h3, h4 {
+    @apply font-semibold;
+}
+
+h1 {
+    @apply text-3xl;
+    @apply mt-0;
+    @apply pb-1;
+}
+
+h2 {
+    @apply text-2xl;
+}
+
+h3 {
+    @apply text-xl;
+}
+
+h4 {
+    @apply text-lg;
+}
+
+a {
+    @apply text-black;
+    @apply no-underline;
+}
+
+a:hover {
+    @apply text-blue;
+}
+
+a.is-active {
+    @apply cursor-default;
+    @apply font-semibold;
+    @apply text-blue;
+}
