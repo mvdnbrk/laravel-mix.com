@@ -26,6 +26,10 @@ mix.js('resources/js/app.js', 'public/js')
         'carbon-ads',
         'lg:max-h-(screen-22)',
         'min-h-(screen-16)',
+        'h1:hover .header-link',
+        'h2:hover .header-link',
+        'h3:hover .header-link',
+        'h4:hover .header-link',
     ],
     whitelistPatterns: [/carbon.*/],
     whitelistPatternsChildren: [/^docs-index$/]
