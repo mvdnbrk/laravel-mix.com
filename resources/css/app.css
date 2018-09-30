@@ -62,16 +62,6 @@ pre[class*="language-"] {
     @apply mb-4;
 }
 
-code {
-    padding-top: .2rem;
-    padding-bottom: .2rem;
-    padding-left: .4rem;
-    padding-right: .4rem;
-    @apply text-sm;
-    @apply bg-grey-lighter;
-    @apply rounded;
-}
-
 pre {
     @apply border;
     @apply rounded;
