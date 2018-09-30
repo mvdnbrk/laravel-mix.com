@@ -52,13 +52,52 @@ blockquote, pre {
 }
 
 blockquote {
-    @apply text-grey-darker;
-    @apply border-l-4;
-    @apply border-grey-light;
+    @apply flex;
+    @apply p-0;
+    @apply rounded;
+    @apply text-black;
+}
+
+blockquote > div {
+    @apply pt-4;
+    @apply pb-2;
+    @apply px-3;
+    @apply rounded-l;
 }
 
 blockquote > p {
+    @apply p-3;
     @apply mb-0;
+}
+
+blockquote.note {
+    @apply bg-orange;
+    @apply border-orange-dark;
+    @apply text-white;
+}
+
+blockquote.note > div {
+    @apply bg-orange-dark;
+}
+
+blockquote.note > p > code {
+    @apply bg-orange-lightest;
+    @apply text-orange-dark;
+}
+
+blockquote.tip {
+    @apply bg-blue;
+    @apply border-blue-dark;
+    @apply text-white;
+}
+
+blockquote.tip > div {
+    @apply bg-blue-dark;
+}
+
+blockquote.tip > p > code {
+    @apply bg-blue-lightest;
+    @apply text-blue-dark;
 }
 
 code {
@@ -77,6 +116,7 @@ pre > code {
 
 pre[class*="language-"] {
     @apply bg-grey-lighter;
+    @apply mb-6;
     @apply p-3;
     @apply text-sm;
 }
