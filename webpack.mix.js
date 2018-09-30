@@ -20,16 +20,16 @@ mix.js('resources/js/app.js', 'public/js')
   })
   .purgeCss({
     whitelist: [
+        'h1',
+        'h2',
+        'h3',
+        'h4',
         'code',
         'pre',
         'blockquote',
         'carbon-ads',
         'lg:max-h-(screen-22)',
         'min-h-(screen-16)',
-        'h1:hover .header-link',
-        'h2:hover .header-link',
-        'h3:hover .header-link',
-        'h4:hover .header-link',
     ],
     whitelistPatterns: [/carbon.*/],
     whitelistPatternsChildren: [/^docs-index$/]
