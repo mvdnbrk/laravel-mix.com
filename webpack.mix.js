@@ -4,7 +4,7 @@ require('laravel-mix-purgecss')
 mix.babelConfig({
     plugins: [
         ['prismjs', {
-            'languages': ['bash', 'css', 'javascript', 'markup']
+            'languages': ['bash', 'css', 'javascript', 'markup', 'php', 'sass', 'yaml']
         }]
     ]
 });
