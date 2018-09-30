@@ -27,12 +27,11 @@ mix.js('resources/js/app.js', 'public/js')
         'code',
         'pre',
         'blockquote',
-        'carbon-ads',
         'lg:max-h-(screen-22)',
         'min-h-(screen-16)',
     ],
     whitelistPatterns: [/carbon.*/],
-    whitelistPatternsChildren: [/^docs-index$/]
+    whitelistPatternsChildren: [/^docs-index$/, /^token$/]
   })
 
 if (mix.inProduction()) {
