@@ -61,6 +61,20 @@ blockquote > p {
     @apply mb-0;
 }
 
+code {
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    padding-left: .4rem;
+    padding-right: .4rem;
+    @apply text-sm;
+    @apply bg-grey-lighter;
+    @apply rounded;
+}
+
+pre > code {
+    @apply p-0;
+}
+
 pre[class*="language-"] {
     @apply bg-grey-lighter;
     @apply p-3;
