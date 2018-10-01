@@ -63,6 +63,13 @@ blockquote > div {
     @apply pb-2;
     @apply px-3;
     @apply rounded-l;
+    @apply hidden;
+}
+
+@screen sm {
+    blockquote > div {
+        @apply block;
+    }
 }
 
 blockquote > p {
