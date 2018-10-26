@@ -58,6 +58,16 @@ blockquote {
     @apply text-black;
 }
 
+blockquote > p > a {
+    @apply text-white;
+    @apply underline;
+}
+
+blockquote > p > a:hover {
+    @apply text-white;
+    @apply no-underline;
+}
+
 blockquote > div {
     @apply pt-4;
     @apply pb-2;
