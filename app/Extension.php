@@ -72,6 +72,22 @@ class Extension extends Model
         return "npmjs/{$this->name}.json";
     }
 
+    public function getKeyWordsAttribute()
+    {
+        $array = collect(json_decode($this->getJson()), true)->get('keywords');
+
+        return collect($array)->reject(function ($keyword) {
+            return in_array($keyword, [
+                \Illuminate\Support\Str::lower($this->getTitleAttribute()),
+                'laravel-mix',
+                'laravel mix',
+                'laravel',
+                'mix',
+                'webpack',
+            ]);
+        });
+    }
+
     /**
      * Get the latest published version number.
      *

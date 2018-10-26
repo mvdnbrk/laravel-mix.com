@@ -34,11 +34,18 @@
                 {{ $extension->version_count }} {{ str_plural('version', $extension->version_count) }}
             </div>
             @if ($extension->isGitRepository())
-            <div class="text-center pt-6">
-                <a href="{{ $extension->repositoryUrl }}">
-                    @include('svg.icons.github', ['class' => 'fill-current mr-2 w-8 h-8'])
-                </a>
-            </div>
+                <div class="text-center pt-6">
+                    <a href="{{ $extension->repositoryUrl }}">
+                        @include('svg.icons.github', ['class' => 'fill-current mr-2 w-8 h-8'])
+                    </a>
+                </div>
+            @endif
+            @if (count($extension->keyWords))
+                <div class="flex justify-center text-white pt-6">
+                    @foreach($extension->keyWords as $keyword)
+                        <div class="bg-blue-light rounded px-4 py-1 mx-2">{{ $keyword }}</div>
+                    @endforeach
+                </div>
             @endif
         </div>
         <div class="flex justify-center py-6">
