@@ -115,8 +115,15 @@ class UpdateExtensionModelFromJson implements ShouldQueue
 
     protected function stripLaravelMixFromName()
     {
-        $name = str_replace_first('mix-', '', $this->data->get('name'));
-        $name = str_replace_first('laravel-mix-', '', $this->data->get('name'));
+        $name = $this->data->get('name');
+
+        if (substr($name, 0, strlen('mix-')) == 'mix-') {
+            $name = substr($name, strlen('mix-'));
+        }
+
+        if (substr($name, 0, strlen('laravel-mix-')) == 'laravel-mix-') {
+            $name = substr($name, strlen('laravel-mix-'));
+        }
 
         return $name;
     }
