@@ -72,6 +72,12 @@ class Extension extends Model
         return "npmjs/{$this->name}.json";
     }
 
+    /**
+     * Get keywords for this extension.
+     * Exclude common used words like "Laravel".
+     *
+     * @return array
+     */
     public function getKeyWordsAttribute()
     {
         $array = collect(json_decode($this->getJson()), true)->get('keywords');
