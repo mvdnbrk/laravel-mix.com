@@ -25,10 +25,10 @@
                 </div>
             </div>
             <div class="p-4 text-center text-sm text-grey-dark">
-                {{ $extension->latestVersion }} - released {{ $extension->updated_at->diffForHumans() }}
+                latest {{ $extension->latestVersion }} - released {{ $extension->updated_at->diffForHumans() }}
             </div>
         </div>
-        <div class="flex justify-center p-6">
+        <div class="flex justify-center py-6">
             @include('partials.carbonads')
         </div>
         <div class="flex justify-center py-6">
@@ -41,7 +41,7 @@
                 <p>Work in progress here...<br>Please come back in a while.</p>
             </blockquote>
         </div>
-        <div class="py-12 text-center">
+        <div class="py-6 text-center border-t">
             <a href="{{ route('extensions.index') }}">back to index</a>
         </div>
      </div>
