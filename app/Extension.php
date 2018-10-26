@@ -91,7 +91,7 @@ class Extension extends Model
                 'mix',
                 'webpack',
             ]);
-        });
+        })->toArray();
     }
 
     /**
