@@ -25,6 +25,7 @@ mix.js('resources/js/app.js', 'public/js')
         'h3',
         'h4',
         'li',
+        'ul',
         'code',
         'pre',
         'blockquote',
