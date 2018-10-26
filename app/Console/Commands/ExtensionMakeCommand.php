@@ -64,6 +64,11 @@ class ExtensionMakeCommand extends Command
         ]);
 
         UpdateExtensionModelFromJson::dispatchNow($extension);
+
+        $this->callSilent('page-cache:clear', [
+            'slug' => route('extensions.index', [], false),
+        ]);
+
         $this->info('Extension added successfully!');
     }
 
