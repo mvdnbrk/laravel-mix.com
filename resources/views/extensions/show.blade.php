@@ -10,7 +10,7 @@
 
     <div class="max-w-3xl mx-auto px-6">
 
-        <div class="p-12 border-b">
+        <div class="py-12 border-b">
             <h1 class="m-0 pb-2 text-center">{{ $extension->title }}</h1>
             <div class="text-grey-darker text-center">{{ $extension->description }}</div>
             <div class="flex justify-center mt-6">
@@ -31,7 +31,7 @@
         <div class="flex justify-center p-6">
             @include('partials.carbonads')
         </div>
-        <div class="flex justify-center p-6">
+        <div class="flex justify-center py-6">
             <blockquote class="note">
                 <div>
                     <svg class="w-6 h-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -41,7 +41,7 @@
                 <p>Work in progress here...<br>Please come back in a while.</p>
             </blockquote>
         </div>
-        <div class="p-12 text-center">
+        <div class="py-12 text-center">
             <a href="{{ route('extensions.index') }}">back to index</a>
         </div>
      </div>

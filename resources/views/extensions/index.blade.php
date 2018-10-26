@@ -9,7 +9,7 @@
     ])
 
     <div class="max-w-3xl mx-auto px-6">
-        <h1 class="p-12 text-center">Discover Laravel Mix Extensions</h1>
+        <h1 class="py-12 text-center">Discover Laravel Mix Extensions</h1>
 
         <div class="flex flex-wrap -mx-2 -mb-4">
             @foreach($extensions as $extension)
@@ -32,7 +32,7 @@
                 </div>
             @endforeach
 
-            <div class="w-full text-center p-6 text-grey-darker">
+            <div class="w-full text-center py-6 text-grey-darker">
                 Would you like to be listed on this page? Please open an issue <a href="https://github.com/mvdnbrk/laravel-mix-docs/issues" target="_blank">here</a>
             </div>
         </div>
