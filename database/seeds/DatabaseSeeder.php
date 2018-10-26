@@ -23,7 +23,10 @@ class DatabaseSeeder extends Seeder
             'laravel-mix-svg-sprite',
             'laravel-mix-tailwind',
             'laravel-mix-versionhash',
+            'laravel-mix-merge-manifest',
             'laravel-mix-mjml',
+            'laravel-mix-sri',
+            'mix-html-builder',
             'mix-serve',
         ])->each(function ($package) {
             DB::table('extensions')->insert([
