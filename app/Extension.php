@@ -25,6 +25,20 @@ class Extension extends Model
     protected $dates = ['deleted_at'];
 
     /**
+     * The "booting" method of the model.
+     *
+     * @return void
+     */
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::addGlobalScope('sorted', function ($builder) {
+            $builder->orderBy('name', 'asc');
+        });
+    }
+
+    /**
      * Get the route key for the model.
      *
      * @return string
