@@ -3,8 +3,6 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
-use Illuminate\Foundation\Testing\WithFaker;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class ViewHomepageTest extends TestCase
 {
@@ -13,7 +11,7 @@ class ViewHomepageTest extends TestCase
     {
         $response = $this->get('/');
 
-        $response->assertStatus(200);
+        $response->assertOk();
         $response->assertViewIs('welcome');
     }
 }

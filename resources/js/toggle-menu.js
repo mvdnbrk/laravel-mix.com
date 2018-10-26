@@ -10,10 +10,12 @@ function toggleNav() {
     content.classList.toggle('fixed')
 }
 
-navOpen.addEventListener('click', () => {
-    toggleNav()
-});
+if (navOpen && navClose) {
+    navOpen.addEventListener('click', () => {
+        toggleNav()
+    });
 
-navClose.addEventListener('click', () => {
-    toggleNav()
-});
+    navClose.addEventListener('click', () => {
+        toggleNav()
+    });
+}

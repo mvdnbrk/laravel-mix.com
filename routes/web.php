@@ -12,7 +12,9 @@
 */
 
 Route::get('/', 'WelcomeController@show');
-Route::get('/extensions', 'ExtensionsController@show');
+
+Route::get('/extensions', 'ExtensionsController@index')->name('extensions.index');
+Route::get('/extensions/{extension}', 'ExtensionsController@show')->name('extensions.show');
 
 Route::get('/docs', 'DocumentationRootController@show');
 Route::get('/docs/{page}', 'DocumentationRedirectController@show');

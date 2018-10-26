@@ -9,8 +9,11 @@
         "erusev/parsedown-extra": "^0.7.1",
         "fideloper/proxy": "^4.0",
         "ipunkt/laravel-analytics": "^1.4",
+        "kitetail/zttp": "^0.3.0",
         "laravel/framework": "5.7.*",
+        "laravel/horizon": "^1.4",
         "laravel/tinker": "^1.0",
+        "nunomaduro/laravel-console-task": "^1.0",
         "predis/predis": "^1.1",
         "silber/page-cache": "^1.0",
         "symfony/dom-crawler": "^4.1"

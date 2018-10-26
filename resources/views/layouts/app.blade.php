@@ -19,11 +19,12 @@
         {
             "@context": "http://schema.org/",
             "@type": "Organization",
-            "url": "https://laravel-mix.com",
+            "name": "Laravel Mix",
             "logo": "https://laravel-mix.com/images/logo.png",
             "sameAs": [
                 "https://github.com/JeffreyWay/laravel-mix"
             ]
+            "url": "https://laravel-mix.com",
         }
         </script>
 
