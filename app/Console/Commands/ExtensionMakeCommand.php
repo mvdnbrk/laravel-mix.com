@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Extension;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Validator;
+use App\Jobs\UpdateExtensionModelFromJson;
 use App\Jobs\FetchPackageMetaDataFromNpmJsRegistry;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -58,10 +59,11 @@ class ExtensionMakeCommand extends Command
             return 1;
         }
 
-        Extension::create([
+        $extension = Extension::create([
             'name' => $name,
         ]);
 
+        UpdateExtensionModelFromJson::dispatchNow($extension);
         $this->info('Extension added successfully!');
     }
 
