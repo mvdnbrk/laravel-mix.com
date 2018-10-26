@@ -27,6 +27,19 @@
             <div class="p-4 text-center text-sm text-grey-dark">
                 latest {{ $extension->latestVersion }} - released {{ $extension->updated_at->diffForHumans() }}
             </div>
+            <div class="text-center text-sm">
+                {{ $extension->license }} license
+            </div>
+            <div class="text-center text-sm">
+                {{ $extension->version_count }} {{ str_plural('version', $extension->version_count) }}
+            </div>
+            @if ($extension->isGitRepository())
+            <div class="text-center pt-6">
+                <a href="{{ $extension->repositoryUrl }}">
+                    @include('svg.icons.github', ['class' => 'fill-current mr-2 w-8 h-8'])
+                </a>
+            </div>
+            @endif
         </div>
         <div class="flex justify-center py-6">
             @include('partials.carbonads')

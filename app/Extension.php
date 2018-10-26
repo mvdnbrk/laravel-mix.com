@@ -83,6 +83,36 @@ class Extension extends Model
     }
 
     /**
+     * Determine if this is a git repository.
+     *
+     * @return boolean
+     */
+    public function isGitRepository()
+    {
+        return collect(json_decode($this->repository, true))->get('type') === 'git';
+    }
+
+    /**
+     * Get the url of the repository.
+     *
+     * @return string
+     */
+    public function getRepositoryUrlAttribute()
+    {
+        $url = collect(json_decode($this->repository, true))->get('url');
+
+        if (substr($url, 0, strlen('git+')) == 'git+') {
+            $url = substr($url, strlen('git+'));
+        }
+
+        if (substr($url, -strlen('.git')) == '.git') {
+            $url = substr($url, 0, strlen($url) - strlen('.git'));
+        }
+
+        return $url;
+    }
+
+    /**
      * Get the title.
      *
      * @return string
