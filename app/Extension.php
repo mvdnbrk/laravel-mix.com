@@ -72,11 +72,21 @@ class Extension extends Model
         return "npmjs/{$this->name}.json";
     }
 
+    /**
+     * Get the latest published version number.
+     *
+     * @return string
+     */
     public function getLatestVersionAttribute()
     {
         return str_start($this->latest_dist_tag, 'v');
     }
 
+    /**
+     * Get the title.
+     *
+     * @return string
+     */
     public function getTitleAttribute()
     {
         return title_case(str_slug($this->slug, ' '));
