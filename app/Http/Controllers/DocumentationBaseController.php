@@ -10,14 +10,14 @@ class DocumentationBaseController extends BaseController
     /**
      * The documentation repository.
      *
-     * @var Documentation
+     * @var \App\Documentation
      */
     protected $documentation;
 
     /**
      * Create a new controller instance.
      *
-     * @param  Documentation  $docs
+     * @param  \App\Documentation  $documentation
      * @return void
      */
     public function __construct(Documentation $documentation)
