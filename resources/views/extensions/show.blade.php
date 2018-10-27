@@ -57,12 +57,12 @@
         </div>
 
         @if($extension->hasLocalReadme())
-            <article class="py-12 lg:px-10 markdown-body">
+            <article class="py-12 lg:px-10 markdown-body border-b">
                 {!! $extension->readme !!}
             </article>
         @endif
 
-        <div class="py-6 text-center border-t">
+        <div class="py-6 text-center">
             <a href="{{ route('extensions.index') }}">back to index</a>
         </div>
      </div>
