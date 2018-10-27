@@ -9,6 +9,7 @@
 @import "tailwindcss/utilities";
 
 @import "carbon";
+@import "markdown-body";
 @import "prismjs";
 @import "typography";
 
@@ -129,6 +130,11 @@ code {
 
 pre > code {
     @apply p-0;
+}
+
+pre {
+    @apply border;
+    @apply bg-grey-lighter;
 }
 
 pre[class*="language-"] {

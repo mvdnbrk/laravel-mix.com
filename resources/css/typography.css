@@ -31,7 +31,7 @@ a {
 }
 
 a:hover {
-    @apply text-blue;
+    @apply text-blue-dark;
 }
 
 a.is-active {

@@ -33,7 +33,7 @@ mix.js('resources/js/app.js', 'public/js')
         'min-h-(screen-16)',
     ],
     whitelistPatterns: [/carbon.*/],
-    whitelistPatternsChildren: [/^docs-index$/, /^token$/]
+    whitelistPatternsChildren: [/^docs-index$/, /^markdown-body$/, /^token$/]
   })
 
 if (mix.inProduction()) {

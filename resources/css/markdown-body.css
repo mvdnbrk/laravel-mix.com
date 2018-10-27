@@ -1,0 +1,35 @@
+.markdown-body {
+    @apply leading-normal;
+}
+
+.markdown-body a {
+    @apply text-blue-dark;
+    @apply no-underline;
+}
+
+.markdown-body a:hover {
+    @apply text-blue-dark;
+    @apply underline
+}
+
+.markdown-body blockquote {
+    @apply bg-grey-lightest;
+    @apply border-grey-light;
+    @apply border-l-8;
+}
+
+.markdown-body table {
+    @apply block;
+    @apply overflow-auto;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+    @apply px-2;
+    @apply py-4;
+    @apply border;
+}
+
+.markdown-body table tr:nth-child(2n) {
+    @apply bg-grey-lightest;
+}
