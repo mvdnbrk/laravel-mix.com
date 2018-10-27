@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -63,6 +64,16 @@ class Extension extends Model
     }
 
     /**
+     * Get the decoded json meta data.
+     *
+     * @return array
+     */
+    public function getDecodedJson()
+    {
+        return json_decode($this->getJson(), true);
+    }
+
+    /**
      * Get the storage path to the json file.
      *
      * @return string
@@ -80,11 +91,11 @@ class Extension extends Model
      */
     public function getKeyWordsAttribute()
     {
-        $array = collect(json_decode($this->getJson()), true)->get('keywords');
+        $array = collect($this->getDecodedJson())->get('keywords');
 
         return collect($array)->reject(function ($keyword) {
             return in_array($keyword, [
-                \Illuminate\Support\Str::lower($this->getTitleAttribute()),
+                Str::lower($this->getTitleAttribute()),
                 'laravel-mix',
                 'laravel mix',
                 'laravel',
@@ -92,6 +103,22 @@ class Extension extends Model
                 'webpack',
             ]);
         })->toArray();
+    }
+
+    /**
+     * Get the maintainers for this extension.
+     * Returns an array with the name as key and email as value.
+     *
+     * @return array
+     */
+    public function getMaintainersAttribute()
+    {
+        $maintainers = collect($this->getDecodedJson())->get('maintainers', []);
+
+        return collect($maintainers)
+            ->mapWithKeys(function ($maintainer) {
+                return [$maintainer['name'] => Str::lower($maintainer['email'])];
+            });
     }
 
     /**
