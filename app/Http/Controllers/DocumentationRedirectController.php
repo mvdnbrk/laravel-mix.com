@@ -10,9 +10,9 @@ class DocumentationRedirectController extends DocumentationBaseController
      * Redirects to the lastest version of a specific page of the documention.
      * In case a version number is specified it will redirect to the
      * default page of that version.
-     * @param  string $page
      *
-     * @return Illuminate\Http\RedirectResponse
+     * @param string  $page
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function show($page)
     {
