@@ -158,18 +158,6 @@ class Extension extends Model
     }
 
     /**
-     * Determine if this is a git repository.
-     *
-     * @return boolean
-     */
-    public function isGitRepository()
-    {
-        return cache()->remember('extension.is-git-repository:'.$this->id, 10, function () {
-            return collect(json_decode($this->repository, true))->get('type') === 'git';
-        });
-    }
-
-    /**
      * Get the url of the repository.
      *
      * @return string
@@ -205,5 +193,17 @@ class Extension extends Model
     public function getTitleAttribute()
     {
         return title_case(str_slug($this->slug, ' '));
+    }
+
+    /**
+     * Determine if this is a git repository.
+     *
+     * @return boolean
+     */
+    public function isGitRepository()
+    {
+        return cache()->remember('extension.is-git-repository:'.$this->id, 10, function () {
+            return collect(json_decode($this->repository, true))->get('type') === 'git';
+        });
     }
 }
