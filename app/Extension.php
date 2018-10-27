@@ -196,6 +196,16 @@ class Extension extends Model
     }
 
     /**
+     * Determine if this extension has a README file in local storage.
+     *
+     * @return boolean
+     */
+    public function hasLocalReadme()
+    {
+        return Storage::exists($this->readmeStoragePath());
+    }
+
+    /**
      * Determine if this is a git repository.
      *
      * @return boolean
