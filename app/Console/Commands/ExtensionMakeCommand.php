@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Extension;
+use App\Jobs\FetchReadme;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Validator;
 use App\Jobs\UpdateExtensionModelFromJson;
@@ -65,6 +66,8 @@ class ExtensionMakeCommand extends Command
 
         UpdateExtensionModelFromJson::dispatchNow($extension);
 
+        $this->fetchReadme($extension);
+
         $this->callSilent('page-cache:clear', [
             'slug' => route('extensions.index', [], false),
         ]);
@@ -77,6 +80,18 @@ class ExtensionMakeCommand extends Command
         return $this->task('Fetching package meta data from npmjs registry', function () use ($name) {
             try {
                 FetchPackageMetaDataFromNpmJsRegistry::dispatchNow($name);
+                return true;
+            } catch(NotFoundHttpException $exception) {
+                return false;
+            }
+        });
+    }
+
+    protected function fetchReadme($extension)
+    {
+        return $this->task('Fetching readme from the repository', function () use ($extension) {
+            try {
+                FetchReadme::dispatchNow($extension);
                 return true;
             } catch(NotFoundHttpException $exception) {
                 return false;
