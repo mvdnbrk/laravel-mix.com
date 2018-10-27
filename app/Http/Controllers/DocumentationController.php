@@ -12,7 +12,7 @@ class DocumentationController extends DocumentationBaseController
      *
      * @param  string $version
      * @param  string $page
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function show($version, $page)
     {
