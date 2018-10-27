@@ -90,7 +90,7 @@ class Extension extends Model
      */
     public function getKeyWordsAttribute()
     {
-        return cache()->remember('extension.keywords'.$this->id, 10, function () {
+        return cache()->remember('extension.keywords:'.$this->id, 10, function () {
             $array = collect($this->getDecodedJson())->get('keywords');
 
             return collect($array)->reject(function ($keyword) {
@@ -127,7 +127,7 @@ class Extension extends Model
      */
     public function getMaintainersAttribute()
     {
-        return cache()->remember('extension.maintainers'.$this->id, 10, function () {
+        return cache()->remember('extension.maintainers:'.$this->id, 10, function () {
             $maintainers = collect($this->getDecodedJson())->get('maintainers', []);
 
             return collect($maintainers)
@@ -154,7 +154,7 @@ class Extension extends Model
      */
     public function isGitRepository()
     {
-        return cache()->remember('extension.is-git-repository'.$this->id, 10, function () {
+        return cache()->remember('extension.is-git-repository:'.$this->id, 10, function () {
             return collect(json_decode($this->repository, true))->get('type') === 'git';
         });
     }
