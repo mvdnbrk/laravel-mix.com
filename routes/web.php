@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', 'HomepageController@show')->name('homepage');
-
-Route::get('/docs', 'DocumentationRootController@show');
-Route::get('/docs/{page}', 'DocumentationRedirectController@show');
-
 Route::middleware(['page-cache'])->group(function () {
+    Route::get('/', 'HomepageController@show')->name('homepage');
+
     Route::get('/extensions', 'ExtensionsController@index')->name('extensions.index');
     Route::get('/extensions/{extension}', 'ExtensionsController@show')->name('extensions.show');
 
     Route::get('/docs/{version}/{page}', 'DocumentationController@show');
 });
+
+Route::get('/docs', 'DocumentationRootController@show');
+Route::get('/docs/{page}', 'DocumentationRedirectController@show');
