@@ -33,7 +33,6 @@ class FetchPackageMetaDataFromNpmJsRegistry implements ShouldQueue
     /**
      * Execute the job.
      *
-     * @param string  $name
      * @return void
      */
     public function handle()

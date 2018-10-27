@@ -34,14 +34,14 @@ class FetchReadme implements ShouldQueue
     /**
      * The extension to fetch the README file for.
      *
-     * @var string
+     * @var \App\Extension
      */
     public $extension;
 
     /**
      * Create a new job instance.
      *
-     * @param  string  $name
+     * @param \App\Extension  $extension
      * @return void
      */
     public function __construct(Extension $extension)
