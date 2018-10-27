@@ -91,18 +91,20 @@ class Extension extends Model
      */
     public function getKeyWordsAttribute()
     {
-        $array = collect($this->getDecodedJson())->get('keywords');
+        return cache()->remember('extension.keywords', 10, function () {
+            $array = collect($this->getDecodedJson())->get('keywords');
 
-        return collect($array)->reject(function ($keyword) {
-            return in_array($keyword, [
-                Str::lower($this->getTitleAttribute()),
-                'laravel-mix',
-                'laravel mix',
-                'laravel',
-                'mix',
-                'webpack',
-            ]);
-        })->toArray();
+            return collect($array)->reject(function ($keyword) {
+                return in_array($keyword, [
+                    Str::lower($this->getTitleAttribute()),
+                    'laravel-mix',
+                    'laravel mix',
+                    'laravel',
+                    'mix',
+                    'webpack',
+                ]);
+            })->toArray();
+        });
     }
 
     /**
@@ -113,12 +115,14 @@ class Extension extends Model
      */
     public function getMaintainersAttribute()
     {
-        $maintainers = collect($this->getDecodedJson())->get('maintainers', []);
+        return cache()->remember('extension.maintainers', 10, function () {
+            $maintainers = collect($this->getDecodedJson())->get('maintainers', []);
 
-        return collect($maintainers)
-            ->mapWithKeys(function ($maintainer) {
-                return [$maintainer['name'] => Str::lower($maintainer['email'])];
-            });
+            return collect($maintainers)
+                ->mapWithKeys(function ($maintainer) {
+                    return [$maintainer['name'] => Str::lower($maintainer['email'])];
+                });
+        });
     }
 
     /**
