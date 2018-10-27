@@ -24,7 +24,7 @@
                     >
                 </div>
             </div>
-            <div class="p-4 text-center text-sm text-grey-dark">
+            <div class="py-4 text-center text-sm text-grey-dark">
                 latest {{ $extension->latestVersion }} - released {{ $extension->updated_at->diffForHumans() }}
             </div>
             @if (count($extension->maintainers))
@@ -48,9 +48,9 @@
                 </div>
             @endif
             @if (count($extension->keyWords))
-                <div class="flex justify-center text-white pt-6">
+                <div class="flex justify-center pt-6">
                     @foreach($extension->keyWords as $keyword)
-                        <div class="bg-blue-light rounded px-4 py-1 mx-2">{{ $keyword }}</div>
+                        <div class="bg-blue text-white text-sm rounded px-4 py-2 mx-2">{{ $keyword }}</div>
                     @endforeach
                 </div>
             @endif
