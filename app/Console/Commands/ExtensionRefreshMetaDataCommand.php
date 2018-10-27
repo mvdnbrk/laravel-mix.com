@@ -30,11 +30,11 @@ class ExtensionRefreshMetaDataCommand extends Command
      */
     public function handle()
     {
-        Extension::when($this->argument('name'), function($query) {
+        Extension::when($this->argument('name'), function ($query) {
             return $query->where('name', $this->argument('name'));
         })
         ->orderBy('name')
-        ->chunk(10, function($extensions) {
+        ->chunk(10, function ($extensions) {
             $extensions->each(function ($extension) {
                 $this->comment("Processing: {$extension->name}");
                 dispatch(new FetchPackageMetaDataFromNpmJsRegistry($extension->name));

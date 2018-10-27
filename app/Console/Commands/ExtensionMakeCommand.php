@@ -45,7 +45,11 @@ class ExtensionMakeCommand extends Command
     {
         $name = $this->argument('name');
 
-        $validator = Validator::make(['name' => $name], ['name' => 'unique:extensions'], ['unique' => 'This extension already exists.']);
+        $validator = Validator::make(
+            ['name' => $name],
+            ['name' => 'unique:extensions'],
+            ['unique' => 'This extension already exists.']
+        );
 
         if ($validator->fails()) {
             collect($validator->errors()->all())->each(function ($error) {
@@ -57,6 +61,7 @@ class ExtensionMakeCommand extends Command
 
         if (! $this->fetchPackageMetaDataFromNpmJsRegistry($name)) {
             $this->error('Extension could not be found in the NpmJS registry.');
+
             return 1;
         }
 
@@ -81,7 +86,7 @@ class ExtensionMakeCommand extends Command
             try {
                 FetchPackageMetaDataFromNpmJsRegistry::dispatchNow($name);
                 return true;
-            } catch(NotFoundHttpException $exception) {
+            } catch (NotFoundHttpException $exception) {
                 return false;
             }
         });
@@ -93,7 +98,7 @@ class ExtensionMakeCommand extends Command
             try {
                 FetchReadme::dispatchNow($extension);
                 return true;
-            } catch(NotFoundHttpException $exception) {
+            } catch (NotFoundHttpException $exception) {
                 return false;
             }
         });

@@ -57,7 +57,7 @@ class FetchReadme implements ShouldQueue
     public function handle()
     {
         collect($this->filenames)
-            ->when(cache()->has($this->cacheKey()), function($collection) {
+            ->when(cache()->has($this->cacheKey()), function ($collection) {
                 return $collection->prepend(
                     cache()->pull('extension.readme.filename:'.$this->extension->id)
                 );
