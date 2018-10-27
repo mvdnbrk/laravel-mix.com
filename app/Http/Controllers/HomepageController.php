@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
-class WelcomeController extends DocumentationBaseController
+class HomepageController extends DocumentationBaseController
 {
+    /**
+     * Show the homepage.
+     *
+     * @return \Illuminate\View\View
+     */
     public function show()
     {
         return view('welcome', [

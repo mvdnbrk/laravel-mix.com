@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'WelcomeController@show');
+Route::get('/', 'HomepageController@show')->name('homepage');
 
 Route::get('/extensions', 'ExtensionsController@index')->name('extensions.index');
 Route::get('/extensions/{extension}', 'ExtensionsController@show')->name('extensions.show');
