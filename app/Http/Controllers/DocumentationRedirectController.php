@@ -17,9 +17,9 @@ class DocumentationRedirectController extends DocumentationBaseController
     public function show($page)
     {
         if ($this->documentation->isVersion($page)) {
-            return redirect("/docs/{$page}/".config('documentation.default_page'), 301);
+            return redirect("/docs/{$page}/".config('documentation.default_page'), 303);
         }
 
-        return redirect("/docs/{$this->documentation->defaultVersion()}/{$page}", 301);
+        return redirect("/docs/{$this->documentation->defaultVersion()}/{$page}", 303);
     }
 }
