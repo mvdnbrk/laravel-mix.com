@@ -16,7 +16,6 @@ class DatabaseSeeder extends Seeder
             'laravel-mix-aero',
             'laravel-mix-banner',
             'laravel-mix-criticalcss',
-            'laravel-mix-dl',
             'laravel-mix-dload',
             'laravel-mix-eslint',
             'laravel-mix-merge-manifest',
