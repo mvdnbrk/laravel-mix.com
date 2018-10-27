@@ -2,6 +2,7 @@
 
 namespace App;
 
+use ParsedownExtra;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
@@ -155,6 +156,37 @@ class Extension extends Model
     public function getLatestVersionAttribute()
     {
         return str_start($this->latest_dist_tag, 'v');
+    }
+
+    /**
+     * Get the readme..
+     *
+     * @return string
+     */
+    public function getReadmeAttribute()
+    {
+        if ($this->hasLocalReadme()) {
+            return (new ParsedownExtra())->text(
+                $this->replaceExternalLinks(
+                    Storage::get($this->readmeStoragePath()
+                )
+            ));
+        }
+
+        return '';
+    }
+
+    /**
+     * Replace links to external links if needed.
+     *
+     * @param  string  $content
+     * @return string
+     */
+    public function replaceExternalLinks($content)
+    {
+        return preg_replace_callback('/\[(.*)\]\((?!http)(.*\.{1}.*)\)/m', function ($matches) {
+            return '['.$matches[1].']('.$this->repositoryUrl.'/blob/master/'.$matches[2].')';
+        }, $content);
     }
 
     /**
