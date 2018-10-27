@@ -21,7 +21,7 @@ class ViewDocumentationTest extends TestCase
     {
         $response = $this->get('/docs');
 
-        $response->assertStatus(302);
+        $response->assertStatus(303);
         $response->assertRedirect('/docs/9.9');
     }
 
@@ -30,7 +30,7 @@ class ViewDocumentationTest extends TestCase
     {
         $response = $this->get('/docs/example-page');
 
-        $response->assertStatus(301);
+        $response->assertStatus(303);
         $response->assertRedirect('/docs/9.9/example-page');
     }
 
@@ -41,7 +41,7 @@ class ViewDocumentationTest extends TestCase
 
         $response = $this->get('/docs/9.9');
 
-        $response->assertStatus(301);
+        $response->assertStatus(303);
         $response->assertRedirect('/docs/9.9/test-default-page');
     }
 
