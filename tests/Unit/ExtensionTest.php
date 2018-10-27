@@ -14,6 +14,6 @@ class ExtensionTest extends TestCase
             'name' => 'laravel-mix',
         ]);
 
-        $this->assertEquals('npmjs/laravel-mix.json', $extension->getJsonStoragePath());
+        $this->assertEquals('npmjs/laravel-mix.json', $extension->jsonStoragePath());
     }
 }

@@ -56,11 +56,11 @@ class Extension extends Model
      */
     public function getJson()
     {
-        if (! Storage::exists($this->getJsonStoragePath())) {
+        if (! Storage::exists($this->jsonStoragePath())) {
             return json_encode(new \stdClass);
         }
 
-        return Storage::get($this->getJsonStoragePath());
+        return Storage::get($this->jsonStoragePath());
     }
 
     /**
@@ -74,11 +74,11 @@ class Extension extends Model
     }
 
     /**
-     * Get the storage path to the json file.
+     * Get the storage path for the json file.
      *
      * @return string
      */
-    public function getJsonStoragePath()
+    public function jsonStoragePath()
     {
         return "npmjs/{$this->name}.json";
     }
