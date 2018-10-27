@@ -154,7 +154,9 @@ class Extension extends Model
      */
     public function isGitRepository()
     {
-        return collect(json_decode($this->repository, true))->get('type') === 'git';
+        return cache()->remember('extension.is-git-repository'.$this->id, 10, function () {
+            return collect(json_decode($this->repository, true))->get('type') === 'git';
+        });
     }
 
     /**
@@ -164,17 +166,19 @@ class Extension extends Model
      */
     public function getRepositoryUrlAttribute()
     {
-        $url = collect(json_decode($this->repository, true))->get('url');
+        return cache()->remember('extension.repository-url:'.$this->id, 10, function () {
+            $url = collect(json_decode($this->repository, true))->get('url');
 
-        if (substr($url, 0, strlen('git+')) == 'git+') {
-            $url = substr($url, strlen('git+'));
-        }
+            if (substr($url, 0, strlen('git+')) == 'git+') {
+                $url = substr($url, strlen('git+'));
+            }
 
-        if (substr($url, -strlen('.git')) == '.git') {
-            $url = substr($url, 0, strlen($url) - strlen('.git'));
-        }
+            if (substr($url, -strlen('.git')) == '.git') {
+                $url = substr($url, 0, strlen($url) - strlen('.git'));
+            }
 
-        return $url;
+            return $url;
+        });
     }
 
     /**
