@@ -173,9 +173,15 @@ class Extension extends Model
                 $url = substr($url, strlen('git+'));
             }
 
+            if (substr($url, 0, strlen('git')) == 'git') {
+                $url = substr($url, strlen('git'));
+            }
+
             if (substr($url, -strlen('.git')) == '.git') {
                 $url = substr($url, 0, strlen($url) - strlen('.git'));
             }
+
+            $url = str_start($url, 'https');
 
             return $url;
         });
