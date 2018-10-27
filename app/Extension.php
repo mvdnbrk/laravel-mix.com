@@ -85,7 +85,6 @@ class Extension extends Model
 
     /**
      * Get keywords for this extension.
-     * Exclude common used words like "Laravel".
      *
      * @return array
      */
@@ -95,16 +94,29 @@ class Extension extends Model
             $array = collect($this->getDecodedJson())->get('keywords');
 
             return collect($array)->reject(function ($keyword) {
-                return in_array($keyword, [
-                    Str::lower($this->getTitleAttribute()),
-                    'laravel-mix',
-                    'laravel mix',
-                    'laravel',
-                    'mix',
-                    'webpack',
-                ]);
+                return in_array($keyword, $this->getUnpermittedKeywords());
             })->toArray();
         });
+    }
+
+    /**
+     * Get unpermitted keywords including a maintainers name.
+     *
+     * @return array
+     */
+    protected function getUnpermittedKeywords()
+    {
+        return array_merge(
+            collect($this->getMaintainersAttribute())->keys()->toArray(),
+            [
+                Str::lower($this->getTitleAttribute()),
+                'laravel-mix',
+                'laravel mix',
+                'laravel',
+                'mix',
+                'webpack',
+            ]
+        );
     }
 
     /**
