@@ -13,7 +13,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Horizon::auth(function ($request) {
+            if (! auth()->check()) {
+                return false;
+            }
+
+            return in_array(auth()->user()->email, [
+                'mark@laravel-mix.com',
+            ]);
+        });
     }
 
     /**
