@@ -84,6 +84,16 @@ class Extension extends Model
     }
 
     /**
+     * Get the storage path for the README file.
+     *
+     * @return string
+     */
+    public function readmeStoragePath()
+    {
+        return "readme/{$this->name}.md";
+    }
+
+    /**
      * Get keywords for this extension.
      *
      * @return array

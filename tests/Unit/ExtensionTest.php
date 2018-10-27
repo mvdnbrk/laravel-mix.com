@@ -16,4 +16,14 @@ class ExtensionTest extends TestCase
 
         $this->assertEquals('npmjs/laravel-mix.json', $extension->jsonStoragePath());
     }
+
+    /** @test */
+    public function it_can_get_the_readme_path()
+    {
+        $extension = factory(Extension::class)->make([
+            'name' => 'laravel-mix',
+        ]);
+
+        $this->assertEquals('readme/laravel-mix.md', $extension->readmeStoragePath());
+    }
 }
