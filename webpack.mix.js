@@ -28,6 +28,7 @@ mix.js('resources/js/app.js', 'public/js')
         'ul',
         'code',
         'pre',
+        'table',
         'blockquote',
         'lg:max-h-(screen-22)',
         'min-h-(screen-16)',
