@@ -239,4 +239,18 @@ class DocumentationTest extends TestCase
 
         $this->assertFalse($this->documentation->pageExists('1.0', 'test-page'));
     }
+
+    /** @test */
+    public function it_can_retrieve_the_canonical_url_for_a_page()
+    {
+        $this->assertNull($this->documentation->canonicalUrl('test-page'));
+
+        Storage::fake('docs');
+        Storage::disk('docs')->put('1.0/test-page.md', 'contents');
+        config(['documentation.versions' => [
+            '1.0',
+        ]]);
+
+        $this->assertEquals(config('app.url').'/docs/1.0/test-page', $this->documentation->canonicalUrl('test-page'));
+    }
 }

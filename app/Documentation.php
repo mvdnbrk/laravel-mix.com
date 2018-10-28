@@ -9,6 +9,24 @@ use Illuminate\Support\Facades\Storage;
 class Documentation
 {
     /**
+     * Get the canonical url for a page.
+     *
+     * @param string  $page
+     * @return string|null
+     */
+    public function canonicalUrl($page)
+    {
+        if (! $this->pageExists($this->defaultVersion(), $page)) {
+            return null;
+        }
+
+        return route('documentation.show', [
+            'version' => $this->defaultVersion(),
+            'page' => $page,
+        ]);
+    }
+
+    /**
      * Get the default page of the documentation.
      *
      * @return string
