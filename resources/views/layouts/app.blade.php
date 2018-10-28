@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <title>{{ $title ?? config('app.name', 'Laravel Mix') }}</title>
         <meta name="description" content="{{ $description ?? 'An elegant wrapper around Webpack for the 80% use case.' }}">
+        @if (isset($canonical))
+        <link rel="canonical" href="{{ url($canonical) }}" />
+        @endif
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
