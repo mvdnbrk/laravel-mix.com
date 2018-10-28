@@ -20,9 +20,9 @@ class ExtensionsController extends Controller
     }
 
     /**
-     * SHow the page for an extension.
+     * Show the page for an extension.
      *
-     * @param \App\Extension
+     * @param \App\Extension  $extension
      * @return \Illuminate\View\View
      */
     public function show(Extension $extension)
