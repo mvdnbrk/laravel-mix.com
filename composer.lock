@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "134348173bee793c8204d515ee816ed1",
+    "content-hash": "1ae387020a0dab527748bf7361dfc782",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -1032,16 +1032,16 @@
         },
         {
             "name": "kitetail/zttp",
-            "version": "v0.3.0",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/kitetail/zttp.git",
-                "reference": "e788ab8fc5c0259f691e2960d17e0ddbab761c6a"
+                "reference": "3875188916c746ff1a3f2b1095564aca72d973b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kitetail/zttp/zipball/e788ab8fc5c0259f691e2960d17e0ddbab761c6a",
-                "reference": "e788ab8fc5c0259f691e2960d17e0ddbab761c6a",
+                "url": "https://api.github.com/repos/kitetail/zttp/zipball/3875188916c746ff1a3f2b1095564aca72d973b8",
+                "reference": "3875188916c746ff1a3f2b1095564aca72d973b8",
                 "shasum": ""
             },
             "require": {
@@ -1050,7 +1050,7 @@
                 "tightenco/collect": "^5.4"
             },
             "require-dev": {
-                "laravel/lumen-framework": "^5.4",
+                "laravel/lumen-framework": "5.5.*",
                 "phpunit/phpunit": "^6.0"
             },
             "type": "library",
@@ -1074,7 +1074,7 @@
                 "Guzzle",
                 "http"
             ],
-            "time": "2017-08-09T15:31:26+00:00"
+            "time": "2018-03-11T19:39:08+00:00"
         },
         {
             "name": "kreitje/nova-horizon-stats",

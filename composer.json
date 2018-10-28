@@ -16,7 +16,7 @@
         "erusev/parsedown-extra": "^0.7.1",
         "fideloper/proxy": "^4.0",
         "ipunkt/laravel-analytics": "^1.4",
-        "kitetail/zttp": "^0.3.0",
+        "kitetail/zttp": "^0.4.0",
         "kreitje/nova-horizon-stats": "^0.3.0",
         "laravel/framework": "5.7.*",
         "laravel/horizon": "^1.4",
