@@ -7,4 +7,4 @@ cd ${docs}/2.0 && git pull origin 2.0
 cd ${docs}/2.1 && git pull origin 2.1
 cd ${docs}/master && git pull origin master
 
-cd $base && php artisan page-cache:clear
+cd ${base}/current && php artisan page-cache:clear
