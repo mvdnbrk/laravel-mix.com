@@ -26,6 +26,7 @@ class DocumentationController extends DocumentationBaseController
 
         return view('documentation', [
             'title' => count($title) ? $title->text() : null,
+            'canonical' => $this->documentation->canonicalUrl($page),
             'index' => $this->documentation->getIndex($version),
             'content' => $content,
             'version' => $version,
