@@ -210,4 +210,33 @@ class DocumentationTest extends TestCase
 
         $this->assertEquals('<p><a href="'.config('app.url').'/docs/version999/installation">Installation</a></p>', $this->documentation->getIndex('version999'));
     }
+
+    /** @test */
+    public function it_can_determine_if_a_page_exists()
+    {
+        Storage::fake('docs');
+        config(['documentation.versions' => [
+            '1.0',
+        ]]);
+
+        $this->assertFalse($this->documentation->pageExists('1.0', 'test-page'));
+
+        Storage::disk('docs')->put('1.0/test-page.md', 'contents');
+        $this->assertTrue($this->documentation->pageExists('1.0', 'test-page'));
+
+        config(['documentation.excluded_pages' => 'test-page']);
+        $this->assertFalse($this->documentation->pageExists('1.0', 'test-page'));
+    }
+
+    /** @test */
+    public function a_page_that_exists_on_file_but_is_not_a_valid_version_is_considered_to_be_non_existent()
+    {
+        Storage::fake('docs');
+        Storage::disk('docs')->put('1.0/test-page.md', 'contents');
+        config(['documentation.versions' => [
+            'some-other-version',
+        ]]);
+
+        $this->assertFalse($this->documentation->pageExists('1.0', 'test-page'));
+    }
 }

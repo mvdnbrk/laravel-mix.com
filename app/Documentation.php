@@ -150,6 +150,28 @@ class Documentation
     }
 
     /**
+     * Determine if a page exists.
+     *
+     * @param string  $version
+     * @param string  $page
+     * @return boolean
+     */
+    public function pageExists($version, $page)
+    {
+        if ($this->isExcludedPage($page)) {
+            return false;
+        }
+
+        if (! $this->isVersion($version)) {
+            return false;
+        }
+
+        return Storage::disk('docs')->exists(
+            $this->path($version, $page)
+        );
+    }
+
+    /**
      * Replace the version place-holder in links
      * and convert links to a full url.
      *
