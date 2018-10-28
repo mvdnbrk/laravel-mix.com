@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c26e1ed745337ddec748721b0b9c8c50",
+    "content-hash": "134348173bee793c8204d515ee816ed1",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -1398,6 +1398,68 @@
             "time": "2018-10-25T19:25:07+00:00"
         },
         {
+            "name": "laravel/telescope",
+            "version": "v0.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/telescope.git",
+                "reference": "f9ee91ef63d3e139e0e4941e546014955b5f81c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/f9ee91ef63d3e139e0e4941e546014955b5f81c9",
+                "reference": "f9ee91ef63d3e139e0e4941e546014955b5f81c9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel/framework": "~5.7.7",
+                "moontoast/math": "^1.1",
+                "php": "^7.1.3",
+                "symfony/var-dumper": "^4.1"
+            },
+            "require-dev": {
+                "nunomaduro/larastan": "^0.3.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Telescope\\TelescopeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Telescope\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Mohamed Said",
+                    "email": "mohamed@laravel.com"
+                }
+            ],
+            "description": "An elegant debug assistant for the Laravel framework.",
+            "keywords": [
+                "debugging",
+                "laravel",
+                "monitoring"
+            ],
+            "time": "2018-10-25T13:28:18+00:00"
+        },
+        {
             "name": "laravel/tinker",
             "version": "v1.0.8",
             "source": {
@@ -1597,6 +1659,60 @@
                 "nova"
             ],
             "time": "2018-10-27T15:31:00+00:00"
+        },
+        {
+            "name": "mad-web/nova-telescope-link",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mad-web/nova-telescope-link.git",
+                "reference": "0e19bb144ecf1d36fec6f4a7f96b60d7e217833d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mad-web/nova-telescope-link/zipball/0e19bb144ecf1d36fec6f4a7f96b60d7e217833d",
+                "reference": "0e19bb144ecf1d36fec6f4a7f96b60d7e217833d",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "*",
+                "laravel/telescope": "^0.1",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MadWeb\\NovaTelescopeLink\\LinkServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MadWeb\\NovaTelescopeLink\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mad Web",
+                    "email": "madweb.dev@gmail.com",
+                    "homepage": "https://github.com/mad-web",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Smart Link for Laravel Nova to Telescope Debug Assistant.",
+            "homepage": "https://github.com/mad-web/nova-telescope-link",
+            "keywords": [
+                "laravel",
+                "link",
+                "nova",
+                "telescope"
+            ],
+            "time": "2018-10-27T14:50:34+00:00"
         },
         {
             "name": "monolog/monolog",

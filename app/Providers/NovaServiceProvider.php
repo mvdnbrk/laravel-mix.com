@@ -71,6 +71,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function tools()
     {
         return [
+            new \MadWeb\NovaTelescopeLink\TelescopeLink('Telescope'),
             new \MadWeb\NovaHorizonLink\HorizonLink('Horizon'),
         ];
     }
