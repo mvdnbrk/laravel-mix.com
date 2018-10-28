@@ -34,6 +34,9 @@
                     @endforeach
                 </div>
             @endif
+            <div class="py-2 font-semibold text-center text-sm semibold">
+                {{ $extension->weekly_download_count }} {{ str_plural('download', $extension->weekly_download_count) }} last week
+            </div>
             <div class="text-center text-sm">
                 {{ $extension->license }} license
             </div>
