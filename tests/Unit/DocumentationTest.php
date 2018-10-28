@@ -18,6 +18,12 @@ class DocumentationTest extends TestCase
     }
 
     /** @test */
+    public function it_can_determine_the_path()
+    {
+        $this->assertEquals('1.1/test-page.md', $this->documentation->path('1.1', 'test-page'));
+    }
+
+    /** @test */
     public function it_can_retrieve_the_latest_release()
     {
         config(['documentation.latest_release' => '1.2.99']);

@@ -58,10 +58,12 @@ class Documentation
             return null;
         }
 
-        $path = "{$version}/{$page}.md";
-
-        if (Storage::disk('docs')->exists($path)) {
-            return (new ParsedownExtra())->text(Storage::disk('docs')->get($path));
+        if (Storage::disk('docs')->exists(
+            $this->path($version, $page)
+        )) {
+            return (new ParsedownExtra())->text(Storage::disk('docs')->get(
+                $this->path($version, $page)
+            ));
         }
 
         return null;
@@ -133,6 +135,18 @@ class Documentation
     public function isVersion($version)
     {
         return $this->versions()->contains($version);
+    }
+
+    /**
+     * Retrieve the path to a page.
+     *
+     * @param string  $version
+     * @param string  $page
+     * @return string
+     */
+    public function path($version, $page)
+    {
+        return "{$version}/{$page}.md";
     }
 
     /**
