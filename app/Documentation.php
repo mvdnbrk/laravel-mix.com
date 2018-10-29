@@ -11,7 +11,7 @@ class Documentation
     /**
      * Get the canonical url for a page.
      *
-     * @param string  $page
+     * @param  string  $page
      * @return string|null
      */
     public function canonicalUrl($page)
@@ -134,7 +134,7 @@ class Documentation
     /**
      * Determines if a page is excluded from the documentation.
      *
-     * @param string  $page
+     * @param  string  $page
      * @return boolean
      */
     public function isExcludedPage($page)
@@ -158,8 +158,8 @@ class Documentation
     /**
      * Retrieve the path to a page.
      *
-     * @param string  $version
-     * @param string  $page
+     * @param  string  $version
+     * @param  string  $page
      * @return string
      */
     public function path($version, $page)
@@ -170,8 +170,8 @@ class Documentation
     /**
      * Determine if a page exists.
      *
-     * @param string  $version
-     * @param string  $page
+     * @param  string  $version
+     * @param  string  $page
      * @return boolean
      */
     public function pageExists($version, $page)
