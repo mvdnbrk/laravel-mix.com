@@ -190,6 +190,23 @@ class Documentation
     }
 
     /**
+     * Determine in which versions a page exists.
+     * Returns an array with the version as key
+     * and the url of a page as value.
+     *
+     * @param  string  $page
+     * @return array
+     */
+    public function pageExistsInVersions($page)
+    {
+        return $this->versions()->mapWithKeys(function ($version) use ($page) {
+            return [$version => $this->url($version, $page)];
+        })->filter(function ($url, $version) use ($page) {
+            return $this->pageExists($version, $page);
+        })->toArray();
+    }
+
+    /**
      * Replace the version place-holder in links
      * and convert links to a full url.
      *

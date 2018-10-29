@@ -259,4 +259,29 @@ class DocumentationTest extends TestCase
 
         $this->assertEquals(config('app.url').'/docs/1.0/test-page', $this->documentation->canonicalUrl('test-page'));
     }
+
+    /** @test */
+    public function it_can_determine_in_which_versions_a_page_exists()
+    {
+        Storage::fake('docs');
+
+        $this->assertEquals([], $this->documentation->pageExistsInVersions('non-existent-page'));
+
+        Storage::disk('docs')->put('1.0/test-page.md', 'contents');
+        Storage::disk('docs')->put('2.0/test-page.md', 'contents');
+        Storage::disk('docs')->put('master/test-page.md', 'contents');
+        config(['documentation.versions' => [
+            'master',
+            '4.0',
+            '3.0',
+            '2.0',
+            '1.0',
+        ]]);
+
+        $this->assertEquals([
+            'master' => config('app.url').'/docs/master/test-page',
+            '2.0' => config('app.url').'/docs/2.0/test-page',
+            '1.0' => config('app.url').'/docs/1.0/test-page',
+        ], $this->documentation->pageExistsInVersions('test-page'));
+    }
 }
