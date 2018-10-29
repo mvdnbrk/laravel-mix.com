@@ -241,6 +241,12 @@ class DocumentationTest extends TestCase
     }
 
     /** @test */
+    public function it_can_retrieve_the_url_of_a_page()
+    {
+        $this->assertEquals(config('app.url').'/docs/1.0/test-page', $this->documentation->url('1.0', 'test-page'));
+    }
+
+    /** @test */
     public function it_can_retrieve_the_canonical_url_for_a_page()
     {
         $this->assertNull($this->documentation->canonicalUrl('test-page'));

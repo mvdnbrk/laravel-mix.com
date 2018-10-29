@@ -230,6 +230,21 @@ class Documentation
     }
 
     /**
+     * Get the canonical url for a page.
+     *
+     * @param  string  $version
+     * @param  string  $page
+     * @return string|null
+     */
+    public function url($version, $page)
+    {
+        return route('documentation.show', [
+            'version' => $version,
+            'page' => $page,
+        ]);
+    }
+
+    /**
      * Get all the versions of the documentation.
      *
      * @return \Illuminate\Support\Collection
