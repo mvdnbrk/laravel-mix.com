@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ae387020a0dab527748bf7361dfc782",
+    "content-hash": "fef42508d848d980df17258931fb678f",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -1399,16 +1399,16 @@
         },
         {
             "name": "laravel/telescope",
-            "version": "v0.1.4",
+            "version": "v0.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/telescope.git",
-                "reference": "9848d07cbf1d9c615bca56826166fd0cb802730c"
+                "reference": "f9ee91ef63d3e139e0e4941e546014955b5f81c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/telescope/zipball/9848d07cbf1d9c615bca56826166fd0cb802730c",
-                "reference": "9848d07cbf1d9c615bca56826166fd0cb802730c",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/f9ee91ef63d3e139e0e4941e546014955b5f81c9",
+                "reference": "f9ee91ef63d3e139e0e4941e546014955b5f81c9",
                 "shasum": ""
             },
             "require": {
@@ -1419,8 +1419,7 @@
                 "symfony/var-dumper": "^4.1"
             },
             "require-dev": {
-                "nunomaduro/larastan": "^0.3.4",
-                "orchestra/testbench": "~3.7"
+                "nunomaduro/larastan": "^0.3.4"
             },
             "type": "library",
             "extra": {
@@ -1458,7 +1457,7 @@
                 "laravel",
                 "monitoring"
             ],
-            "time": "2018-10-29T12:57:15+00:00"
+            "time": "2018-10-25T13:28:18+00:00"
         },
         {
             "name": "laravel/tinker",
