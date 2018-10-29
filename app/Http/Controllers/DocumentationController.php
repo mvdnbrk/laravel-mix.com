@@ -29,7 +29,9 @@ class DocumentationController extends DocumentationBaseController
             'canonical' => $this->documentation->canonicalUrl($page),
             'index' => $this->documentation->getIndex($version),
             'content' => $content,
-            'version' => $version,
+            'versions' => $this->documentation->versions(),
+            'currentVersion' => $version,
+            'pageExistsInVersions' => $this->documentation->pageExistsInVersions($page),
             'page' => $page,
         ]);
     }
