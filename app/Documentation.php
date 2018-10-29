@@ -20,10 +20,7 @@ class Documentation
             return null;
         }
 
-        return route('documentation.show', [
-            'version' => $this->defaultVersion(),
-            'page' => $page,
-        ]);
+        return $this->url($this->defaultVersion(), $page);
     }
 
     /**
