@@ -6,6 +6,7 @@ use Laravel\Nova\Panel;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Code;
+use Laravel\Nova\Fields\Date;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Gravatar;
@@ -62,6 +63,10 @@ class Extension extends Resource
             Text::make('Version', function () {
                 return $this->latestVersion;
             }),
+
+            Date::make('Created at')->sortable(),
+
+            Date::make('Updated at')->sortable(),
 
             new Panel('Package meta data', [
                 Code::make('Json', function () {
