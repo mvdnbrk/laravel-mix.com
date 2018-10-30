@@ -58,6 +58,10 @@ class Extension extends Resource
 
             Number::make('Weekly download count')->sortable(),
 
+            Text::make('Type', function () {
+                return $this->repositoryType;
+            }),
+
             Text::make('License'),
 
             Text::make('Version', function () {
