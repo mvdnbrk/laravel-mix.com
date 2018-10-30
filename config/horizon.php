@@ -71,6 +71,7 @@ return [
     | instance will continue to terminate each of its workers.
     |
     */
+
     'fast_termination' => false,
 
     /*
