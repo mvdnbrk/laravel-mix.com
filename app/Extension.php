@@ -240,14 +240,24 @@ class Extension extends Model
     }
 
     /**
+     * Determine the respository type.
+     *
+     * @return string
+     */
+    public function getRepositoryTypeAttribute()
+    {
+        return cache()->remember('extension.repository-type:'.$this->id, 1440, function () {
+            return collect(json_decode($this->repository, true))->get('type', '');
+        });
+    }
+
+    /**
      * Determine if this is a git repository.
      *
      * @return boolean
      */
     public function isGitRepository()
     {
-        return cache()->remember('extension.is-git-repository:'.$this->id, 10, function () {
-            return collect(json_decode($this->repository, true))->get('type') === 'git';
-        });
+        return $this->getRepositoryTypeAttribute() === 'git';
     }
 }
