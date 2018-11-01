@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "bugsnag/bugsnag",
-            "version": "v3.14.1",
+            "version": "v3.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bugsnag/bugsnag-php.git",
-                "reference": "94474e309cebec88915fa9d4cf1e5355458f35aa"
+                "reference": "c251f20bcd07100a2106db357f5b277ec18bad3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bugsnag/bugsnag-php/zipball/94474e309cebec88915fa9d4cf1e5355458f35aa",
-                "reference": "94474e309cebec88915fa9d4cf1e5355458f35aa",
+                "url": "https://api.github.com/repos/bugsnag/bugsnag-php/zipball/c251f20bcd07100a2106db357f5b277ec18bad3e",
+                "reference": "c251f20bcd07100a2106db357f5b277ec18bad3e",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,7 @@
             },
             "require-dev": {
                 "graham-campbell/testbench-core": "^1.1",
-                "mockery/mockery": "^0.9.4|^1.0",
+                "mockery/mockery": "^0.9.4|~1.1.0",
                 "mtdowling/burgomaster": "dev-master#72151eddf5f0cf101502b94bf5031f9c53501a04",
                 "php-mock/php-mock-phpunit": "^1.1",
                 "phpunit/phpunit": "^4.8|^5.0"
@@ -63,7 +63,7 @@
                 "logging",
                 "tracking"
             ],
-            "time": "2018-07-20T14:35:34+00:00"
+            "time": "2018-11-01T11:29:35+00:00"
         },
         {
             "name": "bugsnag/bugsnag-laravel",
@@ -1262,16 +1262,16 @@
         },
         {
             "name": "laravel/horizon",
-            "version": "v1.4.1",
+            "version": "v1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "958abcb5aa457007ff017418d2a68292d48ed92d"
+                "reference": "b00da78d10158036cab2f45115ecc360f2014ed4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/958abcb5aa457007ff017418d2a68292d48ed92d",
-                "reference": "958abcb5aa457007ff017418d2a68292d48ed92d",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/b00da78d10158036cab2f45115ecc360f2014ed4",
+                "reference": "b00da78d10158036cab2f45115ecc360f2014ed4",
                 "shasum": ""
             },
             "require": {
@@ -1326,7 +1326,7 @@
                 "laravel",
                 "queue"
             ],
-            "time": "2018-10-30T13:52:44+00:00"
+            "time": "2018-11-01T14:03:51+00:00"
         },
         {
             "name": "laravel/nova",
@@ -3172,7 +3172,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -3230,16 +3230,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8"
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d0cd638f4634c16d8df4508e847f14e9e43168b8",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
                 "shasum": ""
             },
             "require": {
@@ -3285,20 +3285,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2018-09-21T13:07:52+00:00"
         },
         {
             "name": "symfony/polyfill-php72",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "95c50420b0baed23852452a7f0c7b527303ed5ae"
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/95c50420b0baed23852452a7f0c7b527303ed5ae",
-                "reference": "95c50420b0baed23852452a7f0c7b527303ed5ae",
+                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
+                "reference": "9050816e2ca34a8e916c3a0ae8b9c2fccf68b631",
                 "shasum": ""
             },
             "require": {
@@ -3340,7 +3340,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2018-09-21T13:07:52+00:00"
         },
         {
             "name": "symfony/process",
@@ -4785,16 +4785,16 @@
         },
         {
             "name": "nunomaduro/larastan",
-            "version": "v0.3.7",
+            "version": "v0.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/larastan.git",
-                "reference": "7dd69ad4feb7fe58676c2e4fd8dfe8f91d9af9d9"
+                "reference": "6f4444d67a48295a37d80bda6bb16c6f4a9e9a7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/larastan/zipball/7dd69ad4feb7fe58676c2e4fd8dfe8f91d9af9d9",
-                "reference": "7dd69ad4feb7fe58676c2e4fd8dfe8f91d9af9d9",
+                "url": "https://api.github.com/repos/nunomaduro/larastan/zipball/6f4444d67a48295a37d80bda6bb16c6f4a9e9a7f",
+                "reference": "6f4444d67a48295a37d80bda6bb16c6f4a9e9a7f",
                 "shasum": ""
             },
             "require": {
@@ -4848,7 +4848,7 @@
                 "php",
                 "static analysis"
             ],
-            "time": "2018-10-30T23:10:42+00:00"
+            "time": "2018-11-01T20:49:13+00:00"
         },
         {
             "name": "ocramius/package-versions",
@@ -5449,16 +5449,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "6.1.3",
+            "version": "6.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "4d3ae9b21a7d7e440bd0cf65565533117976859f"
+                "reference": "807e6013b00af69b6c5d9ceb4282d0393dbb9d8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/4d3ae9b21a7d7e440bd0cf65565533117976859f",
-                "reference": "4d3ae9b21a7d7e440bd0cf65565533117976859f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/807e6013b00af69b6c5d9ceb4282d0393dbb9d8d",
+                "reference": "807e6013b00af69b6c5d9ceb4282d0393dbb9d8d",
                 "shasum": ""
             },
             "require": {
@@ -5508,7 +5508,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-10-23T05:59:32+00:00"
+            "time": "2018-10-31T16:06:48+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
