@@ -28,21 +28,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Record Pruning
-    |--------------------------------------------------------------------------
-    |
-    | This configuration options determines how many Telescope records of
-    | a given type will be kept in storage. This allows you to control
-    | the amount of disk space claimed by Telescope's entry storage.
-    |
-    | When "null", records will not be pruned.
-    |
-    */
-
-    'limit' => env('TELESCOPE_LIMIT', 100),
-
-    /*
-    |--------------------------------------------------------------------------
     | Telescope Route Middleware
     |--------------------------------------------------------------------------
     |
@@ -86,7 +71,12 @@ return [
         ],
 
         Watchers\RedisWatcher::class => env('TELESCOPE_REDIS_WATCHER', true),
-        Watchers\RequestWatcher::class => env('TELESCOPE_REQUEST_WATCHER', true),
+
+        Watchers\RequestWatcher::class => [
+            'enabled' => env('TELESCOPE_REQUEST_WATCHER', true),
+            'size_limit' => env('TELESCOPE_RESPONSE_SIZE_LIMIT', 64),
+        ],
+
         Watchers\ScheduleWatcher::class => env('TELESCOPE_SCHEDULE_WATCHER', true),
     ],
 ];

@@ -1871,7 +1871,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
                 __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post('/' + Telescope.path + '/telescope-api/' + _this4.resource + '?tag=' + _this4.tag + '&take=1' + '&family_hash=' + _this4.familyHash).then(function (response) {
                     if (response.data.entries.length && !_this4.entries.length) {
                         _this4.loadNewEntries();
-                    } else if (response.data.entries.length && __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.first(response.data.entries).id != __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.first(_this4.entries).id) {
+                    } else if (response.data.entries.length && __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.first(response.data.entries).id !== __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.first(_this4.entries).id) {
                         if (_this4.$root.autoLoadsNewEntries) {
                             _this4.loadNewEntries();
                         } else {
@@ -1965,11 +1965,11 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         updateEntries: function updateEntries() {
             var _this9 = this;
 
-            if (this.resource != 'jobs') return;
+            if (this.resource !== 'jobs') return;
 
             this.updateEntriesTimeout = setTimeout(function () {
                 var uuids = __WEBPACK_IMPORTED_MODULE_1_lodash___default.a.chain(_this9.entries).filter(function (entry) {
-                    return entry.content.status == 'pending';
+                    return entry.content.status === 'pending';
                 }).map('id').value();
 
                 if (uuids.length) {
@@ -1994,7 +1994,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
          */
         focusOnSearch: function focusOnSearch() {
             document.onkeyup = function (event) {
-                if (event.which == 191 || event.keyCode == 191) {
+                if (event.which === 191 || event.keyCode === 191) {
                     var searchInput = document.getElementById("searchInput");
 
                     if (searchInput) {
@@ -2089,6 +2089,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             document.title = this.title + " - Telescope";
+            this.ready = false;
+
+            var unwatch = this.$watch('ready', function (newVal) {
+                if (newVal) {
+                    _this.$emit('ready');
+                    unwatch();
+                }
+            });
 
             this.loadEntry(function (response) {
                 _this.entry = response.data.entry;
@@ -2122,7 +2130,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this3 = this;
 
             if (this.resource != 'jobs') return;
-            if (this.entry.content.status != 'pending') return;
+            if (this.entry.content.status !== 'pending') return;
 
             this.updateEntryTimeout = setTimeout(function () {
                 _this3.loadEntry(function (response) {
@@ -2721,7 +2729,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             this.alertConfirm('Are you sure you want to remove this tag?', function () {
                 _this2.tags = _.reject(_this2.tags, function (t) {
-                    return t == tag;
+                    return t === tag;
                 });
 
                 __WEBPACK_IMPORTED_MODULE_1_axios___default.a.post('/' + Telescope.path + '/telescope-api/monitored-tags/delete', { tag: tag });
@@ -2833,15 +2841,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             batch: []
         };
     },
-    mounted: function mounted() {
-        var _this = this;
-
-        setTimeout(function () {
-            __WEBPACK_IMPORTED_MODULE_2_highlight_js_lib_highlight___default.a.registerLanguage('sql', __WEBPACK_IMPORTED_MODULE_3_highlight_js_lib_languages_sql___default.a);
-
-            __WEBPACK_IMPORTED_MODULE_2_highlight_js_lib_highlight___default.a.highlightBlock(_this.$refs.sqlcode);
-        }, 500);
-    },
 
 
     methods: {
@@ -2850,6 +2849,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 params: __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.map(params, function (param) {
                     return __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.isString(param) ? '"' + param + '"' : param;
                 })
+            });
+        },
+        highlightSQL: function highlightSQL() {
+            var _this = this;
+
+            this.$nextTick(function () {
+                __WEBPACK_IMPORTED_MODULE_2_highlight_js_lib_highlight___default.a.registerLanguage('sql', __WEBPACK_IMPORTED_MODULE_3_highlight_js_lib_languages_sql___default.a);
+                __WEBPACK_IMPORTED_MODULE_2_highlight_js_lib_highlight___default.a.highlightBlock(_this.$refs.sqlcode);
             });
         }
     }
@@ -50129,7 +50136,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("td", { attrs: { title: slotProps.entry.content.uri } }, [
-                _vm._v(_vm._s(_vm.truncate(slotProps.entry.content.uri, 90)))
+                _vm._v(_vm._s(_vm.truncate(slotProps.entry.content.uri, 70)))
               ]),
               _vm._v(" "),
               _c("td", { staticClass: "table-fit" }, [
@@ -52407,6 +52414,11 @@ var render = function() {
       resource: "queries",
       id: _vm.$route.params.id
     },
+    on: {
+      ready: function($event) {
+        _vm.highlightSQL()
+      }
+    },
     scopedSlots: _vm._u([
       {
         key: "table-parameters",
@@ -52425,6 +52437,24 @@ var render = function() {
                 )
               ])
             ]),
+            _vm._v(" "),
+            slotProps.entry.content.file
+              ? _c("tr", [
+                  _c("td", { staticClass: "table-fit font-weight-bold" }, [
+                    _vm._v("Location")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(slotProps.entry.content.file) +
+                        ":" +
+                        _vm._s(slotProps.entry.content.line) +
+                        "\n            "
+                    )
+                  ])
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _c("tr", [
               _c("td", { staticClass: "table-fit font-weight-bold" }, [
@@ -53743,6 +53773,34 @@ var render = function() {
             _vm._v(" "),
             _c("tr", [
               _c("td", { staticClass: "table-fit font-weight-bold" }, [
+                _vm._v("Controller Action")
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(slotProps.entry.content.controller_action) +
+                    "\n        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "table-fit font-weight-bold" }, [
+                _vm._v("Middleware")
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(slotProps.entry.content.middleware.join(", ")) +
+                    "\n        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "table-fit font-weight-bold" }, [
                 _vm._v("Path")
               ]),
               _vm._v(" "),
@@ -53765,6 +53823,20 @@ var render = function() {
                   "\n            " +
                     _vm._s(slotProps.entry.content.response_status) +
                     "\n        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", { staticClass: "table-fit font-weight-bold" }, [
+                _vm._v("Duration")
+              ]),
+              _vm._v(" "),
+              _c("td", [
+                _vm._v(
+                  "\n            " +
+                    _vm._s(slotProps.entry.content.duration || "-") +
+                    " ms\n        "
                 )
               ])
             ])
@@ -68431,12 +68503,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__("./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__base__ = __webpack_require__("./resources/js/base.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routes__ = __webpack_require__("./resources/js/routes.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_router__ = __webpack_require__("./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_json_tree_view__ = __webpack_require__("./node_modules/vue-json-tree-view/dist/vue-json-tree-view.min.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_json_tree_view___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_vue_json_tree_view__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment_timezone__ = __webpack_require__("./node_modules/moment-timezone/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment_timezone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_moment_timezone__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__("./node_modules/axios/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routes__ = __webpack_require__("./resources/js/routes.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_vue_router__ = __webpack_require__("./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_json_tree_view__ = __webpack_require__("./node_modules/vue-json-tree-view/dist/vue-json-tree-view.min.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_vue_json_tree_view___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_vue_json_tree_view__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment_timezone__ = __webpack_require__("./node_modules/moment-timezone/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_moment_timezone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_moment_timezone__);
+
 
 
 
@@ -68446,15 +68521,21 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __webpack_require__("./node_modules/bootstrap/dist/js/bootstrap.js");
 
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_3_vue_router__["a" /* default */]);
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_4_vue_json_tree_view___default.a);
+var token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+    __WEBPACK_IMPORTED_MODULE_2_axios___default.a.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+}
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_4_vue_router__["a" /* default */]);
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_5_vue_json_tree_view___default.a);
 
 window.Popper = __webpack_require__("./node_modules/popper.js/dist/esm/popper.js").default;
 
-__WEBPACK_IMPORTED_MODULE_5_moment_timezone___default.a.tz.setDefault(Telescope.timezone);
+__WEBPACK_IMPORTED_MODULE_6_moment_timezone___default.a.tz.setDefault(Telescope.timezone);
 
-var router = new __WEBPACK_IMPORTED_MODULE_3_vue_router__["a" /* default */]({
-    routes: __WEBPACK_IMPORTED_MODULE_2__routes__["a" /* default */],
+var router = new __WEBPACK_IMPORTED_MODULE_4_vue_router__["a" /* default */]({
+    routes: __WEBPACK_IMPORTED_MODULE_3__routes__["a" /* default */],
     mode: 'history',
     base: '/' + window.Telescope.path + '/'
 });
@@ -68481,7 +68562,9 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
                 confirmationCancel: null
             },
 
-            autoLoadsNewEntries: localStorage.autoLoadsNewEntries === '1'
+            autoLoadsNewEntries: localStorage.autoLoadsNewEntries === '1',
+
+            recording: Telescope.recording
         };
     },
 
@@ -68495,6 +68578,12 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
                 this.autoLoadsNewEntries = false;
                 localStorage.autoLoadsNewEntries = 0;
             }
+        },
+        toggleRecording: function toggleRecording() {
+            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post('/' + Telescope.path + '/telescope-api/toggle-recording');
+
+            window.Telescope.recording = !Telescope.recording;
+            this.recording = !this.recording;
         }
     }
 });
@@ -68513,6 +68602,22 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
+    computed: {
+        Telescope: function (_Telescope) {
+            function Telescope() {
+                return _Telescope.apply(this, arguments);
+            }
+
+            Telescope.toString = function () {
+                return _Telescope.toString();
+            };
+
+            return Telescope;
+        }(function () {
+            return Telescope;
+        })
+    },
+
     methods: {
         /**
          * Show the time ago format for the given time.
@@ -68915,25 +69020,25 @@ module.exports = Component.exports
 /* harmony default export */ __webpack_exports__["a"] = ({
     methods: {
         cacheActionTypeClass: function cacheActionTypeClass(type) {
-            if (type == 'hit') return 'success';
-            if (type == 'set') return 'info';
-            if (type == 'forget') return 'warning';
-            if (type == 'missed') return 'danger';
+            if (type === 'hit') return 'success';
+            if (type === 'set') return 'info';
+            if (type === 'forget') return 'warning';
+            if (type === 'missed') return 'danger';
         },
         jobStatusClass: function jobStatusClass(status) {
-            if (status == 'pending') return 'secondary';
-            if (status == 'processed') return 'success';
-            if (status == 'failed') return 'danger';
+            if (status === 'pending') return 'secondary';
+            if (status === 'processed') return 'success';
+            if (status === 'failed') return 'danger';
         },
         logLevelClass: function logLevelClass(level) {
-            if (level == 'debug') return 'success';
-            if (level == 'info') return 'info';
-            if (level == 'notice') return 'secondary';
-            if (level == 'warning') return 'warning';
-            if (level == 'error') return 'danger';
-            if (level == 'critical') return 'danger';
-            if (level == 'alert') return 'danger';
-            if (level == 'emergency') return 'danger';
+            if (level === 'debug') return 'success';
+            if (level === 'info') return 'info';
+            if (level === 'notice') return 'secondary';
+            if (level === 'warning') return 'warning';
+            if (level === 'error') return 'danger';
+            if (level === 'critical') return 'danger';
+            if (level === 'alert') return 'danger';
+            if (level === 'emergency') return 'danger';
         },
         modelActionClass: function modelActionClass(action) {
             if (action == 'created') return 'success';
@@ -68948,6 +69053,7 @@ module.exports = Component.exports
         },
         requestMethodClass: function requestMethodClass(method) {
             if (method == 'GET') return 'secondary';
+            if (method == 'OPTIONS') return 'secondary';
             if (method == 'POST') return 'info';
             if (method == 'PATCH') return 'info';
             if (method == 'PUT') return 'info';
