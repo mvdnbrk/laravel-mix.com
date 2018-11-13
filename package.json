@@ -21,8 +21,8 @@
         "postcss-import": "^12.0.0",
         "postcss-nesting": "^7.0.0",
         "prismjs": "^1.15.0",
-        "smoothscroll-for-websites": "^1.4.6",
-        "tailwindcss": ">=0.5.3",
+        "smoothscroll-for-websites": "^1.4.8",
+        "tailwindcss": "^0.7.2",
         "vue": "^2.5.7"
     }
 }
