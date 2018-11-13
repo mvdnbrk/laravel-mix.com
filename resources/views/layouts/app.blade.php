@@ -18,6 +18,7 @@
         <link rel="apple-touch-icon-precomposed" href="/images/favicons/152x152.png">
 
         @include('partials.schema-organization')
+        {{ Breadcrumbs::view('breadcrumbs::json-ld') }}
 
         {!! Analytics::render() !!}
     </head>
