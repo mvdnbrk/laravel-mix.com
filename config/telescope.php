@@ -28,6 +28,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Telescope Master Switch
+    |--------------------------------------------------------------------------
+    |
+    | This option may be used to disable all Telescope watchers regardless
+    | of their individual configuration, which simply provides a single
+    | and convenient way to enable or disable Telescope data storage.
+    |
+    */
+
+    'enabled' => env('TELESCOPE_ENABLED', true),
+
+    /*
+    |--------------------------------------------------------------------------
     | Telescope Route Middleware
     |--------------------------------------------------------------------------
     |
@@ -40,6 +53,25 @@ return [
     'middleware' => [
         'web',
         Authorize::class,
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Ignored Paths & Commands
+    |--------------------------------------------------------------------------
+    |
+    | The following array lists the URI paths and Artisan commands that will
+    | not be watched by Telescope. In addition to this list, some Laravel
+    | commands, like migrations and queue commands, are always ignored.
+    |
+    */
+
+    'ignore_paths' => [
+        //
+    ],
+
+    'ignore_commands' => [
+        //
     ],
 
     /*

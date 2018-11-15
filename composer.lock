@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b90086822e5c331dea4078b29785cfd2",
+    "content-hash": "fc77828496337da1f925f5262f33f418",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -1321,16 +1321,16 @@
         },
         {
             "name": "laravel/horizon",
-            "version": "v1.4.3",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "b00da78d10158036cab2f45115ecc360f2014ed4"
+                "reference": "384c84512cdf929886343c2e498f8dc4180d8728"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/b00da78d10158036cab2f45115ecc360f2014ed4",
-                "reference": "b00da78d10158036cab2f45115ecc360f2014ed4",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/384c84512cdf929886343c2e498f8dc4180d8728",
+                "reference": "384c84512cdf929886343c2e498f8dc4180d8728",
                 "shasum": ""
             },
             "require": {
@@ -1354,7 +1354,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "2.0-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -1385,7 +1385,7 @@
                 "laravel",
                 "queue"
             ],
-            "time": "2018-11-01T14:03:51+00:00"
+            "time": "2018-11-14T14:14:22+00:00"
         },
         {
             "name": "laravel/nova",
@@ -1458,16 +1458,16 @@
         },
         {
             "name": "laravel/telescope",
-            "version": "v0.1.8",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/telescope.git",
-                "reference": "96e23e08c5de5748b7ea38573da13b3a1f3fc141"
+                "reference": "1d43752cb2ec59906869fa14391329b291c5e8ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/telescope/zipball/96e23e08c5de5748b7ea38573da13b3a1f3fc141",
-                "reference": "96e23e08c5de5748b7ea38573da13b3a1f3fc141",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/1d43752cb2ec59906869fa14391329b291c5e8ec",
+                "reference": "1d43752cb2ec59906869fa14391329b291c5e8ec",
                 "shasum": ""
             },
             "require": {
@@ -1517,7 +1517,7 @@
                 "laravel",
                 "monitoring"
             ],
-            "time": "2018-11-09T14:19:41+00:00"
+            "time": "2018-11-14T14:46:50+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1668,20 +1668,20 @@
         },
         {
             "name": "mad-web/nova-horizon-link",
-            "version": "1.1.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mad-web/nova-horizon-link.git",
-                "reference": "fe4bf127cfb056b760b15e9521e37645860626dc"
+                "reference": "aa4852595f68f160ad510fa5d14477c1a8698726"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mad-web/nova-horizon-link/zipball/fe4bf127cfb056b760b15e9521e37645860626dc",
-                "reference": "fe4bf127cfb056b760b15e9521e37645860626dc",
+                "url": "https://api.github.com/repos/mad-web/nova-horizon-link/zipball/aa4852595f68f160ad510fa5d14477c1a8698726",
+                "reference": "aa4852595f68f160ad510fa5d14477c1a8698726",
                 "shasum": ""
             },
             "require": {
-                "laravel/horizon": "^1.0",
+                "laravel/horizon": "^1.0|^2.0",
                 "laravel/nova": "*",
                 "php": ">=7.1.0"
             },
@@ -1718,25 +1718,25 @@
                 "link",
                 "nova"
             ],
-            "time": "2018-10-27T15:31:00+00:00"
+            "time": "2018-11-14T20:30:45+00:00"
         },
         {
             "name": "mad-web/nova-telescope-link",
-            "version": "0.2.0",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mad-web/nova-telescope-link.git",
-                "reference": "0e19bb144ecf1d36fec6f4a7f96b60d7e217833d"
+                "reference": "24270573ed614d86d855aa9927ab957d7f2bad75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mad-web/nova-telescope-link/zipball/0e19bb144ecf1d36fec6f4a7f96b60d7e217833d",
-                "reference": "0e19bb144ecf1d36fec6f4a7f96b60d7e217833d",
+                "url": "https://api.github.com/repos/mad-web/nova-telescope-link/zipball/24270573ed614d86d855aa9927ab957d7f2bad75",
+                "reference": "24270573ed614d86d855aa9927ab957d7f2bad75",
                 "shasum": ""
             },
             "require": {
                 "laravel/nova": "*",
-                "laravel/telescope": "^0.1",
+                "laravel/telescope": "^1.0",
                 "php": ">=7.1.0"
             },
             "type": "library",
@@ -1772,7 +1772,7 @@
                 "nova",
                 "telescope"
             ],
-            "time": "2018-10-27T14:50:34+00:00"
+            "time": "2018-11-14T21:10:54+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1903,16 +1903,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.34.4",
+            "version": "1.35.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "b9a444d829c9a16735aceca1b173e765745bcc0c"
+                "reference": "5c05a2be472b22f63291d192410df9f0e0de3b19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/b9a444d829c9a16735aceca1b173e765745bcc0c",
-                "reference": "b9a444d829c9a16735aceca1b173e765745bcc0c",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/5c05a2be472b22f63291d192410df9f0e0de3b19",
+                "reference": "5c05a2be472b22f63291d192410df9f0e0de3b19",
                 "shasum": ""
             },
             "require": {
@@ -1957,7 +1957,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2018-11-13T08:26:10+00:00"
+            "time": "2018-11-14T21:55:58+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -5763,16 +5763,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.4.3",
+            "version": "7.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c151651fb6ed264038d486ea262e243af72e5e64"
+                "reference": "b1be2c8530c4c29c3519a052c9fb6cee55053bbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c151651fb6ed264038d486ea262e243af72e5e64",
-                "reference": "c151651fb6ed264038d486ea262e243af72e5e64",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b1be2c8530c4c29c3519a052c9fb6cee55053bbd",
+                "reference": "b1be2c8530c4c29c3519a052c9fb6cee55053bbd",
                 "shasum": ""
             },
             "require": {
@@ -5843,7 +5843,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-10-23T05:57:41+00:00"
+            "time": "2018-11-14T16:52:02+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
