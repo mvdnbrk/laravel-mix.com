@@ -33,3 +33,13 @@
 .markdown-body table tr:nth-child(2n) {
     @apply bg-grey-lightest;
 }
+
+.markdown-body .token.deleted {
+    color: #b31d28;
+    background-color: #ffeef0;
+}
+
+.markdown-body .token.inserted {
+    color: #22863a;
+    background-color: #f0fff4;
+}
