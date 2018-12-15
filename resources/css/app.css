@@ -89,6 +89,7 @@ blockquote > p {
 }
 
 blockquote.note {
+    @apply border-l-0;
     @apply bg-orange;
     @apply border-orange-dark;
     @apply text-white;
@@ -104,6 +105,7 @@ blockquote.note > p > code {
 }
 
 blockquote.tip {
+    @apply border-l-0;
     @apply bg-blue;
     @apply border-blue-dark;
     @apply text-white;
