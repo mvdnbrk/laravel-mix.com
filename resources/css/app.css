@@ -120,6 +120,16 @@ blockquote.tip > p > code {
     @apply text-blue-dark;
 }
 
+blockquote.tip a, blockquote.note a {
+    @apply text-white;
+    @apply underline;
+}
+
+blockquote.tip a:hover, blockquote.note a:hover {
+    @apply text-white;
+    @apply no-underline
+}
+
 code {
     padding-top: .2rem;
     padding-bottom: .2rem;
