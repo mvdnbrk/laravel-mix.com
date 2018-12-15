@@ -172,3 +172,13 @@ li {
 .pin-22 {
     top: 5.5rem;
 }
+
+.token.deleted {
+    color: #b31d28;
+    background-color: #ffeef0;
+}
+
+.token.inserted {
+    color: #22863a;
+    background-color: #f0fff4;
+}
