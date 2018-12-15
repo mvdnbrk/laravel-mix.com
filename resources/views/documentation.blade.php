@@ -17,11 +17,11 @@
                     @endif
                     @if($currentVersion !== $version)
                     <a class="px-2 py-1 mx-1 bg-grey-lighter text-sm text-grey rounded border hover:border-grey hover:text-grey-darker" href="{{ $url }}">
-                        v{{ $version }}
+                        {{ $version }}
                     </a>
                     @else
                     <div class="px-2 py-1 mx-1 bg-grey-light text-sm text-grey-darker rounded border border-grey">
-                        v{{ $version }}
+                        {{ $version }}
                     </div>
                     @endif
                 @endforeach
