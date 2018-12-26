@@ -8,7 +8,7 @@ let anchorForHeader = function (header) {
 
     let anchor = document.createElement('a')
 
-    anchor.className = 'header-link';
+    anchor.className = 'header-link'
     anchor.id = 'user-content-' + slug
     anchor.href = '#' + slug
     anchor.setAttribute('aria-hidden', 'true')
@@ -19,7 +19,7 @@ let anchorForHeader = function (header) {
 };
 
 let linkifyAnchors = function (level, element) {
-    let headers = element.getElementsByTagName("h" + level);
+    let headers = element.getElementsByTagName("h" + level)
 
     for (let h = 0; h < headers.length; h++) {
         let header = headers[h];
@@ -30,7 +30,7 @@ let linkifyAnchors = function (level, element) {
 
 document.onreadystatechange = function () {
     if (this.readyState === "interactive") {
-        let contentBlock = document.getElementById('content');
+        let contentBlock = document.getElementById('content')
 
         if (! contentBlock) {
             return
