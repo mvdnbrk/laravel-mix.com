@@ -12,15 +12,15 @@
     "devDependencies": {
         "babel-plugin-prismjs": "^1.0.2",
         "cross-env": "^5.1",
-        "github-slugger": "^1.2.0",
-        "laravel-mix": "4.0.12",
-        "laravel-mix-purgecss": "^4.0.0",
+        "github-slugger": "^1.2.1",
+        "laravel-mix": "4.0.14",
+        "laravel-mix-purgecss": "^4.1.0",
         "marky-deep-links": "^1.0.1",
         "postcss-import": "^12.0.0",
         "postcss-nesting": "^7.0.0",
         "prismjs": "^1.15.0",
         "smoothscroll-for-websites": "^1.4.8",
         "tailwindcss": "^0.7.3",
-        "vue-template-compiler": "^2.5.21"
+        "vue-template-compiler": "^2.5.22"
     }
 }
