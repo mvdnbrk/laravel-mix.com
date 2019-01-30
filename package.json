@@ -20,7 +20,7 @@
         "postcss-nesting": "^7.0.0",
         "prismjs": "^1.15.0",
         "smoothscroll-for-websites": "^1.4.8",
-        "tailwindcss": "^0.7.3",
+        "tailwindcss": "^0.7.4",
         "vue-template-compiler": "^2.5.22"
     }
 }
