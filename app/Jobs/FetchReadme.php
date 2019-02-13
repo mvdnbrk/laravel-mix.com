@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use Zttp\Zttp;
 use App\Extension;
+use Illuminate\Support\Str;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -80,7 +81,7 @@ class FetchReadme implements ShouldQueue
      */
     protected function baseUrl()
     {
-        return str_replace_first(
+        return Str::replaceFirst(
             'https://github.com',
             'https://raw.githubusercontent.com',
             $this->extension->repositoryUrl

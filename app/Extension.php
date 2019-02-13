@@ -157,7 +157,7 @@ class Extension extends Model
      */
     public function getLatestVersionAttribute()
     {
-        return str_start($this->latest_dist_tag, 'v');
+        return Str::start($this->latest_dist_tag, 'v');
     }
 
     /**
@@ -213,7 +213,7 @@ class Extension extends Model
                 $url = substr($url, 0, strlen($url) - strlen('.git'));
             }
 
-            $url = str_start($url, 'https');
+            $url = Str::start($url, 'https');
 
             return $url;
         });

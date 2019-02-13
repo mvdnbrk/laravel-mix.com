@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Extension;
+use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -86,9 +87,9 @@ class UpdateExtensionModelFromJson implements ShouldQueue
     {
         $description = $this->data->get('description');
 
-        $description = str_finish($description, '.');
+        $description = Str::finish($description, '.');
 
-        return \Illuminate\Support\Str::ucfirst($description);
+        return Str::ucfirst($description);
     }
 
     protected function getRepository()
