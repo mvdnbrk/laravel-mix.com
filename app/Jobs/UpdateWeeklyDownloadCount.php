@@ -28,6 +28,8 @@ class UpdateWeeklyDownloadCount implements ShouldQueue
     public function __construct(Extension $extension)
     {
         $this->extension = $extension;
+
+        $this->extension->timestamps = false;
     }
 
     /**
