@@ -7,8 +7,8 @@ use App\Extension;
 use Illuminate\Support\Str;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
 
 class FetchReadme implements ShouldQueue
 {
@@ -114,6 +114,7 @@ class FetchReadme implements ShouldQueue
             }
 
             Storage::disk('local')->put("readme/{$this->extension->name}.md", $response->body());
+
             cache()->forever($this->cacheKey(), $filename);
         } catch (\Exception $e) {
             return false;
