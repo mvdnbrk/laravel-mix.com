@@ -24,7 +24,7 @@
         "ipunkt/laravel-analytics": "^1.4",
         "kitetail/zttp": "^0.4.0",
         "laravel/framework": "5.8.*",
-        "laravel/horizon": "^2.0",
+        "laravel/horizon": "^3.0",
         "laravel/nova": "^2.0",
         "laravel/tinker": "^1.0",
         "nunomaduro/laravel-console-task": "^1.0",
