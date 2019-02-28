@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc77828496337da1f925f5262f33f418",
+    "content-hash": "04a9afd0f8ae76d13f83535993ee8eb1",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -298,26 +298,26 @@
         },
         {
             "name": "davejamesmiller/laravel-breadcrumbs",
-            "version": "5.2.0",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/davejamesmiller/laravel-breadcrumbs.git",
-                "reference": "e2ed8b0992231ebc61480c63f095a2cf3b8829a1"
+                "reference": "6465e8710341578092fdd8aea24319d4f53ab27c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/davejamesmiller/laravel-breadcrumbs/zipball/e2ed8b0992231ebc61480c63f095a2cf3b8829a1",
-                "reference": "e2ed8b0992231ebc61480c63f095a2cf3b8829a1",
+                "url": "https://api.github.com/repos/davejamesmiller/laravel-breadcrumbs/zipball/6465e8710341578092fdd8aea24319d4f53ab27c",
+                "reference": "6465e8710341578092fdd8aea24319d4f53ab27c",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "5.6.*|5.7.*",
-                "illuminate/view": "5.6.*|5.7.*",
+                "illuminate/support": "5.6.*|5.7.*|5.8.*",
+                "illuminate/view": "5.6.*|5.7.*|5.8.*",
                 "php": ">=7.1.3"
             },
             "require-dev": {
-                "laravel/framework": "5.6.*|5.7.*",
-                "orchestra/testbench": "3.6.*|3.7.*",
+                "laravel/framework": "5.6.*|5.7.*|5.8.*",
+                "orchestra/testbench": "3.6.*|3.7.*|3.8.*",
                 "php-coveralls/php-coveralls": "^1.0",
                 "phpunit/phpunit": "7.*"
             },
@@ -352,7 +352,7 @@
             "keywords": [
                 "laravel"
             ],
-            "time": "2018-10-30T22:06:33+00:00"
+            "time": "2019-02-27T13:09:37+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1181,16 +1181,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.7.26",
+            "version": "v5.7.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ca3bc9769969e8af3bd9878a3e0242051c74dae4"
+                "reference": "8e69728f1c80a024588adbd24c65c4fcf9aa9192"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ca3bc9769969e8af3bd9878a3e0242051c74dae4",
-                "reference": "ca3bc9769969e8af3bd9878a3e0242051c74dae4",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/8e69728f1c80a024588adbd24c65c4fcf9aa9192",
+                "reference": "8e69728f1c80a024588adbd24c65c4fcf9aa9192",
                 "shasum": ""
             },
             "require": {
@@ -1263,7 +1263,7 @@
                 "mockery/mockery": "^1.0",
                 "moontoast/math": "^1.1",
                 "orchestra/testbench-core": "3.7.*",
-                "pda/pheanstalk": "^3.0",
+                "pda/pheanstalk": "^3.0|^4.0",
                 "phpunit/phpunit": "^7.5",
                 "predis/predis": "^1.1.1",
                 "symfony/css-selector": "^4.1",
@@ -1285,7 +1285,7 @@
                 "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (^1.0).",
                 "moontoast/math": "Required to use ordered UUIDs (^1.1).",
                 "nexmo/client": "Required to use the Nexmo transport (^1.0).",
-                "pda/pheanstalk": "Required to use the beanstalk queue driver (^3.0).",
+                "pda/pheanstalk": "Required to use the beanstalk queue driver (^3.0|^4.0).",
                 "predis/predis": "Required to use the redis cache and queue drivers (^1.0).",
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (^3.0).",
                 "symfony/css-selector": "Required to use some of the crawler integration testing tools (^4.1).",
@@ -1323,20 +1323,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-02-12T14:52:21+00:00"
+            "time": "2019-02-26T15:41:34+00:00"
         },
         {
             "name": "laravel/horizon",
-            "version": "v2.2.0",
+            "version": "v2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "9ecf2c8e1ccda442a7e338b8d5b0459f7f9e054b"
+                "reference": "b79bb2762ed3f234125892c811d3a73d13bf66cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/9ecf2c8e1ccda442a7e338b8d5b0459f7f9e054b",
-                "reference": "9ecf2c8e1ccda442a7e338b8d5b0459f7f9e054b",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/b79bb2762ed3f234125892c811d3a73d13bf66cc",
+                "reference": "b79bb2762ed3f234125892c811d3a73d13bf66cc",
                 "shasum": ""
             },
             "require": {
@@ -1391,7 +1391,7 @@
                 "laravel",
                 "queue"
             ],
-            "time": "2019-02-12T15:39:05+00:00"
+            "time": "2019-02-21T19:56:21+00:00"
         },
         {
             "name": "laravel/nexmo-notification-channel",
@@ -1578,21 +1578,21 @@
         },
         {
             "name": "laravel/telescope",
-            "version": "v1.0.13",
+            "version": "v1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/telescope.git",
-                "reference": "25c9e57f5000748eee371e750fe9a55e2ca10f1f"
+                "reference": "925386780c756d6aa7c18ae185bb7a756c122460"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/telescope/zipball/25c9e57f5000748eee371e750fe9a55e2ca10f1f",
-                "reference": "25c9e57f5000748eee371e750fe9a55e2ca10f1f",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/925386780c756d6aa7c18ae185bb7a756c122460",
+                "reference": "925386780c756d6aa7c18ae185bb7a756c122460",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "laravel/framework": "^5.7",
+                "laravel/framework": "~5.7.7|~5.8.0",
                 "moontoast/math": "^1.1",
                 "php": "^7.1.3",
                 "symfony/var-dumper": "^4.1"
@@ -1637,7 +1637,7 @@
                 "laravel",
                 "monitoring"
             ],
-            "time": "2019-01-31T19:18:34+00:00"
+            "time": "2019-02-18T22:02:39+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -2187,16 +2187,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "594bcae1fc0bccd3993d2f0d61a018e26ac2865a"
+                "reference": "5221f49a608808c1e4d436df32884cbc1b821ac0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/594bcae1fc0bccd3993d2f0d61a018e26ac2865a",
-                "reference": "594bcae1fc0bccd3993d2f0d61a018e26ac2865a",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/5221f49a608808c1e4d436df32884cbc1b821ac0",
+                "reference": "5221f49a608808c1e4d436df32884cbc1b821ac0",
                 "shasum": ""
             },
             "require": {
@@ -2234,7 +2234,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-01-12T16:31:37+00:00"
+            "time": "2019-02-16T20:54:15+00:00"
         },
         {
             "name": "nunomaduro/laravel-console-task",
@@ -2296,16 +2296,16 @@
         },
         {
             "name": "opis/closure",
-            "version": "3.1.5",
+            "version": "3.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opis/closure.git",
-                "reference": "41f5da65d75cf473e5ee582df8fc7f2c733ce9d6"
+                "reference": "ccb8e3928c5c8181c76cdd0ed9366c5bcaafd91b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opis/closure/zipball/41f5da65d75cf473e5ee582df8fc7f2c733ce9d6",
-                "reference": "41f5da65d75cf473e5ee582df8fc7f2c733ce9d6",
+                "url": "https://api.github.com/repos/opis/closure/zipball/ccb8e3928c5c8181c76cdd0ed9366c5bcaafd91b",
+                "reference": "ccb8e3928c5c8181c76cdd0ed9366c5bcaafd91b",
                 "shasum": ""
             },
             "require": {
@@ -2353,7 +2353,7 @@
                 "serialization",
                 "serialize"
             ],
-            "time": "2019-01-14T14:45:33+00:00"
+            "time": "2019-02-22T10:30:00+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3008,26 +3008,26 @@
         },
         {
             "name": "silber/page-cache",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JosephSilber/page-cache.git",
-                "reference": "fc6a876e960ae1120a10902de94b6bfc743b0ceb"
+                "reference": "32f9754d0beb99717e1257844a76f6a073027da3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JosephSilber/page-cache/zipball/fc6a876e960ae1120a10902de94b6bfc743b0ceb",
-                "reference": "fc6a876e960ae1120a10902de94b6bfc743b0ceb",
+                "url": "https://api.github.com/repos/JosephSilber/page-cache/zipball/32f9754d0beb99717e1257844a76f6a073027da3",
+                "reference": "32f9754d0beb99717e1257844a76f6a073027da3",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.0 - 5.7",
-                "illuminate/filesystem": "5.0 - 5.7",
+                "illuminate/contracts": "5.0 - 5.8",
+                "illuminate/filesystem": "5.0 - 5.8",
                 "php": ">=5.5.9",
                 "symfony/http-foundation": "2.6 - 4"
             },
             "require-dev": {
-                "illuminate/container": "5.0 - 5.7",
+                "illuminate/container": "5.0 - 5.8",
                 "larapack/dd": "^1.1",
                 "mockery/mockery": "^0.9.5",
                 "phpunit/phpunit": "^4.8"
@@ -3063,7 +3063,7 @@
                 "cache",
                 "laravel"
             ],
-            "time": "2018-09-04T21:54:13+00:00"
+            "time": "2019-02-27T14:02:19+00:00"
         },
         {
             "name": "spatie/once",
@@ -4188,16 +4188,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.7.25",
+            "version": "v5.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "bcdb1d4ca989a3aaa74aeac67c8e44ccf1761b9d"
+                "reference": "9e431d3ba84ff02183bbb6da07410d59ef769f9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/bcdb1d4ca989a3aaa74aeac67c8e44ccf1761b9d",
-                "reference": "bcdb1d4ca989a3aaa74aeac67c8e44ccf1761b9d",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/9e431d3ba84ff02183bbb6da07410d59ef769f9b",
+                "reference": "9e431d3ba84ff02183bbb6da07410d59ef769f9b",
                 "shasum": ""
             },
             "require": {
@@ -4234,7 +4234,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2019-02-05T15:00:41+00:00"
+            "time": "2019-02-26T18:45:33+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5091,31 +5091,31 @@
         },
         {
             "name": "nette/neon",
-            "version": "v2.4.3",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/neon.git",
-                "reference": "5e72b1dd3e2d34f0863c5561139a19df6a1ef398"
+                "reference": "cbff32059cbdd8720deccf9e9eace6ee516f02eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/neon/zipball/5e72b1dd3e2d34f0863c5561139a19df6a1ef398",
-                "reference": "5e72b1dd3e2d34f0863c5561139a19df6a1ef398",
+                "url": "https://api.github.com/repos/nette/neon/zipball/cbff32059cbdd8720deccf9e9eace6ee516f02eb",
+                "reference": "cbff32059cbdd8720deccf9e9eace6ee516f02eb",
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
                 "ext-json": "*",
-                "php": ">=5.6.0"
+                "php": ">=7.0"
             },
             "require-dev": {
-                "nette/tester": "~2.0",
+                "nette/tester": "^2.0",
                 "tracy/tracy": "^2.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5148,7 +5148,7 @@
                 "nette",
                 "yaml"
             ],
-            "time": "2018-03-21T12:12:21+00:00"
+            "time": "2019-02-05T21:30:40+00:00"
         },
         {
             "name": "nette/php-generator",
@@ -5492,16 +5492,16 @@
         },
         {
             "name": "ocramius/package-versions",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Ocramius/PackageVersions.git",
-                "reference": "4489d5002c49d55576fa0ba786f42dbb009be46f"
+                "reference": "a4d4b60d0e60da2487bd21a2c6ac089f85570dbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Ocramius/PackageVersions/zipball/4489d5002c49d55576fa0ba786f42dbb009be46f",
-                "reference": "4489d5002c49d55576fa0ba786f42dbb009be46f",
+                "url": "https://api.github.com/repos/Ocramius/PackageVersions/zipball/a4d4b60d0e60da2487bd21a2c6ac089f85570dbb",
+                "reference": "a4d4b60d0e60da2487bd21a2c6ac089f85570dbb",
                 "shasum": ""
             },
             "require": {
@@ -5510,6 +5510,7 @@
             },
             "require-dev": {
                 "composer/composer": "^1.6.3",
+                "doctrine/coding-standard": "^5.0.1",
                 "ext-zip": "*",
                 "infection/infection": "^0.7.1",
                 "phpunit/phpunit": "^7.0.0"
@@ -5537,7 +5538,7 @@
                 }
             ],
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
-            "time": "2018-02-05T13:05:30+00:00"
+            "time": "2019-02-21T12:16:21+00:00"
         },
         {
             "name": "orchestra/testbench",
@@ -6245,16 +6246,16 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "2.0.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "8b8454ea6958c3dee38453d3bd571e023108c91f"
+                "reference": "8b389aebe1b8b0578430bda0c7c95a829608e059"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/8b8454ea6958c3dee38453d3bd571e023108c91f",
-                "reference": "8b8454ea6958c3dee38453d3bd571e023108c91f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/8b389aebe1b8b0578430bda0c7c95a829608e059",
+                "reference": "8b389aebe1b8b0578430bda0c7c95a829608e059",
                 "shasum": ""
             },
             "require": {
@@ -6266,7 +6267,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -6290,7 +6291,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2018-02-01T13:07:23+00:00"
+            "time": "2019-02-20T10:12:59+00:00"
         },
         {
             "name": "phpunit/php-token-stream",
@@ -6343,16 +6344,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.5.4",
+            "version": "7.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2896657da5fb237bc316bdfc18c2650efeee0dc0"
+                "reference": "09c85e14994df92e5ff1f5ec0b481bdb7d3d3df9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2896657da5fb237bc316bdfc18c2650efeee0dc0",
-                "reference": "2896657da5fb237bc316bdfc18c2650efeee0dc0",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/09c85e14994df92e5ff1f5ec0b481bdb7d3d3df9",
+                "reference": "09c85e14994df92e5ff1f5ec0b481bdb7d3d3df9",
                 "shasum": ""
             },
             "require": {
@@ -6423,7 +6424,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-02-07T14:15:04+00:00"
+            "time": "2019-02-18T09:24:50+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -7140,7 +7141,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.1.3"
+        "php": "^7.2"
     },
     "platform-dev": []
 }
