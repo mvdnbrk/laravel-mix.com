@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04a9afd0f8ae76d13f83535993ee8eb1",
+    "content-hash": "c4bfeec4bd303c61ee979c941b0a2e8b",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -1843,114 +1843,6 @@
                 "storage"
             ],
             "time": "2019-02-01T08:50:36+00:00"
-        },
-        {
-            "name": "mad-web/nova-horizon-link",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mad-web/nova-horizon-link.git",
-                "reference": "aa4852595f68f160ad510fa5d14477c1a8698726"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mad-web/nova-horizon-link/zipball/aa4852595f68f160ad510fa5d14477c1a8698726",
-                "reference": "aa4852595f68f160ad510fa5d14477c1a8698726",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/horizon": "^1.0|^2.0",
-                "laravel/nova": "*",
-                "php": ">=7.1.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "MadWeb\\NovaHorizonLink\\LinkServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "MadWeb\\NovaHorizonLink\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mad Web",
-                    "email": "madweb.dev@gmail.com",
-                    "homepage": "https://github.com/mad-web",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Smart Link for Laravel Nova to Horizon Dashboard.",
-            "homepage": "https://github.com/mad-web/nova-horizon-link",
-            "keywords": [
-                "horizon",
-                "laravel",
-                "link",
-                "nova"
-            ],
-            "time": "2018-11-14T20:30:45+00:00"
-        },
-        {
-            "name": "mad-web/nova-telescope-link",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mad-web/nova-telescope-link.git",
-                "reference": "24270573ed614d86d855aa9927ab957d7f2bad75"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mad-web/nova-telescope-link/zipball/24270573ed614d86d855aa9927ab957d7f2bad75",
-                "reference": "24270573ed614d86d855aa9927ab957d7f2bad75",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/nova": "*",
-                "laravel/telescope": "^1.0",
-                "php": ">=7.1.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "MadWeb\\NovaTelescopeLink\\LinkServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "MadWeb\\NovaTelescopeLink\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mad Web",
-                    "email": "madweb.dev@gmail.com",
-                    "homepage": "https://github.com/mad-web",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Smart Link for Laravel Nova to Telescope Debug Assistant.",
-            "homepage": "https://github.com/mad-web/nova-telescope-link",
-            "keywords": [
-                "laravel",
-                "link",
-                "nova",
-                "telescope"
-            ],
-            "time": "2018-11-14T21:10:54+00:00"
         },
         {
             "name": "monolog/monolog",

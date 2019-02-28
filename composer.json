@@ -29,8 +29,6 @@
         "laravel/nova": "~1.0",
         "laravel/telescope": "^1.0",
         "laravel/tinker": "^1.0",
-        "mad-web/nova-horizon-link": "^2.0",
-        "mad-web/nova-telescope-link": "^1.0",
         "nunomaduro/laravel-console-task": "^1.0",
         "predis/predis": "^1.1",
         "silber/page-cache": "^1.0",
