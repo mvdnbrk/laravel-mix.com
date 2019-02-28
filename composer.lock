@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab755a3c956ca0c1c9fd7a345c50b175",
+    "content-hash": "9ffb6f584d6d9f927a4c4b24ac169d4c",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -1137,47 +1137,6 @@
                 "http"
             ],
             "time": "2018-03-11T19:39:08+00:00"
-        },
-        {
-            "name": "kreitje/nova-horizon-stats",
-            "version": "v0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kreitje/nova-horizon-stats.git",
-                "reference": "22cc6ace3e4c1e111edb9dd5b7b819d6e2d9776c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kreitje/nova-horizon-stats/zipball/22cc6ace3e4c1e111edb9dd5b7b819d6e2d9776c",
-                "reference": "22cc6ace3e4c1e111edb9dd5b7b819d6e2d9776c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Kreitje\\NovaHorizonStats\\CardServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Kreitje\\NovaHorizonStats\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A Laravel Nova card.",
-            "keywords": [
-                "laravel",
-                "nova"
-            ],
-            "time": "2018-08-25T13:27:43+00:00"
         },
         {
             "name": "laravel/framework",

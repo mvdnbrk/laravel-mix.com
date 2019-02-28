@@ -23,7 +23,6 @@
         "fideloper/proxy": "^4.0",
         "ipunkt/laravel-analytics": "^1.4",
         "kitetail/zttp": "^0.4.0",
-        "kreitje/nova-horizon-stats": "^0.3.0",
         "laravel/framework": "5.7.*",
         "laravel/horizon": "^2.0",
         "laravel/nova": "~1.0",
