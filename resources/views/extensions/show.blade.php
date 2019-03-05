@@ -30,7 +30,7 @@
             @if (count($extension->maintainers))
                 <div class="flex justify-center py-4">
                     @foreach($extension->maintainers as $name => $email)
-                        <img src="https://secure.gravatar.com/avatar/{{ md5($email) }}?size=128&d=identicon" alt="{{ $name }}" class="mx-2 rounded-full w-16 h-16"/>
+                        <img src="https://secure.gravatar.com/avatar/{{ md5($email) }}?size=100&d=identicon" alt="{{ $name }}" class="mx-2 rounded-full w-16 h-16"/>
                     @endforeach
                 </div>
             @endif
