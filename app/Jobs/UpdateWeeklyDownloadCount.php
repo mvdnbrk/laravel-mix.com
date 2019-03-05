@@ -28,8 +28,6 @@ class UpdateWeeklyDownloadCount implements ShouldQueue
     public function __construct(Extension $extension)
     {
         $this->extension = $extension;
-
-        $this->extension->timestamps = false;
     }
 
     /**
@@ -44,6 +42,8 @@ class UpdateWeeklyDownloadCount implements ShouldQueue
         if ($response->status() !== 200) {
             abort($response->status());
         }
+
+        $this->extension->timestamps = false;
 
         $this->extension->update([
             'weekly_download_count' => collect(json_decode($response->body(), true))->get('downloads', 0)
