@@ -58,11 +58,11 @@ class DocumentationTest extends TestCase
         $versions = $this->documentation->versions();
 
         $this->assertInstanceOf(\Illuminate\Support\Collection::class, $versions);
-        $this->assertArraySubset([
+        $this->assertEquals([
             '3.0',
             '2.0',
             '1.0'
-        ], $versions);
+        ], $versions->toArray());
     }
 
     /** @test */
