@@ -5646,10 +5646,10 @@ slash@^1.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
   integrity sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU=
 
-smoothscroll-for-websites@^1.4.8:
-  version "1.4.8"
-  resolved "https://registry.yarnpkg.com/smoothscroll-for-websites/-/smoothscroll-for-websites-1.4.8.tgz#0f9af6fcea42120d2517480a6cf5bda510b7cd5e"
-  integrity sha512-vTHK2iRhW7VemXKgT4NUJIRI6d/ETlqoCvqpDPbtcH2VpS0iv8ZQqb9WG11LqY6pCWDBOMd8tv741xtLuzoBoA==
+smoothscroll-for-websites@^1.4.9:
+  version "1.4.9"
+  resolved "https://registry.yarnpkg.com/smoothscroll-for-websites/-/smoothscroll-for-websites-1.4.9.tgz#cf2a6336db36127f2a3cc6d2b0b09de45f0e1371"
+  integrity sha512-8crs6Hihx0Yn0Y2+yRvL0owFyQbqeVXiJZi2QNLdkMZS+ANRPrnLgGp41i7S14CmuRdbk/hob4BCze7YEGkPGw==
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

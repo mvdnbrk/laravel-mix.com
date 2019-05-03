@@ -19,7 +19,7 @@
         "postcss-import": "^12.0.0",
         "postcss-nesting": "^7.0.0",
         "prismjs": "^1.16.0",
-        "smoothscroll-for-websites": "^1.4.8",
+        "smoothscroll-for-websites": "^1.4.9",
         "tailwindcss": "^0.7.4",
         "vue-template-compiler": "^2.6.10"
     }
