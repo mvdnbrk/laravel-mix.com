@@ -50,7 +50,6 @@ blockquote {
     @apply flex;
     @apply p-0;
     @apply rounded;
-    @apply text-black;
 }
 
 blockquote > p > a {
