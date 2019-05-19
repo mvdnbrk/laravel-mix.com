@@ -13,6 +13,11 @@
     @apply border-l-8;
 }
 
+.markdown-body ol {
+    @apply list-decimal;
+    @apply list-inside;
+}
+
 .markdown-body table {
     @apply block;
     @apply overflow-auto;
