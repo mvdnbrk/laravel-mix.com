@@ -19,7 +19,6 @@ mix.js('resources/js/app.js', 'public/js')
         postCss: [
             require('postcss-import')(),
             require('tailwindcss')('./tailwind.js'),
-            require('postcss-nesting')(),
         ]
     })
     .purgeCss({
