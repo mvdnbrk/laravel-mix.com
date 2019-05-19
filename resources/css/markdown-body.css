@@ -13,9 +13,16 @@
     @apply border-l-8;
 }
 
+.markdown-body ol, .markdown-body ul {
+    @apply list-inside;
+}
+
 .markdown-body ol {
     @apply list-decimal;
-    @apply list-inside;
+}
+
+.markdown-body ul {
+    @apply list-disc;
 }
 
 .markdown-body table {
