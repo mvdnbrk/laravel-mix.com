@@ -1,16 +1,14 @@
-h1, h2, h3, h4 {
-    @apply mt-6;
-    @apply mb-4;
-}
-
-h1, h2, h3, h4 {
-    @apply font-semibold;
-}
-
 h1 {
+    @apply font-normal;
     @apply text-3xl;
     @apply mt-0;
-    @apply pb-1;
+    @apply mb-1;
+}
+
+h2, h3, h4 {
+    @apply font-medium;
+    @apply mt-6;
+    @apply mb-4;
 }
 
 h2 {
@@ -26,15 +24,14 @@ h4 {
 }
 
 a {
-    @apply text-black;
+    @apply text-gray-900;
 }
 
 a:hover {
-    @apply text-blue-700;
+    @apply text-blue-500;
 }
 
 a.is-active {
-    @apply cursor-default;
-    @apply font-semibold;
+    @apply font-medium;
     @apply text-blue-500;
 }

@@ -1,15 +1,10 @@
-.markdown-body {
-    @apply leading-normal;
-}
-
 .markdown-body a {
-    @apply text-blue-700;
-    @apply no-underline;
+    @apply text-blue-500;
+    @apply underline;
 }
 
 .markdown-body a:hover {
     @apply text-blue-700;
-    @apply underline
 }
 
 .markdown-body blockquote {

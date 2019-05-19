@@ -60,7 +60,6 @@ blockquote > p > a {
 
 blockquote > p > a:hover {
     @apply text-white;
-    @apply no-underline;
 }
 
 blockquote > div {
@@ -121,7 +120,6 @@ blockquote.tip a, blockquote.note a {
 
 blockquote.tip a:hover, blockquote.note a:hover {
     @apply text-white;
-    @apply no-underline
 }
 
 code {
@@ -166,7 +164,6 @@ li {
 }
 
 .docs-index > ul > li > ul {
-    @apply leading-normal;
     @apply text-sm;
 }
 
