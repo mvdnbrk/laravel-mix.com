@@ -948,16 +948,16 @@
         },
         {
             "name": "ipunkt/laravel-analytics",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ipunkt/laravel-analytics.git",
-                "reference": "83503d163f3064055f18ac2786338da4332f6190"
+                "reference": "0563d9985f84ef7a5e60801d0a964e212630ab8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ipunkt/laravel-analytics/zipball/83503d163f3064055f18ac2786338da4332f6190",
-                "reference": "83503d163f3064055f18ac2786338da4332f6190",
+                "url": "https://api.github.com/repos/ipunkt/laravel-analytics/zipball/0563d9985f84ef7a5e60801d0a964e212630ab8e",
+                "reference": "0563d9985f84ef7a5e60801d0a964e212630ab8e",
                 "shasum": ""
             },
             "require": {
@@ -1007,7 +1007,7 @@
                 "php",
                 "statistics"
             ],
-            "time": "2018-09-10T06:04:38+00:00"
+            "time": "2019-05-13T06:37:11+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1145,16 +1145,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.16",
+            "version": "v5.8.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "83d57f9f9162ab476c43b9ec00d463ff12c578fd"
+                "reference": "33c04dd2a431adeeb49926a4f2b20590cc033ca2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/83d57f9f9162ab476c43b9ec00d463ff12c578fd",
-                "reference": "83d57f9f9162ab476c43b9ec00d463ff12c578fd",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/33c04dd2a431adeeb49926a4f2b20590cc033ca2",
+                "reference": "33c04dd2a431adeeb49926a4f2b20590cc033ca2",
                 "shasum": ""
             },
             "require": {
@@ -1288,7 +1288,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-05-07T14:37:11+00:00"
+            "time": "2019-05-14T16:02:41+00:00"
         },
         {
             "name": "laravel/horizon",
@@ -1361,17 +1361,17 @@
         },
         {
             "name": "laravel/nova",
-            "version": "v2.0.3",
+            "version": "v2.0.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "84e25f8e3fa29cc441a1797af4d9bce733dec795"
+                "reference": "bba766e6f8f3ecff8d1e8728ff647006f242f6ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-84e25f8e3fa29cc441a1797af4d9bce733dec795-zip-39f3de.zip",
-                "reference": "84e25f8e3fa29cc441a1797af4d9bce733dec795",
-                "shasum": "26b2d8c873cf1ff4b836965e9fc3029548af5dc8"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-bba766e6f8f3ecff8d1e8728ff647006f242f6ef-zip-729ee5.zip",
+                "reference": "bba766e6f8f3ecff8d1e8728ff647006f242f6ef",
+                "shasum": "92ee6106c9fb5dd83f2bcdfb51393ca4cb43532c"
             },
             "require": {
                 "cakephp/chronos": "^1.0",
@@ -1426,7 +1426,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2019-05-01T17:03:40+00:00"
+            "time": "2019-05-15T19:21:43+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1704,16 +1704,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.17.1",
+            "version": "2.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "96acbc0c03782e8115156dd4dd8b736267155066"
+                "reference": "8322b7bd1805be31867c13bf3cdaab948a0dd406"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/96acbc0c03782e8115156dd4dd8b736267155066",
-                "reference": "96acbc0c03782e8115156dd4dd8b736267155066",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/8322b7bd1805be31867c13bf3cdaab948a0dd406",
+                "reference": "8322b7bd1805be31867c13bf3cdaab948a0dd406",
                 "shasum": ""
             },
             "require": {
@@ -1760,7 +1760,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-04-27T18:04:27+00:00"
+            "time": "2019-05-16T18:44:35+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -3777,16 +3777,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.8.16",
+            "version": "v5.8.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "d1d78dbdd8884c35a79f9750743177297e7f31a9"
+                "reference": "0197a93032c0f4cfd6a1929d22c038905bdce8ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/d1d78dbdd8884c35a79f9750743177297e7f31a9",
-                "reference": "d1d78dbdd8884c35a79f9750743177297e7f31a9",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/0197a93032c0f4cfd6a1929d22c038905bdce8ac",
+                "reference": "0197a93032c0f4cfd6a1929d22c038905bdce8ac",
                 "shasum": ""
             },
             "require": {
@@ -3823,7 +3823,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2019-04-18T18:52:05+00:00"
+            "time": "2019-05-15T13:07:44+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5166,16 +5166,16 @@
         },
         {
             "name": "orchestra/testbench-core",
-            "version": "v3.8.2",
+            "version": "v3.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench-core.git",
-                "reference": "598caa6f7813b8a29b2f1b69912b40659dcef79b"
+                "reference": "b8f827ace31a15d5343301daf8eb6ce2db00726b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/598caa6f7813b8a29b2f1b69912b40659dcef79b",
-                "reference": "598caa6f7813b8a29b2f1b69912b40659dcef79b",
+                "url": "https://api.github.com/repos/orchestral/testbench-core/zipball/b8f827ace31a15d5343301daf8eb6ce2db00726b",
+                "reference": "b8f827ace31a15d5343301daf8eb6ce2db00726b",
                 "shasum": ""
             },
             "require": {
@@ -5189,7 +5189,7 @@
                 "phpunit/phpunit": "^7.5 || ^8.0"
             },
             "suggest": {
-                "laravel/framework": "Required for testing (~5.8.3).",
+                "laravel/framework": "Required for testing (~5.8.15).",
                 "mockery/mockery": "Allow to use Mockery for testing (^1.0).",
                 "orchestra/testbench-browser-kit": "Allow to use legacy Laravel BrowserKit for testing (^3.8).",
                 "orchestra/testbench-dusk": "Allow to use Laravel Dusk for testing (^3.8).",
@@ -5227,7 +5227,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2019-04-10T12:50:29+00:00"
+            "time": "2019-05-13T02:02:41+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -5920,16 +5920,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "8.1.4",
+            "version": "8.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b534b017daaef2d7f60c6ee61e6aa2e13fdc6910"
+                "reference": "01392d4b5878aa617e8d9bc7a529e5febc8fe956"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b534b017daaef2d7f60c6ee61e6aa2e13fdc6910",
-                "reference": "b534b017daaef2d7f60c6ee61e6aa2e13fdc6910",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/01392d4b5878aa617e8d9bc7a529e5febc8fe956",
+                "reference": "01392d4b5878aa617e8d9bc7a529e5febc8fe956",
                 "shasum": ""
             },
             "require": {
@@ -5998,7 +5998,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-05-09T05:13:39+00:00"
+            "time": "2019-05-14T04:57:31+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
