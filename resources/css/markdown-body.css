@@ -3,18 +3,18 @@
 }
 
 .markdown-body a {
-    @apply text-blue-dark;
+    @apply text-blue-700;
     @apply no-underline;
 }
 
 .markdown-body a:hover {
-    @apply text-blue-dark;
+    @apply text-blue-700;
     @apply underline
 }
 
 .markdown-body blockquote {
-    @apply bg-grey-lightest;
-    @apply border-grey-light;
+    @apply bg-gray-100;
+    @apply border-gray-200;
     @apply border-l-8;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .markdown-body table tr:nth-child(2n) {
-    @apply bg-grey-lightest;
+    @apply bg-gray-100;
 }
 
 .markdown-body .token.deleted {

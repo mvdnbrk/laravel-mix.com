@@ -1,10 +1,6 @@
-@import "tailwindcss/preflight";
-
-/* Add custom base styles here... */
+@import "tailwindcss/base";
 
 @import "tailwindcss/components";
-
-/* Add custom components here... */
 
 @import "tailwindcss/utilities";
 
@@ -13,15 +9,13 @@
 @import "prismjs";
 @import "typography";
 
-/* Add custom utilities here... */
 html, body {
-    @apply font-sans;
-    @apply text-black;
-    font-size: 16px;
+    @apply antialiased;
+    @apply text-gray-900;
 }
 
 .header-link {
-    @apply text-grey-dark;
+    @apply text-gray-900;
     @apply relative;
     @apply opacity-0;
 
@@ -90,34 +84,34 @@ blockquote > p {
 
 blockquote.note {
     @apply border-l-0;
-    @apply bg-orange;
-    @apply border-orange-dark;
+    @apply bg-orange-500;
+    @apply border-orange-700;
     @apply text-white;
 }
 
 blockquote.note > div {
-    @apply bg-orange-dark;
+    @apply bg-orange-700;
 }
 
 blockquote.note > p > code {
-    @apply bg-orange-lightest;
-    @apply text-orange-dark;
+    @apply bg-orange-100;
+    @apply text-orange-700;
 }
 
 blockquote.tip {
     @apply border-l-0;
-    @apply bg-blue;
-    @apply border-blue-dark;
+    @apply bg-blue-500;
+    @apply border-blue-700;
     @apply text-white;
 }
 
 blockquote.tip > div {
-    @apply bg-blue-dark;
+    @apply bg-blue-700;
 }
 
 blockquote.tip > p > code {
-    @apply bg-blue-lightest;
-    @apply text-blue-dark;
+    @apply bg-blue-100;
+    @apply text-blue-700;
 }
 
 blockquote.tip a, blockquote.note a {
@@ -136,7 +130,7 @@ code {
     padding-left: .4rem;
     padding-right: .4rem;
     @apply text-sm;
-    @apply bg-grey-lighter;
+    @apply bg-gray-100;
     @apply rounded;
 }
 
@@ -146,11 +140,11 @@ pre > code {
 
 pre {
     @apply border;
-    @apply bg-grey-lighter;
+    @apply bg-gray-100;
 }
 
 pre[class*="language-"] {
-    @apply bg-grey-lighter;
+    @apply bg-gray-100;
     @apply mb-6;
     @apply p-3;
     @apply text-sm;
@@ -167,16 +161,11 @@ li {
     @apply border-b;
     @apply border-dotted;
     @apply text-sm;
-    @apply text-grey-dark;
+    @apply text-gray-900;
     @apply uppercase;
 }
 
-.docs-index > ul {
-    @apply list-reset;
-}
-
 .docs-index > ul > li > ul {
-    @apply list-reset;
     @apply leading-normal;
     @apply text-sm;
 }

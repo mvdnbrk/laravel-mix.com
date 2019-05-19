@@ -27,15 +27,14 @@ h4 {
 
 a {
     @apply text-black;
-    @apply no-underline;
 }
 
 a:hover {
-    @apply text-blue-dark;
+    @apply text-blue-700;
 }
 
 a.is-active {
     @apply cursor-default;
     @apply font-semibold;
-    @apply text-blue;
+    @apply text-blue-500;
 }
