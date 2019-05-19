@@ -1,6 +1,6 @@
-const mix = require('laravel-mix')
+const mix = require('laravel-mix');
 
-require('laravel-mix-purgecss')
+require('laravel-mix-purgecss');
 
 mix.babelConfig({
     plugins: [
@@ -38,8 +38,8 @@ mix.js('resources/js/app.js', 'public/js')
         ],
         whitelistPatterns: [/carbon.*/],
         whitelistPatternsChildren: [/^docs-index$/, /^markdown-body$/, /^token$/]
-    })
+    });
 
 if (mix.inProduction()) {
-    mix.version()
+    mix.version();
 }
