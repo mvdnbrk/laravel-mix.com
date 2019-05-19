@@ -33,14 +33,12 @@
 }
 
 .carbon-img {
-    display: block;
     margin-bottom: 8px;
     max-width: var(--width);
     line-height: 1;
 }
 
 .carbon-img img {
-    display: block;
     margin: 0 auto;
     max-width: var(--width) !important;
     width: var(--width);
