@@ -564,16 +564,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.7",
+            "version": "2.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "709f21f92707308cdf8f9bcfa1af4cb26586521e"
+                "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/709f21f92707308cdf8f9bcfa1af4cb26586521e",
-                "reference": "709f21f92707308cdf8f9bcfa1af4cb26586521e",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/c26463ff9241f27907112fbcd0c86fa670cfef98",
+                "reference": "c26463ff9241f27907112fbcd0c86fa670cfef98",
                 "shasum": ""
             },
             "require": {
@@ -617,7 +617,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2018-12-04T22:38:24+00:00"
+            "time": "2019-05-16T22:02:54+00:00"
         },
         {
             "name": "erusev/parsedown",
@@ -1145,16 +1145,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.17",
+            "version": "v5.8.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "33c04dd2a431adeeb49926a4f2b20590cc033ca2"
+                "reference": "9f571be04435883dab6f23ecfadb204273b7f527"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/33c04dd2a431adeeb49926a4f2b20590cc033ca2",
-                "reference": "33c04dd2a431adeeb49926a4f2b20590cc033ca2",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/9f571be04435883dab6f23ecfadb204273b7f527",
+                "reference": "9f571be04435883dab6f23ecfadb204273b7f527",
                 "shasum": ""
             },
             "require": {
@@ -1288,20 +1288,20 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-05-14T16:02:41+00:00"
+            "time": "2019-05-21T16:40:34+00:00"
         },
         {
             "name": "laravel/horizon",
-            "version": "v3.1.2",
+            "version": "v3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "32313d787a7a7575c1866e8ed12ec944c1513b7f"
+                "reference": "a9204280f72a1c6d3874e0f98b68e354b212311a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/32313d787a7a7575c1866e8ed12ec944c1513b7f",
-                "reference": "32313d787a7a7575c1866e8ed12ec944c1513b7f",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/a9204280f72a1c6d3874e0f98b68e354b212311a",
+                "reference": "a9204280f72a1c6d3874e0f98b68e354b212311a",
                 "shasum": ""
             },
             "require": {
@@ -1357,7 +1357,7 @@
                 "laravel",
                 "queue"
             ],
-            "time": "2019-04-30T15:20:11+00:00"
+            "time": "2019-05-21T19:58:03+00:00"
         },
         {
             "name": "laravel/nova",
@@ -1493,16 +1493,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.51",
+            "version": "1.0.52",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "755ba7bf3fb9031e6581d091db84d78275874396"
+                "reference": "c5a5097156387970e6f0ccfcdf03f752856f3391"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/755ba7bf3fb9031e6581d091db84d78275874396",
-                "reference": "755ba7bf3fb9031e6581d091db84d78275874396",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/c5a5097156387970e6f0ccfcdf03f752856f3391",
+                "reference": "c5a5097156387970e6f0ccfcdf03f752856f3391",
                 "shasum": ""
             },
             "require": {
@@ -1573,7 +1573,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2019-03-30T13:22:34+00:00"
+            "time": "2019-05-20T20:21:14+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3777,16 +3777,16 @@
         },
         {
             "name": "tightenco/collect",
-            "version": "v5.8.17",
+            "version": "v5.8.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tightenco/collect.git",
-                "reference": "0197a93032c0f4cfd6a1929d22c038905bdce8ac"
+                "reference": "328a1df987fe08969a31b8db474e1c4847202d46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tightenco/collect/zipball/0197a93032c0f4cfd6a1929d22c038905bdce8ac",
-                "reference": "0197a93032c0f4cfd6a1929d22c038905bdce8ac",
+                "url": "https://api.github.com/repos/tightenco/collect/zipball/328a1df987fe08969a31b8db474e1c4847202d46",
+                "reference": "328a1df987fe08969a31b8db474e1c4847202d46",
                 "shasum": ""
             },
             "require": {
@@ -3823,7 +3823,7 @@
                 "collection",
                 "laravel"
             ],
-            "time": "2019-05-15T13:07:44+00:00"
+            "time": "2019-05-18T17:03:47+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5595,16 +5595,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "0.11.6",
+            "version": "0.11.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "7af8b9d02b3ab36444dbf4e1b9ca1c1bd5044d81"
+                "reference": "32d87d746c70785f78d239855782d27cde0eb6ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/7af8b9d02b3ab36444dbf4e1b9ca1c1bd5044d81",
-                "reference": "7af8b9d02b3ab36444dbf4e1b9ca1c1bd5044d81",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/32d87d746c70785f78d239855782d27cde0eb6ee",
+                "reference": "32d87d746c70785f78d239855782d27cde0eb6ee",
                 "shasum": ""
             },
             "require": {
@@ -5613,6 +5613,7 @@
                 "nette/bootstrap": "^2.4 || ^3.0",
                 "nette/di": "^2.4.7 || ^3.0",
                 "nette/robot-loader": "^3.0.1",
+                "nette/schema": "^1.0",
                 "nette/utils": "^2.4.5 || ^3.0",
                 "nikic/php-parser": "^4.0.2",
                 "php": "~7.1",
@@ -5664,7 +5665,7 @@
                 "MIT"
             ],
             "description": "PHPStan - PHP Static Analysis Tool",
-            "time": "2019-05-08T16:33:56+00:00"
+            "time": "2019-05-19T17:36:42+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
