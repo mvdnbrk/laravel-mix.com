@@ -13,7 +13,7 @@
     @apply border-l-8;
 }
 
-.markdown img {
+.markdown-body img {
     @apply inline;
 }
 
