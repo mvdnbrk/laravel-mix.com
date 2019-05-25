@@ -13,6 +13,10 @@
     @apply border-l-8;
 }
 
+.markdown img {
+    @apply inline;
+}
+
 .markdown-body ol, .markdown-body ul {
     @apply pl-0;
     @apply list-inside;
