@@ -2,6 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{{ $title ?? config('app.name', 'Laravel Mix') }}</title>
         @if (isset($canonical))
         <link rel="canonical" href="{{ url($canonical) }}" />
