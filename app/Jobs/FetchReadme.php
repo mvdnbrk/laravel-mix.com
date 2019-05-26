@@ -101,7 +101,7 @@ class FetchReadme implements ShouldQueue
     /**
      * Fetch the readme from the respository and store it locally.
      *
-     * @param string  $filename
+     * @param  string  $filename
      * @return bool
      */
     protected function fetchReadme($filename)
