@@ -59,7 +59,7 @@
         </div>
 
         @if($extension->hasLocalReadme())
-            <article class="py-12 lg:px-10 markdown-body border-b">
+            <article class="py-12 lg:px-10 markdown-body border-b" v-pre>
                 {!! $extension->readme !!}
             </article>
         @endif
@@ -70,7 +70,9 @@
      </div>
 
     @push('scripts')
-        <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/manifest.js') }}"></script>
+    <script src="{{ mix('js/vendor.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
     @endpush
 
     @include('partials.footer')

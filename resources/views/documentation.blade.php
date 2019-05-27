@@ -30,11 +30,11 @@
                 {!! $index !!}
             </div>
         </nav>
-        <article id="content" class="w-full lg:w-3/4 xl:w-3/5 pt-10 px-6 lg:px-12 min-h-(screen-16) markdown-body">
+        <article id="content" class="w-full lg:w-3/4 xl:w-3/5 pt-10 px-6 lg:px-12 min-h-(screen-16) markdown-body" v-pre>
             {!! $content !!}
         </article>
         <div class="hidden pt-4 px-6 xl:flex flex-col xl:w-1/5 text-sm items-center lg:max-h-(screen-22) pin-22 lg:sticky">
-            @include('partials.carbonads')
+            <carbon-ads></carbon-ads>
             <a
                 class="flex items-center justify-center mt-4 px-5 py-2 rounded border text-gray-700 hover:bg-gray-200 hover:border-gray-500"
                 href="{{ config('documentation.repository.url') }}/edit/{{ $currentVersion }}/{{ $page }}.md"
@@ -50,6 +50,8 @@
 @include('partials.footer')
 
 @push('scripts')
-    <script type="text/javascript" src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/manifest.js') }}"></script>
+    <script src="{{ mix('js/vendor.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 @endpush
 @endsection

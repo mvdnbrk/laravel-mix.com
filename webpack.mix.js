@@ -14,6 +14,13 @@ mix.babelConfig({
 });
 
 mix.js('resources/js/app.js', 'public/js')
+    .extract([
+        'vue',
+        'prismjs',
+        'github-slugger',
+        'marky-deep-links',
+        'smoothscroll-for-websites',
+    ])
     .postCss('resources/css/app.css', 'public/css')
     .options({
         postCss: [

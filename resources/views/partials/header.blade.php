@@ -5,12 +5,7 @@
                 @include('svg.laravel-mix-logo', ['class' => 'h-8 xl:h-10'])
             </a>
             @if(! isset($hide_menu))
-                <div id="nav-open" class="text-gray-900 lg:hidden">
-                    @include('svg.icons.menu', ['class' => 'fill-current w-6 h-6'])
-                </div>
-                <div id="nav-close" class="text-gray-900 hidden lg:hidden">
-                    @include('svg.icons.close', ['class' => 'fill-current w-6 h-6'])
-                </div>
+                <toggle-menu></toggle-menu>
             @endif
         </div>
     </div>
