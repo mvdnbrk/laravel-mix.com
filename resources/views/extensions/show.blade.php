@@ -34,13 +34,13 @@
                 </div>
             @endif
             <div class="py-2 font-semibold text-center text-sm semibold">
-                {{ $extension->weekly_download_count }} {{ str_plural('download', $extension->weekly_download_count) }} last week
+                {{ $extension->weekly_download_count }} {{ Str::plural('download', $extension->weekly_download_count) }} last week
             </div>
             <div class="text-center text-sm">
                 {{ $extension->license }} license
             </div>
             <div class="text-center text-sm">
-                {{ $extension->version_count }} {{ str_plural('version', $extension->version_count) }}
+                {{ $extension->version_count }} {{ Str::plural('version', $extension->version_count) }}
             </div>
             @if ($extension->isGitRepository())
                 <div class="text-center pt-6">
