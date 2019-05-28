@@ -12,7 +12,7 @@
             <div class="md:flex mt-16">
                 <a
                     href="{{ $documentation_url }}"
-                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-gray-700 hover:bg-gray-200 hover:border-gray-500"
+                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-lg border text-gray-700 hover:bg-gray-200 hover:border-gray-500"
                 >
                     @include('svg.icons.book-reference', ['class' => 'fill-current mr-2 w-4 h-4'])
                     Documentation
@@ -20,7 +20,7 @@
 
                 <a
                     href="https://github.com/JeffreyWay/laravel-mix"
-                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-gray-700 hover:bg-gray-200 hover:border-gray-500"
+                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-lg border text-gray-700 hover:bg-gray-200 hover:border-gray-500"
                 >
                     @include('svg.icons.github', ['class' => 'fill-current mr-2 w-4 h-4'])
                     Source on Github
@@ -28,7 +28,7 @@
 
                 <a
                     href="https://laracasts.com/series/learn-laravel-mix"
-                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-gray-700 hover:bg-gray-200 hover:border-gray-500"
+                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-lg border text-gray-700 hover:bg-gray-200 hover:border-gray-500"
                     title="Watch screencasts at Laracasts: Learn Laravel Mix"
                 >
                     @include('svg.icons.video-solid', ['class' => 'fill-current mr-2 w-4 h-4'])
@@ -37,7 +37,7 @@
 
                 <a
                     href="{{ route('extensions.index') }}"
-                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-gray-700 hover:bg-gray-200 hover:border-gray-500"
+                    class="flex items-center mt-2 mx-2 px-4 py-2 rounded-lg border text-gray-700 hover:bg-gray-200 hover:border-gray-500"
                 >
                     @include('svg.icons.puzzle-piece-solid', ['class' => 'fill-current mr-2 w-4 h-4'])
                     Extensions
