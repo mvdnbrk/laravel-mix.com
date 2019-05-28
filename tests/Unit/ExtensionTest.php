@@ -26,4 +26,16 @@ class ExtensionTest extends TestCase
 
         $this->assertEquals('readme/laravel-mix.md', $extension->readmeStoragePath());
     }
+
+    /** @test */
+    public function it_casts_counts_to_integers()
+    {
+        $extension = factory(Extension::class)->make([
+            'version_count' => '123',
+            'weekly_download_count' => '456',
+        ]);
+
+        $this->assertSame(123, $extension->version_count);
+        $this->assertSame(456, $extension->weekly_download_count);
+    }
 }

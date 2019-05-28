@@ -13,6 +13,17 @@ class Extension extends Model
     use SoftDeletes;
 
     /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'version_count' => 'integer',
+        'weekly_download_count' => 'integer',
+    ];
+
+
+    /**
      * The attributes that aren't mass assignable.
      *
      * @var array
