@@ -27,11 +27,11 @@
                 latest {{ $extension->latestVersion }} - released {{ $extension->updated_at->diffForHumans() }}
             </div>
             @if (count($extension->maintainers))
-                <div class="flex justify-center py-4">
-                    @foreach($extension->maintainers as $name => $email)
-                        <img src="https://secure.gravatar.com/avatar/{{ md5($email) }}?size=100&d=identicon" alt="{{ $name }}" class="mx-2 rounded-full w-16 h-16"/>
-                    @endforeach
-                </div>
+            <div class="flex justify-center py-4">
+                @foreach($extension->maintainers as $name => $email)
+                    <img src="https://secure.gravatar.com/avatar/{{ md5($email) }}?size=100&d=identicon" alt="{{ $name }}" class="mx-2 rounded-full w-16 h-16"/>
+                @endforeach
+            </div>
             @endif
             <div class="py-2 font-semibold text-center text-sm semibold">
                 <count :to="{{ $extension->weekly_download_count }}">{{ $extension->weekly_download_count }}</count> {{ Str::plural('download', $extension->weekly_download_count) }} last week
@@ -43,25 +43,25 @@
                 {{ $extension->version_count }} {{ Str::plural('version', $extension->version_count) }}
             </div>
             @if ($extension->isGitRepository())
-                <div class="text-center pt-6">
-                    <a href="{{ $extension->repositoryUrl }}">
-                        @include('svg.icons.github', ['class' => 'fill-current inline mr-2 w-8 h-8'])
-                    </a>
-                </div>
+            <div class="text-center pt-6">
+                <a href="{{ $extension->repositoryUrl }}">
+                    @include('svg.icons.github', ['class' => 'fill-current inline mr-2 w-8 h-8'])
+                </a>
+            </div>
             @endif
             @if (count($extension->keyWords))
-                <div class="flex justify-center pt-6">
-                    @foreach($extension->keyWords as $keyword)
-                        <div class="bg-blue-500 text-white text-sm rounded px-4 py-2 mx-2">{{ $keyword }}</div>
-                    @endforeach
-                </div>
+            <div class="flex justify-center pt-6">
+                @foreach($extension->keyWords as $keyword)
+                <div class="bg-blue-500 text-white text-sm rounded px-4 py-2 mx-2">{{ $keyword }}</div>
+                @endforeach
+            </div>
             @endif
         </div>
 
         @if($extension->hasLocalReadme())
-            <article class="py-12 lg:px-10 markdown-body border-b" v-pre>
-                {!! $extension->readme !!}
-            </article>
+        <article class="py-12 lg:px-10 markdown-body border-b" v-pre>
+            {!! $extension->readme !!}
+        </article>
         @endif
 
         <div class="py-6 text-center">
