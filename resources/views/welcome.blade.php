@@ -14,7 +14,7 @@
                     href="{{ $documentation_url }}"
                     class="flex items-center mt-2 mx-2 px-4 py-2 rounded-full border text-gray-800 hover:bg-gray-200 hover:border-gray-500"
                 >
-                    @include('svg.icons.file-alt-regular', ['class' => 'fill-current mr-2 w-4 h-4'])
+                    @include('svg.icons.book-reference', ['class' => 'fill-current mr-2 w-4 h-4'])
                     Documentation
                 </a>
 
