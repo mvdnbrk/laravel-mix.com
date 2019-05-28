@@ -14,7 +14,7 @@ class ExtensionsController extends Controller
      */
     public function index()
     {
-        $extensions = Extension::all();
+        $extensions = Extension::latest()->get();
 
         return view('extensions.index', compact('extensions'));
     }
