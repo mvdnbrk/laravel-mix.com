@@ -20,6 +20,7 @@ mix.js('resources/js/app.js', 'public/js')
         'in-viewport',
         'github-slugger',
         'marky-deep-links',
+        'vue-scroll-indicator',
         'smoothscroll-for-websites',
     ])
     .postCss('resources/css/app.css', 'public/css')

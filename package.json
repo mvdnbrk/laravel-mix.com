@@ -22,6 +22,7 @@
         "smoothscroll-for-websites": "^1.4.9",
         "tailwindcss": "^1.0",
         "vue": "^2.6.10",
+        "vue-scroll-indicator": "^0.1.3",
         "vue-template-compiler": "^2.6.10"
     }
 }

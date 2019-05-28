@@ -1,3 +1,4 @@
+<scroll-indicator height="4px" color="#F27CC2"></scroll-indicator>
 <header class="flex items-center bg-white h-16 z-50 top-0 sticky border-t-4 border-b">
     <div class="container mx-auto">
         <div class="flex items-center justify-between px-6 lg:px-16">

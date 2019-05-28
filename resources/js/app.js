@@ -12,10 +12,12 @@ window.Vue = require('vue');
 import Count from './components/Count.vue';
 import CarbonAds from './components/CarbonAds.vue';
 import ToggleMenu from './components/ToggleMenu.vue';
+import { VueScrollIndicator } from 'vue-scroll-indicator';
 
 Vue.component('count', Count);
 Vue.component('carbon-ads', CarbonAds);
 Vue.component('toggle-menu', ToggleMenu);
+Vue.component('scroll-indicator', VueScrollIndicator);
 
 const app = new Vue({
     el: '#app',
