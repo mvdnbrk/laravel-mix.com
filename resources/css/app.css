@@ -9,6 +9,10 @@
 @import "prismjs";
 @import "typography";
 
+[v-cloak] {
+    @apply hidden;
+}
+
 html, body {
     @apply antialiased;
     @apply text-gray-900;
