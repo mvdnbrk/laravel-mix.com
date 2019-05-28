@@ -17,6 +17,7 @@ mix.js('resources/js/app.js', 'public/js')
     .extract([
         'vue',
         'prismjs',
+        'in-viewport',
         'github-slugger',
         'marky-deep-links',
         'smoothscroll-for-websites',
