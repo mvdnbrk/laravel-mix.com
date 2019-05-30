@@ -30,7 +30,7 @@ class UpdateExtensionModelFromJson implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @param  \App\Extension $extension
+     * @param  \App\Extension  $extension
      * @return void
      */
     public function __construct(Extension $extension)

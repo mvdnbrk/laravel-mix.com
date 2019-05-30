@@ -11,7 +11,7 @@ class DocumentationRedirectController extends DocumentationBaseController
      * In case a version number is specified it will redirect to the
      * default page of that version.
      *
-     * @param string  $page
+     * @param  string  $page
      * @return \Illuminate\Http\RedirectResponse
      */
     public function show($page)

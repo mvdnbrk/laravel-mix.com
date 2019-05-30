@@ -10,8 +10,8 @@ class DocumentationController extends DocumentationBaseController
     /**
      * Show a documentation page.
      *
-     * @param  string $version
-     * @param  string $page
+     * @param  string  $version
+     * @param  string  $page
      * @return \Illuminate\View\View
      */
     public function show($version, $page)
