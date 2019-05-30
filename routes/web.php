@@ -1,5 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\ExtensionsController;
+use App\Http\Controllers\DocumentationController;
+use App\Http\Controllers\DocumentationRootController;
+use App\Http\Controllers\DocumentationRedirectController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,13 +18,13 @@
 */
 
 Route::middleware(['page-cache'])->group(function () {
-    Route::get('/', 'HomepageController@show')->name('homepage');
+    Route::get('/', [HomepageController::class, 'show'])->name('homepage');
 
-    Route::get('/extensions', 'ExtensionsController@index')->name('extensions.index');
-    Route::get('/extensions/{extension}', 'ExtensionsController@show')->name('extensions.show');
+    Route::get('/extensions', [ExtensionsController::class, 'index'])->name('extensions.index');
+    Route::get('/extensions/{extension}', [ExtensionsController::class, 'show'])->name('extensions.show');
 
-    Route::get('/docs/{version}/{page}', 'DocumentationController@show')->name('documentation.show');
+    Route::get('/docs/{version}/{page}', [DocumentationController::class, 'show'])->name('documentation.show');
 });
 
-Route::get('/docs', 'DocumentationRootController@show')->name('documentation.root');
-Route::get('/docs/{page}', 'DocumentationRedirectController@show')->name('documentation.redirect');
+Route::get('/docs', [DocumentationRootController::class, 'show'])->name('documentation.root');
+Route::get('/docs/{page}', [DocumentationRedirectController::class, 'show'])->name('documentation.redirect');
