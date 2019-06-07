@@ -48,8 +48,5 @@ mix.js('resources/js/app.js', 'public/js')
         ],
         whitelistPatterns: [/carbon.*/],
         whitelistPatternsChildren: [/^docs-index$/, /^markdown-body$/, /^token$/]
-    });
-
-if (mix.inProduction()) {
-    mix.version();
-}
+    })
+    .version();
