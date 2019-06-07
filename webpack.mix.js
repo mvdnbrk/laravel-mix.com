@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 
+require('mix-tailwindcss');
 require('laravel-mix-purgecss');
 
 mix.babelConfig({
@@ -24,12 +25,9 @@ mix.js('resources/js/app.js', 'public/js')
         'smoothscroll-for-websites',
     ])
     .postCss('resources/css/app.css', 'public/css')
+    .tailwind()
     .options({
         extractVueStyles: true,
-        postCss: [
-            require('postcss-import')(),
-            require('tailwindcss'),
-        ]
     })
     .purgeCss({
         whitelist: [
