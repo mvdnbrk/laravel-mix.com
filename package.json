@@ -10,7 +10,7 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
-        "babel-plugin-prismjs": "^1.0.2",
+        "babel-plugin-prismjs": "^1.1.1",
         "cross-env": "^5.1",
         "github-slugger": "^1.2.1",
         "in-viewport": "^3.6.0",
@@ -19,9 +19,9 @@
         "marky-deep-links": "^1.0.1",
         "mix-tailwindcss": "^1.1.0",
         "postcss-import": "^12.0.0",
-        "prismjs": "^1.16.0",
-        "smoothscroll-for-websites": "^1.4.9",
-        "tailwindcss": "^1.0.5",
+        "prismjs": "^1.17.1",
+        "smoothscroll-for-websites": "^1.4.10",
+        "tailwindcss": "^1.1.2",
         "vue": "^2.6.10",
         "vue-scroll-indicator": "^0.1.3",
         "vue-template-compiler": "^2.6.10"
