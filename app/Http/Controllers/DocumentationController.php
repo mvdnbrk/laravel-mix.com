@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Response;
 use Symfony\Component\DomCrawler\Crawler;
 use App\Http\Controllers\DocumentationBaseController;
 
@@ -19,7 +20,7 @@ class DocumentationController extends DocumentationBaseController
         $content = $this->documentation->get($version, $page);
 
         if (is_null($content)) {
-            abort(404);
+            abort(Response::HTTP_NOT_FOUND);
         }
 
         $title = (new Crawler($content))->filterXPath('//h1');

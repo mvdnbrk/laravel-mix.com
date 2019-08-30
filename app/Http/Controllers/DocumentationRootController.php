@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Response;
 use App\Http\Controllers\DocumentationBaseController;
 
 class DocumentationRootController extends DocumentationBaseController
@@ -16,7 +17,7 @@ class DocumentationRootController extends DocumentationBaseController
     {
         return redirect(
             '/docs/'.$this->documentation->defaultVersion(),
-            303
+            Response::HTTP_SEE_OTHER
         );
     }
 }
