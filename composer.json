@@ -16,12 +16,11 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.3",
         "bugsnag/bugsnag-laravel": "^2.14",
         "davejamesmiller/laravel-breadcrumbs": "^5.2",
         "erusev/parsedown-extra": "^0.7.1",
         "fideloper/proxy": "^4.0",
-        "ipunkt/laravel-analytics": "^1.4",
         "ipunkt/laravel-analytics": "^1.6",
         "kitetail/zttp": "^0.6",
         "laravel/framework": "5.8.*",
