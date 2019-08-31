@@ -21,7 +21,7 @@ class ViewExtensionPageTest extends TestCase
 
         $response->assertOk();
         $response->assertViewIs('extensions.show');
-        $response->assertViewHas('extension', function($data) use ($extension) {
+        $response->assertViewHas('extension', function ($data) use ($extension) {
             return $data->is($extension);
         });
     }

@@ -85,6 +85,7 @@ class ExtensionMakeCommand extends Command
         return $this->task('Fetching package meta data from npmjs registry', function () use ($name) {
             try {
                 FetchPackageMetaDataFromNpmJsRegistry::dispatchNow($name);
+
                 return true;
             } catch (NotFoundHttpException $exception) {
                 return false;
@@ -97,6 +98,7 @@ class ExtensionMakeCommand extends Command
         return $this->task('Fetching readme from the repository', function () use ($extension) {
             try {
                 FetchReadme::dispatchNow($extension);
+
                 return true;
             } catch (NotFoundHttpException $exception) {
                 return false;

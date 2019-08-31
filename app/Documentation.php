@@ -17,7 +17,7 @@ class Documentation
     public function canonicalUrl($page)
     {
         if (! $this->pageExists($this->defaultVersion(), $page)) {
-            return null;
+            return;
         }
 
         return $this->url($this->defaultVersion(), $page);
@@ -70,7 +70,7 @@ class Documentation
     public function get($version, $page)
     {
         if ($this->isExcludedPage($page)) {
-            return null;
+            return;
         }
 
         if (Storage::disk('docs')->exists(
@@ -80,8 +80,6 @@ class Documentation
                 $this->path($version, $page)
             ));
         }
-
-        return null;
     }
 
     /**
@@ -95,7 +93,7 @@ class Documentation
         $path = $this->getIndexPath($version);
 
         if (! Storage::disk('docs')->exists($path)) {
-            return null;
+            return;
         }
 
         return (new ParsedownExtra())->text(
@@ -132,7 +130,7 @@ class Documentation
      * Determines if a page is excluded from the documentation.
      *
      * @param  string  $page
-     * @return boolean
+     * @return bool
      */
     public function isExcludedPage($page)
     {
@@ -169,7 +167,7 @@ class Documentation
      *
      * @param  string  $version
      * @param  string  $page
-     * @return boolean
+     * @return bool
      */
     public function pageExists($version, $page)
     {

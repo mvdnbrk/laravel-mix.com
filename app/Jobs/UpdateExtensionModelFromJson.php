@@ -16,7 +16,7 @@ class UpdateExtensionModelFromJson implements ShouldQueue
     /**
      * The extension to update.
      *
-     * @var \App\Extension $extension
+     * @var \App\Extension
      */
     public $extension;
 

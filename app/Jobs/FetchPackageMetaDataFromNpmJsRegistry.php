@@ -5,8 +5,8 @@ namespace App\Jobs;
 use Zttp\Zttp;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
 
 class FetchPackageMetaDataFromNpmJsRegistry implements ShouldQueue
 {
