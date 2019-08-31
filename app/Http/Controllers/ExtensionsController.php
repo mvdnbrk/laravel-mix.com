@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Extension;
 use Illuminate\Http\Request;
 
-class ExtensionsController extends Controller
+class ExtensionsController
 {
     /**
      * SHow the extensions index page.

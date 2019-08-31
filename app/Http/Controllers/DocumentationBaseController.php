@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Documentation;
-use App\Http\Controllers\Controller as BaseController;
 
-class DocumentationBaseController extends BaseController
+class DocumentationBaseController
 {
     /**
      * The documentation repository.
