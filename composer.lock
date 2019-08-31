@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "96a2aee8d4304f829c7f4f65b560a878",
+    "content-hash": "6f058f8388efcd5d0a4ae2b1e669ba50",
     "packages": [
         {
             "name": "bugsnag/bugsnag",

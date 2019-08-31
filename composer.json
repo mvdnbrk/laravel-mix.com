@@ -28,7 +28,6 @@
         "laravel/nova": "^2.1",
         "laravel/tinker": "^1.0",
         "nunomaduro/laravel-console-task": "^1.0",
-        "predis/predis": "^1.1",
         "silber/page-cache": "^1.0",
         "symfony/dom-crawler": "^4.3"
     },
