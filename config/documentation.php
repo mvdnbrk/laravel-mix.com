@@ -83,6 +83,6 @@ return [
 
     'repository' => [
         'url' => 'https://github.com/mvdnbrk/laravel-mix-docs',
-    ]
+    ],
 
 ];

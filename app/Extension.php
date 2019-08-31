@@ -22,7 +22,6 @@ class Extension extends Model
         'weekly_download_count' => 'integer',
     ];
 
-
     /**
      * The attributes that aren't mass assignable.
      *
@@ -234,7 +233,7 @@ class Extension extends Model
     /**
      * Determine if this extension has a README file in local storage.
      *
-     * @return boolean
+     * @return bool
      */
     public function hasLocalReadme()
     {
@@ -256,7 +255,7 @@ class Extension extends Model
     /**
      * Determine if this is a git repository.
      *
-     * @return boolean
+     * @return bool
      */
     public function isGitRepository()
     {

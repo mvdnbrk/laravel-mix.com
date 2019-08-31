@@ -61,7 +61,7 @@ class DocumentationTest extends TestCase
         $this->assertEquals([
             '3.0',
             '2.0',
-            '1.0'
+            '1.0',
         ], $versions->toArray());
     }
 
@@ -71,7 +71,7 @@ class DocumentationTest extends TestCase
         config(['documentation.versions' => [
             '3.0',
             '2.0',
-            '1.0'
+            '1.0',
         ]]);
 
         $defaultVersion = $this->documentation->defaultVersion();
