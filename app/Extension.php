@@ -227,7 +227,7 @@ class Extension extends Model
      */
     public function getTitleAttribute()
     {
-        return title_case(str_slug($this->slug, ' '));
+        return Str::title(Str::slug($this->slug, ' '));
     }
 
     /**
