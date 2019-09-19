@@ -11,10 +11,10 @@
     },
     "devDependencies": {
         "babel-plugin-prismjs": "^1.1.1",
-        "cross-env": "^5.1",
+        "cross-env": "^6.0",
         "github-slugger": "^1.2.1",
         "in-viewport": "^3.6.0",
-        "laravel-mix": "4.1.2",
+        "laravel-mix": "^5.0",
         "laravel-mix-purgecss": "^4.1.0",
         "marky-deep-links": "^1.0.1",
         "mix-tailwindcss": "^1.1.0",
