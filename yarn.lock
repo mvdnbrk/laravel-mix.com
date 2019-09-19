@@ -4134,9 +4134,9 @@ mississippi@^3.0.0:
     through2 "^2.0.0"
 
 mix-tailwindcss@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/mix-tailwindcss/-/mix-tailwindcss-1.1.0.tgz#460a0699db0025ce16e1ef52c27fbe4208dfe9e8"
-  integrity sha512-3n7uaxP4GZ/bXLo4rOARlfCUeb1Yn9kFy7mLOcd7w9xaBS4VZWsga4WGURSK1QZt/lHzpIjXhfElLTZDBsi3hw==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/mix-tailwindcss/-/mix-tailwindcss-1.2.0.tgz#a4edeea96c5040d0c8606b12964abd8a0b238c77"
+  integrity sha512-dhG63wPBd4xy+HjPtTnJLXHfzKV6BEhqEKwrmMlKVurtR8+3oRexCff8rnVWonyGaSo8VRVtYhYR5VB53HEnqQ==
 
 mixin-deep@^1.2.0:
   version "1.3.2"
