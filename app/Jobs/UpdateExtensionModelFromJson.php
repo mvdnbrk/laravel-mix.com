@@ -99,7 +99,7 @@ class UpdateExtensionModelFromJson implements ShouldQueue
 
     protected function getSlug()
     {
-        return str_slug($this->stripLaravelMixFromName());
+        return Str::slug($this->stripLaravelMixFromName());
     }
 
     protected function getUpdatedAt()
