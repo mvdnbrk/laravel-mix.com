@@ -2,9 +2,9 @@
 
 namespace App;
 
-use ParsedownExtra;
-use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use ParsedownExtra;
 
 class Documentation
 {

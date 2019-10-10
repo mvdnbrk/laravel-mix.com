@@ -2,11 +2,11 @@
 
 namespace Tests\Unit;
 
-use Tests\TestCase;
 use App\Documentation;
-use Illuminate\Support\Facades\Storage;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Storage;
+use Tests\TestCase;
 
 class DocumentationTest extends TestCase
 {

@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Response;
 use App\Http\Controllers\DocumentationBaseController;
+use Illuminate\Http\Response;
 
 class DocumentationRedirectController extends DocumentationBaseController
 {

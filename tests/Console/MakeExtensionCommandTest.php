@@ -3,10 +3,10 @@
 namespace Tests\Console;
 
 use App\Extension;
-use Tests\TestCase;
-use Illuminate\Support\Facades\Bus;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use App\Jobs\FetchPackageMetaDataFromNpmJsRegistry;
+use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Bus;
+use Tests\TestCase;
 
 class MakeExtensionCommandTest extends TestCase
 {

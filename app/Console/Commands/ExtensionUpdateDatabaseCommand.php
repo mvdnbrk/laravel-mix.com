@@ -3,8 +3,8 @@
 namespace App\Console\Commands;
 
 use App\Extension;
-use Illuminate\Console\Command;
 use App\Jobs\UpdateExtensionModelFromJson;
+use Illuminate\Console\Command;
 
 class ExtensionUpdateDatabaseCommand extends Command
 {

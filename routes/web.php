@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\HomepageController;
-use App\Http\Controllers\ExtensionsController;
 use App\Http\Controllers\DocumentationController;
-use App\Http\Controllers\DocumentationRootController;
 use App\Http\Controllers\DocumentationRedirectController;
+use App\Http\Controllers\DocumentationRootController;
+use App\Http\Controllers\ExtensionsController;
+use App\Http\Controllers\HomepageController;
 
 /*
 |--------------------------------------------------------------------------
