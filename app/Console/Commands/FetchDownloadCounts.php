@@ -3,8 +3,8 @@
 namespace App\Console\Commands;
 
 use App\Extension;
-use Illuminate\Console\Command;
 use App\Jobs\UpdateWeeklyDownloadCount;
+use Illuminate\Console\Command;
 
 class FetchDownloadCounts extends Command
 {

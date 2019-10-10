@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\DocumentationBaseController;
 use Illuminate\Http\Response;
 use Symfony\Component\DomCrawler\Crawler;
-use App\Http\Controllers\DocumentationBaseController;
 
 class DocumentationController extends DocumentationBaseController
 {

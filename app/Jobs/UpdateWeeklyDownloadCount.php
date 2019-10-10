@@ -2,11 +2,11 @@
 
 namespace App\Jobs;
 
-use Zttp\Zttp;
 use App\Extension;
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\SerializesModels;
+use Zttp\Zttp;
 
 class UpdateWeeklyDownloadCount implements ShouldQueue
 {

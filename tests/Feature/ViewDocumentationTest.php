@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
+use Tests\TestCase;
 
 class ViewDocumentationTest extends TestCase
 {

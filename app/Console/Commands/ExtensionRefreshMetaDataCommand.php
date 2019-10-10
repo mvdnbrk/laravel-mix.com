@@ -3,9 +3,9 @@
 namespace App\Console\Commands;
 
 use App\Extension;
-use Illuminate\Console\Command;
-use App\Jobs\UpdateExtensionModelFromJson;
 use App\Jobs\FetchPackageMetaDataFromNpmJsRegistry;
+use App\Jobs\UpdateExtensionModelFromJson;
+use Illuminate\Console\Command;
 
 class ExtensionRefreshMetaDataCommand extends Command
 {

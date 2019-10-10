@@ -2,13 +2,13 @@
 
 namespace App\Jobs;
 
-use Zttp\Zttp;
 use App\Extension;
-use Illuminate\Support\Str;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use Zttp\Zttp;
 
 class FetchReadme implements ShouldQueue
 {

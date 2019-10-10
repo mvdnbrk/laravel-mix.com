@@ -2,11 +2,11 @@
 
 namespace App;
 
-use ParsedownExtra;
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
+use ParsedownExtra;
 
 class Extension extends Model
 {
