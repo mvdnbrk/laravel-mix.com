@@ -45,7 +45,6 @@ class DatabaseSeeder extends Seeder
             'mix-env-file',
             'mix-html-builder',
             'mix-serve',
-            'mix-html-builder',
         ])->each(function ($package) {
             DB::table('extensions')->insert([
                 'name' => $package,
