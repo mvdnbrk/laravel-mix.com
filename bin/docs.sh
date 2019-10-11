@@ -2,13 +2,25 @@
 base=/home/forge/laravel-mix.com
 docs=${base}/storage/docs
 
-cd ${docs}/1.7 && git pull origin 1.7
-cd ${docs}/2.0 && git pull origin 2.0
-cd ${docs}/2.1 && git pull origin 2.1
-cd ${docs}/3.0 && git pull origin 3.0
-cd ${docs}/4.0 && git pull origin 4.0
-cd ${docs}/4.1 && git pull origin 4.1
-cd ${docs}/5.0 && git pull origin 5.0
-cd ${docs}/master && git pull origin master
+doc_versions=(
+  master
+  5.0
+  4.1
+  4.0
+  3.0
+  2.1
+  2.0
+  1.7
+)
+
+for v in "${doc_versions[@]}"; do
+    if [ -d "$docs/$v" ]; then
+        echo "Pulling latest documentation updates for $v..."
+        (cd $docs/$v && git pull)
+    else
+        echo "Cloning $v..."
+        git clone --single-branch --branch "$v" git@github.com:mvdnbrk/laravel-mix-docs.git "$docs/$v"
+    fi;
+done
 
 cd ${base}/current && php artisan page-cache:clear
