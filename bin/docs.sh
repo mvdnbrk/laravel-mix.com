@@ -22,5 +22,3 @@ for v in "${doc_versions[@]}"; do
         git clone --single-branch --branch "$v" git@github.com:mvdnbrk/laravel-mix-docs.git "$docs/$v"
     fi;
 done
-
-cd ${base}/current && php artisan page-cache:clear
