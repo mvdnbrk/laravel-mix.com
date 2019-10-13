@@ -25,6 +25,11 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('extension:stats')->daily();
+        $schedule->command('extension:refresh')->daily();
+        $schedule->command('extension:db-update')->daily();
+        $schedule->command('extension:readme')->daily();
+
+        $schedule->command('page-cache:clear')->dailyAt('0:30');
     }
 
     /**
