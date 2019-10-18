@@ -10,13 +10,14 @@
     max-width: var(--width);
     border-radius: 4px;
     text-align: center;
-    box-shadow: 0 0 0 1px hsla(0, 0%, 0%, .1);
+    box-shadow: 0 0 0 1px hsla(0, 0%, 0%, 0.1);
     background-color: hsl(0, 0%, 98%);
     font-size: var(--font-size);
     line-height: 1.5;
 }
 
-#carbonads a, #carbonads a:hover {
+#carbonads a,
+#carbonads a:hover {
     color: inherit;
 }
 
@@ -48,9 +49,16 @@
     @apply block;
     @pply font-medium;
     padding: 10px var(--font-size);
-    background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+    background: repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 5px,
+            hsla(0, 0%, 0%, 0.025) 5px,
+            hsla(0, 0%, 0%, 0.025) 10px
+        )
+        hsla(203, 11%, 95%, 0.4);
     text-transform: uppercase;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     font-size: 9px;
     line-height: 0;
 }

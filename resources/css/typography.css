@@ -5,7 +5,9 @@ h1 {
     @apply mb-1;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     @apply font-medium;
     @apply mt-6;
     @apply mb-4;
