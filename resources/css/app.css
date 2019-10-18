@@ -1,19 +1,20 @@
-@import "tailwindcss/base";
+@import 'tailwindcss/base';
 
-@import "tailwindcss/components";
+@import 'tailwindcss/components';
 
-@import "tailwindcss/utilities";
+@import 'tailwindcss/utilities';
 
-@import "carbon";
-@import "markdown-body";
-@import "prismjs";
-@import "typography";
+@import 'carbon';
+@import 'markdown-body';
+@import 'prismjs';
+@import 'typography';
 
 [v-cloak] {
     @apply hidden;
 }
 
-html, body {
+html,
+body {
     @apply antialiased;
     @apply text-gray-900;
 }
@@ -23,7 +24,7 @@ html, body {
     @apply relative;
     @apply opacity-0;
 
-    right: .5rem;
+    right: 0.5rem;
 
     -webkit-transition: opacity 0.2s ease-in-out 0.1s;
     -moz-transition: opacity 0.2s ease-in-out 0.1s;
@@ -37,12 +38,15 @@ h4:hover .header-link {
     @apply opacity-100;
 }
 
-p, ul, ol {
+p,
+ul,
+ol {
     @apply mt-0;
     @apply mb-4;
 }
 
-blockquote, pre {
+blockquote,
+pre {
     @apply border;
     @apply rounded;
     @apply p-3;
@@ -116,20 +120,22 @@ blockquote.tip > p > code {
     @apply text-blue-700;
 }
 
-blockquote.tip a, blockquote.note a {
+blockquote.tip a,
+blockquote.note a {
     @apply text-white;
     @apply underline;
 }
 
-blockquote.tip a:hover, blockquote.note a:hover {
+blockquote.tip a:hover,
+blockquote.note a:hover {
     @apply text-white;
 }
 
 code {
-    padding-top: .2rem;
-    padding-bottom: .2rem;
-    padding-left: .4rem;
-    padding-right: .4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
     @apply text-sm;
     @apply bg-gray-100;
     @apply rounded;
@@ -144,7 +150,7 @@ pre {
     @apply bg-gray-100;
 }
 
-pre[class*="language-"] {
+pre[class*='language-'] {
     @apply bg-gray-100;
     @apply mb-6;
     @apply p-3;

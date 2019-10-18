@@ -24,4 +24,3 @@ Vue.component('scroll-indicator', VueScrollIndicator);
 const app = new Vue({
     el: '#app',
 });
-

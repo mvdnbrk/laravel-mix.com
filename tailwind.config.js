@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
     theme: {
@@ -9,11 +9,11 @@ module.exports = {
             maxHeight: {
                 '(screen-22)': 'calc(100vh - 5.5rem)',
             },
-            maxWidth : {
+            maxWidth: {
                 'screen-xl': defaultTheme.screens.xl,
-            }
-        }
+            },
+        },
     },
     variants: {},
-    plugins: []
-}
+    plugins: [],
+};
