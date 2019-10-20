@@ -124,10 +124,12 @@ class Extension extends Model
             collect($this->getMaintainersAttribute())->keys()->toArray(),
             [
                 Str::lower($this->getTitleAttribute()),
+                'extension',
                 'laravel-mix',
                 'laravel mix',
                 'laravel',
                 'mix',
+                'plugin',
                 'webpack',
             ]
         );
