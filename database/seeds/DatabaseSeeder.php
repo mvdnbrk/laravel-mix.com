@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
             'laravel-mix-copy-watched',
             'laravel-mix-critical',
             'laravel-mix-criticalcss',
+            'laravel-mix-definitions',
             'laravel-mix-dl',
             'laravel-mix-dload',
             'laravel-mix-ejs',
@@ -45,6 +46,7 @@ class DatabaseSeeder extends Seeder
             'mix-env-file',
             'mix-html-builder',
             'mix-serve',
+            'mix-tailwindcss',
         ])->each(function ($package) {
             DB::table('extensions')->insert([
                 'name' => $package,
