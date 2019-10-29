@@ -189,7 +189,7 @@ class Extension extends Model
      */
     public function replaceExternalLinks($content)
     {
-        return preg_replace_callback('/\[(.*)\]\((?!http)(.*\.{1}.*)\)/m', function ($matches) {
+        return preg_replace_callback('/\[(.*?)\]\((?!http)(.*?)\)/m', function ($matches) {
             return '['.$matches[1].']('.$this->repositoryUrl.'/blob/master/'.$matches[2].')';
         }, $content);
     }
