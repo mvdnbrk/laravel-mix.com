@@ -384,5 +384,19 @@
     "New :resource": "New :resource",
     "Edit :resource": "Edit :resource",
     "Update :resource": "Update :resource",
-    "Choose :field": "Choose :field"
+    "Choose :field": "Choose :field",
+    "Download": "Download",
+    "Action": "Action",
+    "Changes": "Changes",
+    "Original": "Original",
+    "This resource no longer exists": "This resource no longer exists",
+    ":resource Details": ":resource Details",
+    "There are no available options for this resource.": "There are no available options for this resource.",
+    "All resources loaded.": "All resources loaded.",
+    "Load :perPage More": "Load :perPage More",
+    ":amount Total": ":amount Total",
+    "Show All Fields": "Show All Fields",
+    "There was a problem submitting the form.": "There was a problem submitting the form.",
+    "There was a problem executing the action.": "There was a problem executing the action.",
+    "*": "*"
 }

@@ -6,7 +6,6 @@ use Laravel\Nova\Http\Middleware\BootTools;
 use Laravel\Nova\Http\Middleware\DispatchServingNovaEvent;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Nova App Name
@@ -61,6 +60,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Nova Password Reset Broker
+    |--------------------------------------------------------------------------
+    |
+    | This configuration option defines the password broker that will be
+    | used when passwords are reset. This option should mirror one of
+    | the password reset options defined in the "auth" config file.
+    |
+    */
+
+    'passwords' => env('NOVA_PASSWORDS', null),
+
+    /*
+    |--------------------------------------------------------------------------
     | Nova Route Middleware
     |--------------------------------------------------------------------------
     |
@@ -83,12 +95,11 @@ return [
     | Nova Pagination Type
     |--------------------------------------------------------------------------
     |
-    | This option defines the pagination visual style used by Resources. You
-    | may choose between two types: "simple" and "links". Feel free to set
-    | this option to the visual style you like for your application.
+    | This option defines the visual style used in Nova's resource pagination.
+    | You may choose between 3 types: "simple", "load-more" and "links".
+    | Feel free to set this option to the visual style you like.
     |
     */
 
     'pagination' => 'simple',
-
 ];
