@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
             'laravel-mix-eslint',
             'laravel-mix-eslint-config',
             'laravel-mix-glob',
+            'laravel-mix-ignore',
             'laravel-mix-imagemin',
             'laravel-mix-merge-manifest',
             'laravel-mix-mjml',
