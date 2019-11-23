@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Extension as ExtensionModel;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\Date;
@@ -19,7 +20,7 @@ class Extension extends Resource
      *
      * @var string
      */
-    public static $model = 'App\Extension';
+    public static $model = ExtensionModel::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
