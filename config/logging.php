@@ -37,7 +37,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['slack', 'bugsnag'],
+            'channels' => ['flare'],
             'ignore_exceptions' => false,
         ],
 
@@ -56,6 +56,10 @@ return [
 
         'bugsnag' => [
             'driver' => 'bugsnag',
+        ],
+
+        'flare' => [
+            'driver' => 'flare',
         ],
 
         'slack' => [
