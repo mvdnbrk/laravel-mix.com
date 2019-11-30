@@ -199,7 +199,7 @@ class DocumentationTest extends TestCase
         Storage::disk('docs')->put('version999/test-index.md', '# index');
         config(['documentation.table_of_contents' => 'test-index']);
 
-        $this->assertEquals('<h1>index</h1>', $this->documentation->getIndex('version999'));
+        $this->assertStringContainsString('<h1>index</h1>', $this->documentation->getIndex('version999'));
     }
 
     /** @test */
@@ -208,7 +208,7 @@ class DocumentationTest extends TestCase
         Storage::fake('docs');
         Storage::disk('docs')->put('version999/index.md', '[Installation](/docs/{{version}}/installation)');
 
-        $this->assertEquals('<p><a href="'.config('app.url').'/docs/version999/installation">Installation</a></p>', $this->documentation->getIndex('version999'));
+        $this->assertStringContainsString('<p><a href="'.config('app.url').'/docs/version999/installation">Installation</a></p>', $this->documentation->getIndex('version999'));
     }
 
     /** @test */

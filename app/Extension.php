@@ -2,11 +2,11 @@
 
 namespace App;
 
+use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use ParsedownExtra;
 
 class Extension extends Model
 {
@@ -171,7 +171,7 @@ class Extension extends Model
     public function getReadmeAttribute()
     {
         if ($this->hasLocalReadme()) {
-            return (new ParsedownExtra())->text(
+            return Markdown::convertToHtml(
                 $this->replaceExternalLinks(
                     Storage::get($this->readmeStoragePath()
                 )

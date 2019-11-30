@@ -2,9 +2,9 @@
 
 namespace App;
 
+use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use ParsedownExtra;
 
 class Documentation
 {
@@ -76,7 +76,7 @@ class Documentation
         if (Storage::disk('docs')->exists(
             $this->path($version, $page)
         )) {
-            return (new ParsedownExtra())->text(Storage::disk('docs')->get(
+            return Markdown::convertToHtml(Storage::disk('docs')->get(
                 $this->path($version, $page)
             ));
         }
@@ -96,7 +96,7 @@ class Documentation
             return;
         }
 
-        return (new ParsedownExtra())->text(
+        return Markdown::convertToHtml(
             $this->replaceLinks($version, Storage::disk('docs')->get($path))
         );
     }
