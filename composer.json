@@ -27,7 +27,7 @@
         "laravel/framework": "^6.0",
         "laravel/horizon": "^3.0",
         "laravel/nova": "^2.7",
-        "laravel/tinker": "^1.0",
+        "laravel/tinker": "^2.0",
         "nunomaduro/laravel-console-task": "^1.0",
         "silber/page-cache": "^1.0",
         "symfony/dom-crawler": "^5.0"
