@@ -50,7 +50,7 @@ class ViewDocumentationTest extends TestCase
     public function view_a_documentation_page()
     {
         Storage::fake('docs');
-        Storage::disk('docs')->put('9.9/test-page.md', '# Test title');
+        Storage::disk('docs')->put('9.9/test-page.md', file_get_contents(__DIR__.'/../fixtures/markdown.md'));
 
         $this->assertTrue(Storage::disk('docs')->exists('9.9/test-page.md'));
 
