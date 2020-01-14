@@ -19,7 +19,7 @@
         "php": "^7.3",
         "bugsnag/bugsnag-laravel": "^2.14",
         "davejamesmiller/laravel-breadcrumbs": "^5.2",
-        "facade/ignition": "^1.13",
+        "facade/ignition": "^1.14",
         "fideloper/proxy": "^4.0",
         "graham-campbell/markdown": "^11.1",
         "ipunkt/laravel-analytics": "^2.0",
@@ -37,7 +37,7 @@
         "fzaninotto/faker": "^1.9",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
-        "nunomaduro/larastan": "^0.4",
+        "nunomaduro/larastan": "^0.5",
         "phpunit/phpunit": "^8.0"
     },
     "config": {
