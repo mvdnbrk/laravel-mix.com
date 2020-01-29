@@ -11,7 +11,7 @@
     },
     "devDependencies": {
         "babel-plugin-prismjs": "^2.0",
-        "cross-env": "^6.0",
+        "cross-env": "^7.0",
         "github-slugger": "^1.2",
         "in-viewport": "^3.6",
         "laravel-mix": "^5.0",
