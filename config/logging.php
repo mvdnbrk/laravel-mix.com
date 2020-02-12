@@ -54,10 +54,6 @@ return [
             'days' => 14,
         ],
 
-        'bugsnag' => [
-            'driver' => 'bugsnag',
-        ],
-
         'flare' => [
             'driver' => 'flare',
         ],

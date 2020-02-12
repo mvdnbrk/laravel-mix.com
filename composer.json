@@ -17,7 +17,6 @@
     ],
     "require": {
         "php": "^7.3",
-        "bugsnag/bugsnag-laravel": "^2.14",
         "davejamesmiller/laravel-breadcrumbs": "^5.2",
         "facade/ignition": "^1.16",
         "fideloper/proxy": "^4.0",
