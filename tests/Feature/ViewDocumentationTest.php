@@ -58,7 +58,7 @@ class ViewDocumentationTest extends TestCase
 
         $response->assertOk();
         $response->assertViewIs('documentation');
-        $response->assertSee('<h1>Test title</h1>');
+        $response->assertSee('<h1>Test title</h1>', false);
     }
 
     /** @test */
@@ -66,7 +66,7 @@ class ViewDocumentationTest extends TestCase
     {
         Storage::fake('docs');
 
-        $response = $this->get('/docs/9.9/page-does-not_exist');
+        $response = $this->get('/docs/9.9/page-does-not-exist');
 
         $response->assertNotFound();
     }
