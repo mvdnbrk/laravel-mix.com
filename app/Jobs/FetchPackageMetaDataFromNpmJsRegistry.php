@@ -5,8 +5,8 @@ namespace App\Jobs;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
-use Zttp\Zttp;
 
 class FetchPackageMetaDataFromNpmJsRegistry implements ShouldQueue
 {
@@ -37,9 +37,9 @@ class FetchPackageMetaDataFromNpmJsRegistry implements ShouldQueue
      */
     public function handle()
     {
-        $response = Zttp::get("https://registry.npmjs.org/{$this->name}");
+        $response = Http::get("https://registry.npmjs.org/{$this->name}");
 
-        if ($response->status() !== 200) {
+        if (! $response->ok()) {
             abort($response->status());
         }
 

@@ -6,7 +6,7 @@ use App\Extension;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Zttp\Zttp;
+use Illuminate\Support\Facades\Http;
 
 class UpdateWeeklyDownloadCount implements ShouldQueue
 {
@@ -37,9 +37,9 @@ class UpdateWeeklyDownloadCount implements ShouldQueue
      */
     public function handle()
     {
-        $response = Zttp::get("https://api.npmjs.org/downloads/point/last-week/{$this->extension->name}");
+        $response = Http::get("https://api.npmjs.org/downloads/point/last-week/{$this->extension->name}");
 
-        if ($response->status() !== 200) {
+        if (! $response->ok()) {
             abort($response->status());
         }
 

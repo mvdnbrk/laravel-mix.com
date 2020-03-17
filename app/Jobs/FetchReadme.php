@@ -2,13 +2,14 @@
 
 namespace App\Jobs;
 
+use Exception;
 use App\Extension;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use Zttp\Zttp;
 
 class FetchReadme implements ShouldQueue
 {
@@ -107,16 +108,16 @@ class FetchReadme implements ShouldQueue
     protected function fetchReadme($filename)
     {
         try {
-            $response = Zttp::get($this->baseUrl().$filename);
+            $response = Http::get($this->baseUrl().$filename);
 
-            if ($response->status() !== 200) {
+            if (! $response->ok()) {
                 abort(404);
             }
 
             Storage::disk('local')->put("readme/{$this->extension->name}.md", $response->body());
 
             cache()->forever($this->cacheKey(), $filename);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return false;
         }
 
