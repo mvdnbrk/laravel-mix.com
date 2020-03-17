@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Str;
+
 return [
 
     /*
@@ -52,7 +54,10 @@ return [
     |
     */
 
-    'prefix' => env('HORIZON_PREFIX', 'horizon:'),
+    'prefix' => env(
+        'HORIZON_PREFIX',
+        Str::slug(env('APP_NAME', 'laravel'), '_').'_horizon:'
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -95,6 +100,9 @@ return [
 
     'trim' => [
         'recent' => 60,
+        'pending' => 60,
+        'completed' => 60,
+        'recent_failed' => 10080,
         'failed' => 10080,
         'monitored' => 10080,
     ],
@@ -145,8 +153,7 @@ return [
                 'queue' => ['default'],
                 'balance' => 'simple',
                 'processes' => 2,
-                'sleep' => 10,
-                'tries' => 3,
+                'tries' => 1,
             ],
         ],
 
@@ -156,8 +163,7 @@ return [
                 'queue' => ['default'],
                 'balance' => 'simple',
                 'processes' => 3,
-                'sleep' => 10,
-                'tries' => 3,
+                'tries' => 1,
             ],
         ],
     ],

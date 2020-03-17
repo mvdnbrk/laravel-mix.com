@@ -7,6 +7,7 @@ use Laravel\Nova\Http\Middleware\BootTools;
 use Laravel\Nova\Http\Middleware\DispatchServingNovaEvent;
 
 return [
+
     /*
     |--------------------------------------------------------------------------
     | Nova App Name
@@ -18,7 +19,20 @@ return [
     |
     */
 
-    'name' => 'Laravel Mix',
+    'name' => env('NOVA_APP_NAME', env('APP_NAME')),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Nova Domain Name
+    |--------------------------------------------------------------------------
+    |
+    | This value is the domain name associated with your application. This
+    | can be used to prevent Nova's internal routes from being registered
+    | on subdomains which do not need access to your admin application.
+    |
+    */
+
+    'domain' => env('NOVA_DOMAIN_NAME', null),
 
     /*
     |--------------------------------------------------------------------------
@@ -114,8 +128,22 @@ return [
     | define any extra form fields or other custom behavior you need.
     |
     */
+
     'actions' => [
         'resource' => ActionResource::class,
     ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Nova Currency
+    |--------------------------------------------------------------------------
+    |
+    | This configuration option allows you to specify the default currency
+    | used by the Currency field within Nova. You may change this to any
+    | valid ISO 4217 currency code to suit your specific needs.
+    |
+    */
+
+    'currency' => 'USD',
 
 ];
