@@ -27,16 +27,6 @@ class ExtensionMakeCommand extends Command
     protected $description = 'Add a new extension for Laravel Mix.';
 
     /**
-     * Create a new command instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        parent::__construct();
-    }
-
-    /**
      * Execute the console command.
      *
      * @return mixed
