@@ -7,6 +7,7 @@ use Exception;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
@@ -38,12 +39,12 @@ class FetchReadme implements ShouldQueue
     public function handle()
     {
         collect($this->filenames)
-            ->when(Cache::has($this->cacheKey()), function ($collection) {
+            ->when(Cache::has($this->cacheKey()), function (Collection $collection) {
                 return $collection->prepend(
                     Cache::pull('extension.readme.filename:'.$this->extension->id)
                 );
             })
-            ->each(function ($filename) {
+            ->each(function (string $filename) {
                 if ($this->fetchReadme($filename)) {
                     return false;
                 }
