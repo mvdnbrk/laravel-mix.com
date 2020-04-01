@@ -3,6 +3,7 @@
 namespace App;
 
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -261,7 +262,7 @@ class Documentation
      *
      * @return \Illuminate\Support\Collection
      */
-    public function versions()
+    public function versions(): Collection
     {
         return collect(config('documentation.versions'));
     }
