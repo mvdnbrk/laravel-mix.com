@@ -187,7 +187,7 @@ class Extension extends Model
      * @param  string  $content
      * @return string
      */
-    public function replaceExternalLinks($content)
+    public function replaceExternalLinks(string $content)
     {
         return preg_replace_callback('/\[(.*?)\]\((?!http)(.*?)\)/m', function ($matches) {
             return '['.$matches[1].']('.$this->repositoryUrl.'/blob/master/'.$matches[2].')';

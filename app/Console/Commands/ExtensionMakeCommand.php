@@ -70,7 +70,7 @@ class ExtensionMakeCommand extends Command
         $this->info('Extension added successfully!');
     }
 
-    protected function fetchPackageMetaDataFromNpmJsRegistry($name)
+    protected function fetchPackageMetaDataFromNpmJsRegistry(string $name)
     {
         return $this->task('Fetching package meta data from npmjs registry', function () use ($name) {
             try {
@@ -83,7 +83,7 @@ class ExtensionMakeCommand extends Command
         });
     }
 
-    protected function fetchReadme($extension)
+    protected function fetchReadme(Extension $extension)
     {
         return $this->task('Fetching readme from the repository', function () use ($extension) {
             try {

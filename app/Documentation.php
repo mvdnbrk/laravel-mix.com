@@ -14,7 +14,7 @@ class Documentation
      * @param  string  $page
      * @return string|null
      */
-    public function canonicalUrl($page)
+    public function canonicalUrl(string $page)
     {
         if (! $this->pageExists($this->defaultVersion(), $page)) {
             return;
@@ -67,7 +67,7 @@ class Documentation
      * @param  string  $page
      * @return string|null
      */
-    public function get($version, $page)
+    public function get(string $version, string $page)
     {
         if ($this->isExcludedPage($page)) {
             return;
@@ -88,7 +88,7 @@ class Documentation
      * @param  string  $version
      * @return string|null
      */
-    public function getIndex($version)
+    public function getIndex(string $version)
     {
         $path = $this->getIndexPath($version);
 
@@ -107,7 +107,7 @@ class Documentation
      * @param  string  $version
      * @return string
      */
-    public function getIndexPath($version)
+    public function getIndexPath(string $version)
     {
         return $version.'/'.config('documentation.table_of_contents').'.md';
     }
@@ -132,7 +132,7 @@ class Documentation
      * @param  string  $page
      * @return bool
      */
-    public function isExcludedPage($page)
+    public function isExcludedPage(string $page)
     {
         return collect(config('documentation.excluded_pages'))
             ->push(config('documentation.table_of_contents'))
@@ -145,7 +145,7 @@ class Documentation
      * @param  string  $version
      * @return bool
      */
-    public function isVersion($version)
+    public function isVersion(string $version)
     {
         return $this->versions()->contains($version);
     }
@@ -157,7 +157,7 @@ class Documentation
      * @param  string  $page
      * @return string
      */
-    public function path($version, $page)
+    public function path(string $version, string $page)
     {
         return "{$version}/{$page}.md";
     }
@@ -169,7 +169,7 @@ class Documentation
      * @param  string  $page
      * @return bool
      */
-    public function pageExists($version, $page)
+    public function pageExists(string $version, string $page)
     {
         if ($this->isExcludedPage($page)) {
             return false;
@@ -192,7 +192,7 @@ class Documentation
      * @param  string  $page
      * @return array
      */
-    public function pageExistsInVersions($page)
+    public function pageExistsInVersions(string $page)
     {
         return $this->versions()->mapWithKeys(function ($version) use ($page) {
             return [$version => $this->url($version, $page)];
@@ -209,7 +209,7 @@ class Documentation
      * @param  string  $content
      * @return string
      */
-    public function replaceLinks($version, $content)
+    public function replaceLinks(string $version, string $content)
     {
         return $this->replaceLinksToFullUrl(
             $this->replaceVersion($version, $content)
@@ -222,7 +222,7 @@ class Documentation
      * @param  string  $content
      * @return string
      */
-    public function replaceLinksToFullUrl($content)
+    public function replaceLinksToFullUrl(string $content)
     {
         return preg_replace_callback('/\([\/](.*)\)/m', function ($matches) {
             return '('.url($matches[1]).')';
@@ -236,7 +236,7 @@ class Documentation
      * @param  string  $content
      * @return string
      */
-    public function replaceVersion($version, $content)
+    public function replaceVersion(string $version, string $content)
     {
         return str_replace('{{version}}', $version, $content);
     }
@@ -248,7 +248,7 @@ class Documentation
      * @param  string  $page
      * @return string|null
      */
-    public function url($version, $page)
+    public function url(string $version, string $page)
     {
         return route('documentation.show', [
             'version' => $version,

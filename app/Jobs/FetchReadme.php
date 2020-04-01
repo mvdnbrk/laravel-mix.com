@@ -105,7 +105,7 @@ class FetchReadme implements ShouldQueue
      * @param  string  $filename
      * @return bool
      */
-    protected function fetchReadme($filename)
+    protected function fetchReadme(string $filename)
     {
         try {
             $response = Http::get($this->baseUrl().$filename);
