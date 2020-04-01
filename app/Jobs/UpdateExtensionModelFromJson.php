@@ -74,6 +74,10 @@ class UpdateExtensionModelFromJson implements ShouldQueue
 
     protected function getRepository()
     {
+        if (! $this->data->has('repository')) {
+            return;
+        }
+
         return json_encode($this->data->get('repository'));
     }
 
