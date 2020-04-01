@@ -138,7 +138,8 @@ class Extension extends Model
             return collect($maintainers)
                 ->mapWithKeys(function ($maintainer) {
                     return [$maintainer['name'] => Str::lower($maintainer['email'])];
-                });
+                })
+                ->toArray();
         });
     }
 
