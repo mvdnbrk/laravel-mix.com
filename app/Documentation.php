@@ -257,11 +257,6 @@ class Documentation
         ]);
     }
 
-    /**
-     * Get all the versions of the documentation.
-     *
-     * @return \Illuminate\Support\Collection
-     */
     public function versions(): Collection
     {
         return collect(config('documentation.versions'));
