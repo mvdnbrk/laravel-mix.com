@@ -25,7 +25,7 @@ class Extension extends Model
      *
      * @return void
      */
-    protected static function booted()
+    protected static function booted(): void
     {
         static::addGlobalScope('sorted', function (Builder $builder) {
             $builder->orderBy('name', 'asc');
@@ -37,7 +37,7 @@ class Extension extends Model
      *
      * @return string
      */
-    public function getRouteKeyName()
+    public function getRouteKeyName(): string
     {
         return 'slug';
     }
@@ -47,7 +47,7 @@ class Extension extends Model
      *
      * @return string
      */
-    public function getJson()
+    public function getJson(): string
     {
         if (! Storage::exists($this->jsonStoragePath())) {
             return json_encode(new \stdClass);
@@ -61,7 +61,7 @@ class Extension extends Model
      *
      * @return array
      */
-    public function getDecodedJson()
+    public function getDecodedJson(): array
     {
         return json_decode($this->getJson(), true);
     }
@@ -71,7 +71,7 @@ class Extension extends Model
      *
      * @return string
      */
-    public function jsonStoragePath()
+    public function jsonStoragePath(): string
     {
         return "npmjs/{$this->name}.json";
     }
@@ -81,7 +81,7 @@ class Extension extends Model
      *
      * @return string
      */
-    public function readmeStoragePath()
+    public function readmeStoragePath(): string
     {
         return "readme/{$this->name}.md";
     }
@@ -91,7 +91,7 @@ class Extension extends Model
      *
      * @return array
      */
-    public function getKeyWordsAttribute()
+    public function getKeyWordsAttribute(): array
     {
         return cache()->remember('extension.keywords:'.$this->id, now()->addDay(), function () {
             $array = collect($this->getDecodedJson())->get('keywords');
@@ -107,7 +107,7 @@ class Extension extends Model
      *
      * @return array
      */
-    protected function getUnpermittedKeywords()
+    protected function getUnpermittedKeywords(): array
     {
         return array_merge(
             collect($this->getMaintainersAttribute())->keys()->toArray(),
@@ -130,7 +130,7 @@ class Extension extends Model
      *
      * @return array
      */
-    public function getMaintainersAttribute()
+    public function getMaintainersAttribute(): array
     {
         return cache()->remember('extension.maintainers:'.$this->id, now()->addDay(), function () {
             $maintainers = collect($this->getDecodedJson())->get('maintainers', []);
@@ -148,7 +148,7 @@ class Extension extends Model
      *
      * @return string
      */
-    public function getLatestVersionAttribute()
+    public function getLatestVersionAttribute(): string
     {
         return Str::start($this->latest_dist_tag, 'v');
     }
@@ -158,7 +158,7 @@ class Extension extends Model
      *
      * @return string
      */
-    public function getReadmeAttribute()
+    public function getReadmeAttribute(): string
     {
         if ($this->hasLocalReadme()) {
             return Markdown::convertToHtml(
@@ -177,7 +177,7 @@ class Extension extends Model
      * @param  string  $content
      * @return string
      */
-    public function replaceExternalLinks(string $content)
+    public function replaceExternalLinks(string $content): string
     {
         return preg_replace_callback('/\[(.*?)\]\((?!http)(.*?)\)/m', function ($matches) {
             return '['.$matches[1].']('.$this->repositoryUrl.'/blob/master/'.$matches[2].')';
@@ -189,7 +189,7 @@ class Extension extends Model
      *
      * @return string
      */
-    public function getRepositoryUrlAttribute()
+    public function getRepositoryUrlAttribute(): string
     {
         return cache()->remember('extension.repository-url:'.$this->id, now()->addDay(), function () {
             $url = collect(json_decode($this->repository, true))->get('url');
@@ -217,7 +217,7 @@ class Extension extends Model
      *
      * @return string
      */
-    public function getTitleAttribute()
+    public function getTitleAttribute(): string
     {
         return Str::title(Str::slug($this->slug, ' '));
     }
@@ -227,7 +227,7 @@ class Extension extends Model
      *
      * @return bool
      */
-    public function hasLocalReadme()
+    public function hasLocalReadme(): bool
     {
         return Storage::exists($this->readmeStoragePath());
     }
@@ -237,7 +237,7 @@ class Extension extends Model
      *
      * @return string
      */
-    public function getRepositoryTypeAttribute()
+    public function getRepositoryTypeAttribute(): string
     {
         return cache()->remember('extension.repository-type:'.$this->id, now()->addDay(), function () {
             return collect(json_decode($this->repository, true))->get('type', '');
@@ -249,7 +249,7 @@ class Extension extends Model
      *
      * @return bool
      */
-    public function isGitRepository()
+    public function isGitRepository(): bool
     {
         return $this->getRepositoryTypeAttribute() === 'git';
     }
