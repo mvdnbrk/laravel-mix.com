@@ -3,6 +3,7 @@
 namespace App;
 
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
@@ -26,7 +27,7 @@ class Extension extends Model
      */
     protected static function booted()
     {
-        static::addGlobalScope('sorted', function ($builder) {
+        static::addGlobalScope('sorted', function (Builder $builder) {
             $builder->orderBy('name', 'asc');
         });
     }
