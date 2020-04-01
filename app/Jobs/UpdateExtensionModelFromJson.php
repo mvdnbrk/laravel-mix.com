@@ -27,6 +27,10 @@ class UpdateExtensionModelFromJson implements ShouldQueue
 
     public function handle()
     {
+        if ($this->data->isEmpty()) {
+            return;
+        }
+
         $this->extension->update([
             'slug' => $this->getSlug(),
             'author_name' => $this->getAuthorName(),
