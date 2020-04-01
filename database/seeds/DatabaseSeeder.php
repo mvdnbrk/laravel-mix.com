@@ -1,6 +1,8 @@
 <?php
 
+use App\Extension;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -59,6 +61,6 @@ class DatabaseSeeder extends Seeder
             ]);
         });
 
-        \App\Extension::whereName('laravel-mix')->first()->delete();
+        Extension::whereName('laravel-mix')->first()->delete();
     }
 }
