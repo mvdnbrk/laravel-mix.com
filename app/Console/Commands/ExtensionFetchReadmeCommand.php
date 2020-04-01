@@ -5,7 +5,6 @@ namespace App\Console\Commands;
 use App\Extension;
 use App\Jobs\FetchReadme;
 use Illuminate\Console\Command;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class ExtensionFetchReadmeCommand extends Command
 {
