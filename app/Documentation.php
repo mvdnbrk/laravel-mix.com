@@ -249,7 +249,7 @@ class Documentation
      * @param  string  $page
      * @return string
      */
-    public function url(string $version, string $page)
+    public function url(string $version, string $page): string
     {
         return route('documentation.show', [
             'version' => $version,
