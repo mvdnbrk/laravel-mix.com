@@ -11,7 +11,7 @@ class DocumentationBaseController
      *
      * @var \App\Documentation
      */
-    protected $documentation;
+    protected Documentation $documentation;
 
     /**
      * Create a new controller instance.
