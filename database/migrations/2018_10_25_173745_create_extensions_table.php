@@ -14,7 +14,7 @@ class CreateExtensionsTable extends Migration
     public function up()
     {
         Schema::create('extensions', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name')->unique();
             $table->string('slug')->nullable();
             $table->string('description')->nullable();
