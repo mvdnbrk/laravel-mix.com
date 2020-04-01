@@ -35,8 +35,9 @@ class ExtensionUpdateDatabaseCommand extends Command
         ->orderBy('name')
         ->chunk(10, function ($extensions) {
             $extensions->each(function ($extension) {
+                UpdateExtensionModelFromJson::dispatch($extension);
+
                 $this->comment("Processing: {$extension->name}");
-                dispatch(new UpdateExtensionModelFromJson($extension));
             });
         });
 

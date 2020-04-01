@@ -35,8 +35,9 @@ class FetchDownloadCounts extends Command
         ->orderBy('name')
         ->chunk(10, function ($extensions) {
             $extensions->each(function ($extension) {
+                UpdateWeeklyDownloadCount::dispatch($extension);
+
                 $this->comment("Processing: {$extension->name}");
-                dispatch(new UpdateWeeklyDownloadCount($extension));
             });
         });
 

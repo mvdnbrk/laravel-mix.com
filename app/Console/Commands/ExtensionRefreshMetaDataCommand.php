@@ -37,7 +37,7 @@ class ExtensionRefreshMetaDataCommand extends Command
         ->chunk(10, function ($extensions) {
             $extensions->each(function ($extension) {
                 $this->comment("Processing: {$extension->name}");
-                dispatch(new FetchPackageMetaDataFromNpmJsRegistry($extension->name));
+                FetchPackageMetaDataFromNpmJsRegistry::dispatch($extension->name);
             });
         });
 
