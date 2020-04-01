@@ -242,7 +242,7 @@ class Documentation
     }
 
     /**
-     * Get the canonical url for a page.
+     * Get the url for a page.
      *
      * @param  string  $version
      * @param  string  $page
