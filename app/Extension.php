@@ -154,7 +154,7 @@ class Extension extends Model
     }
 
     /**
-     * Get the readme..
+     * Get the readme.
      *
      * @return string
      */
