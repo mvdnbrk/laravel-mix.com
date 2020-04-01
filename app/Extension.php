@@ -20,14 +20,12 @@ class Extension extends Model
     protected $guarded = [];
 
     /**
-     * The "booting" method of the model.
+     * Perform any actions required after the model boots.
      *
      * @return void
      */
-    protected static function boot()
+    protected static function booted()
     {
-        parent::boot();
-
         static::addGlobalScope('sorted', function ($builder) {
             $builder->orderBy('name', 'asc');
         });
