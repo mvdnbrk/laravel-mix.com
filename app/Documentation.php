@@ -103,7 +103,7 @@ class Documentation
     }
 
     /**
-     * Get the documentation index payh.
+     * Get the documentation index path.
      *
      * @param  string  $version
      * @return string
