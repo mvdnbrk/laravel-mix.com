@@ -35,8 +35,9 @@ class ExtensionFetchReadmeCommand extends Command
         ->orderBy('name')
         ->chunk(10, function ($extensions) {
             $extensions->each(function ($extension) {
-                $this->comment("Processing: {$extension->name}");
                 FetchReadme::dispatch($extension);
+
+                $this->comment("Processing: {$extension->name}");
             });
         });
 
