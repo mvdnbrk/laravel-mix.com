@@ -13,26 +13,10 @@ class UpdateExtensionModelFromJson implements ShouldQueue
 {
     use Dispatchable, SerializesModels;
 
-    /**
-     * The extension to update.
-     *
-     * @var \App\Extension
-     */
-
-    /**
-     * The data associated with this extension.
-     *
-     * @var \Illuminate\Support\Collection
-     */
-
-    /**
-     * Create a new job instance.
-     *
-     * @param  \App\Extension  $extension
-     * @return void
-     */
     public Extension $extension;
+
     protected Collection $data;
+
     public function __construct(Extension $extension)
     {
         $this->extension = $extension;
@@ -40,11 +24,6 @@ class UpdateExtensionModelFromJson implements ShouldQueue
         $this->data = collect(json_decode($this->extension->getJson(), true));
     }
 
-    /**
-     * Execute the job.
-     *
-     * @return void
-     */
     public function handle()
     {
         $this->extension->update([

@@ -15,13 +15,8 @@ class FetchReadme implements ShouldQueue
 {
     use Dispatchable, SerializesModels;
 
-    /**
-     * The filenames that may exists for a repository.
-     * Most common used first.
-     *
-     * @var array
-     */
     public Extension $extension;
+
     protected array $filenames = [
         'README.md',
         'readme.md',
@@ -34,28 +29,11 @@ class FetchReadme implements ShouldQueue
         'readme.mkdn',
     ];
 
-    /**
-     * The extension to fetch the README file for.
-     *
-     * @var \App\Extension
-     */
-
-    /**
-     * Create a new job instance.
-     *
-     * @param  \App\Extension  $extension
-     * @return void
-     */
     public function __construct(Extension $extension)
     {
         $this->extension = $extension;
     }
 
-    /**
-     * Execute the job.
-     *
-     * @return void
-     */
     public function handle()
     {
         collect($this->filenames)
@@ -75,11 +53,6 @@ class FetchReadme implements ShouldQueue
         }
     }
 
-    /**
-     * Get the base url for the repository.
-     *
-     * @return string
-     */
     protected function baseUrl(): string
     {
         return Str::replaceFirst(
@@ -89,22 +62,11 @@ class FetchReadme implements ShouldQueue
         ).'/master/';
     }
 
-    /**
-     * Get the cache key name.
-     *
-     * @return string
-     */
     protected function cacheKey(): string
     {
         return 'extension.readme.filename:'.$this->extension->id;
     }
 
-    /**
-     * Fetch the readme from the respository and store it locally.
-     *
-     * @param  string  $filename
-     * @return bool
-     */
     protected function fetchReadme(string $filename): bool
     {
         try {

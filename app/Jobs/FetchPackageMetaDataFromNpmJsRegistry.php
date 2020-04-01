@@ -12,19 +12,8 @@ class FetchPackageMetaDataFromNpmJsRegistry implements ShouldQueue
 {
     use Dispatchable, SerializesModels;
 
-    /**
-     * The name of the npm package.
-     *
-     * @var string
-     */
     public string $name;
 
-    /**
-     * Create a new job instance.
-     *
-     * @param  string  $name
-     * @return void
-     */
     public function __construct(string $name)
     {
         $this->name = $name;

@@ -12,29 +12,13 @@ class UpdateWeeklyDownloadCount implements ShouldQueue
 {
     use Dispatchable, SerializesModels;
 
-    /**
-     * The extension to update.
-     *
-     * @var \App\Extension
-     */
-
-    /**
-     * Create a new job instance.
-     *
-     * @param  \App\Extension $extension
-     * @return void
-     */
     public Extension $extension;
+
     public function __construct(Extension $extension)
     {
         $this->extension = $extension;
     }
 
-    /**
-     * Execute the job.
-     *
-     * @return void
-     */
     public function handle()
     {
         $response = Http::get("https://api.npmjs.org/downloads/point/last-week/{$this->extension->name}");
