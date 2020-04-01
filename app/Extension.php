@@ -6,6 +6,7 @@ use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -93,7 +94,7 @@ class Extension extends Model
      */
     public function getKeyWordsAttribute(): array
     {
-        return cache()->remember('extension.keywords:'.$this->id, now()->addDay(), function () {
+        return Cache::remember('extension.keywords:'.$this->id, now()->addDay(), function () {
             $array = collect($this->getDecodedJson())->get('keywords');
 
             return collect($array)->reject(function ($keyword) {
@@ -132,7 +133,7 @@ class Extension extends Model
      */
     public function getMaintainersAttribute(): array
     {
-        return cache()->remember('extension.maintainers:'.$this->id, now()->addDay(), function () {
+        return Cache::remember('extension.maintainers:'.$this->id, now()->addDay(), function () {
             $maintainers = collect($this->getDecodedJson())->get('maintainers', []);
 
             return collect($maintainers)
@@ -191,7 +192,7 @@ class Extension extends Model
      */
     public function getRepositoryUrlAttribute(): string
     {
-        return cache()->remember('extension.repository-url:'.$this->id, now()->addDay(), function () {
+        return Cache::remember('extension.repository-url:'.$this->id, now()->addDay(), function () {
             $url = collect(json_decode($this->repository, true))->get('url');
 
             if (substr($url, 0, strlen('git+')) == 'git+') {
@@ -239,7 +240,7 @@ class Extension extends Model
      */
     public function getRepositoryTypeAttribute(): string
     {
-        return cache()->remember('extension.repository-type:'.$this->id, now()->addDay(), function () {
+        return Cache::remember('extension.repository-type:'.$this->id, now()->addDay(), function () {
             return collect(json_decode($this->repository, true))->get('type', '');
         });
     }

@@ -2,11 +2,12 @@
 
 namespace App\Jobs;
 
-use Exception;
 use App\Extension;
+use Exception;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -37,9 +38,9 @@ class FetchReadme implements ShouldQueue
     public function handle()
     {
         collect($this->filenames)
-            ->when(cache()->has($this->cacheKey()), function ($collection) {
+            ->when(Cache::has($this->cacheKey()), function ($collection) {
                 return $collection->prepend(
-                    cache()->pull('extension.readme.filename:'.$this->extension->id)
+                    Cache::pull('extension.readme.filename:'.$this->extension->id)
                 );
             })
             ->each(function ($filename) {
@@ -48,7 +49,7 @@ class FetchReadme implements ShouldQueue
                 }
             });
 
-        if (! cache()->has($this->cacheKey())) {
+        if (! Cache::has($this->cacheKey())) {
             abort(404);
         }
     }
@@ -76,7 +77,7 @@ class FetchReadme implements ShouldQueue
 
             Storage::disk('local')->put("readme/{$this->extension->name}.md", $response->body());
 
-            cache()->forever($this->cacheKey(), $filename);
+            Cache::forever($this->cacheKey(), $filename);
         } catch (Exception $e) {
             return false;
         }
