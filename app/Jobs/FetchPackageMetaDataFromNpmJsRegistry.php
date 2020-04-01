@@ -17,7 +17,7 @@ class FetchPackageMetaDataFromNpmJsRegistry implements ShouldQueue
      *
      * @var string
      */
-    public $name;
+    public string $name;
 
     /**
      * Create a new job instance.

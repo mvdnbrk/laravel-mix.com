@@ -18,14 +18,12 @@ class UpdateExtensionModelFromJson implements ShouldQueue
      *
      * @var \App\Extension
      */
-    public $extension;
 
     /**
      * The data associated with this extension.
      *
      * @var \Illuminate\Support\Collection
      */
-    protected $data;
 
     /**
      * Create a new job instance.
@@ -33,6 +31,8 @@ class UpdateExtensionModelFromJson implements ShouldQueue
      * @param  \App\Extension  $extension
      * @return void
      */
+    public Extension $extension;
+    protected Collection $data;
     public function __construct(Extension $extension)
     {
         $this->extension = $extension;

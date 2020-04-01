@@ -17,7 +17,6 @@ class UpdateWeeklyDownloadCount implements ShouldQueue
      *
      * @var \App\Extension
      */
-    public $extension;
 
     /**
      * Create a new job instance.
@@ -25,6 +24,7 @@ class UpdateWeeklyDownloadCount implements ShouldQueue
      * @param  \App\Extension $extension
      * @return void
      */
+    public Extension $extension;
     public function __construct(Extension $extension)
     {
         $this->extension = $extension;

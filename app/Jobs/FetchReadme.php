@@ -21,7 +21,8 @@ class FetchReadme implements ShouldQueue
      *
      * @var array
      */
-    protected $filenames = [
+    public Extension $extension;
+    protected array $filenames = [
         'README.md',
         'readme.md',
         'Readme.md',
@@ -38,7 +39,6 @@ class FetchReadme implements ShouldQueue
      *
      * @var \App\Extension
      */
-    public $extension;
 
     /**
      * Create a new job instance.
@@ -80,7 +80,7 @@ class FetchReadme implements ShouldQueue
      *
      * @return string
      */
-    protected function baseUrl()
+    protected function baseUrl(): string
     {
         return Str::replaceFirst(
             'https://github.com',
@@ -94,7 +94,7 @@ class FetchReadme implements ShouldQueue
      *
      * @return string
      */
-    private function cacheKey()
+    protected function cacheKey(): string
     {
         return 'extension.readme.filename:'.$this->extension->id;
     }
@@ -105,7 +105,7 @@ class FetchReadme implements ShouldQueue
      * @param  string  $filename
      * @return bool
      */
-    protected function fetchReadme(string $filename)
+    protected function fetchReadme(string $filename): bool
     {
         try {
             $response = Http::get($this->baseUrl().$filename);
