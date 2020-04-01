@@ -4,6 +4,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Repository URL
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify the Git repository url of your documentation.
+    */
+
+    'repository' => [
+        'url' => env('DOCUMENTATION_REPOSITORY_URL'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
     | Latest release.
     |--------------------------------------------------------------------------
     |
@@ -80,10 +92,6 @@ return [
 
     'excluded_pages' => [
         'readme',
-    ],
-
-    'repository' => [
-        'url' => 'https://github.com/mvdnbrk/laravel-mix-docs',
     ],
 
 ];
