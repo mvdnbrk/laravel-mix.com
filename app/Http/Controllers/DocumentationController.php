@@ -14,6 +14,8 @@ class DocumentationController extends DocumentationBaseController
      * @param  string  $version
      * @param  string  $page
      * @return \Illuminate\View\View
+     *
+     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
      */
     public function show($version, $page)
     {
