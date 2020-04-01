@@ -23,9 +23,7 @@ class UpdateWeeklyDownloadCount implements ShouldQueue
     {
         $response = Http::get("https://api.npmjs.org/downloads/point/last-week/{$this->extension->name}");
 
-        if (! $response->ok()) {
-            abort($response->status());
-        }
+        $response->throw();
 
         $this->extension->timestamps = false;
 

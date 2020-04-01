@@ -72,9 +72,7 @@ class FetchReadme implements ShouldQueue
         try {
             $response = Http::get($this->baseUrl().$filename);
 
-            if (! $response->ok()) {
-                abort(404);
-            }
+            $response->throw();
 
             Storage::disk('local')->put("readme/{$this->extension->name}.md", $response->body());
 

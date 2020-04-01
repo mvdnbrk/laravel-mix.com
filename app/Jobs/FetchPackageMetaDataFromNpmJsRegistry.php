@@ -23,14 +23,14 @@ class FetchPackageMetaDataFromNpmJsRegistry implements ShouldQueue
      * Execute the job.
      *
      * @return void
+     *
+     * @throws \Illuminate\Http\Client\RequestException
      */
     public function handle()
     {
         $response = Http::get("https://registry.npmjs.org/{$this->name}");
 
-        if (! $response->ok()) {
-            abort($response->status());
-        }
+        $response->throw();
 
         Storage::disk('local')->put("npmjs/{$this->name}.json", $response->body());
     }
