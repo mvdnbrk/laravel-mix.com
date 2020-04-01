@@ -247,7 +247,7 @@ class Documentation
      *
      * @param  string  $version
      * @param  string  $page
-     * @return string|null
+     * @return string
      */
     public function url(string $version, string $page)
     {
