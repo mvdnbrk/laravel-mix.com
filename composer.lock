@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a433fe7da176de5a253e0b73d1a002c1",
+    "content-hash": "48a9387c19506a301c4f74dad1a6c9a5",
     "packages": [
         {
             "name": "brick/math",
@@ -1580,16 +1580,16 @@
         },
         {
             "name": "laravel/horizon",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "0cde59362978591f33a0361098db634ab6c28866"
+                "reference": "fdfbd5b2f7bb1dfdf2e40518b263337c07b6b22c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/0cde59362978591f33a0361098db634ab6c28866",
-                "reference": "0cde59362978591f33a0361098db634ab6c28866",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/fdfbd5b2f7bb1dfdf2e40518b263337c07b6b22c",
+                "reference": "fdfbd5b2f7bb1dfdf2e40518b263337c07b6b22c",
                 "shasum": ""
             },
             "require": {
@@ -1649,21 +1649,21 @@
                 "laravel",
                 "queue"
             ],
-            "time": "2020-03-31T15:24:24+00:00"
+            "time": "2020-04-02T12:32:01+00:00"
         },
         {
             "name": "laravel/nova",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "5f298f21c7f214a9b22dc6ec900d2b6439377a09"
+                "reference": "38233496ef8cce17ff4b24f5ecfc59862259f410"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-5f298f21c7f214a9b22dc6ec900d2b6439377a09-zip-7bf129.zip",
-                "reference": "5f298f21c7f214a9b22dc6ec900d2b6439377a09",
-                "shasum": "93478a403d0e8f6d2863cbcbabc33d6695257640"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-38233496ef8cce17ff4b24f5ecfc59862259f410-zip-55c68f.zip",
+                "reference": "38233496ef8cce17ff4b24f5ecfc59862259f410",
+                "shasum": "7d6ad526867f9d44c171717c6f26cf0a93066843"
             },
             "require": {
                 "brick/money": "^0.4.2",
@@ -1672,7 +1672,7 @@
                 "illuminate/support": "^7.0",
                 "laravel/ui": "^2.0",
                 "moontoast/math": "^1.1",
-                "php": ">=7.2",
+                "php": "^7.2.5",
                 "spatie/once": "^1.1 | ^2.0",
                 "symfony/console": "^5.0",
                 "symfony/finder": "^5.0",
@@ -1723,7 +1723,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2020-03-17T18:33:18+00:00"
+            "time": "2020-04-01T20:26:49+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -5956,16 +5956,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.0.2",
+            "version": "9.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c0ecbfb898ab8b24d8a59a23520f7b2a73e27b5b"
+                "reference": "ef2af937ce574f215afb6dca37d583cb2964bad9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c0ecbfb898ab8b24d8a59a23520f7b2a73e27b5b",
-                "reference": "c0ecbfb898ab8b24d8a59a23520f7b2a73e27b5b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ef2af937ce574f215afb6dca37d583cb2964bad9",
+                "reference": "ef2af937ce574f215afb6dca37d583cb2964bad9",
                 "shasum": ""
             },
             "require": {
@@ -5986,6 +5986,7 @@
                 "phpunit/php-invoker": "^3.0",
                 "phpunit/php-text-template": "^2.0",
                 "phpunit/php-timer": "^3.0",
+                "sebastian/code-unit": "^1.0",
                 "sebastian/comparator": "^4.0",
                 "sebastian/diff": "^4.0",
                 "sebastian/environment": "^5.0.1",
@@ -6009,7 +6010,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "9.0-dev"
+                    "dev-master": "9.1-dev"
                 }
             },
             "autoload": {
@@ -6038,7 +6039,53 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-03-31T08:57:51+00:00"
+            "time": "2020-04-03T05:23:04+00:00"
+        },
+        {
+            "name": "sebastian/code-unit",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/code-unit.git",
+                "reference": "8d8f09bd47c75159921e6e84fdef146343962866"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/8d8f09bd47c75159921e6e84fdef146343962866",
+                "reference": "8d8f09bd47c75159921e6e84fdef146343962866",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Collection of value objects that represent the PHP code units",
+            "homepage": "https://github.com/sebastianbergmann/code-unit",
+            "time": "2020-03-30T11:59:20+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
