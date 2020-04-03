@@ -20,7 +20,7 @@ return [
     | Latest release.
     |--------------------------------------------------------------------------
     |
-    | Here you may specify the latest release version of your package.
+    | Here you may specify the latest release version of your documentation.
     | If no value is specified we will fall back to the default version.
     |
     */
@@ -53,7 +53,7 @@ return [
     | Default page.
     |--------------------------------------------------------------------------
     |
-    | Here you may specify which page should be displayed as a default.
+    | Here you may specify which page should be displayed by default.
     |
     */
 
