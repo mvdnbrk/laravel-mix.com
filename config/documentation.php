@@ -8,6 +8,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may specify the Git repository url of your documentation.
+    |
     */
 
     'repository' => [
@@ -21,6 +22,7 @@ return [
     |
     | Here you may specify the latest release version of your package.
     | If no value is specified we will fall back to the default version.
+    |
     */
 
     'latest_release' => env('DOCUMENTATION_LATEST_RELEASE', null),
@@ -32,6 +34,7 @@ return [
     |
     | Here you may specify all versions of the documentation.
     | Documentation files should be placed in /storage/docs/{version}.
+    |
     */
 
     'versions' => [
@@ -51,6 +54,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Here you may specify which page should be displayed as a default.
+    |
     */
 
     'default_page' => env('DOCUMENTATION_DEFAULT_PAGE', 'installation'),
@@ -63,6 +67,7 @@ return [
     | Here you may specify which version of the documentation should be
     | displayed by default. If not specified it will default to the
     | latest version.
+    |
     */
 
     'default_version' => env('DOCUMENTATION_DEFAULT_VERSION', null),
@@ -88,6 +93,7 @@ return [
     | Here you may specify which pages are excluded from the documentation.
     | The readme and "table of contents" page which you specified in the
     | section above will be excluded by default.
+    |
     */
 
     'excluded_pages' => [
