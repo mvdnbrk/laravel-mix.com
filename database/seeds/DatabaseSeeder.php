@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             'laravel-mix-copy-watched',
             'laravel-mix-critical',
             'laravel-mix-criticalcss',
+            'laravel-mix-css-partial',
             'laravel-mix-definitions',
             'laravel-mix-dl',
             'laravel-mix-dload',
