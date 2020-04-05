@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "48a9387c19506a301c4f74dad1a6c9a5",
+    "content-hash": "27737b1ecb6ba1388cdfc0ccec0894c1",
     "packages": [
         {
             "name": "brick/math",
@@ -1379,6 +1379,7 @@
                     "email": "jakub.onderka@gmail.com"
                 }
             ],
+            "abandoned": "php-parallel-lint/php-console-color",
             "time": "2018-09-29T17:23:10+00:00"
         },
         {
@@ -1425,6 +1426,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
@@ -1653,17 +1655,17 @@
         },
         {
             "name": "laravel/nova",
-            "version": "v3.2.0",
+            "version": "v3.2.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "38233496ef8cce17ff4b24f5ecfc59862259f410"
+                "reference": "aee648c3f1d997ee554a2c4120ae9ad92e857f08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-38233496ef8cce17ff4b24f5ecfc59862259f410-zip-55c68f.zip",
-                "reference": "38233496ef8cce17ff4b24f5ecfc59862259f410",
-                "shasum": "7d6ad526867f9d44c171717c6f26cf0a93066843"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-aee648c3f1d997ee554a2c4120ae9ad92e857f08-zip-4bd51f.zip",
+                "reference": "aee648c3f1d997ee554a2c4120ae9ad92e857f08",
+                "shasum": "2d2a472754828832681dfb31873b01ad934a3580"
             },
             "require": {
                 "brick/money": "^0.4.2",
@@ -1723,7 +1725,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2020-04-01T20:26:49+00:00"
+            "time": "2020-04-03T16:18:38+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -5259,28 +5261,28 @@
         },
         {
             "name": "nunomaduro/collision",
-            "version": "v4.1.3",
+            "version": "v4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/collision.git",
-                "reference": "a430bce33d1ad07f756ea6cae9afce9ef8670b42"
+                "reference": "d50490417eded97be300a92cd7df7badc37a9018"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/a430bce33d1ad07f756ea6cae9afce9ef8670b42",
-                "reference": "a430bce33d1ad07f756ea6cae9afce9ef8670b42",
+                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/d50490417eded97be300a92cd7df7badc37a9018",
+                "reference": "d50490417eded97be300a92cd7df7badc37a9018",
                 "shasum": ""
             },
             "require": {
                 "facade/ignition-contracts": "^1.0",
                 "filp/whoops": "^2.4",
-                "jakub-onderka/php-console-highlighter": "^0.4",
                 "php": "^7.2.5",
                 "symfony/console": "^5.0"
             },
             "require-dev": {
                 "facade/ignition": "^2.0",
                 "fideloper/proxy": "^4.2",
+                "friendsofphp/php-cs-fixer": "^2.16",
                 "fruitcake/laravel-cors": "^1.0",
                 "laravel/framework": "^7.0",
                 "laravel/tinker": "^2.0",
@@ -5325,7 +5327,7 @@
                 "php",
                 "symfony"
             ],
-            "time": "2020-03-07T12:46:00+00:00"
+            "time": "2020-04-04T19:56:08+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -5956,16 +5958,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.1.0",
+            "version": "9.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ef2af937ce574f215afb6dca37d583cb2964bad9"
+                "reference": "848f6521c906500e66229668768576d35de0227e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ef2af937ce574f215afb6dca37d583cb2964bad9",
-                "reference": "ef2af937ce574f215afb6dca37d583cb2964bad9",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/848f6521c906500e66229668768576d35de0227e",
+                "reference": "848f6521c906500e66229668768576d35de0227e",
                 "shasum": ""
             },
             "require": {
@@ -6039,7 +6041,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-04-03T05:23:04+00:00"
+            "time": "2020-04-03T14:40:04+00:00"
         },
         {
             "name": "sebastian/code-unit",
