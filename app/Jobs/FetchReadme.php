@@ -8,7 +8,6 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
@@ -105,10 +104,9 @@ class FetchReadme implements ShouldQueue
 
     protected function storeReadme(string $content): bool
     {
-        return tap(Storage::disk('local')->put($this->extension->readmeStoragePath(), $content), function() {
-            Artisan::queue('page-cache:clear', [
-                'slug' => route('extensions.show', $this->extension, false),
-            ]);
-        });
+        return tap(
+            Storage::put($this->extension->readmeStoragePath(), $content),
+            fn() => $this->extension->clearPageCache()
+        );
     }
 }

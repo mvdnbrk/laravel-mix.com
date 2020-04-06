@@ -6,6 +6,7 @@ use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -247,5 +248,12 @@ class Extension extends Model
     public function isGitRepository(): bool
     {
         return $this->getRepositoryTypeAttribute() === 'git';
+    }
+
+    public function clearPageCache(): void
+    {
+        Artisan::queue('page-cache:clear', [
+            'slug' => route('extensions.show', $this, false),
+        ]);
     }
 }
