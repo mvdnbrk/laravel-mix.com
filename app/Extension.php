@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Stringable;
 
 class Extension extends Model
 {
@@ -189,13 +190,13 @@ class Extension extends Model
     /**
      * Get the url of the repository.
      *
-     * @return string|null
+     * @return \Illuminate\Support\Stringable
      */
-    public function getRepositoryUrlAttribute(): ?string
+    public function getRepositoryUrlAttribute(): Stringable
     {
         return Cache::remember('extension.repository-url:'.$this->id, now()->addDay(), function () {
             if (! $url = collect($this->repository)->get('url')) {
-                return null;
+                return new Stringable;
             }
 
             return Str::of($url)
