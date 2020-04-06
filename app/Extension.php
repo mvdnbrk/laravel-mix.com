@@ -154,15 +154,15 @@ class Extension extends Model
 
     public function getReadmeAttribute(): string
     {
-        if ($this->hasLocalReadme()) {
-            return Markdown::convertToHtml(
-                $this->replaceExternalLinks(
-                    Storage::get($this->readmeStoragePath()
-                )
-            ));
+        if (! $this->hasLocalReadme()) {
+            return '';
         }
 
-        return '';
+        return Markdown::convertToHtml(
+            $this->replaceExternalLinks(
+                Storage::get($this->readmeStoragePath()
+            )
+        ));
     }
 
     /**
