@@ -8,6 +8,7 @@
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
+         printerClass="NunoMaduro\Collision\Adapters\Phpunit\Printer"
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
@@ -24,9 +25,6 @@
             <directory suffix=".php">./app</directory>
         </whitelist>
     </filter>
-    <listeners>
-        <listener class="NunoMaduro\Collision\Adapters\Phpunit\Printer" />
-    </listeners>
     <php>
         <server name="APP_ENV" value="testing"/>
         <server name="BCRYPT_ROUNDS" value="4"/>
