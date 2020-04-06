@@ -213,9 +213,9 @@ class Extension extends Model
      *
      * @return string
      */
-    public function getTitleAttribute(): string
+    public function getTitleAttribute(): Stringable
     {
-        return Str::title(Str::slug($this->slug, ' '));
+        return Str::of($this->slug)->slug(' ')->title();
     }
 
     /**
