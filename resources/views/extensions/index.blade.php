@@ -18,7 +18,7 @@
                     <a href="{{ route('extensions.show', $extension) }}">
                         <h2 class="mt-0 mb-2 text-xl text-gray-800 hover:text-blue-500">{{ $extension->title }}</h2>
                     </a>
-                    <p class="flex-1">{{ Str::limit($extension->description, 95) }}</p>
+                    <p class="flex-1">{{ Str::limit($extension->description, 90) }}</p>
                     <a class="flex items-center text-sm" href="{{ route('extensions.show', $extension) }}">
                         Learn more
                     </a>
