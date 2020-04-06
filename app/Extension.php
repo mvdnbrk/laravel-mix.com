@@ -24,6 +24,8 @@ class Extension extends Model
 
     protected $guarded = [];
 
+    protected array $decoded_json;
+
     protected static function booted(): void
     {
         static::addGlobalScope('sorted', function (Builder $builder) {
@@ -47,7 +49,7 @@ class Extension extends Model
 
     public function getDecodedJson(): array
     {
-        return json_decode($this->getJson(), true);
+        return $this->decoded_json ??= json_decode($this->getJson(), true);
     }
 
     public function jsonStoragePath(): string
