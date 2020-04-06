@@ -6,7 +6,9 @@ use App\Extension;
 use App\Jobs\FetchPackageMetaDataFromNpmJsRegistry;
 use App\Jobs\FetchReadme;
 use App\Jobs\UpdateExtensionModelFromJson;
+use App\Jobs\UpdateWeeklyDownloadCount;
 use Illuminate\Console\Command;
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -61,6 +63,7 @@ class ExtensionMakeCommand extends Command
 
         UpdateExtensionModelFromJson::dispatchNow($extension);
 
+        $this->fetchDownloadCounts($extension);
         $this->fetchReadme($extension);
 
         $this->callSilent('page-cache:clear', [
@@ -78,6 +81,19 @@ class ExtensionMakeCommand extends Command
 
                 return true;
             } catch (NotFoundHttpException $exception) {
+                return false;
+            }
+        });
+    }
+
+    protected function fetchDownloadCounts(Extension $extension)
+    {
+        return $this->task('Fetching download counts', function () use ($extension) {
+            try {
+                UpdateWeeklyDownloadCount::dispatchNow($extension);
+
+                return true;
+            } catch (RequestException $exception) {
                 return false;
             }
         });
