@@ -56,6 +56,7 @@ class DatabaseSeeder extends Seeder
             'mix-html-builder',
             'mix-serve',
             'mix-tailwindcss',
+            'vuetifyjs-mix-extension',
         ])->each(function ($package) {
             DB::table('extensions')->insert([
                 'name' => $package,
