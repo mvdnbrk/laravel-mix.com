@@ -40,7 +40,7 @@ class FetchReadme implements ShouldQueue
     {
         collect($this->filenames)
             ->prepend(
-                collect(json_decode($this->extension->getJson(), true))->get('readmeFilename')
+                collect($this->extension->getDecodedJson())->get('readmeFilename')
             )
             ->unique()
             ->filter()

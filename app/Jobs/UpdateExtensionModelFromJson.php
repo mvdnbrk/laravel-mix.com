@@ -22,7 +22,7 @@ class UpdateExtensionModelFromJson implements ShouldQueue
     {
         $this->extension = $extension;
 
-        $this->data = collect(json_decode($this->extension->getJson(), true));
+        $this->data = collect($this->extension->getDecodedJson());
     }
 
     public function handle()

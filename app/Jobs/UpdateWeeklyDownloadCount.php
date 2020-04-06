@@ -28,7 +28,7 @@ class UpdateWeeklyDownloadCount implements ShouldQueue
         $this->extension->timestamps = false;
 
         $this->extension->update([
-            'weekly_download_count' => collect(json_decode($response->body(), true))->get('downloads', 0),
+            'weekly_download_count' => collect($response->json())->get('downloads', 0),
         ]);
     }
 }
