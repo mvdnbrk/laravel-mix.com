@@ -34,7 +34,7 @@
             </div>
             @endif
             <div class="py-2 font-semibold text-center text-sm semibold">
-                <count :to="{{ $extension->weekly_download_count }}">{{ $extension->weekly_download_count }}</count> {{ Str::plural('download', $extension->weekly_download_count) }} last week
+                <count :to="{{ $extension->weekly_download_count }}">{{ $extension->weekly_download_count }}</count> {{ \Illuminate\Support\Str::plural('download', $extension->weekly_download_count) }} last week
             </div>
             <div class="text-center text-sm">
                 {{ $extension->license }} license
