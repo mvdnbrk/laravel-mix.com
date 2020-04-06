@@ -57,7 +57,7 @@ class Extension extends Resource
 
             Text::make('Slug')->sortable(),
 
-            Text::make('Description')->hideOnIndex()->nullable(),
+            Text::make('Description')->hideFromIndex()->nullable(),
 
             Number::make('Weekly download count')->sortable(),
 
