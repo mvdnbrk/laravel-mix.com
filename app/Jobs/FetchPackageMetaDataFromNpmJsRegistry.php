@@ -32,6 +32,6 @@ class FetchPackageMetaDataFromNpmJsRegistry implements ShouldQueue
 
         $response->throw();
 
-        Storage::disk('local')->put("npmjs/{$this->name}.json", $response->body());
+        Storage::put("npmjs/{$this->name}.json", $response->body());
     }
 }

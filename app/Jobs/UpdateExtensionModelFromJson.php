@@ -9,6 +9,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Illuminate\Support\Stringable;
 
 class UpdateExtensionModelFromJson implements ShouldQueue
 {
@@ -60,20 +61,16 @@ class UpdateExtensionModelFromJson implements ShouldQueue
         return collect($this->data->get('dist-tags'))->get('latest');
     }
 
-    protected function getCreatedAt()
+    protected function getCreatedAt(): Carbon
     {
-        $createdAt = collect($this->data->get('time'))->get('created');
-
-        return new Carbon($createdAt);
+        return new Carbon(
+            collect($this->data->get('time'))->get('created')
+        );
     }
 
-    protected function getDescription()
+    protected function getDescription(): Stringable
     {
-        $description = $this->data->get('description');
-
-        $description = Str::finish($description, '.');
-
-        return Str::ucfirst($description);
+        return Str::of($this->data->get('description'))->ucfirst()->finish('.');
     }
 
     protected function getRepository()
@@ -81,35 +78,20 @@ class UpdateExtensionModelFromJson implements ShouldQueue
         return $this->data->get('repository');
     }
 
-    protected function getSlug()
+    protected function getSlug(): Stringable
     {
-        return Str::slug($this->stripLaravelMixFromName());
+        return Str::of($this->data->get('name'))->after('laravel-')->after('mix-')->slug();
     }
 
-    protected function getUpdatedAt()
+    protected function getUpdatedAt(): Carbon
     {
-        $updatedAt = collect($this->data->get('time'))->get('modified');
-
-        return new Carbon($updatedAt);
+        return new Carbon(
+            collect($this->data->get('time'))->get('modified')
+        );
     }
 
-    public function getVersionCount()
+    public function getVersionCount(): int
     {
         return collect($this->data->get('versions'))->count();
-    }
-
-    protected function stripLaravelMixFromName()
-    {
-        $name = $this->data->get('name');
-
-        if (substr($name, 0, strlen('mix-')) == 'mix-') {
-            $name = substr($name, strlen('mix-'));
-        }
-
-        if (substr($name, 0, strlen('laravel-mix-')) == 'laravel-mix-') {
-            $name = substr($name, strlen('laravel-mix-'));
-        }
-
-        return $name;
     }
 }
