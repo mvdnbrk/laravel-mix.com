@@ -81,7 +81,7 @@ class FetchReadme implements ShouldQueue
 
             $response->throw();
 
-            Storage::disk('local')->put("readme/{$this->extension->name}.md", $response->body());
+            Storage::disk('local')->put($this->extension->readmeStoragePath(), $response->body());
 
             Cache::forever($this->cacheKey(), $filename);
         } catch (Exception $e) {
