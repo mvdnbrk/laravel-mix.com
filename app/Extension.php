@@ -24,11 +24,6 @@ class Extension extends Model
 
     protected $guarded = [];
 
-    /**
-     * Perform any actions required after the model boots.
-     *
-     * @return void
-     */
     protected static function booted(): void
     {
         static::addGlobalScope('sorted', function (Builder $builder) {
@@ -36,11 +31,6 @@ class Extension extends Model
         });
     }
 
-    /**
-     * Get the route key for the model.
-     *
-     * @return string
-     */
     public function getRouteKeyName(): string
     {
         return 'slug';
