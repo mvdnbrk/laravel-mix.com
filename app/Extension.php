@@ -36,11 +36,6 @@ class Extension extends Model
         return 'slug';
     }
 
-    /**
-     * Get the json meta data for this package from storage.
-     *
-     * @return string
-     */
     public function getJson(): string
     {
         if (! Storage::exists($this->jsonStoragePath())) {
@@ -50,41 +45,21 @@ class Extension extends Model
         return Storage::get($this->jsonStoragePath());
     }
 
-    /**
-     * Get the decoded json meta data.
-     *
-     * @return array
-     */
     public function getDecodedJson(): array
     {
         return json_decode($this->getJson(), true);
     }
 
-    /**
-     * Get the storage path for the json file.
-     *
-     * @return string
-     */
     public function jsonStoragePath(): string
     {
         return "npmjs/{$this->name}.json";
     }
 
-    /**
-     * Get the storage path for the README file.
-     *
-     * @return string
-     */
     public function readmeStoragePath(): string
     {
         return "readme/{$this->name}.md";
     }
 
-    /**
-     * Get keywords for this extension.
-     *
-     * @return array
-     */
     public function getKeyWordsAttribute(): array
     {
         return Cache::remember('extension.keywords:'.$this->id, now()->addDay(), function () {
@@ -155,12 +130,6 @@ class Extension extends Model
         ));
     }
 
-    /**
-     * Replace links to external links if needed.
-     *
-     * @param  string  $content
-     * @return string
-     */
     public function replaceExternalLinks(string $content): string
     {
         return preg_replace_callback('/\[(.*?)\]\((?!http)(.*?)\)/m', function ($matches) {
