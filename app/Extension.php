@@ -189,28 +189,20 @@ class Extension extends Model
     /**
      * Get the url of the repository.
      *
-     * @return string
+     * @return string|null
      */
-    public function getRepositoryUrlAttribute(): string
+    public function getRepositoryUrlAttribute(): ?string
     {
         return Cache::remember('extension.repository-url:'.$this->id, now()->addDay(), function () {
-            $url = collect($this->repository)->get('url');
-
-            if (substr($url, 0, strlen('git+')) == 'git+') {
-                $url = substr($url, strlen('git+'));
+            if (! $url = collect($this->repository)->get('url')) {
+                return null;
             }
 
-            if (substr($url, 0, strlen('git')) == 'git') {
-                $url = substr($url, strlen('git'));
-            }
-
-            if (substr($url, -strlen('.git')) == '.git') {
-                $url = substr($url, 0, strlen($url) - strlen('.git'));
-            }
-
-            $url = Str::start($url, 'https');
-
-            return $url;
+            return Str::of($url)
+                ->after('git+')
+                ->after('git://')
+                ->before('.git')
+                ->start('https://');
         });
     }
 
