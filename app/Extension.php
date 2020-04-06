@@ -63,11 +63,12 @@ class Extension extends Model
     public function getKeyWordsAttribute(): array
     {
         return Cache::remember('extension.keywords:'.$this->id, now()->addDay(), function () {
-            $array = collect($this->getDecodedJson())->get('keywords');
+            $keywords = collect($this->getDecodedJson())->get('keywords');
 
-            return collect($array)->reject(function ($keyword) {
-                return in_array($keyword, $this->getUnpermittedKeywords());
-            })->toArray();
+            return collect($keywords)
+                ->diff($this->getUnpermittedKeywords())
+                ->values()
+                ->all();
         });
     }
 
