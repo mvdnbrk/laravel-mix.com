@@ -111,9 +111,9 @@ class Extension extends Model
      */
     protected function getUnpermittedKeywords(): array
     {
-        return array_merge(
-            collect($this->getMaintainersAttribute())->keys()->toArray(),
-            [
+        return collect($this->getMaintainersAttribute())
+            ->keys()
+            ->merge([
                 Str::lower($this->getTitleAttribute()),
                 'extension',
                 'laravel-mix',
@@ -122,8 +122,8 @@ class Extension extends Model
                 'mix',
                 'plugin',
                 'webpack',
-            ]
-        );
+            ])
+            ->all();
     }
 
     /**
