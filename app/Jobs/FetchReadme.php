@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Stringable;
 
 class FetchReadme implements ShouldQueue
 {
@@ -38,6 +39,14 @@ class FetchReadme implements ShouldQueue
 
     public function handle()
     {
+        if ($this->baseUrl()->isEmpty()) {
+            $this->storeReadme(
+                collect($this->extension->getDecodedJson())->get('readme')
+            );
+
+            return;
+        }
+
         collect($this->filenames)
             ->prepend(
                 collect($this->extension->getDecodedJson())->get('readmeFilename')
@@ -60,13 +69,15 @@ class FetchReadme implements ShouldQueue
         }
     }
 
-    protected function baseUrl(): string
+    protected function baseUrl(): Stringable
     {
-        return Str::replaceFirst(
-            'https://github.com',
-            'https://raw.githubusercontent.com',
-            $this->extension->repositoryUrl
-        ).'/master/';
+        if ($this->extension->repositoryUrl->isEmpty()) {
+            return new Stringable;
+        }
+
+        return Str::of($this->extension->repositoryUrl)
+            ->replaceFirst('https://github.com', 'https://raw.githubusercontent.com')
+            ->finish('/master/');
     }
 
     protected function cacheKey(): string
@@ -81,7 +92,7 @@ class FetchReadme implements ShouldQueue
 
             $response->throw();
 
-            Storage::disk('local')->put($this->extension->readmeStoragePath(), $response->body());
+            $this->storeReadme($response->body());
 
             Cache::forever($this->cacheKey(), $filename);
         } catch (Exception $e) {
@@ -89,5 +100,10 @@ class FetchReadme implements ShouldQueue
         }
 
         return true;
+    }
+
+    protected function storeReadme(string $content): bool
+    {
+        return Storage::disk('local')->put($this->extension->readmeStoragePath(), $content);
     }
 }
