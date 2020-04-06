@@ -147,21 +147,11 @@ class Extension extends Model
         });
     }
 
-    /**
-     * Get the latest published version number.
-     *
-     * @return string
-     */
     public function getLatestVersionAttribute(): string
     {
         return Str::start($this->latest_dist_tag, 'v');
     }
 
-    /**
-     * Get the readme.
-     *
-     * @return string
-     */
     public function getReadmeAttribute(): string
     {
         if ($this->hasLocalReadme()) {
@@ -188,11 +178,6 @@ class Extension extends Model
         }, $content);
     }
 
-    /**
-     * Get the url of the repository.
-     *
-     * @return \Illuminate\Support\Stringable
-     */
     public function getRepositoryUrlAttribute(): Stringable
     {
         return Cache::remember('extension.repository-url:'.$this->id, now()->addDay(), function () {
@@ -208,31 +193,16 @@ class Extension extends Model
         });
     }
 
-    /**
-     * Get the title.
-     *
-     * @return string
-     */
     public function getTitleAttribute(): Stringable
     {
         return Str::of($this->slug)->slug(' ')->title();
     }
 
-    /**
-     * Determine if this extension has a README file in local storage.
-     *
-     * @return bool
-     */
     public function hasLocalReadme(): bool
     {
         return Storage::exists($this->readmeStoragePath());
     }
 
-    /**
-     * Determine the respository type.
-     *
-     * @return string
-     */
     public function getRepositoryTypeAttribute(): string
     {
         return Cache::remember('extension.repository-type:'.$this->id, now()->addDay(), function () {
@@ -240,11 +210,6 @@ class Extension extends Model
         });
     }
 
-    /**
-     * Determine if this is a git repository.
-     *
-     * @return bool
-     */
     public function isGitRepository(): bool
     {
         return $this->getRepositoryTypeAttribute() === 'git';
