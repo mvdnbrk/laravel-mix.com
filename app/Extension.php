@@ -15,6 +15,7 @@ class Extension extends Model
     use SoftDeletes;
 
     protected $casts = [
+        'repository' => 'array',
         'version_count' => 'integer',
         'weekly_download_count' => 'integer',
     ];
@@ -193,7 +194,7 @@ class Extension extends Model
     public function getRepositoryUrlAttribute(): string
     {
         return Cache::remember('extension.repository-url:'.$this->id, now()->addDay(), function () {
-            $url = collect(json_decode($this->repository, true))->get('url');
+            $url = collect($this->repository)->get('url');
 
             if (substr($url, 0, strlen('git+')) == 'git+') {
                 $url = substr($url, strlen('git+'));
@@ -241,7 +242,7 @@ class Extension extends Model
     public function getRepositoryTypeAttribute(): string
     {
         return Cache::remember('extension.repository-type:'.$this->id, now()->addDay(), function () {
-            return collect(json_decode($this->repository, true))->get('type', '');
+            return collect($this->repository)->get('type', '');
         });
     }
 
