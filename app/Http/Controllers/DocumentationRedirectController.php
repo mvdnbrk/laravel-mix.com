@@ -19,7 +19,7 @@ class DocumentationRedirectController extends DocumentationBaseController
     {
         if ($this->documentation->isVersion($page)) {
             return redirect(
-                "/docs/{$page}/".config('documentation.default_page'),
+                "/docs/{$page}/".$this->documentation->defaultPage(),
                 Response::HTTP_SEE_OTHER
             );
         }
