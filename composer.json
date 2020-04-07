@@ -23,10 +23,10 @@
         "graham-campbell/markdown": "^12.0",
         "guzzlehttp/guzzle": "^6.5",
         "ipunkt/laravel-analytics": "^3.0",
-        "laravel/framework": "^7.4",
+        "laravel/framework": "^7.5",
         "laravel/horizon": "^4.2",
         "laravel/nova": "^3.2",
-        "laravel/tinker": "^2.3",
+        "laravel/tinker": "^2.4",
         "nunomaduro/laravel-console-task": "^1.0",
         "silber/page-cache": "^1.0",
         "symfony/dom-crawler": "^5.0"
