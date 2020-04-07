@@ -12,7 +12,7 @@ class ViewDocumentationTest extends TestCase
     {
         parent::setUp();
 
-        config(['documentation.versions' => [
+        config(['documentation.versions.published' => [
             '9.9',
         ]]);
     }
@@ -36,9 +36,9 @@ class ViewDocumentationTest extends TestCase
     }
 
     /** @test */
-    public function a_request_to_a_specific_version_without_a_specific_page_should_redirect_to_the_installation_page_of_that_version()
+    public function a_request_to_a_specific_version_without_a_specific_page_should_redirect_to_the_default_page_of_that_version()
     {
-        config(['documentation.default_page' => 'test-default-page']);
+        config(['documentation.pages.default' => 'test-default-page']);
 
         $response = $this->get('/docs/9.9');
 
@@ -76,7 +76,7 @@ class ViewDocumentationTest extends TestCase
     {
         Storage::fake('docs');
         Storage::disk('docs')->put('9.9/excluded.md', '# Excluded page');
-        config(['documentation.excluded_pages' => 'excluded']);
+        config(['documentation.pages.exclude' => 'excluded']);
 
         $this->assertTrue(Storage::disk('docs')->exists('9.9/excluded.md'));
 
