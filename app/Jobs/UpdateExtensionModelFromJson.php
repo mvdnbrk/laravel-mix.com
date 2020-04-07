@@ -80,7 +80,11 @@ class UpdateExtensionModelFromJson implements ShouldQueue
 
     protected function getSlug(): Stringable
     {
-        return Str::of($this->data->get('name'))->after('laravel-')->after('mix-')->slug();
+        return Str::of($this->data->get('name'))
+            ->replaceFirst('laravel', '')
+            ->replaceFirst('mix', '')
+            ->replaceFirst('extension', '')
+            ->slug();
     }
 
     protected function getUpdatedAt(): Carbon
