@@ -5,7 +5,7 @@
 
 @section('body')
 @include('partials.header', [
-    'pageExistsInVersions' => $pageExistsInVersions,
+    'versionsContainingPage' => $versionsContainingPage,
     'currentVersion' => $currentVersion,
 ])
 
@@ -21,7 +21,7 @@
             <carbon-ads></carbon-ads>
             <a
                 class="flex items-center justify-center mt-4 px-5 py-2 rounded border text-gray-700 hover:bg-gray-200 hover:border-gray-500"
-                href="{{ config('documentation.repository.url') }}/edit/{{ $currentVersion }}/{{ $page }}.md"
+                href="https://github.com/mvdnbrk/laravel-mix-docs/edit/{{ $currentVersion }}/{{ $page }}.md"
                 target="_blank"
             >
                 @include('svg.icons.edit-pencil', ['class' => 'fill-current mr-2 w-3 h-3'])

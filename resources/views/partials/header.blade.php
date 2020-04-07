@@ -15,8 +15,8 @@
                             @include('svg.icons.chevron-down', ['class' => 'fill-current w-6 h-6 ml-1'])
                         </button>
                     </template>
-                    @foreach($pageExistsInVersions as $version => $url)
-                    <li><a href="{{ $url }}" class="px-8 text-center leading-loose hover:bg-gray-200 block">{{ $version }}</a></li>
+                    @foreach($versionsContainingPage as $version)
+                    <li><a href="{{ route('documentation.show', ['page' => $page, 'version' => $version]) }}" class="px-8 text-center leading-loose hover:bg-gray-200 block">{{ $version }}</a></li>
                     @endforeach
                 </dropdown>
             </div>

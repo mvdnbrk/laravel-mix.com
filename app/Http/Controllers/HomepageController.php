@@ -11,9 +11,14 @@ class HomepageController extends DocumentationBaseController
      */
     public function show()
     {
+        $documentation_url = route('documentation.show', [
+            'version' => $this->documentation->defaultVersion(),
+            'page' => $this->documentation->defaultPage(),
+        ]);
+
         return view('welcome', [
-            'latest_release' => $this->documentation->latestRelease(),
-            'documentation_url' => $this->documentation->defaultStartPage(),
+            'latest_release' => $this->documentation->defaultVersion(),
+            'documentation_url' => $documentation_url,
         ]);
     }
 }
