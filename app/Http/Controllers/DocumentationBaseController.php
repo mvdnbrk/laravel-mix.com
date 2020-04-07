@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Documentation;
+use Mvdnbrk\Documentation\Documentation;
 
 class DocumentationBaseController
 {

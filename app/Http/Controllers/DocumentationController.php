@@ -27,14 +27,23 @@ class DocumentationController extends DocumentationBaseController
 
         $title = (new Crawler($content))->filterXPath('//h1');
 
+        $canonical = null;
+
+        if ($this->documentation->sectionExists($this->documentation->defaultVersion(), $page)) {
+            $canonical = route('documentation.show', [
+                'version' => $this->documentation->defaultVersion(),
+                'page' => $page,
+            ]);
+        }
+
         return view('documentation', [
             'title' => count($title) ? $title->text() : null,
-            'canonical' => $this->documentation->canonicalUrl($page),
+            'canonical' => $canonical,
             'index' => $this->documentation->getIndex($version),
             'content' => $content,
             'versions' => $this->documentation->versions(),
             'currentVersion' => $version,
-            'pageExistsInVersions' => $this->documentation->pageExistsInVersions($page),
+            'versionsContainingPage' => $this->documentation->versionsContainingPage($page),
             'page' => $page,
         ]);
     }

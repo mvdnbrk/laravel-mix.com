@@ -2,7 +2,6 @@
 
 namespace App;
 
-use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -11,6 +10,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Support\Stringable;
+use Mvdnbrk\Documentation\Markdown;
 
 class Extension extends Model
 {
@@ -126,7 +126,7 @@ class Extension extends Model
             return '';
         }
 
-        return Markdown::convertToHtml(
+        return Markdown::parse(
             $this->replaceExternalLinks(
                 Storage::get($this->readmeStoragePath()
             )
