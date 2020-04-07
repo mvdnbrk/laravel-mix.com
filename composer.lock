@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ccde35df77558054257fabde14647a8",
+    "content-hash": "a1d06f95bf395aa49faead53dec20574",
     "packages": [
         {
             "name": "brick/math",
@@ -1274,16 +1274,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v7.5.0",
+            "version": "v7.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0e71d781854723d9428e1ae921a7edfe0a10c8ec"
+                "reference": "b2457b1ddb9c59396313eae4e948bdc5fa5251db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0e71d781854723d9428e1ae921a7edfe0a10c8ec",
-                "reference": "0e71d781854723d9428e1ae921a7edfe0a10c8ec",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/b2457b1ddb9c59396313eae4e948bdc5fa5251db",
+                "reference": "b2457b1ddb9c59396313eae4e948bdc5fa5251db",
                 "shasum": ""
             },
             "require": {
@@ -1421,7 +1421,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-04-07T14:47:48+00:00"
+            "time": "2020-04-07T18:52:38+00:00"
         },
         {
             "name": "laravel/horizon",
@@ -1981,16 +1981,16 @@
         },
         {
             "name": "mvdnbrk/laravel-documentation",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mvdnbrk/laravel-documentation.git",
-                "reference": "a7db23e176604afdc6fd61c57df98986e89d5f22"
+                "reference": "2d54e64b03c0d35b044d8e8d20aae671db29f937"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mvdnbrk/laravel-documentation/zipball/a7db23e176604afdc6fd61c57df98986e89d5f22",
-                "reference": "a7db23e176604afdc6fd61c57df98986e89d5f22",
+                "url": "https://api.github.com/repos/mvdnbrk/laravel-documentation/zipball/2d54e64b03c0d35b044d8e8d20aae671db29f937",
+                "reference": "2d54e64b03c0d35b044d8e8d20aae671db29f937",
                 "shasum": ""
             },
             "require": {
@@ -2002,7 +2002,7 @@
             "require-dev": {
                 "nunomaduro/collision": "^4.2",
                 "orchestra/testbench": "^5.0",
-                "phpunit/phpunit": "^9.0",
+                "phpunit/phpunit": "^9.1",
                 "symfony/var-dumper": "^5.0"
             },
             "type": "library",
@@ -2041,7 +2041,7 @@
                 "documentation",
                 "laravel"
             ],
-            "time": "2020-04-07T15:09:07+00:00"
+            "time": "2020-04-07T20:10:55+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -6704,7 +6704,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "mvdnbrk/laravel-documentation": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
