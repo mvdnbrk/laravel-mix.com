@@ -49,6 +49,7 @@ class ViewDocumentationTest extends TestCase
     /** @test */
     public function view_a_documentation_page()
     {
+        $this->withoutExceptionHandling();
         Storage::fake('docs');
         Storage::disk('docs')->put('9.9/test-page.md', file_get_contents(__DIR__.'/../fixtures/markdown.md'));
 

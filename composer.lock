@@ -1981,16 +1981,16 @@
         },
         {
             "name": "mvdnbrk/laravel-documentation",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mvdnbrk/laravel-documentation.git",
-                "reference": "2d54e64b03c0d35b044d8e8d20aae671db29f937"
+                "reference": "66ffeb7b3b15c2dd77b961a869f62edf413836bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mvdnbrk/laravel-documentation/zipball/2d54e64b03c0d35b044d8e8d20aae671db29f937",
-                "reference": "2d54e64b03c0d35b044d8e8d20aae671db29f937",
+                "url": "https://api.github.com/repos/mvdnbrk/laravel-documentation/zipball/66ffeb7b3b15c2dd77b961a869f62edf413836bc",
+                "reference": "66ffeb7b3b15c2dd77b961a869f62edf413836bc",
                 "shasum": ""
             },
             "require": {
@@ -2041,7 +2041,7 @@
                 "documentation",
                 "laravel"
             ],
-            "time": "2020-04-07T20:10:55+00:00"
+            "time": "2020-04-08T06:33:58+00:00"
         },
         {
             "name": "nesbot/carbon",

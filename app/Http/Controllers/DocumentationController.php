@@ -21,11 +21,11 @@ class DocumentationController extends DocumentationBaseController
     {
         $content = $this->documentation->get($version, $page);
 
-        if (is_null($content)) {
+        if (empty($content->toHtml())) {
             abort(Response::HTTP_NOT_FOUND);
         }
 
-        $title = (new Crawler($content))->filterXPath('//h1');
+        $title = (new Crawler($content->toHtml()))->filterXPath('//h1');
 
         $canonical = null;
 
