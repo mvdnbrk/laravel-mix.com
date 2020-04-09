@@ -17,7 +17,6 @@ class HomepageController extends DocumentationBaseController
         ]);
 
         return view('welcome', [
-            'latest_release' => $this->documentation->defaultVersion(),
             'documentation_url' => $documentation_url,
         ]);
     }

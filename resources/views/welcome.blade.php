@@ -7,8 +7,6 @@
 
             <p class="mt-6 text-lg px-4 text-center leading-normal">An elegant wrapper around Webpack for the 80% use case.</p>
 
-            <p class="flex justify-center mt-6 text-sm text-gray-500">{{ $latest_release }}</p>
-
             <div class="md:flex mt-16">
                 <a
                     href="{{ $documentation_url }}"
