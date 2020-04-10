@@ -106,7 +106,7 @@ class FetchReadme implements ShouldQueue
     {
         return tap(
             Storage::put($this->extension->readmeStoragePath(), $content),
-            fn() => $this->extension->clearPageCache()
+            fn () => $this->extension->clearPageCache()
         );
     }
 }

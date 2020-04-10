@@ -3,12 +3,12 @@
 return [
 
     /**
-     * current selected provider
+     * current selected provider.
      */
     'provider' => env('ANALYTICS_PROVIDER', 'GoogleAnalytics'),
 
     /**
-     * configurations for all possible providers
+     * configurations for all possible providers.
      */
     'configurations' => [
 
@@ -21,51 +21,51 @@ return [
          * - display_features (bool) - default will be false if no config property exists
          * - anonymize_ip (bool) - default will be false if no config property exists
          * - auto_track (bool) - default will be false if no config property exists
-         * - debug (bool) - default will be false if no config property exists
+         * - debug (bool) - default will be false if no config property exists.
          */
         'GoogleAnalytics' => [
 
             /**
              * Tracking ID: You have to set this
-             * Format example: UA-XXXXXXXX-1
+             * Format example: UA-XXXXXXXX-1.
              */
             'tracking_id' => env('ANALYTICS_TRACKING_ID', 'UA-XXXXXXXX-1'),
 
             /**
              * Optimize ID
-             * Format example: GTM-XXXXXX
+             * Format example: GTM-XXXXXX.
              */
             'optimize_id' => env('ANALYTICS_OPTIMIZE_ID', ''),
 
             /**
-             * Tracking Domain
+             * Tracking Domain.
              */
             'tracking_domain' => env('ANALYTICS_TRACKING_DOMAIN', 'auto'),
 
             /**
-             * Tracker Name
+             * Tracker Name.
              */
             'tracker_name' => env('ANALYTICS_TRACKER_NAME', 't0'),
 
             /**
-             * enabling the display feature plugin
+             * enabling the display feature plugin.
              */
             'display_features' => env('ANALYTICS_DISPLAY_FEATURES', false),
 
             /**
-             * Use ip anonymized
+             * Use ip anonymized.
              */
             'anonymize_ip' => env('ANALYTICS_ANONYMIZE_IP', true),
 
             /**
              * Auto tracking pageview: ga('send', 'pageview');
              * If false, you have to do it manually for each request
-             * Or you can use Analytics::disableAutoTracking(), Analytics::enableAutoTracking()
+             * Or you can use Analytics::disableAutoTracking(), Analytics::enableAutoTracking().
              */
             'auto_track' => env('ANALYTICS_AUTO_TRACK', true),
 
             /**
-             * Enable the debugging version of Google Analytics
+             * Enable the debugging version of Google Analytics.
              */
             'debug' => env('ANALYTICS_DEBUG', env('APP_ENV') === 'local'),
         ],
@@ -73,7 +73,7 @@ return [
     ],
 
     /**
-     * disable Analytics <script> block
+     * disable Analytics <script> block.
      */
     'disable_script_block' => false,
 
