@@ -7,7 +7,7 @@ module.exports = {
                 'ploi-blue': '#0e3283',
             },
             fontFamily: {
-                'helvetica': ['Helvetica Neue', 'Helvetica'],
+                helvetica: ['Helvetica Neue', 'Helvetica'],
             },
             minHeight: {
                 '(screen-16)': 'calc(100vh - 4rem)',
