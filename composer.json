@@ -22,7 +22,7 @@
         "fideloper/proxy": "^4.3",
         "guzzlehttp/guzzle": "^6.5",
         "ipunkt/laravel-analytics": "^3.0",
-        "laravel/framework": "^7.5.2",
+        "laravel/framework": "^7.5",
         "laravel/horizon": "^4.2",
         "laravel/nova": "^3.2",
         "laravel/tinker": "^2.4",
