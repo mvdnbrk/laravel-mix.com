@@ -3,7 +3,7 @@ import markyDeepLinks from 'marky-deep-links';
 
 let slugger = new GithubSlugger();
 
-let anchorForHeader = function(header) {
+let anchorForHeader = function (header) {
     let slug = slugger.slug(header.innerText);
 
     let anchor = document.createElement('a');
@@ -25,7 +25,7 @@ let anchorForHeader = function(header) {
     return anchor;
 };
 
-let linkifyAnchors = function(level, element) {
+let linkifyAnchors = function (level, element) {
     let headers = element.getElementsByTagName('h' + level);
 
     for (let h = 0; h < headers.length; h++) {
@@ -35,7 +35,7 @@ let linkifyAnchors = function(level, element) {
     }
 };
 
-document.onreadystatechange = function() {
+document.onreadystatechange = function () {
     if (this.readyState === 'interactive') {
         let contentBlock = document.getElementById('content');
 
