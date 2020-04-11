@@ -1,5 +1,5 @@
 #!/bin/bash
-base=/home/forge/laravel-mix.com
+base=/home/ploi/laravel-mix.com
 docs=${base}/storage/docs
 
 doc_versions=(
