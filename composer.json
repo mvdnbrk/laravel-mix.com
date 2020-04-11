@@ -1,7 +1,7 @@
 {
     "name": "mvdnbrk/laravel-mix.com",
     "type": "project",
-    "description": "laravel-mix.com website",
+    "description": "The laravel-mix.com website.",
     "keywords": [
         "laravel",
         "mix"
