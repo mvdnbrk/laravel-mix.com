@@ -43,6 +43,7 @@ class DatabaseSeeder extends Seeder
             'laravel-mix-ignore',
             'laravel-mix-imagemin',
             'laravel-mix-jigsaw',
+            'laravel-mix-js-partial',
             'laravel-mix-make-file-hash',
             'laravel-mix-merge-manifest',
             'laravel-mix-mjml',
