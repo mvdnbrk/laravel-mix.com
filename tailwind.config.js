@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             colors: {
                 'ploi-blue': '#0e3283',
+                'digitalocean-blue': '#0080FF',
             },
             fontFamily: {
                 helvetica: ['Helvetica Neue', 'Helvetica'],
