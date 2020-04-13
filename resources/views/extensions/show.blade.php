@@ -60,10 +60,10 @@
 
         <div class="lg:px-10">
             <div class="flex py-2 justify-center items-center bg-gray-100 rounded-b-lg border-t text-sm">
-                <a href="https://m.do.co/c/7a24c68b1e6d" class="text-gray-600 ">
+                <a href="https://m.do.co/c/7a24c68b1e6d" class="text-gray-600 hover:text-digitalocean-blue">
                     @include('svg.icons.digital-ocean', ['class' => 'mr-4 fill-current w-6'])
                 </a>
-                <a href="https://m.do.co/c/7a24c68b1e6d" class="text-gray-600 ">
+                <a href="https://m.do.co/c/7a24c68b1e6d" class="text-gray-600 hover:text-digitalocean-blue">
                     Try <span class="font-medium">DigitalOcean</span>
                 </a>
                 <a href="https://m.do.co/c/7a24c68b1e6d" taget="_blank" class=" ml-4 text-gray-600 hover:text-digitalocean-blue" rel="noopener noreferrer">
