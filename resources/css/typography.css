@@ -37,3 +37,38 @@ a.is-active {
     @apply font-medium;
     @apply text-blue-500;
 }
+
+.docs-index h2 {
+    @apply pb-1;
+    @apply mt-0;
+    @apply mb-2;
+    @apply border-b;
+    @apply border-dotted;
+    @apply text-sm;
+    @apply text-gray-900;
+    @apply uppercase;
+}
+
+.docs-index > ul > li > ul {
+    @apply text-sm;
+}
+
+.header-link {
+    @apply text-gray-900;
+    @apply relative;
+    @apply opacity-0;
+
+    right: 0.5rem;
+
+    -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+    -moz-transition: opacity 0.2s ease-in-out 0.1s;
+    -ms-transition: opacity 0.2s ease-in-out 0.1s;
+}
+
+h1:hover .header-link,
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link {
+    @apply opacity-100;
+}
+
