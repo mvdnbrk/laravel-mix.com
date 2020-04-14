@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'title' => 'Laravel Mix Extensions',
-    'description' => 'Discover Laravel Mix Extensions.'
+    'description' => 'Browse packages to extend Laravel Mix and customize it to your own needs.'
 ])
 
 @section('body')
