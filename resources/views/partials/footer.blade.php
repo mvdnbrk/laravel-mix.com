@@ -4,7 +4,7 @@
         @include('svg.digital-ocean-logo', ['class' => 'mx-2 fill-current w-24'])
     </a>
     managed with
-    <a href="https://ploi.io" class="text-sm text-gray-500 font-helvetica ml-2 hover:text-ploi-blue" rel="noopener noreferrer">
+    <a href="https://ploi.io" class="text-sm text-gray-500 font-helvetica ml-2 hover:text-ploi-blue" rel="noopener">
         <strong>Ploi</strong>.io
     </a>
 </footer>
