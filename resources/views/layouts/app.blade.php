@@ -31,6 +31,9 @@
 
         <!-- Fathom - beautiful, simple website analytics -->
         <script src="https://cdn.usefathom.com/3.js" site="QTHSNKVN"></script>
+        <script>
+            window.fathom || document.write('<script src="https://squirrel.laravel-mix.com/core.js"><\/script>');
+        </script>
         <!-- / Fathom -->
     </body>
 </html>
