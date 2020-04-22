@@ -13,7 +13,7 @@
             Get started now and get <span class="font-medium">$100 credit</span>.
         </a>
         <a href="https://m.do.co/c/7a24c68b1e6d" taget="_blank">
-            <span class="bg-white border rounded-lg py-1 px-3 font-medium text-gray-600 text-2xs ml-4 hover:border-digitalocean-blue hover:text-digitalocean-blue">AD</span>
+            <span class="bg-white border rounded-lg py-1 px-3 font-medium text-gray-600 text-2xs ml-4 hover:border-digitalocean-blue hover:text-digitalocean-blue">SPONSOR</span>
         </a>
     </div>
 </div>
