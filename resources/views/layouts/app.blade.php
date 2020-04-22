@@ -22,7 +22,6 @@
         <meta name="description" content="{{ $description ?? 'An elegant wrapper around Webpack for the 80% use case.' }}">
         @include('partials.schema-organization')
         {{ Breadcrumbs::view('breadcrumbs::json-ld') }}
-        {!! Analytics::render() !!}
     </head>
     <body>
         <div id="app">
