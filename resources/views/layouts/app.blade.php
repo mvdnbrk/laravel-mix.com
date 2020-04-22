@@ -29,5 +29,9 @@
             @yield('body')
         </div>
         @stack('scripts')
+
+        <!-- Fathom - beautiful, simple website analytics -->
+        <script src="https://cdn.usefathom.com/3.js" site="QTHSNKVN"></script>
+        <!-- / Fathom -->
     </body>
 </html>
