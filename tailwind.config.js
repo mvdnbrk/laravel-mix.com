@@ -4,10 +4,12 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                'fathom-indigo': '#533feb',
                 'ploi-blue': '#0e3283',
                 'digitalocean-blue': '#0080FF',
             },
             fontFamily: {
+                fathom: ['-apple-system', 'BlinkMacSystemFont', '"San Francisco"', '"Helvetica Neue"', 'Helvetica', 'Ubuntu', 'Roboto', 'Noto', '"Segoe UI"', 'Arial', 'sans-serif'],
                 helvetica: ['"Helvetica Neue"', 'Helvetica', 'system-ui', '-apple-system', 'BlinkMacSystemFont'],
             },
             minHeight: {

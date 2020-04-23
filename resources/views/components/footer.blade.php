@@ -1,10 +1,14 @@
-<footer class="flex items-center justify-center mt-16 mb-24 text-gray-500 text-xs">
+<footer class="flex items-center justify-center h-16 mt-16 mb-24 text-gray-500 text-xs">
     proudly hosted with
     <a href="https://m.do.co/c/7a24c68b1e6d" class="text-gray-500 hover:border-digitalocean-blue" rel="noopener noreferrer">
         @include('svg.digital-ocean-logo', ['class' => 'mx-2 fill-current w-24'])
     </a>
     managed with
-    <a href="https://ploi.io" class="text-sm text-gray-500 font-helvetica ml-2 hover:text-ploi-blue" rel="noopener">
+    <a href="https://ploi.io" class="mx-2 text-sm text-gray-500 font-helvetica hover:text-ploi-blue" rel="noopener">
         <strong>Ploi</strong>.io
+    </a>
+    analytics by
+    <a href="https://usefathom.com/ref/FI15PB" class="flex ml-2 text-sm font-bold font-fathom text-gray-500 hover:text-fathom-indigo" rel="noopener noreferrer">
+        Fathom Analytics @include('svg.fathom-arrow', ['class' => 'ml-1 w-3'])
     </a>
 </footer>
