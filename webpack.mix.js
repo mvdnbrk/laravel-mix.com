@@ -39,14 +39,13 @@ mix.js('resources/js/app.js', 'public/js')
                 'li',
                 'ul',
                 'code',
-                'pre',
                 'table',
                 'blockquote',
                 'lg:max-h-(screen-22)',
                 'min-h-(screen-16)',
             ],
             whitelistPatterns: [/carbon.*/],
-            whitelistPatternsChildren: [/^docs-index$/, /^markdown-body$/, /^token$/]
+            whitelistPatternsChildren: [/^docs-index$/, /^markdown-body$/, /^token$/, /^pre$/]
         }
     })
     .version();
