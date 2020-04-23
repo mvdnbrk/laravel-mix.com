@@ -9,7 +9,19 @@ module.exports = {
                 'digitalocean-blue': '#0080FF',
             },
             fontFamily: {
-                fathom: ['-apple-system', 'BlinkMacSystemFont', '"San Francisco"', '"Helvetica Neue"', 'Helvetica', 'Ubuntu', 'Roboto', 'Noto', '"Segoe UI"', 'Arial', 'sans-serif'],
+                fathom: [
+                    '-apple-system',
+                    'BlinkMacSystemFont',
+                    '"San Francisco"',
+                    '"Helvetica Neue"',
+                    'Helvetica',
+                    'Ubuntu',
+                    'Roboto',
+                    'Noto',
+                    '"Segoe UI"',
+                    'Arial',
+                    'sans-serif',
+                ],
                 helvetica: ['"Helvetica Neue"', 'Helvetica', 'system-ui', '-apple-system', 'BlinkMacSystemFont'],
             },
             minHeight: {
