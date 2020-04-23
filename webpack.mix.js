@@ -30,21 +30,23 @@ mix.js('resources/js/app.js', 'public/js')
         extractVueStyles: true,
     })
     .purgeCss({
-        whitelist: [
-            'h1',
-            'h2',
-            'h3',
-            'h4',
-            'li',
-            'ul',
-            'code',
-            'pre',
-            'table',
-            'blockquote',
-            'lg:max-h-(screen-22)',
-            'min-h-(screen-16)',
-        ],
-        whitelistPatterns: [/carbon.*/],
-        whitelistPatternsChildren: [/^docs-index$/, /^markdown-body$/, /^token$/]
+        extend: {
+            whitelist: [
+                'h1',
+                'h2',
+                'h3',
+                'h4',
+                'li',
+                'ul',
+                'code',
+                'pre',
+                'table',
+                'blockquote',
+                'lg:max-h-(screen-22)',
+                'min-h-(screen-16)',
+            ],
+            whitelistPatterns: [/carbon.*/],
+            whitelistPatternsChildren: [/^docs-index$/, /^markdown-body$/, /^token$/]
+        }
     })
     .version();
