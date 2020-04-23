@@ -36,5 +36,5 @@
     </div>
 </div>
 
-@include('partials.footer')
+<x-footer></x-footer>
 @endsection

@@ -58,7 +58,7 @@
             @endif
         </div>
 
-        @include('partials.ad')
+        <x-ad></x-ad>
 
         @if($extension->hasLocalReadme())
         <article class="py-12 lg:px-10 markdown-body border-b" v-pre>
@@ -77,5 +77,5 @@
     <script src="{{ mix('js/app.js') }}"></script>
     @endpush
 
-    @include('partials.footer')
+    <x-footer></x-footer>
 @endsection

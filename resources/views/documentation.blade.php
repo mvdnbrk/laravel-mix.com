@@ -31,7 +31,7 @@
     </div>
 </div>
 
-@include('partials.footer')
+<x-footer></x-footer>
 
 @push('scripts')
     <script src="{{ mix('js/manifest.js') }}"></script>

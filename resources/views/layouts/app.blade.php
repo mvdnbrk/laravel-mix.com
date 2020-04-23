@@ -20,7 +20,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="description" content="{{ $description ?? 'An elegant wrapper around Webpack for the 80% use case.' }}">
-        @include('partials.schema-organization')
+        <x-schema-organization></x-schema-organization>
         {{ Breadcrumbs::view('breadcrumbs::json-ld') }}
     </head>
     <body>
@@ -28,7 +28,6 @@
             @yield('body')
         </div>
         @stack('scripts')
-
         <!-- Fathom - beautiful, simple website analytics -->
         <script src="https://cdn.usefathom.com/3.js" site="QTHSNKVN"></script>
         <script>
