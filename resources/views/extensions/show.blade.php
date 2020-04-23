@@ -58,7 +58,7 @@
             @endif
         </div>
 
-        <x-ad></x-ad>
+        <x-ads.digitalocean></x-ad>
 
         @if($extension->hasLocalReadme())
         <article class="py-12 lg:px-10 markdown-body border-b" v-pre>
