@@ -8,7 +8,7 @@ module.exports = {
                 'digitalocean-blue': '#0080FF',
             },
             fontFamily: {
-                helvetica: ['Helvetica Neue', 'Helvetica'],
+                helvetica: ['"Helvetica Neue"', 'Helvetica', 'system-ui', '-apple-system', 'BlinkMacSystemFont'],
             },
             minHeight: {
                 '(screen-16)': 'calc(100vh - 4rem)',
