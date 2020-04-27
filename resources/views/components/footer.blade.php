@@ -4,7 +4,7 @@
         @include('svg.digital-ocean-logo', ['class' => 'mx-2 fill-current w-24'])
     </a>
     managed with
-    <a href="https://ploi.io" class="mx-2 text-sm text-gray-500 font-helvetica hover:text-ploi-blue" rel="noopener">
+    <a href="https://ploi.io" class="mx-2 text-sm text-gray-500 font-helvetica hover:text-ploi-blue" onclick="fathom('trackGoal', 'KUEOOI7D', 0);" rel="noopener">
         <strong>Ploi</strong>.io
     </a>
     analytics by
