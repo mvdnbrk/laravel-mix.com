@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "768c3da0923ae0d5c58fc0cb86677e61",
+    "content-hash": "21aaa755e104a0c4278f6f92af90ab00",
     "packages": [
         {
             "name": "brick/math",
@@ -100,26 +100,25 @@
         },
         {
             "name": "cakephp/chronos",
-            "version": "1.3.0",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/chronos.git",
-                "reference": "ba2bab98849e7bf29b02dd634ada49ab36472959"
+                "reference": "7e77b7d43e23b78363b6a1dc592de1c3d557347b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/chronos/zipball/ba2bab98849e7bf29b02dd634ada49ab36472959",
-                "reference": "ba2bab98849e7bf29b02dd634ada49ab36472959",
+                "url": "https://api.github.com/repos/cakephp/chronos/zipball/7e77b7d43e23b78363b6a1dc592de1c3d557347b",
+                "reference": "7e77b7d43e23b78363b6a1dc592de1c3d557347b",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": ">=7.2"
             },
             "require-dev": {
-                "athletic/athletic": "~0.1",
-                "cakephp/cakephp-codesniffer": "^3.0",
-                "phpbench/phpbench": "@dev",
-                "phpunit/phpunit": "<6.0 || ^7.0"
+                "cakephp/cakephp-codesniffer": "^4.0",
+                "phpbench/phpbench": "^1.0@dev",
+                "phpunit/phpunit": "^8.0"
             },
             "type": "library",
             "autoload": {
@@ -152,7 +151,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2019-11-30T02:33:19+00:00"
+            "time": "2020-04-21T14:14:05+00:00"
         },
         {
             "name": "davejamesmiller/laravel-breadcrumbs",
@@ -1215,16 +1214,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v7.7.1",
+            "version": "v7.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "4de129177f889cd7672e732d8808020adfb7b121"
+                "reference": "cdc6d7e6c744f4d8f7d61102aea9b111550cd297"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/4de129177f889cd7672e732d8808020adfb7b121",
-                "reference": "4de129177f889cd7672e732d8808020adfb7b121",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/cdc6d7e6c744f4d8f7d61102aea9b111550cd297",
+                "reference": "cdc6d7e6c744f4d8f7d61102aea9b111550cd297",
                 "shasum": ""
             },
             "require": {
@@ -1363,24 +1362,24 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-04-21T18:57:12+00:00"
+            "time": "2020-04-24T17:21:56+00:00"
         },
         {
             "name": "laravel/horizon",
-            "version": "v4.2.1",
+            "version": "v4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/horizon.git",
-                "reference": "fdfbd5b2f7bb1dfdf2e40518b263337c07b6b22c"
+                "reference": "03feeb6379b26371575400c4a3fd659b094ee4c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/horizon/zipball/fdfbd5b2f7bb1dfdf2e40518b263337c07b6b22c",
-                "reference": "fdfbd5b2f7bb1dfdf2e40518b263337c07b6b22c",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/03feeb6379b26371575400c4a3fd659b094ee4c6",
+                "reference": "03feeb6379b26371575400c4a3fd659b094ee4c6",
                 "shasum": ""
             },
             "require": {
-                "cakephp/chronos": "^1.0",
+                "cakephp/chronos": "^2.0",
                 "ext-json": "*",
                 "ext-pcntl": "*",
                 "ext-posix": "*",
@@ -1436,25 +1435,25 @@
                 "laravel",
                 "queue"
             ],
-            "time": "2020-04-02T12:32:01+00:00"
+            "time": "2020-04-21T12:54:49+00:00"
         },
         {
             "name": "laravel/nova",
-            "version": "v3.4.0",
+            "version": "v3.4.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:laravel/nova.git",
-                "reference": "08bfcfe836310f1492e8bd81f7457d2c961fd00c"
+                "reference": "c14a97d3ca9404951a1e69a5300c8f5cc0c70333"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-08bfcfe836310f1492e8bd81f7457d2c961fd00c-zip-3fffb4.zip",
-                "reference": "08bfcfe836310f1492e8bd81f7457d2c961fd00c",
-                "shasum": "19ba0991926fede9656491fe606663b762fa0972"
+                "url": "https://nova.laravel.com/dist/laravel/nova/laravel-nova-c14a97d3ca9404951a1e69a5300c8f5cc0c70333-zip-d1fb99.zip",
+                "reference": "c14a97d3ca9404951a1e69a5300c8f5cc0c70333",
+                "shasum": "e04721bee15fc67c81b3d4aef7dc59d59b401a56"
             },
             "require": {
                 "brick/money": "^0.4.2",
-                "cakephp/chronos": "^1.0",
+                "cakephp/chronos": "^1.0|^2.0",
                 "doctrine/dbal": "^2.9",
                 "ext-intl": "*",
                 "illuminate/support": "^7.0",
@@ -1511,7 +1510,7 @@
                 "admin",
                 "laravel"
             ],
-            "time": "2020-04-14T19:09:30+00:00"
+            "time": "2020-04-23T17:25:47+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1634,16 +1633,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "c995966d35424bae20f76f8b31248099487a3f57"
+                "reference": "9e780d972185e4f737a03bade0fd34a9e67bbf31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/c995966d35424bae20f76f8b31248099487a3f57",
-                "reference": "c995966d35424bae20f76f8b31248099487a3f57",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/9e780d972185e4f737a03bade0fd34a9e67bbf31",
+                "reference": "9e780d972185e4f737a03bade0fd34a9e67bbf31",
                 "shasum": ""
             },
             "require": {
@@ -1704,7 +1703,7 @@
                 "md",
                 "parser"
             ],
-            "time": "2020-04-20T13:36:51+00:00"
+            "time": "2020-04-24T13:39:56+00:00"
         },
         {
             "name": "league/flysystem",
@@ -2285,20 +2284,23 @@
         },
         {
             "name": "phpseclib/bcmath_compat",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/bcmath_compat.git",
-                "reference": "f805922db4b3d8c1e174dafb74ac7374264e8880"
+                "reference": "89cbb63742a32730b7187773a60b6b12b9db4479"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/bcmath_compat/zipball/f805922db4b3d8c1e174dafb74ac7374264e8880",
-                "reference": "f805922db4b3d8c1e174dafb74ac7374264e8880",
+                "url": "https://api.github.com/repos/phpseclib/bcmath_compat/zipball/89cbb63742a32730b7187773a60b6b12b9db4479",
+                "reference": "89cbb63742a32730b7187773a60b6b12b9db4479",
                 "shasum": ""
             },
             "require": {
                 "phpseclib/phpseclib": ">=2.0.19"
+            },
+            "provide": {
+                "ext-bcmath": "7.3.5"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
@@ -2335,7 +2337,7 @@
                 "math",
                 "polyfill"
             ],
-            "time": "2020-01-10T11:44:43+00:00"
+            "time": "2020-04-26T16:34:33+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -5282,23 +5284,20 @@
         },
         {
             "name": "phpdocumentor/reflection-common",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionCommon.git",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a"
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/63a995caa1ca9e5590304cd845c15ad6d482a62a",
-                "reference": "63a995caa1ca9e5590304cd845c15ad6d482a62a",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionCommon/zipball/6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
+                "reference": "6568f4687e5b41b054365f9ae03fcb1ed5f2069b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~6"
             },
             "type": "library",
             "extra": {
@@ -5330,7 +5329,7 @@
                 "reflection",
                 "static analysis"
             ],
-            "time": "2018-08-07T13:53:10+00:00"
+            "time": "2020-04-27T09:25:28+00:00"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -5807,16 +5806,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.1.2",
+            "version": "9.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "d99d4e69c98c18d5c5f033c68c623880536f37be"
+                "reference": "a74780472172957a65cb5999a597e8c0878cf39c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/d99d4e69c98c18d5c5f033c68c623880536f37be",
-                "reference": "d99d4e69c98c18d5c5f033c68c623880536f37be",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a74780472172957a65cb5999a597e8c0878cf39c",
+                "reference": "a74780472172957a65cb5999a597e8c0878cf39c",
                 "shasum": ""
             },
             "require": {
@@ -5891,20 +5890,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2020-04-20T06:24:01+00:00"
+            "time": "2020-04-23T04:42:05+00:00"
         },
         {
             "name": "sebastian/code-unit",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/code-unit.git",
-                "reference": "8d8f09bd47c75159921e6e84fdef146343962866"
+                "reference": "00d2094a93573796ec6666401be467fa6efcd86a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/8d8f09bd47c75159921e6e84fdef146343962866",
-                "reference": "8d8f09bd47c75159921e6e84fdef146343962866",
+                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/00d2094a93573796ec6666401be467fa6efcd86a",
+                "reference": "00d2094a93573796ec6666401be467fa6efcd86a",
                 "shasum": ""
             },
             "require": {
@@ -5937,7 +5936,7 @@
             ],
             "description": "Collection of value objects that represent the PHP code units",
             "homepage": "https://github.com/sebastianbergmann/code-unit",
-            "time": "2020-03-30T11:59:20+00:00"
+            "time": "2020-04-27T06:25:01+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
