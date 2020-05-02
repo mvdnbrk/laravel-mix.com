@@ -7,7 +7,7 @@
         target="_blank"
         class="text-gray-500 hover:border-digitalocean-blue"
     >
-        @include('svg.digital-ocean-logo', ['class' => 'mx-2 fill-current w-24'])
+        @include('svg.digital-ocean-logo', ['class' => 'mx-2 fill-current h-4'])
     </a>
     managed with
     <a
@@ -18,6 +18,16 @@
         class="mx-2 text-sm text-gray-500 font-helvetica hover:text-ploi-blue"
     >
         <strong>Ploi</strong>.io
+    </a>
+    monitored by
+    <a
+        href="https://ohdear.app"
+        onclick="fathom('trackGoal', 'EJNZ6SM3', 0);"
+        rel="noopener"
+        target="_blank"
+        class="flex mx-2 text-sm font-bold text-gray-500 hover:text-ohdear-red"
+    >
+        @include('svg.ohdear-logo', ['class' => 'mx-2 fill-current h-3'])
     </a>
     analytics by
     <a

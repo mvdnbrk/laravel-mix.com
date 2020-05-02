@@ -7,6 +7,7 @@ module.exports = {
             colors: {
                 'digitalocean-blue': '#0080ff',
                 'fathom-indigo': '#533feb',
+                'ohdear-red': '#e32929',
                 'ploi-blue': '#0e3283',
             },
             fontFamily: {
