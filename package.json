@@ -21,7 +21,7 @@
         "postcss-import": "^12.0",
         "prismjs": "^1.20",
         "smoothscroll-for-websites": "^1.4",
-        "tailwindcss": "^1.3.5",
+        "tailwindcss": "^1.4.4",
         "vue": "^2.6.11",
         "vue-scroll-indicator": "^0.1",
         "vue-template-compiler": "^2.6.11"
