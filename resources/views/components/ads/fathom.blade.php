@@ -13,6 +13,7 @@
             onclick="fathom('trackGoal', '7D8GVLAA', 0);"
             rel="noopener noreferrer"
             taget="_blank"
+            class="text-gray-600 hover:text-fathom-indigo"
         >
             Try <span class="text-fathom font-bold">Fathom Analytics</span>
         </a>
@@ -21,6 +22,7 @@
             onclick="fathom('trackGoal', '7D8GVLAA', 0);"
             rel="noopener noreferrer"
             taget="_blank"
+            class="ml-4 text-gray-600 hover:text-fathom-indigo"
         >
             Simple analytics for bloggers & businesses.
         </a>
@@ -29,6 +31,7 @@
             onclick="fathom('trackGoal', '7D8GVLAA', 0);"
             rel="noopener noreferrer"
             taget="_blank"
+            class="ml-4 text-gray-600 hover:text-fathom-indigo"
         >
             Get started now and get <span class="font-medium">$10 credit</span>.
         </a>
