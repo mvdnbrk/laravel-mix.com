@@ -4,7 +4,8 @@
             href="https://m.do.co/c/7a24c68b1e6d"
             onclick="fathom('trackGoal', 'TVUSHJYA', 0);"
             rel="noopener noreferrer"
-            target="_blank" class="text-gray-600 hover:text-digitalocean-blue"
+            target="_blank"
+            class="text-gray-600 hover:text-digitalocean-blue"
         >
             @include('svg.icons.digital-ocean', ['class' => 'mr-4 fill-current w-6'])
         </a>
@@ -12,7 +13,8 @@
             href="https://m.do.co/c/7a24c68b1e6d"
             onclick="fathom('trackGoal', 'TVUSHJYA', 0);"
             rel="noopener noreferrer"
-            target="_blank" class="text-gray-600 hover:text-digitalocean-blue"
+            target="_blank"
+            class="text-gray-600 hover:text-digitalocean-blue"
         >
             Try <span class="font-medium">DigitalOcean</span>
         </a>
@@ -20,7 +22,8 @@
             href="https://m.do.co/c/7a24c68b1e6d"
             onclick="fathom('trackGoal', 'TVUSHJYA', 0);"
             rel="noopener noreferrer"
-            target="_blank" class=" ml-4 text-gray-600 hover:text-digitalocean-blue"
+            target="_blank"
+            class=" ml-4 text-gray-600 hover:text-digitalocean-blue"
         >
             Simple cloud hosting, built for developers.
         </a>
@@ -28,7 +31,8 @@
             href="https://m.do.co/c/7a24c68b1e6d"
             onclick="fathom('trackGoal', 'TVUSHJYA', 0);"
             rel="noopener noreferrer"
-            target="_blank" class="ml-4 text-gray-600 hover:text-digitalocean-blue"
+            target="_blank"
+            class="ml-4 text-gray-600 hover:text-digitalocean-blue"
         >
             Get started now and get <span class="font-medium">$100 credit</span>.
         </a>
