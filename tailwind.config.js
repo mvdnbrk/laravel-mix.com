@@ -5,9 +5,9 @@ module.exports = {
     theme: {
         extend: {
             colors: {
+                'digitalocean-blue': '#0080ff',
                 'fathom-indigo': '#533feb',
                 'ploi-blue': '#0e3283',
-                'digitalocean-blue': '#0080FF',
             },
             fontFamily: {
                 fathom: [
