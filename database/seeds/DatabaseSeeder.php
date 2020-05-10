@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             'laravel-mix-auto-extract',
             'laravel-mix-banner',
             'laravel-mix-blade-reload',
+            'laravel-mix-browser-sync-multi',
             'laravel-mix-bundle',
             'laravel-mix-bundle-analyzer',
             'laravel-mix-clean',
