@@ -2,7 +2,7 @@
     <div class="flex py-2 justify-center items-center bg-gray-100 rounded-b-lg border-t text-sm">
         <a
             href="https://m.do.co/c/7a24c68b1e6d"
-            onclick="fathom('trackGoal', 'TVUSHJYA', 0);"
+            onclick="fathom.trackGoal('TVUSHJYA', 0);"
             rel="noopener noreferrer"
             target="_blank"
             class="text-gray-600 hover:text-digitalocean-blue"
@@ -11,7 +11,7 @@
         </a>
         <a
             href="https://m.do.co/c/7a24c68b1e6d"
-            onclick="fathom('trackGoal', 'TVUSHJYA', 0);"
+            onclick="fathom.trackGoal('TVUSHJYA', 0);"
             rel="noopener noreferrer"
             target="_blank"
             class="text-gray-600 hover:text-digitalocean-blue"
@@ -20,7 +20,7 @@
         </a>
         <a
             href="https://m.do.co/c/7a24c68b1e6d"
-            onclick="fathom('trackGoal', 'TVUSHJYA', 0);"
+            onclick="fathom.trackGoal('TVUSHJYA', 0);"
             rel="noopener noreferrer"
             target="_blank"
             class=" ml-4 text-gray-600 hover:text-digitalocean-blue"
@@ -29,7 +29,7 @@
         </a>
         <a
             href="https://m.do.co/c/7a24c68b1e6d"
-            onclick="fathom('trackGoal', 'TVUSHJYA', 0);"
+            onclick="fathom.trackGoal('TVUSHJYA', 0);"
             rel="noopener noreferrer"
             target="_blank"
             class="ml-4 text-gray-600 hover:text-digitalocean-blue"
@@ -38,7 +38,7 @@
         </a>
         <a
             href="https://m.do.co/c/7a24c68b1e6d"
-            onclick="fathom('trackGoal', 'TVUSHJYA', 0);"
+            onclick="fathom.trackGoal('TVUSHJYA', 0);"
             rel="noopener noreferrer"
             target="_blank"
         >

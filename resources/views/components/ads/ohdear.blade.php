@@ -2,7 +2,7 @@
     <div class="flex py-2 justify-center items-center bg-gray-100 rounded-b-lg border-t text-sm">
         <a
             href="https://ohdear.app"
-            onclick="fathom('trackGoal', 'N4UF6P0J', 0);"
+            onclick="fathom.trackGoal('N4UF6P0J', 0);"
             rel="noopener"
             target="_blank"
             class="flex items-center text-gray-600 hover:text-ohdear-red"
@@ -11,7 +11,7 @@
         </a>
         <a
             href="https://ohdear.app"
-            onclick="fathom('trackGoal', 'N4UF6P0J', 0);"
+            onclick="fathom.trackGoal('N4UF6P0J', 0);"
             rel="noopener"
             target="_blank"
             class="ml-4 text-gray-600 hover:text-ohdear-red"
@@ -20,7 +20,7 @@
         </a>
         <a
             href="https://ohdear.app"
-            onclick="fathom('trackGoal', 'N4UF6P0J', 0);"
+            onclick="fathom.trackGoal('N4UF6P0J', 0);"
             rel="noopener"
             target="_blank"
             class="ml-4 text-gray-600 hover:text-ohdear-red"
@@ -29,7 +29,7 @@
         </a>
         <a
             href="https://ohdear.app"
-            onclick="fathom('trackGoal', 'N4UF6P0J', 0);"
+            onclick="fathom.trackGoal('N4UF6P0J', 0);"
             rel="noopener"
             target="_blank"
         >

@@ -2,7 +2,7 @@
     <div class="flex py-2 justify-center items-center bg-gray-100 rounded-b-lg border-t text-sm">
         <a
             href="https://usefathom.com/ref/FI15PB"
-            onclick="fathom('trackGoal', '7D8GVLAA', 0);"
+            onclick="fathom.trackGoal('7D8GVLAA', 0);"
             rel="noopener noreferrer"
             target="_blank"
         >
@@ -10,7 +10,7 @@
         </a>
         <a
             href="https://usefathom.com/ref/FI15PB"
-            onclick="fathom('trackGoal', '7D8GVLAA', 0);"
+            onclick="fathom.trackGoal('7D8GVLAA', 0);"
             rel="noopener noreferrer"
             target="_blank"
             class="text-gray-600 hover:text-fathom-indigo"
@@ -19,7 +19,7 @@
         </a>
         <a
             href="https://usefathom.com/ref/FI15PB"
-            onclick="fathom('trackGoal', '7D8GVLAA', 0);"
+            onclick="fathom.trackGoal('7D8GVLAA', 0);"
             rel="noopener noreferrer"
             target="_blank"
             class="ml-4 text-gray-600 hover:text-fathom-indigo"
@@ -28,7 +28,7 @@
         </a>
         <a
             href="https://usefathom.com/ref/FI15PB"
-            onclick="fathom('trackGoal', '7D8GVLAA', 0);"
+            onclick="fathom.trackGoal('7D8GVLAA', 0);"
             rel="noopener noreferrer"
             target="_blank"
             class="ml-4 text-gray-600 hover:text-fathom-indigo"
@@ -37,7 +37,7 @@
         </a>
         <a
             href="https://usefathom.com/ref/FI15PB"
-            onclick="fathom('trackGoal', '7D8GVLAA', 0);"
+            onclick="fathom.trackGoal('7D8GVLAA', 0);"
             rel="noopener noreferrer"
             target="_blank"
         >
