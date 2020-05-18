@@ -135,11 +135,11 @@ class Extension extends Model
 
     public function replaceExternalLinks(string $content): string
     {
-        if ($this->repositoryUrl->isEmpty()) {
-            return $content;
-        }
-
         return preg_replace_callback('/\[(.*?)\]\((?!http)(.*?)\)/m', function ($matches) {
+            if ($this->repositoryUrl->isEmpty()) {
+                return $matches[1];
+            }
+
             return '['.$matches[1].']('.$this->repositoryUrl.'/blob/master/'.$matches[2].')';
         }, $content);
     }
