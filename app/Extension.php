@@ -85,11 +85,18 @@ class Extension extends Model
             ->keys()
             ->merge([
                 Str::lower($this->getTitleAttribute()),
+                'artisan',
                 'extension',
+                'extend-laravel-mix',
+                'js',
+                'laravel',
                 'laravel-mix',
                 'laravel mix',
-                'laravel',
+                'laravel-mix-extension',
                 'mix',
+                'mix-extension',
+                'node',
+                'php',
                 'plugin',
                 'webpack',
             ])
