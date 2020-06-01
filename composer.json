@@ -21,14 +21,14 @@
         "facade/ignition": "^2.0",
         "fideloper/proxy": "^4.3",
         "guzzlehttp/guzzle": "^6.5",
-        "laravel/framework": "^7.12",
+        "laravel/framework": "^7.13",
         "laravel/horizon": "^4.3",
         "laravel/nova": "^3.6",
         "laravel/tinker": "^2.4",
         "mvdnbrk/laravel-documentation": "^1.1",
         "nunomaduro/laravel-console-task": "^1.0",
         "silber/page-cache": "^1.0",
-        "symfony/dom-crawler": "^5.0"
+        "symfony/dom-crawler": "^5.1"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.9",
