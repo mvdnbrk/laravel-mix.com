@@ -21,7 +21,7 @@
         "facade/ignition": "^2.3",
         "fideloper/proxy": "^4.4",
         "guzzlehttp/guzzle": "^7.0",
-        "laravel/framework": "^7.21",
+        "laravel/framework": "^7.23",
         "laravel/horizon": "^4.3",
         "laravel/nova": "^3.8",
         "laravel/tinker": "^2.4",
@@ -34,7 +34,7 @@
         "fzaninotto/faker": "^1.9",
         "mockery/mockery": "^1.4",
         "nunomaduro/collision": "^4.2",
-        "phpunit/phpunit": "^9.2"
+        "phpunit/phpunit": "^9.3"
     },
     "config": {
         "optimize-autoloader": true,
