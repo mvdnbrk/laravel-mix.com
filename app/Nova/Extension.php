@@ -2,7 +2,7 @@
 
 namespace App\Nova;
 
-use App\Extension as ExtensionModel;
+use App\Models\Extension as ExtensionModel;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\Date;

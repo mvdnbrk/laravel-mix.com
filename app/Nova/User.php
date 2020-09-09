@@ -2,7 +2,7 @@
 
 namespace App\Nova;
 
-use App\User as UserModel;
+use App\Models\User as UserModel;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;

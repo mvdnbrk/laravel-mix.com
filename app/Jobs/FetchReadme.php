@@ -2,7 +2,7 @@
 
 namespace App\Jobs;
 
-use App\Extension;
+use App\Models\Extension;
 use Exception;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
