@@ -19,9 +19,6 @@
                         <h2 class="mt-0 mb-2 text-xl text-gray-800 hover:text-blue-500">{{ $extension->title }}</h2>
                     </a>
                     <p class="flex-1">{{ \Illuminate\Support\Str::limit($extension->description, 90) }}</p>
-                    <a class="flex items-center text-sm" href="{{ route('extensions.show', $extension) }}">
-                        Learn more
-                    </a>
                 </div>
                 <div class="flex justify-between px-4 py-2 text-xs text-blue-700 bg-gray-200 border-t border-gray-400">
                     <div class="font-semibold uppercase">{{ $extension->author_name }}</div>
