@@ -41,6 +41,12 @@ jobs:
           php artisan key:generate
           php artisan package:discover
 
+      - name: Install NPM dependencies
+        run: yarn install
+
+      - name: Compile assets
+        run: yarn run production
+
       - name: Execute tests
         run: vendor/bin/phpunit
 
