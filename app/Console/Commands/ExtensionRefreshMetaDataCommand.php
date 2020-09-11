@@ -2,7 +2,7 @@
 
 namespace App\Console\Commands;
 
-use App\Extension;
+use App\Models\Extension;
 use App\Jobs\FetchPackageMetaDataFromNpmJsRegistry;
 use App\Jobs\UpdateExtensionModelFromJson;
 use Illuminate\Console\Command;
