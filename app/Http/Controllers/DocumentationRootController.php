@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\DocumentationBaseController;
 use Illuminate\Http\Response;
+use Illuminate\Http\RedirectResponse;
+use App\Http\Controllers\DocumentationBaseController;
 
 class DocumentationRootController extends DocumentationBaseController
 {
@@ -13,7 +14,7 @@ class DocumentationRootController extends DocumentationBaseController
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function show()
+    public function show(): RedirectResponse
     {
         return redirect(
             '/docs/'.$this->documentation->defaultVersion(),

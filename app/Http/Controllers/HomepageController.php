@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\View\View;
+
 class HomepageController extends DocumentationBaseController
 {
     /**
@@ -9,7 +11,7 @@ class HomepageController extends DocumentationBaseController
      *
      * @return \Illuminate\View\View
      */
-    public function show()
+    public function show(): View
     {
         $documentation_url = route('documentation.show', [
             'version' => $this->documentation->defaultVersion(),

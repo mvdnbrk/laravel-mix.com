@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\DocumentationBaseController;
 use Illuminate\Http\Response;
+use Illuminate\Http\RedirectResponse;
+use App\Http\Controllers\DocumentationBaseController;
 
 class DocumentationRedirectController extends DocumentationBaseController
 {
@@ -15,7 +16,7 @@ class DocumentationRedirectController extends DocumentationBaseController
      * @param  string  $page
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function show($page)
+    public function show(string $page): RedirectResponse
     {
         if ($this->documentation->isVersion($page)) {
             return redirect(

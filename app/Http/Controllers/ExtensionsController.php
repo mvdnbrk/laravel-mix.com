@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Extension;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 
 class ExtensionsController
@@ -12,7 +13,7 @@ class ExtensionsController
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index(): View
     {
         $extensions = Extension::latest()->get();
 
@@ -25,7 +26,7 @@ class ExtensionsController
      * @param  \App\Models\Extension  $extension
      * @return \Illuminate\View\View
      */
-    public function show(Extension $extension)
+    public function show(Extension $extension): View
     {
         return view('extensions.show', compact('extension'));
     }
