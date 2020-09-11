@@ -2,8 +2,8 @@
 
 namespace Tests\Console;
 
-use App\Models\Extension;
 use App\Jobs\FetchPackageMetaDataFromNpmJsRegistry;
+use App\Models\Extension;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Bus;
 use Tests\TestCase;
