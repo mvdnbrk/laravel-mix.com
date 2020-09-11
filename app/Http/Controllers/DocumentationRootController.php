@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Response;
-use Illuminate\Http\RedirectResponse;
 use App\Http\Controllers\DocumentationBaseController;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Response;
 
 class DocumentationRootController extends DocumentationBaseController
 {

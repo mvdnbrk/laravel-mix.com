@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Extension;
-use Illuminate\View\View;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class ExtensionsController
 {
