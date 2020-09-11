@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Extension;
+use App\Models\Extension;
 use Illuminate\Http\Request;
 
 class ExtensionsController
@@ -22,7 +22,7 @@ class ExtensionsController
     /**
      * Show the page for an extension.
      *
-     * @param  \App\Extension  $extension
+     * @param  \App\Models\Extension  $extension
      * @return \Illuminate\View\View
      */
     public function show(Extension $extension)
