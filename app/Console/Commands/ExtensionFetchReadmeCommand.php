@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Extension;
 use App\Jobs\FetchReadme;
+use App\Models\Extension;
 use Illuminate\Console\Command;
 
 class ExtensionFetchReadmeCommand extends Command
