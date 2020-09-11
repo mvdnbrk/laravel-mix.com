@@ -10,7 +10,7 @@ class ExtensionTest extends TestCase
     /** @test */
     public function it_can_get_the_json_path()
     {
-        $extension = factory(Extension::class)->make([
+        $extension = Extension::factory()->make([
             'name' => 'laravel-mix',
         ]);
 
@@ -20,7 +20,7 @@ class ExtensionTest extends TestCase
     /** @test */
     public function it_can_get_the_readme_path()
     {
-        $extension = factory(Extension::class)->make([
+        $extension = Extension::factory()->make([
             'name' => 'laravel-mix',
         ]);
 
@@ -30,7 +30,7 @@ class ExtensionTest extends TestCase
     /** @test */
     public function it_casts_counts_to_integers()
     {
-        $extension = factory(Extension::class)->make([
+        $extension = Extension::factory()->make([
             'version_count' => '123',
             'weekly_download_count' => '456',
         ]);

@@ -35,7 +35,7 @@ class MakeExtensionCommandTest extends TestCase
     /** @test */
     public function name_is_unique()
     {
-        factory(Extension::class)->create(['name' => 'test-extension']);
+        Extension::factory()->create(['name' => 'test-extension']);
 
         $this->artisan('extension:make', [
             'name' => 'test-extension',

@@ -1,9 +1,27 @@
 <?php
 
-use Faker\Generator as Faker;
+namespace Database\Factories;
 
-$factory->define(App\Models\Extension::class, function (Faker $faker) {
-    return [
-        'name' => $faker->word,
-    ];
-});
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+class ExtensionFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = \App\Models\Extension::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->word,
+        ];
+    }
+}
