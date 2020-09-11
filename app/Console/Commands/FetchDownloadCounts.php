@@ -2,8 +2,8 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Extension;
 use App\Jobs\UpdateWeeklyDownloadCount;
+use App\Models\Extension;
 use Illuminate\Console\Command;
 
 class FetchDownloadCounts extends Command

@@ -2,11 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Models\Extension;
 use App\Jobs\FetchPackageMetaDataFromNpmJsRegistry;
 use App\Jobs\FetchReadme;
 use App\Jobs\UpdateExtensionModelFromJson;
 use App\Jobs\UpdateWeeklyDownloadCount;
+use App\Models\Extension;
 use Illuminate\Console\Command;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Validator;
