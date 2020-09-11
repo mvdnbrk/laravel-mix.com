@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateExtensionsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('extensions', function (Blueprint $table) {
@@ -29,15 +24,5 @@ class CreateExtensionsTable extends Migration
             $table->softDeletes();
             $table->timestamps();
         });
-    }
-
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('extensions');
     }
 }
