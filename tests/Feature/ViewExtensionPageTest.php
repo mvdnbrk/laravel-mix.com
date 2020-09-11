@@ -13,7 +13,7 @@ class ViewExtensionPageTest extends TestCase
     /** @test */
     public function a_user_can_view_an_extension_page()
     {
-        $extension = factory(Extension::class)->create([
+        $extension = Extension::factory()->create([
             'slug' => 'test-extension',
         ]);
 
