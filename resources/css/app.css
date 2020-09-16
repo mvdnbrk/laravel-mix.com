@@ -15,7 +15,7 @@
 
 html,
 body {
-    @apply bg-gray-100;
+    @apply bg-white;
     @apply antialiased;
     @apply text-gray-900;
 }
