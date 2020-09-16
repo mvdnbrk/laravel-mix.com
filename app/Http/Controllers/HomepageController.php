@@ -6,11 +6,6 @@ use Illuminate\View\View;
 
 class HomepageController extends DocumentationBaseController
 {
-    /**
-     * Show the homepage.
-     *
-     * @return \Illuminate\View\View
-     */
     public function show(): View
     {
         $documentation_url = route('documentation.show', [

@@ -8,11 +8,6 @@ use Illuminate\View\View;
 
 class ExtensionsController
 {
-    /**
-     * SHow the extensions index page.
-     *
-     * @return \Illuminate\View\View
-     */
     public function index(): View
     {
         $extensions = Extension::latest()->get();
@@ -20,12 +15,6 @@ class ExtensionsController
         return view('extensions.index', compact('extensions'));
     }
 
-    /**
-     * Show the page for an extension.
-     *
-     * @param  \App\Models\Extension  $extension
-     * @return \Illuminate\View\View
-     */
     public function show(Extension $extension): View
     {
         return view('extensions.show', compact('extension'));

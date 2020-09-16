@@ -8,12 +8,6 @@ use Illuminate\Http\Response;
 
 class DocumentationRootController extends DocumentationBaseController
 {
-    /**
-     * A request to the index of /docs redirects to
-     * the latest version of the documentation.
-     *
-     * @return \Illuminate\Http\RedirectResponse
-     */
     public function show(): RedirectResponse
     {
         return redirect(
