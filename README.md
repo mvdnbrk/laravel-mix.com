@@ -45,7 +45,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [link-website]: https://laravel-mix.com
-[ico-tests]: https://github.com/mvdnbrk/laravel-mix.com/workflows/tests/badge.svg?branch=master
+[ico-tests]: https://img.shields.io/github/workflow/status/mvdnbrk/laravel-mix.com/tests/main?label=tests&style=flat-square
 [link-tests]: https://github.com/mvdnbrk/laravel-mix.com/actions?query=workflow%3Atests
 [ico-style-ci]: https://styleci.io/repos/142707290/shield?branch=master
 [link-style-ci]: https://styleci.io/repos/142707290
