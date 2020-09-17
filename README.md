@@ -40,6 +40,9 @@ Please review [our security policy](../../security/policy) on how to report secu
 - [Mark van den Broek](https://github.com/mvdnbrk)
 - [All Contributors](../../contributors)
 
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [link-website]: https://laravel-mix.com
 [ico-tests]: https://github.com/mvdnbrk/laravel-mix.com/workflows/tests/badge.svg?branch=master
