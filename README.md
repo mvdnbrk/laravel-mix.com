@@ -31,6 +31,14 @@ This is the source of the [laravel-mix.com][link-website] website.
   </a>
 </p>
 
+## Security Vulnerabilities
+
+Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
+
+## Credits
+
+- [Mark van den Broek](https://github.com/mvdnbrk)
+- [All Contributors](../../contributors)
 
 
 [link-website]: https://laravel-mix.com
