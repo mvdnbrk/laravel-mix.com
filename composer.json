@@ -26,7 +26,9 @@
         "laravel/tinker": "^2.4",
         "mvdnbrk/laravel-documentation": "^1.2",
         "nunomaduro/laravel-console-task": "^1.5",
+        "ohdearapp/ohdear-php-sdk": "^3.0",
         "silber/page-cache": "^1.0",
+        "spatie/laravel-schedule-monitor": "^1.0",
         "symfony/dom-crawler": "^5.1"
     },
     "require-dev": {
