@@ -6,7 +6,10 @@
 
 /.github export-ignore
 /tests export-ignore
+.env.github export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
 .styleci.yml export-ignore
 CHANGELOG.md export-ignore
-phpunit.xml.dist export-ignore
 README.md export-ignore
+phpunit.xml.dist export-ignore
