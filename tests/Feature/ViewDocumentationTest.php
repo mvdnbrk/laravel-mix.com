@@ -18,6 +18,15 @@ class ViewDocumentationTest extends TestCase
     }
 
     /** @test */
+    public function master_is_redirected_to_main()
+    {
+        $response = $this->get('/docs/master/example-page');
+
+        $response->assertStatus(Response::HTTP_MOVED_PERMANENTLY);
+        $response->assertRedirect('/docs/main/example-page');
+    }
+
+    /** @test */
     public function a_request_to_the_documentation_index_should_redirect_to_the_latest_version()
     {
         $response = $this->get('/docs');

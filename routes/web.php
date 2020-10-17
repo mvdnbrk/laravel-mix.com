@@ -5,6 +5,9 @@ use App\Http\Controllers\DocumentationRedirectController;
 use App\Http\Controllers\DocumentationRootController;
 use App\Http\Controllers\ExtensionsController;
 use App\Http\Controllers\HomepageController;
+use Illuminate\Http\Response;
+
+Route::get('docs/master/{page}', fn (string $page) => redirect('docs/main/'.$page, Response::HTTP_MOVED_PERMANENTLY));
 
 Route::middleware(['page-cache'])->group(function () {
     Route::get('/', [HomepageController::class, 'show'])->name('homepage');
