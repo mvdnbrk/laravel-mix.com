@@ -1,5 +1,5 @@
 <scroll-indicator height="4px" color="#F27CC2"></scroll-indicator>
-<header class="flex items-center bg-white h-16 z-20 top-0 sticky border-t-4 border-b">
+<header class="sticky top-0 z-20 flex items-center h-16 bg-white border-t-4 border-b">
     <div class="container mx-auto">
         <div class="flex items-center justify-between px-6 lg:px-16">
             <a href="{{ config('app.url') }}">
@@ -17,7 +17,7 @@
                             </button>
                         </template>
                         @foreach($versionsContainingPage as $version)
-                        <li><a href="{{ route('documentation.show', ['page' => $page, 'version' => $version]) }}" class="px-8 text-center leading-loose hover:bg-gray-200 block">{{ $version }}</a></li>
+                        <li><a href="{{ route('documentation.show', ['page' => $page, 'version' => $version]) }}" class="block px-8 leading-loose text-center hover:bg-gray-200">{{ $version }}</a></li>
                         @endforeach
                     </dropdown>
                 </div>
