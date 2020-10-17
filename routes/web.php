@@ -6,6 +6,7 @@ use App\Http\Controllers\DocumentationRootController;
 use App\Http\Controllers\ExtensionsController;
 use App\Http\Controllers\HomepageController;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Route;
 
 Route::get('docs/master/{page}', fn (string $page) => redirect('docs/main/'.$page, Response::HTTP_MOVED_PERMANENTLY));
 
