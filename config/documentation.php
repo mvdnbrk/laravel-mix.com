@@ -15,7 +15,7 @@ return [
     'versions' => [
         'default' => '5.0',
         'published' => [
-            'master',
+            'main',
             '5.0',
             '4.1',
             '4.0',

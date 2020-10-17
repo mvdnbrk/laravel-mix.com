@@ -3,7 +3,7 @@ base=/home/ploi/laravel-mix.com-deploy
 docs=${base}/storage/docs
 
 doc_versions=(
-  master
+  main
   5.0
   4.1
   4.0
