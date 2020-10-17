@@ -12,7 +12,7 @@
                     <dropdown v-cloak>
                         <template v-slot:trigger>
                             <button type="button" class="flex text-gray-500 hover:text-gray-700 focus:text-gray-500 focus:outline-none">
-                                {{ $currentVersion == 'master' ? '' : 'v' }}{{ $currentVersion }}
+                                {{ $currentVersion == 'main' ? '' : 'v' }}{{ $currentVersion }}
                                 @include('svg.icons.chevron-down', ['class' => 'fill-current w-6 h-6 ml-1'])
                             </button>
                         </template>
