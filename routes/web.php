@@ -19,5 +19,5 @@ Route::middleware(['page-cache'])->group(function () {
     Route::get('docs/{version}/{page}', [DocumentationController::class, 'show'])->name('documentation.show');
 });
 
-Route::get('docs', [DocumentationRootController::class, 'show'])->name('documentation.root');
-Route::get('docs/{page}', [DocumentationRedirectController::class, 'show'])->name('documentation.redirect');
+Route::get('docs', DocumentationRootController::class)->name('documentation.root');
+Route::get('docs/{page}', DocumentationRedirectController::class)->name('documentation.redirect');

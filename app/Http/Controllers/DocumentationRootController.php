@@ -8,7 +8,7 @@ use Illuminate\Http\Response;
 
 class DocumentationRootController extends DocumentationBaseController
 {
-    public function show(): RedirectResponse
+    public function __invoke(): RedirectResponse
     {
         return redirect(
             '/docs/'.$this->documentation->defaultVersion(),

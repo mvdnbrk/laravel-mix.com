@@ -8,7 +8,7 @@ use Illuminate\Http\Response;
 
 class DocumentationRedirectController extends DocumentationBaseController
 {
-    public function show(string $page): RedirectResponse
+    public function __invoke(string $page): RedirectResponse
     {
         if ($this->documentation->isVersion($page)) {
             return redirect(
