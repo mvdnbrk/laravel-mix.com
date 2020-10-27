@@ -32,7 +32,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          composer install --no-ansi --no-interaction --no-scripts --no-suggest --prefer-dist --classmap-authoritative --optimize-autoloader
+          composer install --no-ansi --no-interaction --no-scripts --prefer-dist --classmap-authoritative --optimize-autoloader
 
       - name: Prepare Laravel application
         run: |
