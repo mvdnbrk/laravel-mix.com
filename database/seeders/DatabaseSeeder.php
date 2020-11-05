@@ -72,6 +72,7 @@ class DatabaseSeeder extends Seeder
             'mix-replacer',
             'mix-serve',
             'mix-tailwindcss',
+            'single-file-blade-components',
             'vuetifyjs-mix-extension',
             'webpack-s3-pusher',
         ])->each(function ($package) {
