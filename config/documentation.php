@@ -16,6 +16,7 @@ return [
         'default' => '5.0',
         'published' => [
             'main',
+            '6.0',
             '5.0',
             '4.1',
             '4.0',

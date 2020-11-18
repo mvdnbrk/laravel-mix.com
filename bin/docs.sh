@@ -4,6 +4,7 @@ docs=${base}/storage/docs
 
 doc_versions=(
   main
+  6.0
   5.0
   4.1
   4.0
