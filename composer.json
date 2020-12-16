@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": "^7.4",
+        "php": "^7.4 || ^8.0",
         "davejamesmiller/laravel-breadcrumbs": "^5.3",
         "facade/ignition": "^2.4",
         "fideloper/proxy": "^4.4",
