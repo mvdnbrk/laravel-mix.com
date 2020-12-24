@@ -13,7 +13,7 @@ return [
     */
 
     'versions' => [
-        'default' => '5.0',
+        'default' => '6.0',
         'published' => [
             'main',
             '6.0',
