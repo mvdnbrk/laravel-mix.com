@@ -32,8 +32,8 @@ jobs:
 
       - name: Install dependencies
         run: |
+          composer config platform.php {{ matrix.php }}
           composer install --no-ansi --no-interaction --no-scripts --prefer-dist --classmap-authoritative --optimize-autoloader
-          composer update --lock
 
       - name: Prepare Laravel application
         run: |
