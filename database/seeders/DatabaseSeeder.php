@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
         collect([
             'laravel-mix',
             'laravel-mix-aero',
+            'laravel-mix-angular-templatecache',
             'laravel-mix-alias',
             'laravel-mix-artisan-serve',
             'laravel-mix-auto-extract',
