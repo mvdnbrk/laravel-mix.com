@@ -64,6 +64,7 @@ class DatabaseSeeder extends Seeder
             'laravel-mix-twig-to-html',
             'laravel-mix-versionhash',
             'laravel-mix-vue-auto-routing',
+            'laravel-mix-vue-css-modules',
             'laravel-mix-vue-svgicon',
             'laravel-mix-workbox',
             'laravel-mix-wp-blocks',
