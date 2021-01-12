@@ -21,7 +21,7 @@
         "facade/ignition": "^2.4",
         "fideloper/proxy": "^4.4",
         "guzzlehttp/guzzle": "^7.2",
-        "laravel/framework": "^8.20",
+        "laravel/framework": "^8.21",
         "laravel/horizon": "^5.6",
         "laravel/tinker": "^2.5",
         "mvdnbrk/laravel-documentation": "^1.3",
