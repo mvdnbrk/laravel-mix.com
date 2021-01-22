@@ -55,6 +55,7 @@ class DatabaseSeeder extends Seeder
             'laravel-mix-pug-recursive',
             'laravel-mix-purgecss',
             'laravel-mix-remove-flow-types',
+            'laravel-mix-serve',
             'laravel-mix-sri',
             'laravel-mix-string-replace',
             'laravel-mix-svelte',
