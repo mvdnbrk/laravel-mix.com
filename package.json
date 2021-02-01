@@ -20,7 +20,6 @@
         "mix-tailwindcss": "^1.1",
         "postcss-import": "^12.0",
         "prismjs": "^1.23.0",
-        "smoothscroll-for-websites": "^1.4",
         "tailwindcss": "^1.9.6",
         "vue": "^2.6.12",
         "vue-scroll-indicator": "^0.1",
