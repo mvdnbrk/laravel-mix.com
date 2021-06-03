@@ -18,7 +18,7 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "davejamesmiller/laravel-breadcrumbs": "^5.3",
-        "facade/ignition": "^2.9",
+        "facade/ignition": "^2.10",
         "fideloper/proxy": "^4.4",
         "guzzlehttp/guzzle": "^7.3",
         "laravel/framework": "^8.44",
@@ -29,7 +29,7 @@
         "ohdearapp/ohdear-php-sdk": "^3.1",
         "silber/page-cache": "^1.0",
         "spatie/laravel-schedule-monitor": "^2.3",
-        "symfony/dom-crawler": "^5.1"
+        "symfony/dom-crawler": "^5.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.14",
