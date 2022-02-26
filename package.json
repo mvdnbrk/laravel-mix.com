@@ -19,7 +19,7 @@
         "marky-deep-links": "^1.0",
         "mix-tailwindcss": "^1.1",
         "postcss-import": "^12.0",
-        "prismjs": "^1.23.0",
+        "prismjs": "^1.27.0",
         "tailwindcss": "^1.9.6",
         "vue": "^2.6.12",
         "vue-scroll-indicator": "^0.1",
