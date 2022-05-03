@@ -19,16 +19,6 @@
     >
         <strong>Ploi</strong>.io
     </a>
-    monitored by
-    <a
-        href="https://ohdear.app"
-        onclick="fathom.trackGoal('EJNZ6SM3', 0);"
-        rel="noopener"
-        target="_blank"
-        class="flex mx-2 text-sm font-bold text-gray-500 hover:text-ohdear-red"
-    >
-        @include('svg.ohdear-logo', ['class' => 'mx-2 fill-current h-3'])
-    </a>
     analytics by
     <a
         href="https://usefathom.com/ref/FI15PB"
