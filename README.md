@@ -20,12 +20,6 @@ This is the source of the [laravel-mix.com][link-website] website.
 </p>
 
 <p>
-   <a href="https://ohdear.app">
-    <img src="https://laravel-mix.com/svg/oh-dear-logo.svg" height="30px">
-  </a>
-</p>
-
-<p>
   <a href="https://usefathom.com/ref/FI15PB">
     <img src="https://laravel-mix.com/svg/fathom-analytics-logo.svg" height="30px">
   </a>
