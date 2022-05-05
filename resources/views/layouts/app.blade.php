@@ -29,6 +29,7 @@
         </div>
         @stack('scripts')
         <!-- Fathom - beautiful, simple website analytics -->
+        <!-- https://usefathom.com/ref/FI15PB -->
         <script src="https://squirrel.laravel-mix.com/script.js" site="QTHSNKVN" defer></script>
         <!-- / Fathom -->
     </body>
