@@ -64,6 +64,7 @@ class DatabaseSeeder extends Seeder
             'laravel-mix-svelte',
             'laravel-mix-svg-sprite',
             'laravel-mix-svg-vue',
+            'laravel-mix-swc',
             'laravel-mix-tailwind',
             'laravel-mix-twig',
             'laravel-mix-twig-to-html',
