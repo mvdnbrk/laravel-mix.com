@@ -10,7 +10,7 @@
 ])
 
 <div class="container mx-auto">
-    <article id="content" class="pt-10 pb-12 px-6 lg:px-16 min-h-screen-16 markdown-body" v-pre>
+    <article id="content" class="max-w-4xl mx-auto pt-10 pb-12 px-6 lg:px-16 min-h-screen-16 markdown-body" v-pre>
         {!! Mvdnbrk\Documentation\Markdown::parse(file_get_contents(resource_path('pages/migrating-to-vite.md'))) !!}
     </article>
 </div>
