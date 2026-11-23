@@ -18,6 +18,11 @@ Breadcrumbs::for('extensions.show', function (BreadcrumbTrail $trail, $extension
     $trail->push($extension->title, route('extensions.show', $extension));
 });
 
+Breadcrumbs::for('troubleshooting', function (BreadcrumbTrail $trail) {
+    $trail->parent('homepage');
+    $trail->push('Troubleshooting', route('troubleshooting'));
+});
+
 Breadcrumbs::for('documentation.root', function (BreadcrumbTrail $trail) {
     $trail->parent('homepage');
     $trail->push('Documentation', route('documentation.root'));
