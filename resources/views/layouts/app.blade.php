@@ -25,6 +25,7 @@
     </head>
     <body>
         <div id="app">
+            <legacy-notice></legacy-notice>
             @yield('body')
         </div>
         @stack('scripts')
