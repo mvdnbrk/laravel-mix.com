@@ -53,7 +53,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['flare'],
+            'channels' => ['daily'],
             'ignore_exceptions' => false,
         ],
 
@@ -68,10 +68,6 @@ return [
             'path' => storage_path('logs/laravel.log'),
             'level' => 'debug',
             'days' => 14,
-        ],
-
-        'flare' => [
-            'driver' => 'flare',
         ],
 
         'slack' => [
