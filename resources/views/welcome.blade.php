@@ -1,7 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.app', [
+    'body_class' => 'flex flex-col min-h-dvh',
+    'app_class' => 'flex flex-col flex-1',
+])
 
 @section('body')
-    <div class="flex flex-col min-h-screen border-t-4">
+    <div class="flex flex-col flex-1 border-t-4">
         <main class="flex flex-col items-center justify-center flex-1 py-16">
             @include('svg.laravel-mix-logo', ['class' => 'w-64'])
 

@@ -23,9 +23,9 @@
         <x-schema-organization></x-schema-organization>
         {{ Breadcrumbs::view('breadcrumbs::json-ld') }}
     </head>
-    <body>
+    <body @isset($body_class) class="{{ $body_class }}" @endisset>
         <x-legacy-notice></x-legacy-notice>
-        <div id="app">
+        <div id="app" @isset($app_class) class="{{ $app_class }}" @endisset>
             @yield('body')
         </div>
         @stack('scripts')
