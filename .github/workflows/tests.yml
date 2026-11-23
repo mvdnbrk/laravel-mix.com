@@ -8,17 +8,17 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [8.0, 7.4]
-        laravel: [^8.0]
+        php: [8.5]
+        laravel: [^13.0]
 
     name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }}
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: ~/.composer/cache/files
           key: dependencies-php-${{ matrix.php }}-laravel-${{ matrix.laravel }}-composer-${{ hashFiles('composer.lock') }}
@@ -46,6 +46,8 @@ jobs:
 
       - name: Compile assets
         run: yarn run production
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Execute tests
         run: vendor/bin/phpunit

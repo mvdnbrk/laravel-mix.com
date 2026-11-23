@@ -4,13 +4,14 @@ namespace Tests\Feature;
 
 use App\Models\Extension;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class ViewExtensionPageTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    #[Test]
     public function a_user_can_view_an_extension_page()
     {
         $extension = Extension::factory()->create([
@@ -26,7 +27,7 @@ class ViewExtensionPageTest extends TestCase
         });
     }
 
-    /** @test */
+    #[Test]
     public function a_user_sees_a_404_when_requesting_a_non_existent_extension()
     {
         $response = $this->get('/extensions/does-not-exist');

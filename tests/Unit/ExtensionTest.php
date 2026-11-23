@@ -3,11 +3,12 @@
 namespace Tests\Unit;
 
 use App\Models\Extension;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class ExtensionTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_can_get_the_json_path()
     {
         $extension = Extension::factory()->make([
@@ -17,7 +18,7 @@ class ExtensionTest extends TestCase
         $this->assertEquals('npmjs/laravel-mix.json', $extension->jsonStoragePath());
     }
 
-    /** @test */
+    #[Test]
     public function it_can_get_the_readme_path()
     {
         $extension = Extension::factory()->make([
@@ -27,7 +28,7 @@ class ExtensionTest extends TestCase
         $this->assertEquals('readme/laravel-mix.md', $extension->readmeStoragePath());
     }
 
-    /** @test */
+    #[Test]
     public function it_casts_counts_to_integers()
     {
         $extension = Extension::factory()->make([
