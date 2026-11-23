@@ -22,6 +22,7 @@ class Extension extends Model
         'repository' => 'array',
         'version_count' => 'integer',
         'weekly_download_count' => 'integer',
+        'published_at' => 'datetime',
     ];
 
     protected $guarded = [];
