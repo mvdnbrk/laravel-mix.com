@@ -20,7 +20,6 @@
         "diglactic/laravel-breadcrumbs": "^10.1",
         "guzzlehttp/guzzle": "^7.17",
         "laravel/framework": "^13.0",
-        "laravel/horizon": "^5.52",
         "laravel/tinker": "^3.2",
         "mvdnbrk/laravel-documentation": "^3.0",
         "nunomaduro/laravel-console-task": "^1.11",
