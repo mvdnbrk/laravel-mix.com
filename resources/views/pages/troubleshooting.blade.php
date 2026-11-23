@@ -19,9 +19,6 @@
         <article id="content" class="w-full min-w-0 lg:w-3/4 xl:w-3/5 pt-10 px-6 lg:px-12 min-h-screen-16 markdown-body" v-pre>
             {!! \Mvdnbrk\Documentation\Markdown::parse(file_get_contents(resource_path('pages/troubleshooting.md'))) !!}
         </article>
-        <div class="hidden pt-4 px-6 xl:flex flex-col xl:w-1/5 text-sm items-center lg:max-h-screen-22 pin-22 lg:sticky">
-            <carbon-ads></carbon-ads>
-        </div>
     </div>
 </div>
 

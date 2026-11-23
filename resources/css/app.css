@@ -5,7 +5,6 @@
  * generated utilities. This keeps the cascade of Tailwind CSS v1, where these
  * rules came after the utilities and specificity decided between them.
  */
-@import './carbon.css' layer(utilities);
 @import './markdown-body.css' layer(utilities);
 @import 'prismjs/themes/prism.css' layer(utilities);
 @import './typography.css' layer(utilities);
