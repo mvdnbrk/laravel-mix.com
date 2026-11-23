@@ -33,3 +33,8 @@ Breadcrumbs::for('documentation.show', function (BreadcrumbTrail $trail, $versio
     $trail->push($version, route('documentation.redirect', ['page' => $version]));
     $trail->push(Str::studly($page), route('documentation.show', compact('version', 'page')));
 });
+
+Breadcrumbs::for('migrating-to-vite', function (BreadcrumbTrail $trail) {
+    $trail->parent('homepage');
+    $trail->push('Migrating to Vite', route('migrating-to-vite'));
+});
