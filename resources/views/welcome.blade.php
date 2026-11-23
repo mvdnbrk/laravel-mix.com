@@ -42,6 +42,10 @@
                 </a>
             </div>
 
+            <p class="px-4 mt-8 text-sm text-center text-gray-600">
+                Build broken? <a href="{{ route('troubleshooting') }}" class="text-gray-700 underline hover:text-blue-500">Troubleshooting</a>
+            </p>
+
             <x-footer></x-footer>
         </div>
     </div>
