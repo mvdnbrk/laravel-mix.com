@@ -13,13 +13,13 @@
             <h1 class="pb-2 m-0 text-center">{{ $extension->title }}</h1>
             <div class="text-center">{{ $extension->description }}</div>
             <div class="flex justify-center mt-6">
-                <div class="flex items-center bg-gray-500 border-l-4 border-black rounded">
+                <div class="flex items-center bg-gray-500 border-l-4 border-black rounded-sm">
                     @include('svg.icons.chevron-right', ['class' => 'fill-current w-6 h-6 mx-2'])
                     <input
                         type="text"
                         size="{{ mb_strlen($extension->name)+6 }}"
                         value="npm i {{ $extension->name }}"
-                        class="w-full py-2 font-mono bg-gray-500 rounded focus:outline-none"
+                        class="w-full py-2 font-mono bg-gray-500 rounded-sm focus:outline-hidden"
                     >
                 </div>
             </div>
@@ -52,7 +52,7 @@
             @if (count($extension->keyWords))
             <div class="flex justify-center pt-6">
                 @foreach($extension->keyWords as $keyword)
-                <div class="px-4 py-2 mx-2 text-sm text-white bg-blue-500 rounded">{{ $keyword }}</div>
+                <div class="px-4 py-2 mx-2 text-sm text-white bg-blue-500 rounded-sm">{{ $keyword }}</div>
                 @endforeach
             </div>
             @endif

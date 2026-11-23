@@ -1,148 +1,276 @@
-@import 'tailwindcss/base';
+@import 'tailwindcss' source(none);
 
-@import 'tailwindcss/components';
+/*
+ * The site's own styles live in the `utilities` layer, after Tailwind's
+ * generated utilities. This keeps the cascade of Tailwind CSS v1, where these
+ * rules came after the utilities and specificity decided between them.
+ */
+@import './carbon.css' layer(utilities);
+@import './markdown-body.css' layer(utilities);
+@import 'prismjs/themes/prism.css' layer(utilities);
+@import './typography.css' layer(utilities);
 
-@import 'tailwindcss/utilities';
+@source '../views';
+@source '../js';
 
-@import 'carbon';
-@import 'markdown-body';
-@import 'prismjs';
-@import 'typography';
+@theme {
+    /* Tailwind CSS v1 defaults the site was designed with. */
+    --breakpoint-2xl: initial;
 
-[v-cloak] {
-    @apply hidden;
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-mono: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+    --text-*: initial;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+    --text-6xl: 4rem;
+
+    --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px 0 rgb(0 0 0 / 0.06);
+
+    --color-black: #000;
+    --color-white: #fff;
+
+    --color-gray-100: #f7fafc;
+    --color-gray-200: #edf2f7;
+    --color-gray-300: #e2e8f0;
+    --color-gray-400: #cbd5e0;
+    --color-gray-500: #a0aec0;
+    --color-gray-600: #718096;
+    --color-gray-700: #4a5568;
+    --color-gray-800: #2d3748;
+    --color-gray-900: #1a202c;
+
+    --color-orange-100: #fffaf0;
+    --color-orange-200: #feebc8;
+    --color-orange-300: #fbd38d;
+    --color-orange-400: #f6ad55;
+    --color-orange-500: #ed8936;
+    --color-orange-600: #dd6b20;
+    --color-orange-700: #c05621;
+    --color-orange-800: #9c4221;
+    --color-orange-900: #7b341e;
+
+    --color-blue-100: #ebf8ff;
+    --color-blue-200: #bee3f8;
+    --color-blue-300: #90cdf4;
+    --color-blue-400: #63b3ed;
+    --color-blue-500: #4299e1;
+    --color-blue-600: #3182ce;
+    --color-blue-700: #2b6cb0;
+    --color-blue-800: #2c5282;
+    --color-blue-900: #2a4365;
+
+    /* Site specific extensions. */
+    --color-digitalocean-blue: #0080ff;
+    --color-fathom-indigo: #533feb;
+    --color-ohdear-red: #e32929;
+    --color-ploi-blue: #0e3283;
+
+    --font-fathom: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Helvetica, Ubuntu, Roboto, Noto,
+        'Segoe UI', Arial, sans-serif;
+    --font-helvetica: 'Helvetica Neue', Helvetica, system-ui, -apple-system, BlinkMacSystemFont;
 }
 
-html,
-body {
-    @apply bg-white;
-    @apply antialiased;
-    @apply text-gray-900;
+@utility min-h-screen-16 {
+    min-height: calc(100vh - 4rem);
 }
 
-p,
-ul,
-ol {
-    @apply mt-0;
-    @apply mb-4;
+@utility max-h-screen-22 {
+    max-height: calc(100vh - 5.5rem);
 }
 
-blockquote,
-pre {
-    @apply border;
-    @apply rounded;
-    @apply p-3;
-    @apply mt-6;
-    @apply mb-4;
-}
+/* Tailwind CSS v1 preflight behaviour that changed in v4. */
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-300);
+    }
 
-blockquote {
-    @apply flex;
-    @apply p-0;
-    @apply rounded;
-}
+    input::placeholder,
+    textarea::placeholder {
+        color: var(--color-gray-500);
+    }
 
-blockquote > p > a {
-    @apply text-white;
-    @apply underline;
-}
-
-blockquote > p > a:hover {
-    @apply text-white;
-}
-
-blockquote > div {
-    @apply pt-4;
-    @apply pb-2;
-    @apply px-3;
-    @apply rounded-l;
-    @apply hidden;
-}
-
-@screen sm {
-    blockquote > div {
-        @apply block;
+    button:not(:disabled),
+    [role='button']:not(:disabled) {
+        cursor: pointer;
     }
 }
 
-blockquote > p {
-    @apply p-3;
-    @apply mb-0;
-}
+@layer utilities {
+    [v-cloak] {
+        @apply hidden;
+    }
 
-blockquote.note {
-    @apply border-l-0;
-    @apply bg-orange-500;
-    @apply border-orange-700;
-    @apply text-white;
-}
+    html,
+    body {
+        @apply bg-white;
+        @apply antialiased;
+        @apply text-gray-900;
+    }
 
-blockquote.note > div {
-    @apply bg-orange-700;
-}
+    p,
+    ul,
+    ol {
+        @apply mt-0;
+        @apply mb-4;
+    }
 
-blockquote.note > p > code {
-    @apply bg-orange-100;
-    @apply text-orange-700;
-}
+    blockquote,
+    pre {
+        @apply border;
+        @apply rounded-sm;
+        @apply p-3;
+        @apply mt-6;
+        @apply mb-4;
+    }
 
-blockquote.tip {
-    @apply border-l-0;
-    @apply bg-blue-500;
-    @apply border-blue-700;
-    @apply text-white;
-}
+    blockquote {
+        @apply flex;
+        @apply p-0;
+        @apply rounded-sm;
+    }
 
-blockquote.tip > div {
-    @apply bg-blue-700;
-}
+    blockquote > p > a {
+        @apply text-white;
+        @apply underline;
+    }
 
-blockquote.tip > p > code {
-    @apply bg-blue-100;
-    @apply text-blue-700;
-}
+    blockquote > p > a:hover {
+        @apply text-white;
+    }
 
-blockquote.tip a,
-blockquote.note a {
-    @apply text-white;
-    @apply underline;
-}
+    blockquote > div {
+        @apply pt-4;
+        @apply pb-2;
+        @apply px-3;
+        @apply rounded-l-sm;
+        @apply hidden;
+    }
 
-blockquote.tip a:hover,
-blockquote.note a:hover {
-    @apply text-white;
-}
+    @media (width >= 640px) {
+        blockquote > div {
+            @apply block;
+        }
+    }
 
-code {
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
-    @apply text-sm;
-    @apply bg-gray-100;
-    @apply rounded;
-}
+    blockquote > p {
+        @apply p-3;
+        @apply mb-0;
+    }
 
-pre > code {
-    @apply p-0;
-}
+    blockquote.note {
+        @apply border-l-0;
+        @apply bg-orange-500;
+        @apply border-orange-700;
+        @apply text-white;
+    }
 
-pre {
-    @apply border;
-    @apply bg-gray-100;
-}
+    blockquote.note > div {
+        @apply bg-orange-700;
+    }
 
-pre[class*='language-'] {
-    @apply bg-gray-100;
-    @apply mb-6;
-    @apply p-3;
-    @apply text-sm;
-}
+    blockquote.note > p > code {
+        @apply bg-orange-100;
+        @apply text-orange-700;
+    }
 
-li {
-    @apply py-1;
-}
+    blockquote.tip {
+        @apply border-l-0;
+        @apply bg-blue-500;
+        @apply border-blue-700;
+        @apply text-white;
+    }
 
-.pin-22 {
-    top: 5.5rem;
+    blockquote.tip > div {
+        @apply bg-blue-700;
+    }
+
+    blockquote.tip > p > code {
+        @apply bg-blue-100;
+        @apply text-blue-700;
+    }
+
+    blockquote.tip a,
+    blockquote.note a {
+        @apply text-white;
+        @apply underline;
+    }
+
+    blockquote.tip a:hover,
+    blockquote.note a:hover {
+        @apply text-white;
+    }
+
+    code {
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        @apply text-sm;
+        @apply bg-gray-100;
+        @apply rounded-sm;
+    }
+
+    pre > code {
+        @apply p-0;
+    }
+
+    pre {
+        @apply border;
+        @apply bg-gray-100;
+    }
+
+    pre[class*='language-'] {
+        @apply bg-gray-100;
+        @apply mb-6;
+        @apply p-3;
+        @apply text-sm;
+    }
+
+    li {
+        @apply py-1;
+    }
+
+    .pin-22 {
+        top: 5.5rem;
+    }
+
+    /* <dropdown> transition */
+    .pop-out-quick-enter-active,
+    .pop-out-quick-leave-active {
+        transition: all 0.4s;
+    }
+
+    .pop-out-quick-enter-from,
+    .pop-out-quick-leave-active {
+        opacity: 0;
+        transform: translateY(-7px);
+    }
+
+    /* <scroll-indicator> */
+    .v-scroll--indicator-wrapper {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    }
+
+    .v-scroll--indicator {
+        width: 0;
+        height: 100%;
+    }
 }
