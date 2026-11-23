@@ -16,26 +16,25 @@
         }
     ],
     "require": {
-        "php": "^7.4 || ^8.0",
-        "davejamesmiller/laravel-breadcrumbs": "^5.3",
-        "facade/ignition": "^2.17",
-        "fideloper/proxy": "^4.4",
-        "guzzlehttp/guzzle": "^7.4",
-        "laravel/framework": "^8.83",
-        "laravel/horizon": "^5.9",
-        "laravel/tinker": "^2.7",
-        "mvdnbrk/laravel-documentation": "^1.3",
-        "nunomaduro/laravel-console-task": "^1.7",
-        "ohdearapp/ohdear-php-sdk": "^3.4",
-        "silber/page-cache": "^1.0",
-        "spatie/laravel-schedule-monitor": "^2.4",
-        "symfony/dom-crawler": "^5.3"
+        "php": "^8.5",
+        "diglactic/laravel-breadcrumbs": "^10.1",
+        "guzzlehttp/guzzle": "^7.17",
+        "laravel/framework": "^12.73",
+        "laravel/horizon": "^5.52",
+        "laravel/tinker": "^3.2",
+        "mvdnbrk/laravel-documentation": "^2.0",
+        "nunomaduro/laravel-console-task": "^1.11",
+        "ohdearapp/ohdear-php-sdk": "^4.8",
+        "silber/page-cache": "^1.1.3",
+        "spatie/laravel-ignition": "^2.12",
+        "spatie/laravel-schedule-monitor": "^4.3",
+        "symfony/dom-crawler": "^8.1"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.19",
-        "mockery/mockery": "^1.5",
-        "nunomaduro/collision": "^5.4",
-        "phpunit/phpunit": "^9.5"
+        "fakerphp/faker": "^1.24",
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.9",
+        "phpunit/phpunit": "^12.5"
     },
     "config": {
         "optimize-autoloader": true,
