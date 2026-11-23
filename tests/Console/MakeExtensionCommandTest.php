@@ -6,13 +6,14 @@ use App\Jobs\FetchPackageMetaDataFromNpmJsRegistry;
 use App\Models\Extension;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Bus;
+use PHPUnit\Framework\Attributes\Test;
 use Tests\TestCase;
 
 class MakeExtensionCommandTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    #[Test]
     public function it_can_make_a_new_extension()
     {
         Bus::fake();
@@ -32,7 +33,7 @@ class MakeExtensionCommandTest extends TestCase
         });
     }
 
-    /** @test */
+    #[Test]
     public function name_is_unique()
     {
         Extension::factory()->create(['name' => 'test-extension']);
