@@ -9,10 +9,20 @@
     'hide_menu' => true,
 ])
 
-<div class="container mx-auto">
-    <article id="content" class="max-w-4xl mx-auto pt-10 pb-12 px-6 lg:px-16 min-h-screen-16 markdown-body" v-pre>
-        {!! \Mvdnbrk\Documentation\Markdown::parse(file_get_contents(resource_path('pages/troubleshooting.md'))) !!}
-    </article>
+@php($documentation = app(\Mvdnbrk\Documentation\Documentation::class))
+
+<div class="w-full max-w-screen-xl mx-auto px-6">
+    <div class="lg:flex -mx-6">
+        <nav id="nav" class="docs-index hidden w-full lg:block lg:w-1/4 xl:w-1/5 pt-6 px-6 lg:border-r z-10 lg:max-h-screen-22 pin-22 lg:sticky overflow-y-auto">
+            {!! $documentation->getIndex($documentation->defaultVersion()) !!}
+        </nav>
+        <article id="content" class="w-full min-w-0 lg:w-3/4 xl:w-3/5 pt-10 px-6 lg:px-12 min-h-screen-16 markdown-body" v-pre>
+            {!! \Mvdnbrk\Documentation\Markdown::parse(file_get_contents(resource_path('pages/troubleshooting.md'))) !!}
+        </article>
+        <div class="hidden pt-4 px-6 xl:flex flex-col xl:w-1/5 text-sm items-center lg:max-h-screen-22 pin-22 lg:sticky">
+            <carbon-ads></carbon-ads>
+        </div>
+    </div>
 </div>
 
 <x-footer></x-footer>

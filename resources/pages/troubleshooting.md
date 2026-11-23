@@ -25,7 +25,7 @@ npm ls webpack
 
 ## Cannot Find Module SizeFormatHelpers
 
-```
+```text
 [webpack-cli] Error: Cannot find module 'webpack/lib/SizeFormatHelpers'
 Require stack:
 - node_modules/laravel-mix/src/webpackPlugins/BuildOutputPlugin.js
@@ -41,7 +41,7 @@ To fix it, [pin webpack to 5.105.4](#pin-the-webpack-version).
 
 ## Progress Plugin Invalid Options Object
 
-```
+```text
 [webpack-cli] Invalid options object. Progress Plugin has been initialized using an options object that does not match the API schema.
  - options should be one of these:
    object { activeModules?, dependencies?, dependenciesCount?, entries?, handler?, modules?, modulesCount?, percentBy?, profile? } | function
@@ -85,7 +85,7 @@ npm ls webpack
 
 If your `package.json` file lists `webpack` under `devDependencies` itself, npm refuses the override:
 
-```
+```text
 npm error code EOVERRIDE
 npm error Override for webpack@^5.60.0 conflicts with direct dependency
 ```
@@ -112,7 +112,7 @@ If you need webpack 5.106, you can use it together with webpackbar 7, which no l
 
 ## Additional Dependencies Must Be Installed
 
-```
+```text
 Additional dependencies must be installed. This will only take a moment.
 
 Running: npm install sass-loader@^12.1.0 sass resolve-url-loader@^5.0.0 --save-dev --legacy-peer-deps
@@ -137,7 +137,7 @@ npm install vue-template-compiler vue-loader@^15.9.8 --save-dev
 
 ## Require Is Not Defined in ES Module Scope
 
-```
+```text
 [webpack-cli] ReferenceError: require is not defined in ES module scope, you can use import instead
 This file is being treated as an ES module because it has a '.js' file extension and '/path/to/your-app/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
 ```
@@ -155,7 +155,7 @@ mix.js('resources/js/app.js', 'public/js');
 
 ## Tailwind CSS v4
 
-```
+```text
 Error: It looks like you're trying to use `tailwindcss` directly as a PostCSS plugin. The PostCSS plugin has moved to a separate package, so to continue using Tailwind CSS with PostCSS you'll need to install `@tailwindcss/postcss` and update your PostCSS configuration.
 ```
 
@@ -181,7 +181,7 @@ And import Tailwind in your CSS file:
 
 ## Node Sass Fails to Install
 
-```
+```text
 npm warn deprecated node-sass@4.14.1: Node Sass is no longer supported. Please use `sass` or `sass-embedded` instead.
 npm error command sh -c node scripts/build.js
 npm error gyp ERR! configure error
@@ -196,7 +196,7 @@ npm install sass --save-dev
 
 ## Digital Envelope Routines Unsupported
 
-```
+```text
 Error: error:0308010C:digital envelope routines::unsupported
   library: 'digital envelope routines',
   reason: 'unsupported',
