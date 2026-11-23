@@ -19,7 +19,6 @@
         "php": "^8.5",
         "diglactic/laravel-breadcrumbs": "^10.1",
         "laravel/framework": "^13.0",
-        "laravel/tinker": "^3.2",
         "mvdnbrk/laravel-documentation": "^3.0",
         "nunomaduro/laravel-console-task": "^1.11",
         "silber/page-cache": "^1.1.3",
