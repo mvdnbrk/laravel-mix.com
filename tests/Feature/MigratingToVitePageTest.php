@@ -16,4 +16,12 @@ class MigratingToVitePageTest extends TestCase
             ->assertSee('<h1>Migrating from Mix to Vite</h1>', false)
             ->assertSee('From webpack.mix.js to vite.config.js');
     }
+
+    #[Test]
+    public function the_homepage_links_to_the_migrating_to_vite_page()
+    {
+        $this->get('/')
+            ->assertOk()
+            ->assertSee('href="'.route('migrating-to-vite').'"', false);
+    }
 }
