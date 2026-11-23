@@ -12,7 +12,7 @@
 This is the source of the [laravel-mix.com][link-website] website.
 
 > [!WARNING]
-> Laravel Mix is a legacy package that is no longer actively maintained. [Vite](https://laravel.com/docs/vite) may be used as a modern alternative. See the [migration guide](https://github.com/laravel/vite-plugin/blob/main/UPGRADE.md#migrating-from-laravel-mix-to-vite) to switch from Laravel Mix to Vite.
+> Laravel Mix is a legacy package that is no longer actively maintained. [Vite](https://laravel.com/docs/vite) may be used as a modern alternative. See the [migration guide](https://laravel-mix.com/migrating-to-vite) to switch from Laravel Mix to Vite.
 
 ## Sponsors
 
