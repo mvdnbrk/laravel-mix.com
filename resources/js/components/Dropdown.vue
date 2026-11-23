@@ -10,7 +10,7 @@
 
         <transition name="pop-out-quick">
             <ol
-                class="absolute bg-gray-100 rounded mt-2 py-1 shadow z-30 right-0"
+                class="absolute bg-gray-100 rounded-sm mt-2 py-1 shadow-sm z-30 right-0"
                 v-show="isOpen"
                 role="menu"
             >
@@ -41,7 +41,7 @@ export default {
         dismiss() {
             this.isOpen = false;
 
-            document.removeEventListener('click', this.onEscape);
+            document.removeEventListener('keydown', this.onEscape);
             document.removeEventListener('click', this.onClickOutside);
         },
         onEscape(e) {
@@ -62,15 +62,3 @@ export default {
 }
 </script>
 
-<style>
-.pop-out-quick-enter-active,
-.pop-out-quick-leave-active {
-    transition: all 0.4s;
-}
-
-.pop-out-quick-enter,
-.pop-out-quick-leave-active {
-    opacity: 0;
-    transform: translateY(-7px);
-}
-</style>

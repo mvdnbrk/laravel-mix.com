@@ -6,20 +6,20 @@ import Prism from 'prismjs';
 
 Prism.highlightAll();
 
-window.Vue = require('vue');
+import { createApp } from 'vue';
 
 import Count from './components/Count.vue';
 import Dropdown from './components/Dropdown.vue';
 import CarbonAds from './components/CarbonAds.vue';
 import ToggleMenu from './components/ToggleMenu.vue';
-import { VueScrollIndicator } from 'vue-scroll-indicator';
+import ScrollIndicator from './components/ScrollIndicator.vue';
 
-Vue.component('count', Count);
-Vue.component('dropdown', Dropdown);
-Vue.component('carbon-ads', CarbonAds);
-Vue.component('toggle-menu', ToggleMenu);
-Vue.component('scroll-indicator', VueScrollIndicator);
+const app = createApp({});
 
-const app = new Vue({
-    el: '#app',
-});
+app.component('count', Count);
+app.component('dropdown', Dropdown);
+app.component('carbon-ads', CarbonAds);
+app.component('toggle-menu', ToggleMenu);
+app.component('scroll-indicator', ScrollIndicator);
+
+app.mount('#app');
