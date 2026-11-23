@@ -2,21 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\DocumentationBaseController;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
 use Symfony\Component\DomCrawler\Crawler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class DocumentationController extends DocumentationBaseController
 {
     /**
      * Show a documentation page.
      *
-     * @param  string  $version
-     * @param  string  $page
-     * @return \Illuminate\View\View
      *
-     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     * @throws NotFoundHttpException
      */
     public function show(string $version, string $page): View
     {

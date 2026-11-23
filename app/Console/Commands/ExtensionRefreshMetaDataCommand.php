@@ -3,7 +3,6 @@
 namespace App\Console\Commands;
 
 use App\Jobs\FetchPackageMetaDataFromNpmJsRegistry;
-use App\Jobs\UpdateExtensionModelFromJson;
 use App\Models\Extension;
 use Illuminate\Console\Command;
 
@@ -33,13 +32,13 @@ class ExtensionRefreshMetaDataCommand extends Command
         Extension::when($this->argument('name'), function ($query) {
             return $query->where('name', $this->argument('name'));
         })
-        ->orderBy('name')
-        ->chunk(10, function ($extensions) {
-            $extensions->each(function ($extension) {
-                $this->comment("Processing: {$extension->name}");
-                FetchPackageMetaDataFromNpmJsRegistry::dispatch($extension->name);
+            ->orderBy('name')
+            ->chunk(10, function ($extensions) {
+                $extensions->each(function ($extension) {
+                    $this->comment("Processing: {$extension->name}");
+                    FetchPackageMetaDataFromNpmJsRegistry::dispatch($extension->name);
+                });
             });
-        });
 
         $this->info('Jobs to download fresh meta data from the registry created successfully.');
     }

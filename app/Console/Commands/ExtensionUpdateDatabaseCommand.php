@@ -32,14 +32,14 @@ class ExtensionUpdateDatabaseCommand extends Command
         Extension::when($this->argument('name'), function ($query) {
             return $query->where('name', $this->argument('name'));
         })
-        ->orderBy('name')
-        ->chunk(10, function ($extensions) {
-            $extensions->each(function ($extension) {
-                UpdateExtensionModelFromJson::dispatch($extension);
+            ->orderBy('name')
+            ->chunk(10, function ($extensions) {
+                $extensions->each(function ($extension) {
+                    UpdateExtensionModelFromJson::dispatch($extension);
 
-                $this->comment("Processing: {$extension->name}");
+                    $this->comment("Processing: {$extension->name}");
+                });
             });
-        });
 
         $this->info('Jobs to update the database are created successfully.');
     }

@@ -5,6 +5,7 @@ namespace App\Jobs;
 use App\Models\Extension;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
@@ -25,7 +26,7 @@ class FetchPackageMetaDataFromNpmJsRegistry implements ShouldQueue
      *
      * @return void
      *
-     * @throws \Illuminate\Http\Client\RequestException
+     * @throws RequestException
      */
     public function handle()
     {
