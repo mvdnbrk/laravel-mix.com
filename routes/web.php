@@ -15,6 +15,7 @@ Route::middleware(['page-cache'])->group(function () {
 
     Route::get('extensions', [ExtensionsController::class, 'index'])->name('extensions.index');
     Route::get('extensions/{extension}', [ExtensionsController::class, 'show'])->name('extensions.show');
+    Route::view('troubleshooting', 'pages.troubleshooting')->name('troubleshooting');
 
     Route::view('migrating-to-vite', 'pages.migrating-to-vite')->name('migrating-to-vite');
 
