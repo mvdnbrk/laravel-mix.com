@@ -24,8 +24,8 @@
         {{ Breadcrumbs::view('breadcrumbs::json-ld') }}
     </head>
     <body>
+        <x-legacy-notice></x-legacy-notice>
         <div id="app">
-            <legacy-notice></legacy-notice>
             @yield('body')
         </div>
         @stack('scripts')
