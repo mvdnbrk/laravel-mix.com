@@ -41,6 +41,11 @@ jobs:
           php artisan key:generate
           php artisan package:discover
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
       - name: Install NPM dependencies
         run: yarn install
 
