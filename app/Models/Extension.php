@@ -78,8 +78,6 @@ class Extension extends Model
 
     /**
      * Get unpermitted keywords including a maintainers name.
-     *
-     * @return array
      */
     protected function getUnpermittedKeywords(): array
     {
@@ -108,8 +106,6 @@ class Extension extends Model
     /**
      * Get the maintainers for this extension.
      * Returns an array with the name as key and email as value.
-     *
-     * @return array
      */
     public function getMaintainersAttribute(): array
     {
@@ -138,8 +134,8 @@ class Extension extends Model
         return Markdown::parse(
             $this->replaceExternalLinks(
                 Storage::get($this->readmeStoragePath()
-            )
-        ));
+                )
+            ));
     }
 
     public function replaceExternalLinks(string $content): string

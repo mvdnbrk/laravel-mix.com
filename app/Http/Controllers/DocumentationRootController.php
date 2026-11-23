@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\DocumentationBaseController;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 

@@ -32,14 +32,14 @@ class ExtensionFetchReadmeCommand extends Command
         Extension::when($this->argument('name'), function ($query) {
             return $query->where('name', $this->argument('name'));
         })
-        ->orderBy('name')
-        ->chunk(10, function ($extensions) {
-            $extensions->each(function ($extension) {
-                FetchReadme::dispatch($extension);
+            ->orderBy('name')
+            ->chunk(10, function ($extensions) {
+                $extensions->each(function ($extension) {
+                    FetchReadme::dispatch($extension);
 
-                $this->comment("Processing: {$extension->name}");
+                    $this->comment("Processing: {$extension->name}");
+                });
             });
-        });
 
         $this->info('Jobs to fetch the readme files from the repository created successfully.');
     }
