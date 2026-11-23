@@ -41,6 +41,7 @@ class UpdateExtensionModelFromJson implements ShouldQueue
             'version_count' => $this->getVersionCount(),
             'license' => $this->data->get('license'),
             'repository' => $this->getRepository(),
+            'published_at' => $this->getPublishedAt(),
             'created_at' => $this->getCreatedAt(),
             'updated_at' => $this->getUpdatedAt(),
         ]);
@@ -71,6 +72,13 @@ class UpdateExtensionModelFromJson implements ShouldQueue
     protected function getDescription(): Stringable
     {
         return Str::of($this->data->get('description'))->ucfirst()->finish('.');
+    }
+
+    protected function getPublishedAt(): ?Carbon
+    {
+        $time = collect($this->data->get('time'))->get($this->getLatestDistTag() ?? '');
+
+        return $time ? new Carbon($time) : null;
     }
 
     protected function getRepository()

@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="py-4 text-sm text-center text-gray-700">
-                latest {{ $extension->latestVersion }} - released <time datetime="{{ $extension->updated_at->toISOString() }}">{{ $extension->updated_at->diffForHumans() }}</time>
+                latest {{ $extension->latestVersion }}@if ($extension->published_at) - released <time datetime="{{ $extension->published_at->toISOString() }}">{{ $extension->published_at->diffForHumans() }}</time>@endif
             </div>
             @if (count($extension->maintainers))
             <div class="flex justify-center py-4">
