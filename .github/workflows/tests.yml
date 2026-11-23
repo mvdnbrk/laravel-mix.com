@@ -46,6 +46,8 @@ jobs:
 
       - name: Compile assets
         run: yarn run production
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider
 
       - name: Execute tests
         run: vendor/bin/phpunit
