@@ -7,6 +7,8 @@
 -   [Update Your JavaScript](#update-your-javascript)
 -   [Update Your CSS](#update-your-css)
 -   [Update Your Blade Templates](#update-your-blade-templates)
+-   [Server-Side Rendering](#server-side-rendering)
+-   [Sail and Vapor](#sail-and-vapor)
 -   [Clean Up](#clean-up)
 -   [Mix Extensions](#mix-extensions)
 -   [Troubleshooting](#troubleshooting)
@@ -15,7 +17,7 @@
 
 Laravel Mix is a legacy package that is no longer actively maintained. New Laravel applications use [Vite](https://laravel.com/docs/vite) instead.
 
-This page is for Mix users. It shows what each part of a `webpack.mix.js` file becomes in Vite, and the errors you are most likely to run into. Use it together with the official [Laravel Mix to Vite migration guide](https://github.com/laravel/vite-plugin/blob/main/UPGRADE.md#migrating-from-laravel-mix-to-vite), which covers Inertia, SSR, Vapor and Sail.
+This page is for Mix users. It shows what each part of a `webpack.mix.js` file becomes in Vite, and the errors you are most likely to run into. It builds on the official [Laravel Mix to Vite migration guide](https://github.com/laravel/vite-plugin/blob/main/UPGRADE.md#migrating-from-laravel-mix-to-vite).
 
 The examples use Vite 8 and version 3 of the Laravel Vite plugin, which need Node.js 20.19 or 22.12 and newer. The `@vite` Blade directive needs Laravel 9.19 or newer.
 
@@ -269,6 +271,28 @@ import Greeting from './components/Greeting.vue';
 
 Without the extension, the build fails with `Could not load .../components/Greeting` and `No such file or directory`.
 
+### Inertia
+
+Inertia apps built with Mix load their pages with `require()`. Vite can't do that, so resolve the pages with `import.meta.glob()` instead. The Laravel Vite plugin has a helper for this:
+
+```js
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
+
+createInertiaApp({
+    // Before
+    resolve: (name) => require(`./Pages/${name}.vue`),
+
+    // After
+    resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
+
+    // ...
+});
+```
+
+For React, use `.jsx` in both places: `./Pages/${name}.jsx` and `./Pages/**/*.jsx`. Each page becomes its own chunk, which is loaded when the page is visited.
+
+Inertia 3 also has its own Vite plugin, `@inertiajs/vite`, which resolves the pages for you. See the [Inertia documentation](https://inertiajs.com/docs/v3/installation/client-side-setup) if you upgrade Inertia at the same time.
+
 ### Vue Templates in Blade
 
 Many Mix projects mount Vue on a Blade page and use components directly in the HTML:
@@ -400,6 +424,57 @@ If you need the URL of a single built file, use `Vite::asset()`. It works for an
 ```
 
 In your tests, replace `$this->withoutMix()` with `$this->withoutVite()`.
+
+### React
+
+If you use React, add `@viteReactRefresh` before `@vite`:
+
+```html
+@viteReactRefresh
+@vite('resources/js/app.jsx')
+```
+
+Without it, `npm run dev` stops with `@vitejs/plugin-react can't detect preamble. Something is wrong.` The directive only outputs something while the dev server is running.
+
+## Server-Side Rendering
+
+If you used Mix to build an Inertia SSR bundle, delete `webpack.ssr.mix.js`. Pass your SSR entry to the Laravel plugin instead:
+
+```js
+laravel({
+    input: 'resources/js/app.js',
+    ssr: 'resources/js/ssr.js',
+}),
+```
+
+Build it with `vite build --ssr`, after the normal build:
+
+```js
+"scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --ssr"
+}
+```
+
+The SSR bundle is written to `bootstrap/ssr`. Start the SSR server with `php artisan inertia:start-ssr`. In `ssr.js`, resolve the pages with `resolvePageComponent()` too, as shown under [Inertia](#inertia).
+
+## Sail and Vapor
+
+### Laravel Sail
+
+To run `npm run dev` inside a Sail container, publish the Vite port in `docker-compose.yml`:
+
+```yaml
+ports:
+    - '${APP_PORT:-80}:80'
+    - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
+```
+
+You don't need to change `vite.config.js`. Under Sail, the Laravel plugin listens on all addresses and points your browser to `localhost`.
+
+### Laravel Vapor
+
+On Vapor, build your assets during the deploy; the Laravel plugin refuses to run the dev server there. If you use the `laravel-vapor` asset helper in JavaScript, see the [Vapor section of the official guide](https://github.com/laravel/vite-plugin/blob/main/UPGRADE.md#vapor).
 
 ## Clean Up
 
