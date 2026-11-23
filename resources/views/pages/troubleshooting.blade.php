@@ -9,8 +9,8 @@
     'hide_menu' => true,
 ])
 
-<div class="w-full max-w-screen-lg mx-auto px-6">
-    <article id="content" class="w-full pt-10 pb-12 lg:px-12 min-h-screen-16 markdown-body" v-pre>
+<div class="container mx-auto">
+    <article id="content" class="pt-10 pb-12 px-6 lg:px-16 min-h-screen-16 markdown-body" v-pre>
         {!! \Mvdnbrk\Documentation\Markdown::parse(file_get_contents(resource_path('pages/troubleshooting.md'))) !!}
     </article>
 </div>
