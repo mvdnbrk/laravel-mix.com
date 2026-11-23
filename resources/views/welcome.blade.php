@@ -44,6 +44,8 @@
 
             <p class="px-4 mt-8 text-sm text-center text-gray-600">
                 Build broken? <a href="{{ route('troubleshooting') }}" class="text-gray-700 underline hover:text-blue-500">Troubleshooting</a>
+                <span class="mx-2" aria-hidden="true">&middot;</span>
+                Moving on? <a href="{{ route('migrating-to-vite') }}" class="text-gray-700 underline hover:text-blue-500">Migrate to Vite</a>
             </p>
         </main>
 
