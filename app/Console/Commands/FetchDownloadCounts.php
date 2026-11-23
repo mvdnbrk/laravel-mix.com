@@ -29,13 +29,17 @@ class FetchDownloadCounts extends Command
      */
     public function handle()
     {
+        $position = 0;
+
         Extension::when($this->argument('name'), function ($query) {
             return $query->where('name', $this->argument('name'));
         })
         ->orderBy('name')
-        ->chunk(10, function ($extensions) {
-            $extensions->each(function ($extension) {
-                UpdateWeeklyDownloadCount::dispatch($extension);
+        ->chunk(10, function ($extensions) use (&$position) {
+            $extensions->each(function ($extension) use (&$position) {
+                // Spread the requests out, because the npm downloads API rate limits bursts.
+                UpdateWeeklyDownloadCount::dispatch($extension)
+                    ->delay(now()->addSeconds(2 * $position++));
 
                 $this->comment("Processing: {$extension->name}");
             });

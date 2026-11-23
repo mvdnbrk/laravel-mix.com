@@ -40,9 +40,7 @@ class FetchReadme implements ShouldQueue
     public function handle()
     {
         if ($this->baseUrl()->isEmpty()) {
-            $this->storeReadme(
-                collect($this->extension->getDecodedJson())->get('readme')
-            );
+            $this->storeReadmeFromNpm();
 
             return;
         }
@@ -65,7 +63,7 @@ class FetchReadme implements ShouldQueue
             });
 
         if (! Cache::has($this->cacheKey())) {
-            abort(404);
+            $this->storeReadmeFromNpm();
         }
     }
 
@@ -77,7 +75,7 @@ class FetchReadme implements ShouldQueue
 
         return Str::of($this->extension->repositoryUrl)
             ->replaceFirst('https://github.com', 'https://raw.githubusercontent.com')
-            ->finish('/master/');
+            ->finish('/HEAD/');
     }
 
     protected function cacheKey(): string
@@ -100,6 +98,18 @@ class FetchReadme implements ShouldQueue
         }
 
         return true;
+    }
+
+    /**
+     * Use npm's copy of the README when the repository has none.
+     */
+    protected function storeReadmeFromNpm(): void
+    {
+        $readme = collect($this->extension->getDecodedJson())->get('readme');
+
+        if (is_string($readme) && trim($readme) !== '' && $readme !== 'ERROR: No README data found!') {
+            $this->storeReadme($readme);
+        }
     }
 
     protected function storeReadme(string $content): bool

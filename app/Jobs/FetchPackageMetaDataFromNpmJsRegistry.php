@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Models\Extension;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\SerializesModels;
@@ -31,6 +32,13 @@ class FetchPackageMetaDataFromNpmJsRegistry implements ShouldQueue
         $response = Http::get("https://registry.npmjs.org/{$this->name}");
 
         $response->throw();
+
+        // npm keeps a stub for unpublished packages. Hide them instead of failing on them every night.
+        if ($response->json('time.unpublished')) {
+            Extension::where('name', $this->name)->first()?->delete();
+
+            return;
+        }
 
         Storage::put("npmjs/{$this->name}.json", $response->body());
     }
