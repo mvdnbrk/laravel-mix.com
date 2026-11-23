@@ -149,7 +149,7 @@ class Extension extends Model
                 return $matches[1];
             }
 
-            return '['.$matches[1].']('.$this->repositoryUrl.'/blob/master/'.$matches[2].')';
+            return '['.$matches[1].']('.$this->repositoryUrl.'/blob/HEAD/'.$matches[2].')';
         }, $content);
     }
 
