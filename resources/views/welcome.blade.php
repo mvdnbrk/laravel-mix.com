@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('body')
-    <div class="flex items-center justify-center min-h-screen border-t-4">
-        <div class="flex flex-col items-center">
+    <div class="flex flex-col min-h-screen border-t-4">
+        <main class="flex flex-col items-center justify-center flex-1 py-16">
             @include('svg.laravel-mix-logo', ['class' => 'w-64'])
 
             <p class="px-4 mt-6 text-lg leading-normal text-center">An elegant wrapper around Webpack for the 80% use case.</p>
@@ -47,8 +47,8 @@
                 <span class="mx-2" aria-hidden="true">&middot;</span>
                 Moving on? <a href="{{ route('migrating-to-vite') }}" class="text-gray-700 underline hover:text-blue-500">Migrate to Vite</a>
             </p>
+        </main>
 
-            <x-footer></x-footer>
-        </div>
+        <x-footer :homepage="true"></x-footer>
     </div>
 @endsection
